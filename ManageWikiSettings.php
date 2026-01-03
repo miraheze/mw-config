@@ -1646,6 +1646,15 @@ $wgManageWikiSettings = [
 		'help' => 'Allows to change the page language for MediaWiki pages.',
 		'requires' => [],
 	],
+	'wgPageImagesExpandOpenSearchXml' => [
+		'name' => 'PageImages Expand OpenSearch XML',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'If set to true, PageImages will override the image detection in the opensearch API module with its own, more accurate results.',
+		'requires' => [],
+	],
 	'wgPageImagesLeadSectionOnly' => [
 		'name' => 'Only choose images from section 0',
 		'from' => 'pageimages',

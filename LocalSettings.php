@@ -4865,17 +4865,6 @@ $wgConf->settings += [
 	],
 
 	// Page Images
-	'wgPageImagesNamespaces' => [
-		'default' => [
-			NS_MAIN,
-		],
-		'+giannawiki' => [
-			3000
-		],
-		'+gpcommonswiki' => [
-			NS_CATEGORY,
-		],
-	],
 	'wgPageImagesDenylist' => [
 		'ext-PageImages' => [
 			[
@@ -4887,9 +4876,6 @@ $wgConf->settings += [
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
-		'gratispaideiawiki' => true,
-		'gratisdatawiki' => true,
-		'gpcommonswiki' => true,
 	],
 	'wgPageImagesLeadSectionOnly' => [
 		'default' => false,
