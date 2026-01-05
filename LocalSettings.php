@@ -6654,6 +6654,16 @@ $wgConf->settings += [
 			'logged_out' => false,
 		],
 	],
+	'wgVectorLanguageInMainPageHeader' => [
+		'default' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'tkuwiki' => [
+			'logged_in' => true,
+			'logged_out' => true,
+		],
+	],
 
 	// VisualEditor
 	'wmgVisualEditorEnableDefault' => [
