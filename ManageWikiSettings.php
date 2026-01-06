@@ -3542,6 +3542,15 @@ $wgManageWikiSettings = [
 		'help' => 'Decides whether to enable friending or not.',
 		'requires' => [],
 	],
+	'wgUserBoard' => [
+		'name' => 'User Board',
+		'from' => 'socialprofile',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'socialtools',
+		'help' => 'Displays UserBoard-related things on social profile pages.',
+		'requires' => [],
+	],
 	'wgUserProfileDisplay' => [
 		'name' => 'User Profile Display',
 		'from' => 'socialprofile',
