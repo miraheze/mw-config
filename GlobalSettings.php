@@ -141,6 +141,7 @@ if ( $wi->isExtensionActive( 'SemanticMediaWiki' ) ) {
 if ( $wi->isExtensionActive( 'SocialProfile' ) ) {
 	require_once "$IP/extensions/SocialProfile/SocialProfile.php";
 	$wgSocialProfileFileBackend = 'miraheze-swift';
+	$wgUserBoardAllowPrivateMessages = false;
 }
 
 if ( $wi->isExtensionActive( 'UserProfileV2' ) ) {
