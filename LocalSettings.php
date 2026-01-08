@@ -110,7 +110,6 @@ if ( $_SERVER['HTTP_HOST'] === 'auth.mirabeta.org'
 
 	$wgServer = '//' . 'auth.mirabeta.org';
 	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
-	$wgConf->settings['wgServer'][$wi->dbname] = $wgServer;
 } else {
 	$wgLoadScript = "{$wgScriptPath}/load.php";
 }
@@ -5928,6 +5927,9 @@ $wgConf->settings += [
 	],
 
 	// Server
+	'wgArticlePath' => [
+		'default' => '/wiki/$1',
+	],
 	'wgDisableOutputCompression' => [
 		'default' => true,
 	],
