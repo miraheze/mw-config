@@ -3,7 +3,7 @@
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
-/*use MediaWiki\MediaWikiServices;
+use MediaWiki\MediaWikiServices;
 use MediaWiki\Title\Title;
 
 $uri = strtok( $_SERVER['REQUEST_URI'] ?? '', '?' );
@@ -125,4 +125,3 @@ $redirectUrl = str_replace( '\\', '%5C', $redirectUrl );
 // Issue the redirect
 header( 'Location: ' . $redirectUrl, true, 301 );
 exit();
-*/
