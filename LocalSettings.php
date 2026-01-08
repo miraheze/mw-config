@@ -110,9 +110,6 @@ if ( $_SERVER['HTTP_HOST'] === 'auth.mirabeta.org'
 
 	$wgServer = '//' . 'auth.mirabeta.org';
 	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
-
-	// $wgConf->settings['wgServer'][$wi->dbname] = $wgServer;
-	// $wgConf->settings['wgCanonicalServer'][$wi->dbname] = $wgCanonicalServer;
 } else {
 	$wgLoadScript = "{$wgScriptPath}/load.php";
 }
@@ -7568,7 +7565,7 @@ require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
 
-if ( $wi->missing && $wmgSharedDomainPathPrefix === '' ) {
+if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
 
