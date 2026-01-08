@@ -32,7 +32,6 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
-	$wgCentralAuthEnableSul3 = false;
 
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 
@@ -43,6 +42,21 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 	$wgLoginNotifyUseCentralId = true;
+
+	$wgCentralAuthLoginWiki = 'loginwikibeta';
+	$wgCentralAuthCentralWiki = 'metawikibeta';
+	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://auth.mirabeta.org/$dbname";
+	$wgCentralAuthRestrictSharedDomain = true;
+
+	if ( $wmgSharedDomainPathPrefix ) {
+		$wgCentralAuthCookieDomain = '';
+		$wgCookiePrefix = 'auth';
+		$wgSessionName = 'authSession';
+		$wgWebAuthnNewCredsDisabled = false;
+
+		$wgCheckUserClientHintsEnabled = true;
+		$wgCheckUserAlwaysSetClientHintHeaders = true;
+	}
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
