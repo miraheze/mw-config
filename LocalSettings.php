@@ -95,6 +95,7 @@ $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
 $wmgSharedDomainPathPrefix = '';
+$wgScriptPath = '/w';
 
 if ( $_SERVER['HTTP_HOST'] === 'auth.mirabeta.org'
 	|| getenv( 'MW_USE_SHARED_DOMAIN' )
@@ -109,7 +110,7 @@ if ( $_SERVER['HTTP_HOST'] === 'auth.mirabeta.org'
 
 	$wgServer = '//' . 'auth.mirabeta.org';
 	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
-	$wgConf->settings['wgServer']['default'] = $wgServer;
+	$wgConf->settings['wgServer'][$wi->dbname] = $wgServer;
 
 	$wgEnableSidebarCache = false;
 } else {
