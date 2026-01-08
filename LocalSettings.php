@@ -123,6 +123,15 @@ if ( $wmgSharedDomainPathPrefix ) {
 }
 
 $wgInternalServer = $wgCanonicalServer;
+$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
+
+$wgScriptPath  = "{$wmgSharedDomainPathPrefix}/w";
+$wgScript = "{$wgScriptPath}/index.php";
+
+$wgResourceBasePath = "{$wmgSharedDomainPathPrefix}/{$wi->version}/w";
+$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
+$wgStylePath = "{$wgResourceBasePath}/skins";
+$wgLocalStylePath = $wgStylePath;
 
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
@@ -5412,20 +5421,8 @@ $wgConf->settings += [
 	],
 
 	// Resources
-	'wgExtensionAssetsPath' => [
-		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}/extensions",
-	],
-	'wgLocalStylePath' => [
-		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}/skins",
-	],
-	'wgResourceBasePath' => [
-		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}",
-	],
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
-	],
-	'wgStylePath' => [
-		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}/skins",
 	],
 
 	// RelatedArticles
