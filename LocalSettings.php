@@ -127,8 +127,6 @@ if ( $wmgSharedDomainPathPrefix ) {
 $wgInternalServer = $wgCanonicalServer;
 $wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
 
-$wgConf->settings['wgArticlePath'][$wi->dbname] = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
-
 $wgScriptPath  = "{$wmgSharedDomainPathPrefix}/w";
 $wgScript = "{$wgScriptPath}/index.php";
 
