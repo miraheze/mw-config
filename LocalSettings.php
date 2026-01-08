@@ -5928,17 +5928,8 @@ $wgConf->settings += [
 	],
 
 	// Server
-	'wgArticlePath' => [
-		'default' => "$wmgSharedDomainPathPrefix/wiki/\$1",
-	],
 	'wgDisableOutputCompression' => [
 		'default' => true,
-	],
-	'wgScript' => [
-		'default' => "$wmgSharedDomainPathPrefix/w/index.php",
-	],
-	'wgScriptPath' => [
-		'default' => "$wmgSharedDomainPathPrefix/w",
 	],
 	'wgShowHostnames' => [
 		'default' => true,
