@@ -393,6 +393,7 @@ class MirahezeFunctions {
 		global $wgConf, $wgServer;
 
 		$wgConf->settings['wgServer'] = self::getServers( null, true );
+		$wgConf->settings['wgCanonicalServer'] = self::getServers( null, true );
 		$wgServer = $this->server;
 	}
 
