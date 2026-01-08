@@ -4,7 +4,6 @@ use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\EntryPointEnvironment;
 use MediaWiki\MediaWikiServices;
-use MediaWiki\Title\Title;
 
 define( 'MW_ENTRY_POINT', 'index' );
 
