@@ -94,6 +94,37 @@ $wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
+$wmgSharedDomainPathPrefix = '';
+
+if ( @$_SERVER['SERVER_NAME'] === 'auth.mirabeta.org'
+	|| getenv( 'MW_USE_SHARED_DOMAIN' )
+) {
+	if ( $wi->dbname === 'ldapwikiwiki'  ) {
+		print "Can only be used for SUL wikis\n";
+		exit( 1 );
+	}
+
+	$wgLoadScript = "{$wgCanonicalServer}{$wgScriptPath}/load.php";
+	$wmgSharedDomainPathPrefix = "/$wgDBname";
+
+	$wgServer = '//' . 'auth.mirabeta.org';
+	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
+	$wgConf->settings['wgServer']['default'] = $wgServer;
+
+	$wgEnableSidebarCache = false;
+} else {
+	$wgLoadScript = "{$wgScriptPath}/load.php";
+}
+
+if ( $wmgSharedDomainPathPrefix ) {
+	$wgUseSiteCss = false;
+	$wgUseSiteJs = false;
+	$wgAllowUserCss = false;
+	$wgAllowUserJs = false;
+}
+
+$wgInternalServer = $wgCanonicalServer;
+
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
@@ -5383,19 +5414,19 @@ $wgConf->settings += [
 
 	// Resources
 	'wgExtensionAssetsPath' => [
-		'default' => '/' . $wi->version . '/extensions',
+		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}/extensions",
 	],
 	'wgLocalStylePath' => [
-		'default' => '/' . $wi->version . '/skins',
+		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}/skins",
 	],
 	'wgResourceBasePath' => [
-		'default' => '/' . $wi->version,
+		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}",
 	],
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
 	],
 	'wgStylePath' => [
-		'default' => '/' . $wi->version . '/skins',
+		'default' => "$wmgSharedDomainPathPrefix/{$wi->version}/skins",
 	],
 
 	// RelatedArticles
@@ -5902,13 +5933,16 @@ $wgConf->settings += [
 
 	// Server
 	'wgArticlePath' => [
-		'default' => '/wiki/$1',
+		'default' => "$wmgSharedDomainPathPrefix/wiki/\$1",
 	],
 	'wgDisableOutputCompression' => [
 		'default' => true,
 	],
+	'wgScript' => [
+		'default' => "$wmgSharedDomainPathPrefix/w/index.php",
+	],
 	'wgScriptPath' => [
-		'default' => '/w',
+		'default' => "$wmgSharedDomainPathPrefix/w",
 	],
 	'wgShowHostnames' => [
 		'default' => true,
@@ -7523,9 +7557,9 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-// we set $wgInternalServer to $wgServer to get varnish cache purging working
-// we convert $wgServer to http://, as varnish does not support purging https requests
-$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+// To get varnish cache purging working, we convert to http://, as varnish
+// does not support purging https requests.
+$wgInternalServer = str_replace( 'https://', 'http://', $wgInternalServer );
 
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
