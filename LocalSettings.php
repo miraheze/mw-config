@@ -99,7 +99,7 @@ $wmgSharedDomainPathPrefix = '';
 if ( @$_SERVER['SERVER_NAME'] === 'auth.mirabeta.org'
 	|| getenv( 'MW_USE_SHARED_DOMAIN' )
 ) {
-	if ( $wi->dbname === 'ldapwikiwiki'  ) {
+	if ( $wi->dbname === 'ldapwikiwiki' ) {
 		print "Can only be used for SUL wikis\n";
 		exit( 1 );
 	}
