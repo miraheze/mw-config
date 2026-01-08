@@ -10,7 +10,7 @@ define( 'MW_ENTRY_POINT', 'index' );
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
-
+/*
 // Normalize request URI
 $requestUri = $_SERVER['REQUEST_URI'] ?? '';
 $requestMethod = $_SERVER['REQUEST_METHOD'] ?? '';
@@ -59,7 +59,7 @@ if ( $mainPageRoot && $requestUri !== '/' && $requestMethod !== 'POST' ) {
 
 	// Don't need a global here
 	unset( $title );
-}
+}*/
 
 require_once MirahezeFunctions::getMediaWiki( 'includes/PHPVersionCheck.php' );
 wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ?? '' ) );
