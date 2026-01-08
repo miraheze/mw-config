@@ -32,6 +32,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
+	$wgCentralAuthEnableSul3 = true;
 
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 
