@@ -97,7 +97,7 @@ $wgStatsTarget = 'udp://localhost:9125';
 $wmgSharedDomainPathPrefix = '';
 $wgScriptPath = '/w';
 
-if ( $_SERVER['HTTP_HOST'] === 'auth.mirabeta.org'
+if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'auth.mirabeta.org'
 	|| getenv( 'MW_USE_SHARED_DOMAIN' )
 ) {
 	if ( $wi->dbname === 'ldapwikiwiki' ) {
