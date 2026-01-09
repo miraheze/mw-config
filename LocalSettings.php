@@ -2570,6 +2570,15 @@ $wgConf->settings += [
 			'showDimensions' => true,
 			'mode' => 'packed',
 		],
+		'pilgrammedwiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 180,
+			'imageHeight' => 180,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'traditional',
+		],
 		'rippaversewiki' => [
 			'imagesPerRow' => 0,
 			'imageWidth' => 120,
