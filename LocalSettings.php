@@ -99,7 +99,7 @@ $wmgSharedDomainPathPrefix = '';
 $wgScriptPath = '/w';
 $wgLoadScript = "$wgScriptPath/load.php";
 
-if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'auth.mirabeta.org'
+if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 	|| getenv( 'MW_USE_SHARED_DOMAIN' )
 ) {
 	if ( $wi->dbname === 'ldapwikiwiki' ) {
@@ -110,8 +110,8 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'auth.mirabeta.org'
 	$wgLoadScript = "{$wi->server}$wgScriptPath/load.php";
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
 
-	$wgServer = '//' . 'auth.mirabeta.org';
-	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
+	$wgServer = '//' . $wi->getSharedDomain();
+	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
 
 	$wgUseSiteCss = false;
 	$wgUseSiteJs = false;
