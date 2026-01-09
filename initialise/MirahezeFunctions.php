@@ -1110,6 +1110,7 @@ class MirahezeFunctions {
 		foreach ( $GLOBALS['globals'] as $global => $value ) {
 			if (
 				!isset( $settings["+$global"] ) &&
+				$global !== 'wgArticlePath' &&
 				$global !== 'wgManageWikiPermissionsAdditionalRights'
 			) {
 				$GLOBALS[$global] = $value;
