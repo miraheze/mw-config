@@ -314,20 +314,22 @@ if ( !$cwPrivate ) {
 	$wgDiscordExperimentalWebhook = $wmgDiscordExperimentalWebhook;
 }
 
-// Dynamic cookie settings dependant on $wgServer
-foreach ( $wi->getAllowedDomains() as $domain ) {
-	if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
-		$wgCentralAuthCookieDomain = '.' . $domain;
-		$wgMFStopRedirectCookieHost = '.' . $domain;
-		break;
-	} else {
-		$wgCentralAuthCookieDomain = '';
-		if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
-			$host = parse_url( $wi->server, PHP_URL_HOST );
-			$wgMFStopRedirectCookieHost = $host !== false ? $host : null;
+if ( !$wmgSharedDomainPathPrefix ) {
+	// Dynamic cookie settings dependant on $wgServer
+	foreach ( $wi->getAllowedDomains() as $domain ) {
+		if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
+			$wgCentralAuthCookieDomain = '.' . $domain;
+			$wgMFStopRedirectCookieHost = '.' . $domain;
+			break;
+		} else {
+			$wgCentralAuthCookieDomain = '';
+			if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+				$host = parse_url( $wi->server, PHP_URL_HOST );
+				$wgMFStopRedirectCookieHost = $host !== false ? $host : null;
 
-			// Don't need a global here
-			unset( $host );
+				// Don't need a global here
+				unset( $host );
+			}
 		}
 	}
 }
