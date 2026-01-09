@@ -6758,8 +6758,7 @@ $wgConf->settings += [
 
 	// WebAuthn
 	'wgWebAuthnLimitPasskeysToRoaming' => [
-		// TODO set to true
-		'default' => false,
+		'default' => true,
 	],
 
 	// Wikibase
