@@ -43,6 +43,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 	$wgLoginNotifyUseCentralId = true;
+	$wgWebAuthnNewCredsDisabled = true;
 	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) =>
 		"https://{$wi->getSharedDomain()}/$dbname";
 
