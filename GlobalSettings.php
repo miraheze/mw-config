@@ -968,5 +968,5 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 // RecentChanges
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 
-//Disallow adding new WebAuthN keys (SUL3)
+// Disallow adding new WebAuthN keys (SUL3)
 $wgWebAuthnNewCredsDisabled = true;
