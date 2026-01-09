@@ -480,6 +480,10 @@ $wgConf->settings += [
 	'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
 		'default' => true,
 	],
+	'wgCentralAuthCentralWiki' => [
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	],
 	'wgCentralAuthCookies' => [
 		'default' => true,
 	],
@@ -502,6 +506,9 @@ $wgConf->settings += [
 		'beta' => 'metawikibeta',
 	],
 	'wgCentralAuthPreventUnattached' => [
+		'default' => true,
+	],
+	'wgCentralAuthRestrictSharedDomain' => [
 		'default' => true,
 	],
 	'wmgCentralAuthAutoLoginWikis' => [
