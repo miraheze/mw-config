@@ -513,7 +513,10 @@ $wgConf->settings += [
 	],
 	'wmgCentralAuthAutoLoginWikis' => [
 		'default' => [
-			'.miraheze.org' => 'metawiki'
+			'.miraheze.org' => 'metawiki',
+		],
+		'beta' => [
+			'.mirabeta.org' => 'metawikibeta',
 		],
 	],
 	'wgGlobalRenameDenylist' => [
