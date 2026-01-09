@@ -95,7 +95,9 @@ $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
 $wmgSharedDomainPathPrefix = '';
+
 $wgScriptPath = '/w';
+$wgLoadScript = "$wgScriptPath/load.php";
 
 if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'auth.mirabeta.org'
 	|| getenv( 'MW_USE_SHARED_DOMAIN' )
@@ -105,30 +107,22 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'auth.mirabeta.org'
 		exit( 1 );
 	}
 
-	$wgLoadScript = "{$wgConf->settings['wgServer'][$wi->dbname]}{$wgScriptPath}/load.php";
+	$wgLoadScript = "{$wi->server}$wgScriptPath/load.php";
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
 
 	$wgServer = '//' . 'auth.mirabeta.org';
 	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
-} else {
-	$wgLoadScript = "{$wgScriptPath}/load.php";
-}
 
-if ( $wmgSharedDomainPathPrefix ) {
 	$wgUseSiteCss = false;
 	$wgUseSiteJs = false;
-	$wgAllowUserCss = false;
-	$wgAllowUserJs = false;
 }
 
-$wgInternalServer = $wgCanonicalServer;
+$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
+$wgScript = "$wgScriptPath/index.php";
 
-$wgScriptPath  = "{$wmgSharedDomainPathPrefix}/w";
-$wgScript = "{$wgScriptPath}/index.php";
-
-$wgResourceBasePath = "{$wmgSharedDomainPathPrefix}/{$wi->version}/w";
-$wgExtensionAssetsPath = "{$wgResourceBasePath}/extensions";
-$wgStylePath = "{$wgResourceBasePath}/skins";
+$wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}/w";
+$wgExtensionAssetsPath = "$wgResourceBasePath/extensions";
+$wgStylePath = "$wgResourceBasePath/skins";
 $wgLocalStylePath = $wgStylePath;
 
 $wgConf->settings += [
@@ -7554,7 +7548,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 
 // To get varnish cache purging working, we convert to http://, as varnish
 // does not support purging https requests.
-$wgInternalServer = str_replace( 'https://', 'http://', $wgInternalServer );
+$wgInternalServer = str_replace( 'https://', 'http://', $wgCanonicalServer );
 
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
