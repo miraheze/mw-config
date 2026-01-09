@@ -110,7 +110,6 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 	$wgLoadScript = "{$wi->server}$wgScriptPath/load.php";
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
 
-	$wgServer = '//' . $wi->getSharedDomain();
 	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
 
 	$wgUseSiteCss = false;
@@ -7525,6 +7524,7 @@ extract( $globals );
 
 if ( $wmgSharedDomainPathPrefix ) {
 	$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
+	$wgServer = '//' . $wi->getSharedDomain();
 }
 
 $wi->loadExtensions();
