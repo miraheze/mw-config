@@ -109,7 +109,6 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === 'auth.mirabeta.org'
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
 
 	$wgServer = '//' . 'auth.mirabeta.org';
-	$wgConf->settings['wgCanonicalServer'][$wi->dbname] = $wgConf->settings['wgServer'][$wi->dbname];
 } else {
 	$wgLoadScript = "{$wgScriptPath}/load.php";
 }
