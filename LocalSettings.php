@@ -122,7 +122,6 @@ if ( $wmgSharedDomainPathPrefix ) {
 }
 
 $wgInternalServer = $wgCanonicalServer;
-$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
 
 $wgScriptPath  = "{$wmgSharedDomainPathPrefix}/w";
 $wgScript = "{$wgScriptPath}/index.php";
@@ -7521,6 +7520,10 @@ $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
+
+if ( $wmgSharedDomainPathPrefix ) {
+	$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
+}
 
 $wi->loadExtensions();
 
