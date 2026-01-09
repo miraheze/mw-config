@@ -43,11 +43,8 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 	$wgLoginNotifyUseCentralId = true;
-
-	$wgCentralAuthLoginWiki = 'loginwikibeta';
-	$wgCentralAuthCentralWiki = 'metawikibeta';
-	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) => "https://auth.mirabeta.org/$dbname";
-	$wgCentralAuthRestrictSharedDomain = true;
+	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) =>
+		"https://{$wi->getSharedDomain()}/$dbname";
 
 	if ( $wmgSharedDomainPathPrefix ) {
 		$wgCentralAuthCookieDomain = '';
