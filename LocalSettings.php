@@ -6757,13 +6757,9 @@ $wgConf->settings += [
 	],
 
 	// WebAuthn
-	'wgWebAuthnRelyingPartyName' => [
-		'default' => 'Miraheze',
-		'beta' => 'beta',
-	],
-	'wgWebAuthnRelyingPartyID' => [
-		'default' => 'miraheze.org',
-		'beta' => 'mirabeta.org',
+	'wgWebAuthnLimitPasskeysToRoaming' => [
+		// TODO set to true
+		'default' => false,
 	],
 
 	// Wikibase
