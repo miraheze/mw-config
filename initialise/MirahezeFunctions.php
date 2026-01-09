@@ -1120,6 +1120,7 @@ class MirahezeFunctions {
 			if (
 				!isset( $settings["+$global"] ) &&
 				$global !== 'wgArticlePath' &&
+				$global !== 'wgServer' &&
 				$global !== 'wgManageWikiPermissionsAdditionalRights'
 			) {
 				$GLOBALS[$global] = $value;
