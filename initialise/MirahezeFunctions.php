@@ -74,6 +74,11 @@ class MirahezeFunctions {
 		'wikibeta' => self::ALLOWED_DOMAINS['beta'],
 	];
 
+	private const SUL3_AUTH_SERVER = [
+		'default' => 'auth.miraheze.org',
+		'beta' => 'auth.mirabeta.org',
+	];
+
 	public function __construct() {
 		self::setupSiteConfiguration();
 		$this->dbname = self::getCurrentDatabase();
@@ -280,7 +285,7 @@ class MirahezeFunctions {
 		}
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
-		if ( $hostname === 'auth.wikitide.org' || $hostname === 'auth.mirabeta.org' ) {
+		if ( $hostname === 'auth.miraheze.org' || $hostname === 'auth.mirabeta.org' ) {
 			$requestUri = $_SERVER['REQUEST_URI'];
 			$pathBits = explode( '/', $requestUri, 3 );
 			if ( count( $pathBits ) < 3 ) {
@@ -382,6 +387,10 @@ class MirahezeFunctions {
 		$realm ??= self::getRealm( $database );
 
 		return self::DEFAULT_SERVER[$realm];
+	}
+
+	public function getSUL3AuthServer(): string {
+		return self::SUL3_AUTH_SERVER[$this->realm];
 	}
 
 	public static function getServer(): string {
