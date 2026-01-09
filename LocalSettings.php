@@ -121,6 +121,7 @@ if ( $wmgSharedDomainPathPrefix ) {
 	$wgAllowUserJs = false;
 }
 
+$wgInternalServer = $wgCanonicalServer;
 $wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
 
 $wgScriptPath  = "{$wmgSharedDomainPathPrefix}/w";
@@ -7518,10 +7519,6 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
-if ( $wmgSharedDomainPathPrefix !== '' ) {
-	$wgCanonicalServer = 'https://' . 'auth.mirabeta.org';
-}
-
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -7551,7 +7548,7 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 
 // To get varnish cache purging working, we convert to http://, as varnish
 // does not support purging https requests.
-$wgInternalServer = str_replace( 'https://', 'http://', $wgCanonicalServer );
+$wgInternalServer = str_replace( 'https://', 'http://', $wgInternalServer );
 
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
