@@ -920,6 +920,7 @@ $wgConf->settings += [
 			'logging',
 			'monitoring',
 			'analytics',
+			'auth',
 			'csw(\d+)?',
 			'matomo(\d+)?',
 			'prometheus(\d+)?',
