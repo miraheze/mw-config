@@ -51,6 +51,11 @@ class MirahezeFunctions {
 		'beta' => 'mirabeta.org',
 	];
 
+	private const SHARED_DOMAIN = [
+		'default' => 'auth.miraheze.org',
+		'beta' => 'auth.mirabeta.org',
+	];
+
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
 		'beta' => 'testglobal',
@@ -72,11 +77,6 @@ class MirahezeFunctions {
 	public const SUFFIXES = [
 		'wiki' => self::ALLOWED_DOMAINS['default'],
 		'wikibeta' => self::ALLOWED_DOMAINS['beta'],
-	];
-
-	private const SUL3_AUTH_SERVER = [
-		'default' => 'auth.miraheze.org',
-		'beta' => 'auth.mirabeta.org',
 	];
 
 	public function __construct() {
@@ -382,15 +382,15 @@ class MirahezeFunctions {
 		return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
 	}
 
+	public function getSharedDomain(): string {
+		return self::SHARED_DOMAIN[$this->realm];
+	}
+
 	public static function getDefaultServer( ?string $database = null ): string {
 		static $realm = null;
 		$realm ??= self::getRealm( $database );
 
 		return self::DEFAULT_SERVER[$realm];
-	}
-
-	public function getSUL3AuthServer(): string {
-		return self::SUL3_AUTH_SERVER[$this->realm];
 	}
 
 	public static function getServer(): string {
