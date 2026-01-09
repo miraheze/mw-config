@@ -1117,11 +1117,6 @@ class MirahezeFunctions {
 			}
 		}
 
-		/*global $wgArticlePath, $wmgSharedDomainPathPrefix;
-		if ( $wmgSharedDomainPathPrefix !== '' ) {
-			$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
-		}*/
-
 		// Don't need a global here
 		unset( $GLOBALS['globals'] );
 	}
