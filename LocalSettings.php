@@ -120,7 +120,7 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 $wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
 $wgScript = "$wgScriptPath/index.php";
 
-$wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}/w";
+$wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}";
 $wgExtensionAssetsPath = "$wgResourceBasePath/extensions";
 $wgStylePath = "$wgResourceBasePath/skins";
 $wgLocalStylePath = $wgStylePath;
