@@ -948,7 +948,7 @@ $wgMathUseInternalRestbasePath = false;
 
 // ConfirmEdit (hCaptcha)
 // Needed as the server uses ipv4 only.
-$wgHCaptchaProxy = 'http://bastion.fsslc.wtnet:8080';
+$wgHCaptchaProxy = "http://$wmgMirahezeBastionServer:8080";
 $wgCaptchaClass = HCaptcha::class;
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgCaptchaRegexes[] = '/<a +href/i';
