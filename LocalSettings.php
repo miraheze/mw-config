@@ -74,6 +74,11 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 	unset( $xhprofFlags );
 }
 
+$bastionServers = [ '10.0.16.127', '10.0.18.101' ];
+$wmgMirahezeBastionServer = $servers[ array_rand( $servers ) ];
+
+unset( $bastionServers );
+
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [];
 
