@@ -1997,7 +1997,7 @@ $wgManageWikiSettings = [
 		'section' => 'parserfunctions',
 		'requires' => [],
 	],
-        
+
 	// Media/File
 	'wgEnableUploads' => [
 		'name' => 'Enable File Uploads',
