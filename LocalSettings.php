@@ -108,11 +108,11 @@ $wgConf->settings += [
 		'default' => [ 'bureaucrat', 'checkuser', 'interface-admin', 'suppress', 'sysop' ],
 		'+metawiki' => [ 'steward', 'techteam' ],
 	],
-    	
+
 	'wgParserEnableUserLanguage' => [
 		'default' => false,
 	],
-    	
+
 	// 3D
 	'wg3dProcessor' => [
 		'ext-3d' => [
