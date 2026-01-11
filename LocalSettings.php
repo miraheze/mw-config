@@ -2456,7 +2456,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgQuickInstantCommonsPrefetchMaxLimit' => [
-		'default' => 500,
+		'default' => 1000,
 	],
 	'wgMaxImageArea' => [
 		'default' => 10e7,
