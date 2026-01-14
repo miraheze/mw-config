@@ -41,7 +41,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								Miraheze will be conducting maintenance on our file storage servers on 15 January 2026 from 20:00 to 23:00 UTC. During that time, files may be intermittently unavailable and you may be unable to upload or delete files.
+								Miraheze will be conducting maintenance on file storage servers on January 15, 2026 from 20:00 to 23:00 UTC. During that time, files may be intermittently unavailable and you may be unable to upload or delete files.
 							</div>
 						</td>
 					</tr>
