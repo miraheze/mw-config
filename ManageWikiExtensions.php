@@ -473,11 +473,6 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
 		'conflicts' => 'dynamicpagelist',
 		'requires' => [],
-		'install' => [
-			'mwscript' => [
-				CreateView::class => [],
-			],
-		],
 		'section' => 'parserhooks',
 	],
 	'embedspotify' => [
