@@ -36,7 +36,6 @@
 use CirrusSearch\Maintenance\ForceSearchIndex;
 use CirrusSearch\Maintenance\UpdateSearchIndexConfig;
 use Flow\Maintenance\FlowCreateTemplates;
-use MediaWiki\Extension\DynamicPageList4\Maintenance\CreateView;
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
 
