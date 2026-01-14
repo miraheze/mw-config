@@ -927,7 +927,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.19.149:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01,
 ];
