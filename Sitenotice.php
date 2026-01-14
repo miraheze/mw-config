@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 91;
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
 
-/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -34,14 +34,14 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 						<td rowspan=2><div style="float: left;"><img alt="Server maintenance" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/OOjs_UI_icon_desktop.svg" decoding="async" width="40" height="40"></div></td>
 						<td>
 							<div style="font-weight: bold; color: black;">
-								Server maintenance ongoing
+								Server maintenance
 							</div>
 						</td>
 					</tr>
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								Miraheze is currently conducting server maintenance until 16:00 UTC. During this time, some images may fail to load. Editing remains unaffected.
+								Miraheze will be conducting maintenance on our file storage servers on 15 January 2026 from 20:00 to 23:00 UTC. During that time, files may be intermittently unavailable and you may be unable to upload or delete files.
 							</div>
 						</td>
 					</tr>
@@ -49,7 +49,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-} */
+}
 
 // }
 
