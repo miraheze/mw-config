@@ -149,7 +149,7 @@ $wgMicroStashType = 'mcrouter-primary-dc';
 
 $wgObjectCaches['redis-session'] = [
 	'class' => RedisBagOStuff::class,
-	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.19.149:6379' ],
 	'password' => $wmgRedisPassword,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
