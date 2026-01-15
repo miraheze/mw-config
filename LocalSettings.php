@@ -111,7 +111,6 @@ $wgConf->settings += [
 
 	'wgParserEnableUserLanguage' => [
 		'default' => false,
-		'utgwiki' => true,
 	],
 
 	// 3D
