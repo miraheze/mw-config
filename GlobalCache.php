@@ -8,7 +8,12 @@ use Wikimedia\ObjectCache\RedisBagOStuff;
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
-if ( !$wi->isBeta() ) {
+if ( $wi->isBeta() ) {
+	$wgManageWikiServers = [
+		/** test151 */
+		'10.0.15.118:443'
+	];
+} else {
 	$wgCdnServers = [
 		/** cp161 */
 		'10.0.16.137:81',
