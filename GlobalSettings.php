@@ -970,3 +970,10 @@ $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 
 // Disallow adding new WebAuthN keys (SUL3)
 $wgWebAuthnNewCredsDisabled = true;
+
+// Disble import requests and uploads (maintenance)
+$wgSpecialPages['RequestImport'] = MediaWiki\SpecialPage\DisabledSpecialPage::getCallback( 'RequestImport', 'RequestImport is temporarily unavailable. Please try again later.' );
+$wgSpecialPages['RequestImportQueue'] = MediaWiki\SpecialPage\DisabledSpecialPage::getCallback( 'RequestImportQueue', 'RequestImport is temporarily unavailable. Please try again later.' );
+$wgRevokePermissions['*']['upload'] = true;
+$wgRevokePermissions['*']['movefile'] = true;
+$wgUploadMaintenance = true;
