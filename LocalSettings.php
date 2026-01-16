@@ -1265,6 +1265,9 @@ $wgConf->settings += [
 			],
 		],
 		'ldapwikiwiki' => [
+			'virtual-interwiki' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-LoginNotify' => [
 				'db' => 'ldapwikiwiki',
 			],
