@@ -8,7 +8,12 @@ use Wikimedia\ObjectCache\RedisBagOStuff;
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
-if ( !$wi->isBeta() ) {
+if ( $wi->isBeta() ) {
+	$wgManageWikiServers = [
+		/** test151 */
+		'10.0.15.118:443'
+	];
+} else {
 	$wgCdnServers = [
 		/** cp161 */
 		'10.0.16.137:81',
@@ -149,7 +154,7 @@ $wgMicroStashType = 'mcrouter-primary-dc';
 
 $wgObjectCaches['redis-session'] = [
 	'class' => RedisBagOStuff::class,
-	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.19.149:6379' ],
 	'password' => $wmgRedisPassword,
 	'loggroup' => 'redis',
 	'reportDupes' => false,

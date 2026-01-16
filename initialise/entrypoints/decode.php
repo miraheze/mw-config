@@ -19,7 +19,12 @@ $redirectUrl = ( $articlePath !== '' ? $articlePath : '/' ) . $decodedUri;
 // T13127: $decodedUri can be empty (e.g. /w/index.php?any=query), so append /
 // if that is the case in order to prevent a redirect at best, and the query
 // parameters being ignored in the redirect if worse.
-if ( $decodedUri === '' ) {
+
+// (no task due to laziness): However, if $wgArticlePath is '/$1', this would lead
+// $redirectUrl to be '/'. If $redirectUrl has '/' appended (and thus become '//'),
+// then browsers would refuse to resolve the redirect. Therefore, do not append a
+// slash if $redirectUrl is only a '/'.
+if ( $decodedUri === '' && $redirectUrl !== '/' ) {
 	$redirectUrl .= '/';
 }
 

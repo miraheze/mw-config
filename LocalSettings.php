@@ -443,6 +443,7 @@ $wgConf->settings += [
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
 		'historikawiki' => 'uca-cs',
+		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
@@ -1305,6 +1306,9 @@ $wgConf->settings += [
 			],
 		],
 		'ldapwikiwiki' => [
+			'virtual-interwiki' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-LoginNotify' => [
 				'db' => 'ldapwikiwiki',
 			],
@@ -2497,7 +2501,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgQuickInstantCommonsPrefetchMaxLimit' => [
-		'default' => 500,
+		'default' => 1000,
 	],
 	'wgMaxImageArea' => [
 		'default' => 10e7,
@@ -2610,6 +2614,15 @@ $wgConf->settings += [
 			'showBytes' => true,
 			'showDimensions' => true,
 			'mode' => 'packed',
+		],
+		'pilgrammedwiki' => [
+			'imagesPerRow' => 0,
+			'imageWidth' => 180,
+			'imageHeight' => 180,
+			'captionLength' => true,
+			'showBytes' => true,
+			'showDimensions' => true,
+			'mode' => 'traditional',
 		],
 		'rippaversewiki' => [
 			'imagesPerRow' => 0,
@@ -4906,17 +4919,6 @@ $wgConf->settings += [
 	],
 
 	// Page Images
-	'wgPageImagesNamespaces' => [
-		'default' => [
-			NS_MAIN,
-		],
-		'+giannawiki' => [
-			3000
-		],
-		'+gpcommonswiki' => [
-			NS_CATEGORY,
-		],
-	],
 	'wgPageImagesDenylist' => [
 		'ext-PageImages' => [
 			[
@@ -4928,9 +4930,6 @@ $wgConf->settings += [
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
-		'gratispaideiawiki' => true,
-		'gratisdatawiki' => true,
-		'gpcommonswiki' => true,
 	],
 	'wgPageImagesLeadSectionOnly' => [
 		'default' => false,
