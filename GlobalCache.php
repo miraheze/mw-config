@@ -221,6 +221,7 @@ $wgObjectCacheSessionExpiry = 86400;
 $wgDLPMaxCacheTime = 604800;
 
 $wgDLPQueryCacheTime = 120;
+$wgDplSettings['alwaysCacheResults'] = true;
 $wgDplSettings['queryCacheTime'] = 120;
 
 $wgSearchSuggestCacheExpiry = 10800;
