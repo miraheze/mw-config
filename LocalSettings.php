@@ -1272,6 +1272,9 @@ $wgConf->settings += [
 			'virtual-globalnewfiles' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-globalusage' => [
+				'db' => 'commonswiki',
+			],
 			'virtual-importdump' => [
 				'db' => $wi->getCentralDatabase(),
 			],
@@ -1297,14 +1300,6 @@ $wgConf->settings += [
 				'db' => $wi->getCentralDatabase(),
 			],
 		],
-		'+beta' => [
-			'virtual-botpasswords' => [
-				'db' => 'metawikibeta',
-			],
-			'virtual-globaljsonlinks' => [
-				'db' => 'commonswikibeta',
-			],
-		],
 		'ldapwikiwiki' => [
 			'virtual-interwiki' => [
 				'db' => $wi->getCentralDatabase(),
@@ -1314,6 +1309,17 @@ $wgConf->settings += [
 			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
+			],
+		],
+		'+beta' => [
+			'virtual-botpasswords' => [
+				'db' => 'metawikibeta',
+			],
+			'virtual-globaljsonlinks' => [
+				'db' => 'commonswikibeta',
+			],
+			'virtual-globalusage' => [
+				'db' => 'commonswikibeta',
 			],
 		],
 	],
