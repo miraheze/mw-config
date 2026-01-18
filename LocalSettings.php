@@ -74,6 +74,11 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 	unset( $xhprofFlags );
 }
 
+$bastionServers = [ '10.0.16.127', '10.0.18.101' ];
+$wmgMirahezeBastionServer = $servers[ array_rand( $servers ) ];
+
+unset( $bastionServers );
+
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenance = [];
 
@@ -89,7 +94,7 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
-$wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
+$wmgHTTPProxy = "http://$wmgMirahezeBastionServer:8080";
 
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
@@ -6402,7 +6407,7 @@ $wgConf->settings += [
 		]
 	],
 	'wgTorBlockProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080'
+		'default' => "http://$wmgMirahezeBastionServer:8080"
 	],
 	'wgTorTagChanges' => [
 		'default' => false
