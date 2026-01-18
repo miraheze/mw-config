@@ -2426,6 +2426,7 @@ $wgConf->settings += [
 	// Files
 	'wgEnableUploads' => [
 		'default' => true,
+		'removededmsongswiki' => false,
 	],
 	'wgEnableAsyncUploads' => [
 		'default' => true,
