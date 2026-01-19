@@ -2920,6 +2920,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'renderblocking' => [
+		'name' => 'RenderBlocking',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RenderBlocking',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'revisionslider' => [
 		'name' => 'RevisionSlider',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RevisionSlider',

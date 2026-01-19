@@ -5376,6 +5376,11 @@ $wgConf->settings += [
 		'default' => 7,
 	],
 
+	// RenderBlocking
+	'wgRenderBlockingInlineAssets' => [
+		'default' => false,
+	],
+
 	// ReportIncident
 	'wgReportIncidentAdministratorsPage' => [
 		'default' => 'meta:Trust_and_Safety',
