@@ -970,8 +970,3 @@ $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 
 // Disallow adding new WebAuthN keys (SUL3)
 $wgWebAuthnNewCredsDisabled = true;
-
-// Disallow wiki creations for maintenance
-$wgCreateWikiOpenAIConfig['dryrun'] = true;
-$wgRevokePermissions['*']['createwiki'] = true;
-$wgRevokePermissions['*']['requestwiki'] = true;
