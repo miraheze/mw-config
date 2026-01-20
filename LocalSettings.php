@@ -1629,6 +1629,10 @@ $wgConf->settings += [
 	],
 
 	// EmbedVideo
+	'wgEmbedVideoAddFileExtensions' => [
+		'default' => true,
+		'removededmsongswiki' => false,
+	],
 	'wgEmbedVideoEnableVideoHandler' => [
 		'default' => true,
 	],
