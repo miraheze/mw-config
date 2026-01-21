@@ -3966,6 +3966,14 @@ $wgConf->settings += [
 				'editor' => true,
 			],
 		],
+		'+tikipediawiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'sysop' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
@@ -5618,6 +5626,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
+		'+tikipediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
@@ -5749,6 +5760,9 @@ $wgConf->settings += [
 		'testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'tikipediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'ultimatelevelbuilderwiki' => [
 			'editemailconfirmedprotected',
