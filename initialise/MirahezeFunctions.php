@@ -169,7 +169,7 @@ class MirahezeFunctions {
 						MW_ENTRY_POINT !== 'cli' &&
 						in_array( $data['c'] ?? null, $wgDatabaseClustersMaintenance, true )
 					) {
-						require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/databaseMaintenance.php';
+						require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/DatabaseMaintenance.php';
 					}
 
 					return true;
