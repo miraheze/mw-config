@@ -2777,7 +2777,7 @@ $wgConf->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
-		'pilgrammed' => [
+		'pilgrammedwiki' => [
 			"Melee_Weapons" => 'c-Melee_Weapons',
 			"Mage_Weapons" => 'c-Mage_Weapons',
 			"Bows" => 'c-Bows',
