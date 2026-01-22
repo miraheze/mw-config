@@ -151,6 +151,14 @@ switch ( $wi->dbname ) {
 		$wgVectorNightMode['logged_out'] = true;
 
 		break;
+	case 'emiliabearwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
