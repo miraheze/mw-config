@@ -2777,6 +2777,15 @@ $wgConf->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
+		'pilgrammedwiki' => [
+			'Melee_Weapons' => 'c-Melee_Weapons',
+			'Mage_Weapons' => 'c-Mage_Weapons',
+			'Bows' => 'c-Bows',
+			'Guns' => 'c-Guns',
+			'Bosses' => 'c-Bosses',
+			'Materials' => 'c-Materials',
+			'Quests' => 'c-Quests',
+		],
 	],
 
 	// ImageMagick
