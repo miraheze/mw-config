@@ -3740,6 +3740,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'cologneblue' => [
+		'name' => 'Cologne Blue',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cologne_Blue',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'cosmos' => [
 		'name' => 'Cosmos',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
@@ -3827,6 +3834,13 @@ $wgManageWikiExtensions = [
 	'mirage' => [
 		'name' => 'Mirage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'modern' => [
+		'name' => 'Modern',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Modern',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
