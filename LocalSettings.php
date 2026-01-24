@@ -2983,7 +2983,6 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000',
-			'Original Authority',
 			'Reception123',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
@@ -2992,7 +2991,6 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
 			'MacFan4000',
-			'Original Authority',
 			'Reception123',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
