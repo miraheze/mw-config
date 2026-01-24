@@ -5631,6 +5631,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
+		'+tikipediawiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
@@ -5762,6 +5765,9 @@ $wgConf->settings += [
 		'testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'tikipediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'ultimatelevelbuilderwiki' => [
 			'editemailconfirmedprotected',
