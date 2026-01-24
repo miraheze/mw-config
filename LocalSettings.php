@@ -3966,14 +3966,6 @@ $wgConf->settings += [
 				'editor' => true,
 			],
 		],
-		'+tikipediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-			'sysop' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
