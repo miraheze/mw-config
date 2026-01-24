@@ -4420,6 +4420,8 @@ $wgConf->settings += [
 				542825,
 				/** Skye (Technology team) */
 				583331,
+				/** PetraMagna (Technology team) */
+				431929,
 			],
 		],
 	],
