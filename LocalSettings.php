@@ -2777,6 +2777,15 @@ $wgConf->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
+		'pilgrammedwiki' => [
+			'Melee_Weapons' => 'c-Melee_Weapons',
+			'Mage_Weapons' => 'c-Mage_Weapons',
+			'Bows' => 'c-Bows',
+			'Guns' => 'c-Guns',
+			'Bosses' => 'c-Bosses',
+			'Materials' => 'c-Materials',
+			'Quests' => 'c-Quests',
+		],
 	],
 
 	// ImageMagick
@@ -3525,9 +3534,13 @@ $wgConf->settings += [
 			'citethispage',
 			'codeeditor',
 			'codemirror',
+			// T14325: added here after being removed from global skins
+			'cologneblue',
 			'globaluserpage',
 			'minervaneue',
 			'mobilefrontend',
+			// T14325: added here after being removed from global skins
+			'modern',
 			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
