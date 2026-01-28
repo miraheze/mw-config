@@ -1144,6 +1144,9 @@ $wgConf->settings += [
 	'wgRequestWikiConfirmAgreement' => [
 		'default' => true,
 	],
+	'wgCreateWikiTrackDatabaseListMetrics' => [
+		'default' => true,
+	],
 
 	// CookieWarning
 	'wgCookieWarningMoreUrl' => [
