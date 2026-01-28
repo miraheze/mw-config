@@ -5595,6 +5595,9 @@ $wgConf->settings += [
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'+mcsosirswiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+metawiki' => [
 			'editautopatrolprotected',
 		],
@@ -5734,6 +5737,9 @@ $wgConf->settings += [
 		],
 		'knightnwiki' => [
 			'editextendedsemiprotected',
+		],
+		'mcsosirswiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'metawiki' => [
 			'editautopatrolprotected',
