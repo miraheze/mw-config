@@ -5348,6 +5348,12 @@ $wgConf->settings += [
 				'user' => [ 1, 259200 ],
 			],
 		],
+		'loginwiki' => [
+			'edit' => [
+				'ip-all' => [ 5, 3600 ],
+				'user' => [ 5, 3600 ],
+			],
+		],
 	],
 
 	// RatePage
