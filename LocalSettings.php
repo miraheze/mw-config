@@ -120,6 +120,12 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 	$wgUseSiteJs = false;
 
 	$wgCSPHeader = [
+		'script-src' => [
+			'*.miraheze.org',
+			'*.wikitide.org',
+			'*.wikitide.net',
+			str_replace( 'https://', '', $wi->server ),
+		],
 		'default-src' => [
 			'*.miraheze.org',
 			'*.wikitide.org',
@@ -7578,6 +7584,9 @@ extract( $globals );
 if ( $wmgSharedDomainPathPrefix ) {
 	$wgArticlePath = $wmgSharedDomainPathPrefix . $wgArticlePath;
 	$wgServer = '//' . $wi->getSharedDomain();
+
+	$wgAllowUserCss = false;
+	$wgAllowUserJs = false;
 }
 
 $wi->loadExtensions();
