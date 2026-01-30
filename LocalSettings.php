@@ -75,6 +75,7 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 }
 
 // Show custom database maintenance error page on these clusters.
+$wgDatabaseClustersMaintenanceType = 'unscheduled';
 $wgDatabaseClustersMaintenance = [];
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
@@ -2817,6 +2818,15 @@ $wgConf->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
+		'pilgrammedwiki' => [
+			'Melee_Weapons' => 'c-Melee_Weapons',
+			'Mage_Weapons' => 'c-Mage_Weapons',
+			'Bows' => 'c-Bows',
+			'Guns' => 'c-Guns',
+			'Bosses' => 'c-Bosses',
+			'Materials' => 'c-Materials',
+			'Quests' => 'c-Quests',
+		],
 	],
 
 	// ImageMagick
@@ -3014,7 +3024,6 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000',
-			'Original Authority',
 			'Reception123',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
@@ -3023,7 +3032,6 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
 			'MacFan4000',
-			'Original Authority',
 			'Reception123',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
@@ -3565,9 +3573,13 @@ $wgConf->settings += [
 			'citethispage',
 			'codeeditor',
 			'codemirror',
+			// T14325: added here after being removed from global skins
+			'cologneblue',
 			'globaluserpage',
 			'minervaneue',
 			'mobilefrontend',
+			// T14325: added here after being removed from global skins
+			'modern',
 			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
@@ -4447,6 +4459,8 @@ $wgConf->settings += [
 				542825,
 				/** Skye (Technology team) */
 				583331,
+				/** PetraMagna (Technology team) */
+				431929,
 			],
 		],
 	],
@@ -5375,6 +5389,12 @@ $wgConf->settings += [
 				'user' => [ 1, 259200 ],
 			],
 		],
+		'loginwiki' => [
+			'edit' => [
+				'ip-all' => [ 5, 3600 ],
+				'user' => [ 5, 3600 ],
+			],
+		],
 	],
 
 	// RatePage
@@ -5415,6 +5435,11 @@ $wgConf->settings += [
 	],
 	'wmgDefaultRecentChangesDays' => [
 		'default' => 7,
+	],
+
+	// RenderBlocking
+	'wgRenderBlockingInlineAssets' => [
+		'default' => false,
 	],
 
 	// ReportIncident
@@ -5605,6 +5630,9 @@ $wgConf->settings += [
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'+mcsosirswiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+metawiki' => [
 			'editautopatrolprotected',
 		],
@@ -5645,6 +5673,9 @@ $wgConf->settings += [
 		'+testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'+tikipediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+trwdeploymentwiki' => [
 			'bureaucrat',
@@ -5742,6 +5773,9 @@ $wgConf->settings += [
 		'knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'mcsosirswiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'metawiki' => [
 			'editautopatrolprotected',
 		],
@@ -5777,6 +5811,9 @@ $wgConf->settings += [
 		'testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'tikipediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'ultimatelevelbuilderwiki' => [
 			'editemailconfirmedprotected',

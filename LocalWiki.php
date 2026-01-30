@@ -151,6 +151,14 @@ switch ( $wi->dbname ) {
 		$wgVectorNightMode['logged_out'] = true;
 
 		break;
+	case 'emiliabearwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'famedatawiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -527,10 +535,10 @@ switch ( $wi->dbname ) {
 						'label-message' => 'contactpage-requestaccount-selectissue',
 						'type' => 'radio',
 						'options-messages' => [
+							'version-other' => 'other',
 							'contactpage-requestaccount-selectissue-abusefilterissue' => 'abusefilter',
 							'contactpage-requestaccount-selectissue-recaptchaissues' => 'captcha',
 							'contactpage-requestaccount-selectissue-globalblock' => 'globalblock',
-							'version-other' => 'other',
 						],
 						'help-message' => 'contactpage-requestaccount-selectissue-help',
 						'required' => true,
@@ -588,7 +596,7 @@ switch ( $wi->dbname ) {
 						'label-message' => 'contactpage-requestaccount-otherdetails',
 						'type' => 'textarea',
 						'help-message' => 'contactpage-requestaccount-otherdetails-help',
-						'required' => false,
+						'required' => true,
 					],
 				],
 				'DisplayFormat' => 'raw',

@@ -648,8 +648,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 		'Tabular.JsonConfig' => [
 			'namespace' => 486,
 			'nsName' => 'Data',
-			// page name must end in ".tab", and contain at least one symbol
-			'pattern' => '/.\.tab$/',
+			// page name must end in ".tab" or ".tabx", and contain at least one symbol
+			'pattern' => '/.\.tab|x$/',
 			'license' => 'CC-BY-SA 4.0',
 			'isLocal' => false,
 		],
@@ -657,7 +657,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 
 	if ( $wgDBname !== 'commonswiki' &&
 		$wgDBname !== 'gpcommonswiki' &&
-		$wgDBname !== 'needforspeedwiki'
+		$wgDBname !== 'needforspeedwiki' &&
+		$wgDBname !== 'emiliabearwiki'
 	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.miraheze.org/w/api.php'
