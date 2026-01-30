@@ -7567,7 +7567,7 @@ $globals = MirahezeFunctions::getConfigGlobals();
 extract( $globals );
 
 if ( $wmgSharedDomainPathPrefix ) {
-	$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
+	$wgArticlePath = $wmgSharedDomainPathPrefix . $wgArticlePath;
 	$wgServer = '//' . $wi->getSharedDomain();
 }
 
