@@ -51,6 +51,11 @@ class MirahezeFunctions {
 		'beta' => 'mirabeta.org',
 	];
 
+	private const SHARED_DOMAIN = [
+		'default' => 'auth.miraheze.org',
+		'beta' => 'auth.mirabeta.org',
+	];
+
 	private const GLOBAL_DATABASE = [
 		'default' => 'mhglobal',
 		'beta' => 'testglobal',
@@ -169,7 +174,7 @@ class MirahezeFunctions {
 						MW_ENTRY_POINT !== 'cli' &&
 						in_array( $data['c'] ?? null, $wgDatabaseClustersMaintenance, true )
 					) {
-						require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/databaseMaintenance.php';
+						require_once self::MEDIAWIKI_DIRECTORY . 'ErrorPages/DatabaseMaintenance.php';
 					}
 
 					return true;
@@ -280,6 +285,17 @@ class MirahezeFunctions {
 		}
 
 		$hostname = $_SERVER['HTTP_HOST'] ?? 'undefined';
+		if ( $hostname === 'auth.miraheze.org' || $hostname === 'auth.mirabeta.org' ) {
+			$requestUri = $_SERVER['REQUEST_URI'];
+			$pathBits = explode( '/', $requestUri, 3 );
+			if ( count( $pathBits ) < 3 ) {
+				trigger_error( "Invalid request URI (requestUri=" . $requestUri . "), can't determine language.\n", E_USER_ERROR );
+				exit( 1 );
+			}
+			[ , $dbname, ] = $pathBits;
+			// No validation of $dbname at this point - if it's invalid, an error will be produced
+			return $dbname;
+		}
 
 		static $database = null;
 		$database ??= self::readDbListFile( 'databases', true, 'https://' . $hostname, true );
@@ -364,6 +380,10 @@ class MirahezeFunctions {
 	public static function getPrimaryDomain( string $database ): string {
 		$primaryDomain = self::readDbListFile( 'databases', false, $database )['d'] ?? null;
 		return $primaryDomain ?? self::DEFAULT_SERVER[self::getRealm( $database )];
+	}
+
+	public function getSharedDomain(): string {
+		return self::SHARED_DOMAIN[$this->realm];
 	}
 
 	public static function getDefaultServer( ?string $database = null ): string {
@@ -1099,6 +1119,8 @@ class MirahezeFunctions {
 		foreach ( $GLOBALS['globals'] as $global => $value ) {
 			if (
 				!isset( $settings["+$global"] ) &&
+				$global !== 'wgArticlePath' &&
+				$global !== 'wgServer' &&
 				$global !== 'wgManageWikiPermissionsAdditionalRights'
 			) {
 				$GLOBALS[$global] = $value;
