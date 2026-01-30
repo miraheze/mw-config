@@ -5632,6 +5632,8 @@ $wgConf->settings += [
 		],
 		'+mcsosirswiki' => [
 			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'+metawiki' => [
 			'editautopatrolprotected',
@@ -5775,6 +5777,8 @@ $wgConf->settings += [
 		],
 		'mcsosirswiki' => [
 			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'metawiki' => [
 			'editautopatrolprotected',
