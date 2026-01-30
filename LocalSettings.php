@@ -95,10 +95,40 @@ $wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
+$wmgSharedDomainPathPrefix = '';
+
+$wgScriptPath = '/w';
+$wgLoadScript = "$wgScriptPath/load.php";
+
+if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
+	|| getenv( 'MW_USE_SHARED_DOMAIN' )
+) {
+	if ( $wi->dbname === 'ldapwikiwiki' ) {
+		print "Can only be used for SUL wikis\n";
+		exit( 1 );
+	}
+
+	$wgLoadScript = "{$wi->server}$wgScriptPath/load.php";
+	$wmgSharedDomainPathPrefix = "/$wgDBname";
+
+	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
+
+	$wgUseSiteCss = false;
+	$wgUseSiteJs = false;
+}
+
+$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
+$wgScript = "$wgScriptPath/index.php";
+
+$wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}";
+$wgExtensionAssetsPath = "$wgResourceBasePath/extensions";
+$wgStylePath = "$wgResourceBasePath/skins";
+$wgLocalStylePath = $wgStylePath;
+
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
-		'default' => '10',
+		'default' => '11',
 	],
 
 	'wgEnableEditRecovery' => [
@@ -451,6 +481,10 @@ $wgConf->settings += [
 	'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
 		'default' => true,
 	],
+	'wgCentralAuthCentralWiki' => [
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	],
 	'wgCentralAuthCookies' => [
 		'default' => true,
 	],
@@ -475,9 +509,15 @@ $wgConf->settings += [
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
 	],
+	'wgCentralAuthRestrictSharedDomain' => [
+		'default' => true,
+	],
 	'wmgCentralAuthAutoLoginWikis' => [
 		'default' => [
-			'.miraheze.org' => 'metawiki'
+			'.miraheze.org' => 'metawiki',
+		],
+		'beta' => [
+			'.mirabeta.org' => 'metawikibeta',
 		],
 	],
 	'wgGlobalRenameDenylist' => [
@@ -881,6 +921,7 @@ $wgConf->settings += [
 			'logging',
 			'monitoring',
 			'analytics',
+			'auth',
 			'csw(\d+)?',
 			'matomo(\d+)?',
 			'prometheus(\d+)?',
@@ -5416,20 +5457,8 @@ $wgConf->settings += [
 	],
 
 	// Resources
-	'wgExtensionAssetsPath' => [
-		'default' => '/' . $wi->version . '/extensions',
-	],
-	'wgLocalStylePath' => [
-		'default' => '/' . $wi->version . '/skins',
-	],
-	'wgResourceBasePath' => [
-		'default' => '/' . $wi->version,
-	],
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
-	],
-	'wgStylePath' => [
-		'default' => '/' . $wi->version . '/skins',
 	],
 
 	// RelatedArticles
@@ -5952,9 +5981,6 @@ $wgConf->settings += [
 	],
 	'wgDisableOutputCompression' => [
 		'default' => true,
-	],
-	'wgScriptPath' => [
-		'default' => '/w',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
@@ -6777,13 +6803,8 @@ $wgConf->settings += [
 	],
 
 	// WebAuthn
-	'wgWebAuthnRelyingPartyName' => [
-		'default' => 'Miraheze',
-		'beta' => 'beta',
-	],
-	'wgWebAuthnRelyingPartyID' => [
-		'default' => 'miraheze.org',
-		'beta' => 'mirabeta.org',
+	'wgWebAuthnLimitPasskeysToRoaming' => [
+		'default' => true,
 	],
 
 	// Wikibase
@@ -7542,6 +7563,11 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
+if ( $wmgSharedDomainPathPrefix ) {
+	$wgArticlePath = "{$wmgSharedDomainPathPrefix}/wiki/\$1";
+	$wgServer = '//' . $wi->getSharedDomain();
+}
+
 $wi->loadExtensions();
 
 require_once __DIR__ . '/ManageWikiNamespaces.php';
@@ -7569,9 +7595,9 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-// we set $wgInternalServer to $wgServer to get varnish cache purging working
-// we convert $wgServer to http://, as varnish does not support purging https requests
-$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+// To get varnish cache purging working, we convert to http://, as varnish
+// does not support purging https requests.
+$wgInternalServer = str_replace( 'https://', 'http://', $wgCanonicalServer );
 
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
