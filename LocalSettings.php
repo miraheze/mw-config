@@ -118,6 +118,15 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 
 	$wgUseSiteCss = false;
 	$wgUseSiteJs = false;
+
+	$wgCSPHeader = [
+		'default-src' => [
+			'*.miraheze.org',
+			'*.wikitide.org',
+			'*.wikitide.net',
+			str_replace( 'https://', '', $wi->server ),
+		],
+	];
 }
 
 $wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
