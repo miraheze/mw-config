@@ -108,7 +108,11 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 		exit( 1 );
 	}
 
-	$wgLoadScript = "{$wi->server}$wgScriptPath/load.php";
+
+	$prefix = substr( $wi->dbname, 0, -strlen( $wi::getCurrentSuffix() ) );
+	$mainServer = "https://$prefix.{$wi::getPrimaryDomain( $wi->dbname )}";
+
+	$wgLoadScript = "{$mainServer}$wgScriptPath/load.php";
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
 
 	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
