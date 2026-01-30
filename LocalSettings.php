@@ -108,7 +108,6 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 		exit( 1 );
 	}
 
-
 	$prefix = substr( $wi->dbname, 0, -strlen( $wi::getCurrentSuffix() ) );
 	$mainServer = "https://$prefix.{$wi::getPrimaryDomain( $wi->dbname )}";
 
