@@ -108,16 +108,18 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 		exit( 1 );
 	}
 
-	$wgLoadScript = "{$wi->server}$wgScriptPath/load.php";
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
+	$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
 
 	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
+	$wgLoadScript = "{$wgCanonicalServer}$wgScriptPath/load.php";
 
 	$wgUseSiteCss = false;
 	$wgUseSiteJs = false;
 }
 
-$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
+$wgCentralAuthSul3SharedDomainRestrictions['allowedEntryPoints'] = [ 'load' ];
+
 $wgScript = "$wgScriptPath/index.php";
 
 $wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}";
