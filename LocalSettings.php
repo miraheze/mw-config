@@ -7432,7 +7432,7 @@ $wgConf->settings += [
 			'GlobalTitleFail' => false,
 			'GlobalWatchlist' => false,
 			'headers-sent' => false,
-			'http' =>  [ 'graylog' => 'warning', 'sample' => 1000 ],
+			'http' => 'warning',
 			// Only log http errors with a 500+ code
 			'HttpError' => 'error',
 			'JobExecutor' => [ 'graylog' => 'warning' ],
