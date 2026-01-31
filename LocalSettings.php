@@ -100,6 +100,8 @@ $wmgSharedDomainPathPrefix = '';
 $wgScriptPath = '/w';
 $wgLoadScript = "$wgScriptPath/load.php";
 
+$wgCanonicalServer = $wi->server;
+
 if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 	|| getenv( 'MW_USE_SHARED_DOMAIN' )
 ) {
