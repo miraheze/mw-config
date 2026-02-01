@@ -90,7 +90,29 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
-$wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
+
+// bast161, bast181
+$servers = [ '10.0.16.127', '10.0.18.101' ];
+$proxy = 'http://' . $servers[ array_rand( $servers ) ] . ':8080';
+
+$proxyGlobals = [
+	'wgHTTPProxy',
+	'wgDiscordCurlProxy',
+	'wgCopyUploadProxy',
+	'wgMediaModerationHttpProxy',
+	'wgMathHTTPProxy',
+	'wgRottenLinksHTTPProxy',
+	'wgRSSProxy',
+	'wgTorBlockProxy',
+	'wgHCaptchaProxy',
+];
+
+foreach ( $proxyGlobals as $global ) {
+	$GLOBALS[ $global ] = $proxy;
+}
+
+// Don't need globals here
+unset( $proxy, $proxyGlobals, $servers );
 
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
@@ -1500,9 +1522,6 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgDiscordCurlProxy' => [
-		'default' => $wmgHTTPProxy,
-	],
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
 	],
@@ -1701,11 +1720,6 @@ $wgConf->settings += [
 				'verbose' => true,
 			],
 		],
-	],
-
-	// HTTP
-	'wgHTTPProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 
 	// FeaturedFeeds
@@ -2495,9 +2509,6 @@ $wgConf->settings += [
 	],
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
-	],
-	'wgCopyUploadProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 	'wgFileExtensions' => [
 		'default' => [
@@ -4240,9 +4251,6 @@ $wgConf->settings += [
 	'wgMediaModerationFrom' => [
 		'default' => 'noreply@wikitide.org',
 	],
-	'wgMediaModerationHttpProxy' => [
-		'default' => $wmgHTTPProxy,
-	],
 	'wgMediaModerationRecipientList' => [
 		'default' => [
 			// Don't put plain text email here.
@@ -4819,9 +4827,6 @@ $wgConf->settings += [
 		'default' => [
 			'mathml'
 		],
-	],
-	'wgMathHTTPProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 
 	// MultiBoilerplate
@@ -5889,9 +5894,6 @@ $wgConf->settings += [
 			'www.hinkler.com.au',
 		],
 	],
-	'wgRottenLinksHTTPProxy' => [
-		'default' => $wmgHTTPProxy,
-	],
 
 	// Robot policy
 	'wgDefaultRobotPolicy' => [
@@ -5916,9 +5918,6 @@ $wgConf->settings += [
 	],
 	'wgRSSItemMaxLength' => [
 		'default' => 200,
-	],
-	'wgRSSProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s',
@@ -6476,9 +6475,6 @@ $wgConf->settings += [
 			'208.80.152.2',
 			'208.80.152.134'
 		]
-	],
-	'wgTorBlockProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080'
 	],
 	'wgTorTagChanges' => [
 		'default' => false
