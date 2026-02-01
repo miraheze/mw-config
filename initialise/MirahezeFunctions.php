@@ -1,8 +1,11 @@
 <?php
 
+use MediaWiki\Auth\AuthenticationResponse;
 use MediaWiki\Config\SiteConfiguration;
 use MediaWiki\Context\IContextSource;
+use MediaWiki\Context\RequestContext;
 use MediaWiki\JobQueue\Jobs\CdnPurgeJob;
+use MediaWiki\Logger\LoggerFactory;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Registration\ExtensionProcessor;
 use MediaWiki\Registration\ExtensionRegistry;
@@ -1129,5 +1132,33 @@ class MirahezeFunctions {
 
 		// Don't need a global here
 		unset( $GLOBALS['globals'] );
+	}
+
+	public static function onAuthManagerLoginAuthenticateAudit( AuthenticationResponse $response, ?User $user, ?string $username, array $extraData ): void {
+		$guessed = false;
+		if ( !$user && $username ) {
+			$user = MediaWikiServices::getInstance()
+				->getUserFactory()
+				->newFromName( $username );
+			$guessed = true;
+		}
+		if ( !$user || !in_array( $response->status,
+			[ AuthenticationResponse::PASS, AuthenticationResponse::FAIL ], true )
+		) {
+			return;
+		}
+		$request = RequestContext::getMain()->getRequest();
+		$successful = $response->status === AuthenticationResponse::PASS;
+		$channel = $successful ? 'goodpass' : 'badpass';
+		$logger = LoggerFactory::getInstance( $channel );
+		$verb = $successful ? 'succeeded' : 'failed';
+		$logger->info( "Login $verb for {name} from {clientip}: {messagestr}", [
+			'successful' => $successful,
+			'name' => $user->getName(),
+			'clientip' => $request->getIP(),
+			'guessed' => $guessed,
+			'msgname' => $response->message ? $response->message->getKey() : '-',
+			'messagestr' => $response->message ? $response->message->inLanguage( 'en' )->text() : '',
+		] );
 	}
 }

@@ -7366,6 +7366,7 @@ $wgConf->settings += [
 			'authentication' => 'info',
 			'authevents' => [ 'graylog' => 'info', 'sample' => 1000 ],
 			'autoloader' => false,
+			'badpass' => 'info',
 			'BlockManager' => false,
 			'BlogPage' => false,
 			'BounceHandler' => false,
@@ -7427,6 +7428,7 @@ $wgConf->settings += [
 			'GlobalNewFiles' => 'debug',
 			'GlobalTitleFail' => false,
 			'GlobalWatchlist' => false,
+			'goodpass' => 'info',
 			'headers-sent' => false,
 			'http' => 'warning',
 			// Only log http errors with a 500+ code
