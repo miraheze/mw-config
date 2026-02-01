@@ -92,7 +92,7 @@ $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
 
 // bast161, bast181
-$servers = [ '10.0.16.127', '10.0.18.101' ];
+$servers = [ '10.0.16.127' ];
 $proxy = 'http://' . $servers[ array_rand( $servers ) ] . ':8080';
 
 $proxyGlobals = [
