@@ -6807,6 +6807,33 @@ $wgConf->settings += [
 		'default' => '1 hour',
 	],
 
+	// QuickSurveys
+	'wgQuickSurveysConfig' => [
+		'default' => [
+			[
+				'name' => 'Fundraiser 2025',
+				'type' => 'external',
+				'enabled' => true,
+				'coverage' => 1,
+				'privacyPolicy' => 'miraheze-privacypage',
+				'audience' => [
+					'anons' => true,
+				],
+				'questions' => [
+					[
+						'name' => 'Support the community-run alternative',
+						'layout' => 'single-answer',
+						'link' => 'ext-quicksurveys-fundraiser-link',
+						'question' => 'ext-quicksurveys-fundraiser-2025-title-1',
+						'description' => 'ext-quicksurveys-fundraiser-2025-desc-1',
+						'yesMsg' => 'miraheze-sidebar-donate',
+						'noMsg' => 'ext-quicksurveys-no-thanks',
+					],
+				],
+			],
+		],
+	],
+
 	// WebAuthn
 	'wgWebAuthnLimitPasskeysToRoaming' => [
 		'default' => true,
