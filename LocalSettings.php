@@ -2530,6 +2530,9 @@ $wgConf->settings += [
 	'wgQuickInstantCommonsPrefetchMaxLimit' => [
 		'default' => 1000,
 	],
+	'wgQuickInstantCommonsUserAgentInfo' => [
+		'default' => 'https://miraheze.org; tech@miraheze.org',
+	],
 	'wgMaxImageArea' => [
 		'default' => 10e7,
 	],
