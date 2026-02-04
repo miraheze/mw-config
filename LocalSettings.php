@@ -4476,7 +4476,7 @@ $wgConf->settings += [
 				/** Paladox (Miraheze) (Technology team) */
 				796073,
 				/** PetraMagna (Miraheze) (Technology team) */
-				431929,
+				796099,
 			],
 		],
 	],
