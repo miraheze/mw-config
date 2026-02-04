@@ -4473,8 +4473,8 @@ $wgConf->settings += [
 				512002,
 				/** SomeRandomDeveloper (Technology team) */
 				542825,
-				/** Skye (Technology team) */
-				583331,
+				/** Skye (Miraheze) (Technology team) */
+				786522,
 				/** PetraMagna (Technology team) */
 				431929,
 			],
