@@ -4452,7 +4452,7 @@ $wgConf->settings += [
 				/** Void (Technology team) */
 				5258,
 				/** Paladox (Technology team) */
-				13554,
+				796073,
 				/** Harej (Board) */
 				13892,
 				/** RhinosF1 (Miraheze) (Technology team) */
