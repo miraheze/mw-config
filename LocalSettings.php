@@ -4465,18 +4465,18 @@ $wgConf->settings += [
 				345529,
 				/** Original Authority (Technology team) */
 				353865,
-				/** Universal Omega (Technology team and Board) */
-				438966,
+				/** PetraMagna (Technology team) */
+				431929,
+				/** Universal Omega (Miraheze) (Technology team and Board) */
+				459599,
 				/** BlankEclair (Miraheze) (Technology team) */
 				592845,
 				/** Agent Isai (Technology team and Board) */
 				512002,
-				/** SomeRandomDeveloper (Technology team) */
-				542825,
+				/** SomeRandomDeveloper (Miraheze) (Technology team) */
+				650827,
 				/** Skye (Miraheze) (Technology team) */
 				786522,
-				/** PetraMagna (Technology team) */
-				431929,
 			],
 		],
 	],
