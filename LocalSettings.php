@@ -4451,8 +4451,6 @@ $wgConf->settings += [
 				2551,
 				/** Void (Technology team) */
 				5258,
-				/** Paladox (Technology team) */
-				796073,
 				/** Harej (Board) */
 				13892,
 				/** RhinosF1 (Miraheze) (Technology team) */
@@ -4477,6 +4475,8 @@ $wgConf->settings += [
 				786522,
 				/** MacFan4000 (Miraheze) (Technology team) */
 				796050,
+				/** Paladox (Miraheze) (Technology team) */
+				796073,
 			],
 		],
 	],
