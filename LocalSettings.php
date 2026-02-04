@@ -4461,8 +4461,6 @@ $wgConf->settings += [
 				345529,
 				/** Original Authority (Technology team) */
 				353865,
-				/** PetraMagna (Technology team) */
-				431929,
 				/** Universal Omega (Miraheze) (Technology team and Board) */
 				459599,
 				/** BlankEclair (Miraheze) (Technology team) */
@@ -4477,6 +4475,8 @@ $wgConf->settings += [
 				796050,
 				/** Paladox (Miraheze) (Technology team) */
 				796073,
+				/** PetraMagna (Miraheze) (Technology team) */
+				431929,
 			],
 		],
 	],
