@@ -214,9 +214,6 @@ if ( $wi->isExtensionActive( 'Moderation' ) ) {
 }
 
 // Article paths
-$articlePath = str_replace( '$1', '', $wgArticlePath );
-
-$wgDiscordNotificationWikiUrl = $wi->server . $articlePath;
 $wgDiscordNotificationWikiUrlEnding = '';
 $wgDiscordNotificationWikiUrlEndingDeleteArticle = '?action=delete';
 $wgDiscordNotificationWikiUrlEndingDiff = '?diff=prev&oldid=';
@@ -253,6 +250,7 @@ foreach ( $actions as $action ) {
 	$wgActionPaths[$action] = $wgArticlePath . '?action=' . $action;
 }
 
+$articlePath = str_replace( '$1', '', $wgArticlePath );
 if ( ( $wgMirahezeActionPathsFormat ?? 'default' ) !== 'default' ) {
 	switch ( $wgMirahezeActionPathsFormat ) {
 		case 'specialpages':
