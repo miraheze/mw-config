@@ -4457,6 +4457,8 @@ $wgConf->settings += [
 				243629,
 				/** Raidarr (Board) */
 				249078,
+				/** Agent (Miraheze) (Technology team and Board) */
+				330070,
 				/** NotAracham (Board) */
 				345529,
 				/** Original Authority (Technology team) */
@@ -4465,8 +4467,6 @@ $wgConf->settings += [
 				459599,
 				/** BlankEclair (Miraheze) (Technology team) */
 				592845,
-				/** Agent Isai (Technology team and Board) */
-				512002,
 				/** SomeRandomDeveloper (Miraheze) (Technology team) */
 				650827,
 				/** Skye (Miraheze) (Technology team) */
