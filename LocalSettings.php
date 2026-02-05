@@ -4445,8 +4445,6 @@ $wgConf->settings += [
 			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'staffwiki' => [
-				/** Reception123 (Technology team and Board) */
-				19,
 				/** Labster (Board) */
 				2551,
 				/** Void (Technology team) */
@@ -4461,8 +4459,6 @@ $wgConf->settings += [
 				330070,
 				/** NotAracham (Board) */
 				345529,
-				/** Original Authority (Technology team) */
-				353865,
 				/** Universal Omega (Miraheze) (Technology team and Board) */
 				459599,
 				/** BlankEclair (Miraheze) (Technology team) */
@@ -4477,6 +4473,10 @@ $wgConf->settings += [
 				796073,
 				/** PetraMagna (Miraheze) (Technology team) */
 				796099,
+				/** Original Authority (Miraheze) (Technology team) */
+				796544,
+				/** Reception123 (Miraheze) (Technology team and Board) */
+				796684,
 			],
 		],
 	],
