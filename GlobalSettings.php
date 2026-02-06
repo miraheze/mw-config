@@ -32,7 +32,7 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 
 	// Only allow users with global accounts to login
 	$wgCentralAuthStrict = true;
-	$wgCentralAuthEnableSul3 = false;
+	$wgCentralAuthEnableSul3 = true;
 
 	$wgCentralAuthAutoLoginWikis = $wmgCentralAuthAutoLoginWikis;
 
@@ -43,6 +43,19 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	$wgPasswordConfig['null'] = [ 'class' => InvalidPassword::class ];
 
 	$wgLoginNotifyUseCentralId = true;
+	$wgWebAuthnNewCredsDisabled = true;
+	$wgCentralAuthSharedDomainCallback = static fn ( $dbname ) =>
+		"https://{$wi->getSharedDomain()}/$dbname";
+
+	if ( $wmgSharedDomainPathPrefix ) {
+		$wgCentralAuthCookieDomain = '';
+		$wgCookiePrefix = 'auth';
+		$wgSessionName = 'authSession';
+		$wgWebAuthnNewCredsDisabled = false;
+
+		$wgCheckUserClientHintsEnabled = true;
+		$wgCheckUserAlwaysSetClientHintHeaders = true;
+	}
 }
 
 if ( $wi->isExtensionActive( 'chameleon' ) ) {
@@ -201,9 +214,6 @@ if ( $wi->isExtensionActive( 'Moderation' ) ) {
 }
 
 // Article paths
-$articlePath = str_replace( '$1', '', $wgArticlePath );
-
-$wgDiscordNotificationWikiUrl = $wi->server . $articlePath;
 $wgDiscordNotificationWikiUrlEnding = '';
 $wgDiscordNotificationWikiUrlEndingDeleteArticle = '?action=delete';
 $wgDiscordNotificationWikiUrlEndingDiff = '?diff=prev&oldid=';
@@ -240,6 +250,7 @@ foreach ( $actions as $action ) {
 	$wgActionPaths[$action] = $wgArticlePath . '?action=' . $action;
 }
 
+$articlePath = str_replace( '$1', '', $wgArticlePath );
 if ( ( $wgMirahezeActionPathsFormat ?? 'default' ) !== 'default' ) {
 	switch ( $wgMirahezeActionPathsFormat ) {
 		case 'specialpages':
@@ -299,20 +310,22 @@ if ( !$cwPrivate ) {
 	$wgDiscordExperimentalWebhook = $wmgDiscordExperimentalWebhook;
 }
 
-// Dynamic cookie settings dependant on $wgServer
-foreach ( $wi->getAllowedDomains() as $domain ) {
-	if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
-		$wgCentralAuthCookieDomain = '.' . $domain;
-		$wgMFStopRedirectCookieHost = '.' . $domain;
-		break;
-	} else {
-		$wgCentralAuthCookieDomain = '';
-		if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
-			$host = parse_url( $wi->server, PHP_URL_HOST );
-			$wgMFStopRedirectCookieHost = $host !== false ? $host : null;
+if ( !$wmgSharedDomainPathPrefix ) {
+	// Dynamic cookie settings dependant on $wgServer
+	foreach ( $wi->getAllowedDomains() as $domain ) {
+		if ( preg_match( '/' . preg_quote( $domain ) . '$/', $wi->server ) ) {
+			$wgCentralAuthCookieDomain = '.' . $domain;
+			$wgMFStopRedirectCookieHost = '.' . $domain;
+			break;
+		} else {
+			$wgCentralAuthCookieDomain = '';
+			if ( $wi->isExtensionActive( 'MobileFrontend' ) ) {
+				$host = parse_url( $wi->server, PHP_URL_HOST );
+				$wgMFStopRedirectCookieHost = $host !== false ? $host : null;
 
-			// Don't need a global here
-			unset( $host );
+				// Don't need a global here
+				unset( $host );
+			}
 		}
 	}
 }
@@ -633,8 +646,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 		'Tabular.JsonConfig' => [
 			'namespace' => 486,
 			'nsName' => 'Data',
-			// page name must end in ".tab", and contain at least one symbol
-			'pattern' => '/.\.tab$/',
+			// page name must end in ".tab" or ".tabx", and contain at least one symbol
+			'pattern' => '/.\.tab|x$/',
 			'license' => 'CC-BY-SA 4.0',
 			'isLocal' => false,
 		],
@@ -642,7 +655,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 
 	if ( $wgDBname !== 'commonswiki' &&
 		$wgDBname !== 'gpcommonswiki' &&
-		$wgDBname !== 'needforspeedwiki'
+		$wgDBname !== 'needforspeedwiki' &&
+		$wgDBname !== 'emiliabearwiki'
 	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.miraheze.org/w/api.php'
@@ -927,7 +941,7 @@ $wgPoolCounterConf = [
 ];
 
 $wgPoolCountClientConf = [
-	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.15.142:7531' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:7531' : '10.0.19.149:7531' ],
 	'timeout' => 0.5,
 	'connect_timeout' => 0.01,
 ];
@@ -947,8 +961,6 @@ $wgMathSvgRenderer = 'mathoid';
 $wgMathUseInternalRestbasePath = false;
 
 // ConfirmEdit (hCaptcha)
-// Needed as the server uses ipv4 only.
-$wgHCaptchaProxy = 'http://bastion.fsslc.wtnet:8080';
 $wgCaptchaClass = HCaptcha::class;
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgCaptchaRegexes[] = '/<a +href/i';
@@ -967,6 +979,3 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 
 // RecentChanges
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
-
-// Disallow adding new WebAuthN keys (SUL3)
-$wgWebAuthnNewCredsDisabled = true;

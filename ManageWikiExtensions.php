@@ -36,7 +36,6 @@
 use CirrusSearch\Maintenance\ForceSearchIndex;
 use CirrusSearch\Maintenance\UpdateSearchIndexConfig;
 use Flow\Maintenance\FlowCreateTemplates;
-use MediaWiki\Extension\DynamicPageList4\Maintenance\CreateView;
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
 
@@ -473,11 +472,6 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DynamicPageList4',
 		'conflicts' => 'dynamicpagelist',
 		'requires' => [],
-		'install' => [
-			'mwscript' => [
-				CreateView::class => [],
-			],
-		],
 		'section' => 'parserhooks',
 	],
 	'embedspotify' => [
@@ -2926,6 +2920,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
+	'renderblocking' => [
+		'name' => 'RenderBlocking',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RenderBlocking',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'other',
+	],
 	'revisionslider' => [
 		'name' => 'RevisionSlider',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RevisionSlider',
@@ -3746,6 +3747,13 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
+	'cologneblue' => [
+		'name' => 'Cologne Blue',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cologne_Blue',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
 	'cosmos' => [
 		'name' => 'Cosmos',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Cosmos',
@@ -3833,6 +3841,13 @@ $wgManageWikiExtensions = [
 	'mirage' => [
 		'name' => 'Mirage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Mirage',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'skins',
+	],
+	'modern' => [
+		'name' => 'Modern',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Modern',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'skins',
