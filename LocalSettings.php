@@ -7600,7 +7600,7 @@ extract( $globals );
 
 if ( $wgUseQuickInstantCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => ForeignAPIRepo::class,
+		'class' => MediaWiki\FileRepo\ForeignAPIRepo::class,
 		'name' => 'wikimediacommons',
 		'apibase' => 'https://commons.wikimedia.org/w/api.php',
 		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
