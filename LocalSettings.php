@@ -7197,7 +7197,7 @@ $wgConf->settings += [
 	],
 
 	// WikimediaIncubator
-	'wmincProjects' => [
+	'wgWmincProjects' => [
 		'default' => [
 			'p' => [
 				'name' => 'Wikipedia',
@@ -7249,22 +7249,23 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wmincProjectSite' => [
+	'wgWmincProjectSite' => [
 		'default' => [
 			'name' => 'Incubator Plus 2.0',
 			'short' => 'incplus',
 		],
 	],
-	'wmincExistingWikis' => [
-		'default' => null,
-	],
-	'wmincClosedWikis' => [
-		'default' => false,
-	],
-	'wmincMultilingualProjects' => [
+	'wgWmincExistingWikis' => [
+		// empty array, see T14782
 		'default' => [],
 	],
-	'wmincTestWikiNamespaces' => [
+	'wgWmincClosedWikis' => [
+		'default' => false,
+	],
+	'wgWmincMultilingualProjects' => [
+		'default' => [],
+	],
+	'wgWmincTestWikiNamespaces' => [
 		'default' => [
 			NS_MAIN,
 			NS_TALK,
