@@ -7598,6 +7598,8 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
+$wgUseInstantCommons = $wgUseQuickInstantCommons;
+
 $wgDiscordNotificationWikiUrl = $wi->server . str_replace( '$1', '', $wgArticlePath );
 
 if ( $wmgSharedDomainPathPrefix ) {
