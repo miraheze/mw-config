@@ -7610,7 +7610,7 @@ if ( $wgUseQuickInstantCommons ) {
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 43200,
 		'apiThumbCacheExpiry' => 0,
-		'userAgent' => MW_VERSION . ' (https://miraheze.org; tech@miraheze.org) ForeignAPIRepo/2.1',
+		'userAgent' => 'MediaWiki/' . MW_VERSION . ' (https://miraheze.org; tech@miraheze.org) ForeignAPIRepo/2.1',
 	];
 }
 
