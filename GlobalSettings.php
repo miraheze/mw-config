@@ -464,6 +464,30 @@ if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
 	$wgSkinMetaTags = [ 'og:title', 'og:type' ];
 }
 
+if ( $wi->isExtensionActive( 'Chart' ) ) {
+	$wgChartServiceUrl = 'http://localhost:6284/v1/chart/render';
+
+	// Copied from https://github.com/wikimedia/mediawiki-extensions-Chart/blob/a7fd15850be06d97f93844e5c8605bda7b03c657/README.md
+	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
+	$wgJsonConfigs['Tabular.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab", and contain at least one symbol
+		'pattern' => '/.\.tab$/',
+		'license' => 'CC0-1.0',
+		'isLocal' => true,
+	];
+	$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
+	$wgJsonConfigs['Chart.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".chart", and contain at least one symbol
+		'pattern' => '/.\.chart$/',
+		'license' => 'CC0-1.0',
+		'isLocal' => true,
+	];
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['wikiapairy']['wikiapiary'] = [
