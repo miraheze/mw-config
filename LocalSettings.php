@@ -1575,12 +1575,38 @@ $wgConf->settings += [
 		'default' => '/usr/bin/djvutxt',
 	],
 
-	// DynamicPageList
+	// DynamicPageList (Wikimedia)
 	'wgDLPAllowUnlimitedCategories' => [
 		'default' => false,
 	],
 	'wgDLPAllowUnlimitedResults' => [
 		'default' => false,
+	],
+
+	// DynamicPageList4
+	'wgDPLAllowUnlimitedCategories' => [
+		'default' => false,
+		'bluearchivewiki' => true,
+		'fischwiki' => true,
+		'metzowiki' => true,
+		'traceprojectwikiwiki' => true,
+	],
+	'wgDPLAllowUnlimitedResults' => [
+		'default' => false,
+		'metzowiki' => true,
+		'traceprojectwikiwiki' => true,
+	],
+	'wgDPLMaxCategoryCount' => [
+		'default' => 8,
+		'constantnoblewiki' => 100,
+		'dappervolkwiki' => 15,
+		'gui7814sgtafanonwiki' => 1000,
+		'persistwiki' => 10,
+	],
+	'wgDPLMaxResultCount' => [
+		'default' => 500,
+		'constantnoblewiki' => 2500,
+		'gui7814sgtafanonwiki' => 1000,
 	],
 
 	// DynamicSidebar
