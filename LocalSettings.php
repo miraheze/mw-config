@@ -5034,6 +5034,15 @@ $wgConf->settings += [
 	'wgParserMigrationEnableQueryString' => [
 		'default' => true,
 	],
+	'wgParserMigrationFeedbackAPIURL' => [
+		'default' => 'https://meta.miraheze.org/w/api.php',
+	],
+	'wgParserMigrationFeedbackTitle' => [
+		'default' => 'Tech:Parsoid/Feedback',
+	],
+	'wgParserMigrationFeedbackTitleURL' => [
+		'default' => 'https://meta.miraheze.org/wiki/Tech:Parsoid/Feedback',
+	],
 
 	// Parsoid
 	'wgParsoidSettings' => [
