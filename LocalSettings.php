@@ -7619,6 +7619,21 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
+if ( $wgUseQuickInstantCommons ) {
+	$wgForeignFileRepos[] = [
+		'class' => Miraheze\MirahezeMagic\ForeignAPIRepoWithFixedUA::class,
+		'name' => 'wikimediacommons',
+		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
+		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 43200,
+		'apiThumbCacheExpiry' => 0,
+	];
+}
+
 $wgDiscordNotificationWikiUrl = $wi->server . str_replace( '$1', '', $wgArticlePath );
 
 if ( $wmgSharedDomainPathPrefix ) {
