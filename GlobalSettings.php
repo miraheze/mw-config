@@ -659,6 +659,10 @@ if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	$wgTrackGlobalJsonLinks = false;
+	
+	$wgJsonConfigModels[ 'Map.JsonConfig' ] = 'JsonConfig\JCMapDataContent';
+	$wgJsonConfigModels[ 'Tabular.JsonConfig' ] = 'JsonConfig\JCTabularContent';
+
 	$wgJsonConfigs[ 'Map.JsonConfig' ] = [
 		'namespace' => 486,
 		'nsName' => 'Data',
