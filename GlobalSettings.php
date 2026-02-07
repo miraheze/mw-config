@@ -658,23 +658,22 @@ if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
 
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
-	$wgJsonConfigs = [
-		'Map.JsonConfig' => [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".map", and contain at least one symbol
-			'pattern' => '/.\.map$/',
-			'license' => 'CC-BY-SA 4.0',
-			'isLocal' => false,
-		],
-		'Tabular.JsonConfig' => [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".tab" or ".tabx", and contain at least one symbol
-			'pattern' => '/.\.tab|x$/',
-			'license' => 'CC-BY-SA 4.0',
-			'isLocal' => false,
-		],
+	$wgTrackGlobalJsonLinks = false;
+	$wgJsonConfigs[ 'Map.JsonConfig' ] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".map", and contain at least one symbol
+		'pattern' => '/.\.map$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => true,
+	];
+	$wgJsonConfigs[ 'Tabular.JsonConfig' ] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab" or ".tabx", and contain at least one symbol
+		'pattern' => '/.\.tab|x$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => true,
 	];
 
 	if ( $wgDBname !== 'commonswiki' &&
