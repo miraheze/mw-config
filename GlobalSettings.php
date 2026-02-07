@@ -465,7 +465,7 @@ if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
 }
 
 if ( $wi->isExtensionActive( 'Chart' ) ) {
-	$wgChartServiceUrl = 'http://localhost:6284/v1/chart/render';
+	$wgChartServiceUrl = 'http://test151.fsslc.wtnet:6284/v1/chart/render';
 
 	// Copied from https://github.com/wikimedia/mediawiki-extensions-Chart/blob/a7fd15850be06d97f93844e5c8605bda7b03c657/README.md
 	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
@@ -659,7 +659,7 @@ if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	$wgTrackGlobalJsonLinks = false;
-	
+
 	$wgJsonConfigModels[ 'Map.JsonConfig' ] = 'JsonConfig\JCMapDataContent';
 	$wgJsonConfigModels[ 'Tabular.JsonConfig' ] = 'JsonConfig\JCTabularContent';
 
