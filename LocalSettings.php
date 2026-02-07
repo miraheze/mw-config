@@ -1111,6 +1111,9 @@ $wgConf->settings += [
 			"$IP/extensions/RottenLinks/sql/rottenlinks.sql",
 			"$IP/extensions/UrlShortener/schemas/mysql/tables-generated.sql",
 		],
+		'+1.45' => [
+			"$IP/extensions/CheckUser/schema/mysql/tables-virtual-checkuser-generated.sql",
+		],
 	],
 	'wgCreateWikiStateDays' => [
 		'default' => [
