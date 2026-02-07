@@ -464,6 +464,30 @@ if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
 	$wgSkinMetaTags = [ 'og:title', 'og:type' ];
 }
 
+if ( $wi->isExtensionActive( 'Chart' ) ) {
+	$wgChartServiceUrl = 'http://test151.fsslc.wtnet:6284/v1/chart/render';
+
+	// Copied from https://github.com/wikimedia/mediawiki-extensions-Chart/blob/a7fd15850be06d97f93844e5c8605bda7b03c657/README.md
+	$wgJsonConfigModels['Tabular.JsonConfig'] = 'JsonConfig\JCTabularContent';
+	$wgJsonConfigs['Tabular.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab", and contain at least one symbol
+		'pattern' => '/.\.tab$/',
+		'license' => 'CC0-1.0',
+		'isLocal' => true,
+	];
+	$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
+	$wgJsonConfigs['Chart.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".chart", and contain at least one symbol
+		'pattern' => '/.\.chart$/',
+		'license' => 'CC0-1.0',
+		'isLocal' => true,
+	];
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['wikiapairy']['wikiapiary'] = [
@@ -634,23 +658,26 @@ if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
 
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
-	$wgJsonConfigs = [
-		'Map.JsonConfig' => [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".map", and contain at least one symbol
-			'pattern' => '/.\.map$/',
-			'license' => 'CC-BY-SA 4.0',
-			'isLocal' => false,
-		],
-		'Tabular.JsonConfig' => [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".tab" or ".tabx", and contain at least one symbol
-			'pattern' => '/.\.tab|x$/',
-			'license' => 'CC-BY-SA 4.0',
-			'isLocal' => false,
-		],
+	$wgTrackGlobalJsonLinks = false;
+
+	$wgJsonConfigModels[ 'Map.JsonConfig' ] = 'JsonConfig\JCMapDataContent';
+	$wgJsonConfigModels[ 'Tabular.JsonConfig' ] = 'JsonConfig\JCTabularContent';
+
+	$wgJsonConfigs[ 'Map.JsonConfig' ] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".map", and contain at least one symbol
+		'pattern' => '/.\.map$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => true,
+	];
+	$wgJsonConfigs[ 'Tabular.JsonConfig' ] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab" or ".tabx", and contain at least one symbol
+		'pattern' => '/.\.tab|x$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => true,
 	];
 
 	if ( $wgDBname !== 'commonswiki' &&

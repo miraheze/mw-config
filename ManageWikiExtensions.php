@@ -2162,6 +2162,17 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
+	'chart' => [
+		'name' => 'Chart',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Chart',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'jsonconfig',
+			],
+		],
+		'section' => 'other',
+	],
 	'cirrussearch' => [
 		'name' => 'CirrusSearch',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CirrusSearch',
