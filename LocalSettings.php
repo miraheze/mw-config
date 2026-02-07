@@ -7600,7 +7600,7 @@ extract( $globals );
 
 if ( $wgUseQuickInstantCommons ) {
 	$wgForeignFileRepos[] = [
-		'class' => MediaWiki\FileRepo\ForeignAPIRepo::class,
+		'class' => Miraheze\MirahezeMagic\ForeignAPIRepoWithFixedUA::class,
 		'name' => 'wikimediacommons',
 		'apibase' => 'https://commons.wikimedia.org/w/api.php',
 		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
@@ -7610,7 +7610,6 @@ if ( $wgUseQuickInstantCommons ) {
 		'fetchDescription' => true,
 		'descriptionCacheExpiry' => 43200,
 		'apiThumbCacheExpiry' => 0,
-		'userAgent' => 'MediaWiki/' . MW_VERSION . ' (https://miraheze.org; tech@miraheze.org) ForeignAPIRepo/2.1',
 	];
 }
 
