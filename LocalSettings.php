@@ -3222,6 +3222,9 @@ $wgConf->settings += [
 			'Data.JsonConfig' => null,
 		],
 	],
+	'wgTrackGlobalJsonLinks' => [
+		'default' => false,
+	],
 
 	// Kartographer
 	'wgKartographerDfltStyle' => [
