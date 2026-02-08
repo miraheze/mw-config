@@ -979,3 +979,7 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 
 // RecentChanges
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
+
+if ( $wi->version === '1.45' ) {
+	$wgSpecialPages['OATHManage'] = MediaWiki\SpecialPage\DisabledSpecialPage::getCallback( 'OATHManage', 'Please use a wiki on MediaWiki 1.44 to manage 2FA due to incompatibilities between MediaWiki 1.44 and 1.45.' );
+}
