@@ -4732,6 +4732,11 @@ $wgConf->settings += [
 				'.nomobile',
 			],
 		],
+		'danmachienwiki' => [
+			'base' => [
+				'.nomobile',
+			],
+		],
 		'mcspringfieldserverwiki' => [
 			'base' => [
 				'.nomobile',
