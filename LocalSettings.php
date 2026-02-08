@@ -5377,6 +5377,9 @@ $wgConf->settings += [
 			'minerva-theme' => 'night',
 			'vector-theme' => 'night',
 		],
+		'+versesanddimensionswiki' => [
+			'vector-theme' => 'night',
+		],
 		'+zenithwiki' => [
 			'vector-theme' => 'night',
 		],
