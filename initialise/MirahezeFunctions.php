@@ -643,6 +643,13 @@ class MirahezeFunctions {
 		$settings['cwInactive']['default'] = $states['inactive'] === 'exempt' ? 'exempt' : (bool)( $states['inactive'] ?? false );
 		$settings['cwExperimental']['default'] = (bool)( $states['experimental'] ?? false );
 
+		$settings['wgManageWikiPrivateWiki']['default'] = (bool)( $states['private'] ?? false );
+		$settings['wgManageWikiClosedWiki']['default'] = (bool)( $states['closed'] ?? false );
+		$settings['wgManageWikiLockedWiki']['default'] = (bool)( $states['locked'] ?? false );
+		$settings['wgManageWikiDeletedWiki']['default'] = (bool)( $states['deleted'] ?? false );
+		$settings['wgManageWikiInactiveWiki']['default'] = $states['inactive'] === 'exempt' ? false : (bool)( $states['inactive'] ?? false );
+		$settings['wgManageWikiExperimentalWiki']['default'] = (bool)( $states['experimental'] ?? false );
+
 		// Config settings
 		foreach ( $cacheArray['settings'] ?? [] as $var => $val ) {
 			$settings[$var]['default'] = $val;

@@ -75,7 +75,7 @@ $wgThumbnailMinimumBucketDistance = 100;
 // Thumbnail prerendering at upload time
 $wgUploadThumbnailRenderMap = [ 320, 640, 800, 1024, 1280, 1920 ];
 
-if ( $cwPrivate ) {
+if ( $wgManageWikiPrivateWiki ) {
 	$wgUploadThumbnailRenderMap = [];
 	$wgUploadPath = '/w/img_auth.php';
 	$wgImgAuthUrlPathMap = [
@@ -108,8 +108,8 @@ $wgLocalFileRepo = [
 	'useSplitMetadata'  => true,
 	'deletedHashLevels' => 3,
 	'abbrvThreshold' => 160,
-	'isPrivate' => $cwPrivate,
-	'zones' => $cwPrivate ? [
+	'isPrivate' => $wgManageWikiPrivateWiki,
+	'zones' => $wgManageWikiPrivateWiki ? [
 		'thumb' => [ 'url' => "$wgScriptPath/thumb_handler.php" ],
 	] : [],
 ];
