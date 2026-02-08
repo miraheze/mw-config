@@ -7631,7 +7631,7 @@ if ( $wgUseQuickInstantCommons ) {
 		'hashLevels' => 2,
 		'transformVia404' => true,
 		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 43200,
+		'descriptionCacheExpiry' => 604800,
 		'apiThumbCacheExpiry' => 0,
 	];
 }
