@@ -172,17 +172,6 @@ $wgConf->settings += [
 		'utgwiki' => true,
 	],
 
-	// 3D
-	'wg3dProcessor' => [
-		'ext-3d' => [
-			'/usr/bin/xvfb-run',
-			'-a',
-			'-s',
-			'-ac -screen 0 1280x1024x24',
-			'/srv/3d2png/src/3d2png.js',
-		],
-	],
-
 	// AbuseFilter
 	'wgAbuseFilterActions' => [
 		'default' => [
@@ -4576,9 +4565,6 @@ $wgConf->settings += [
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
 		],
-		'+ext-3d' => [
-			'application/sla',
-		],
 	],
 	'wgNativeImageLazyLoading' => [
 		'default' => false,
@@ -6848,14 +6834,6 @@ $wgConf->settings += [
 	],
 	'wgVisualEditorTemplateSearchImprovements' => [
 		'default' => false,
-	],
-
-	// ProtectSite
-	'wgProtectSiteLimit' => [
-		'default' => '1 week',
-	],
-	'wgProtectSiteDefaultTimeout' => [
-		'default' => '1 hour',
 	],
 
 	// WebAuthn
