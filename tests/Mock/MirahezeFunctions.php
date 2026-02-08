@@ -9,10 +9,6 @@ class MirahezeFunctions {
 	public string $sitename = '';
 	public string $version = '';
 
-	public function getSettingValue(): array {
-		return [];
-	}
-
 	public function isAllOfExtensionsActive(): true {
 		return true;
 	}

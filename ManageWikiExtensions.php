@@ -81,18 +81,6 @@ $wgManageWikiExtensions = [
 	],
 
 	// Media handlers
-	'3d' => [
-		'name' => '3D',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:3D',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'settings' => [
-				'wgFileExtensions' => array_merge( $wi->getSettingValue( 'wgFileExtensions' ), [ 'stl' ] ),
-			],
-		],
-		'section' => 'mediahandlers',
-	],
 	'embedvideo' => [
 		'name' => 'EmbedVideo',
 		'linkPage' => 'https://github.com/StarCitizenWiki/mediawiki-extensions-EmbedVideo',
@@ -1689,22 +1677,6 @@ $wgManageWikiExtensions = [
 		'install' => [
 			'sql' => [
 				'pagetriage_tags' => 'extensions/PageTriage/sql/mysql/tables-generated.sql',
-			],
-		],
-		'section' => 'specialpages',
-	],
-	'protectsite' => [
-		'name' => 'Protect Site',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ProtectSite',
-		'conflicts' => false,
-		'requires' => [],
-		'install' => [
-			'permissions' => [
-				'bureaucrat' => [
-					'permissions' => [
-						'protectsite',
-					],
-				],
 			],
 		],
 		'section' => 'specialpages',

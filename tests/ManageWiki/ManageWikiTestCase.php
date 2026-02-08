@@ -17,7 +17,6 @@ abstract class ManageWikiTestCase extends TestCase {
 
 	public function mockMirahezeFunctions(): MirahezeFunctions {
 		$methods = [
-			'getSettingValue' => [],
 			'isAllOfExtensionsActive' => true,
 			'isAnyOfExtensionsActive' => true,
 			'isExtensionActive' => true,

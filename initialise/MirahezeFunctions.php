@@ -715,15 +715,6 @@ class MirahezeFunctions {
 		return $settings;
 	}
 
-	public function getSettingValue( string $setting, string $wiki = 'default' ): mixed {
-		global $wgConf;
-
-		static $cacheArray = null;
-		$cacheArray ??= self::getCacheArray();
-
-		return $cacheArray['settings'][$setting] ?? $wgConf->get( $setting, $wiki );
-	}
-
 	public static function getActiveExtensions(): array {
 		global $wgDBname, $wgManageWikiExtensions;
 
