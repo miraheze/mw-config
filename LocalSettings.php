@@ -7626,7 +7626,7 @@ if ( $wgUseQuickInstantCommons ) {
 		'apibase' => 'https://commons.wikimedia.org/w/api.php',
 		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
 		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
-		'directory' => $wgUploadDirectory,
+		'directory' => false,
 		'hashLevels' => 2,
 		'transformVia404' => true,
 		'fetchDescription' => true,
