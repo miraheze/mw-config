@@ -7620,22 +7620,6 @@ $globals = MirahezeFunctions::getConfigGlobals();
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
 
-if ( $wgUseQuickInstantCommons ) {
-	$wgForeignFileRepos[] = [
-		'class' => Miraheze\MirahezeMagic\ForeignAPIRepoWithFixedUA::class,
-		'name' => 'wikimediacommons',
-		'apibase' => 'https://commons.wikimedia.org/w/api.php',
-		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
-		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
-		'directory' => false,
-		'hashLevels' => 2,
-		'transformVia404' => true,
-		'fetchDescription' => true,
-		'descriptionCacheExpiry' => 604800,
-		'apiThumbCacheExpiry' => 0,
-	];
-}
-
 $wgDiscordNotificationWikiUrl = $wi->server . str_replace( '$1', '', $wgArticlePath );
 
 if ( $wmgSharedDomainPathPrefix ) {
@@ -7688,6 +7672,31 @@ require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
+
+if ( $wgUseQuickInstantCommons ) {
+	$wgForeignFileRepos[] = [
+		'class' => Miraheze\MirahezeMagic\ForeignAPIRepoWithFixedUA::class,
+		'name' => 'wikimediacommons',
+		'backend' => 'miraheze-swift-shared',
+		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
+		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+		'directory' => $wgUploadDirectory,
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 604800,
+		'apiThumbCacheExpiry' => 0,
+		'initialCapital' => true,
+		'zones' => [
+			// actual swift containers have 'local-*'
+			'public' => [ 'container' => 'local-public' ],
+			'thumb' => [ 'container' => 'local-thumb' ],
+			'temp' => [ 'container' => 'local-temp' ],
+			'deleted' => [ 'container' => 'local-deleted' ],
+		],
+	];
+}
 
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
