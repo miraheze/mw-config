@@ -4,6 +4,7 @@ use MediaWiki\FileRepo\LocalRepo;
 use Wikimedia\FileBackend\SwiftFileBackend;
 
 $wgMirahezeMagicSwiftKey = $wmgSwiftPassword;
+
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',
@@ -24,11 +25,33 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
+// This is for wikimedias commons wiki
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift-shared',
 	// This is the prefix for the container that it starts with.
 	'wikiId'             => "miraheze-wikipedia-commons",
+	'lockManager'        => 'redisLockManager',
+	'swiftAuthUrl'       => 'https://swift-lb.wikitide.net/auth',
+	'swiftStorageUrl'    => 'https://swift-lb.wikitide.net/v1/AUTH_mw',
+	'swiftUser'          => 'mw:media',
+	'swiftKey'           => $wmgSwiftPassword,
+	'swiftTempUrlKey'    => $wmgSwiftTempUrlKey,
+	'parallelize'        => 'implicit',
+	'cacheAuthInfo'      => true,
+	'readAffinity'       => true,
+	'readUsers'           => [ 'mw:media' ],
+	'writeUsers'          => [ 'mw:media' ],
+	'connTimeout'         => 10,
+	'reqTimeout'          => 900,
+];
+
+// This is for miraheze commonswiki
+$wgFileBackends[] = [
+	'class'              => SwiftFileBackend::class,
+	'name'               => 'miraheze-swift-commons-shared',
+	// This is the prefix for the container that it starts with.
+	'wikiId'             => "miraheze-commonswiki",
 	'lockManager'        => 'redisLockManager',
 	'swiftAuthUrl'       => 'https://swift-lb.wikitide.net/auth',
 	'swiftStorageUrl'    => 'https://swift-lb.wikitide.net/v1/AUTH_mw',
