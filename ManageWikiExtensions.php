@@ -2172,6 +2172,7 @@ $wgManageWikiExtensions = [
 			],
 		],
 		'section' => 'other',
+		'help' => 'This extension works differently compared with the documentation on mediawiki.org. Instead of creating chart data pages with suffix .tab, use the .data suffix instead. An example title would be Data:TestChart.data.',
 	],
 	'cirrussearch' => [
 		'name' => 'CirrusSearch',
