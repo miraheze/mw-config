@@ -4,6 +4,7 @@ use MediaWiki\FileRepo\LocalRepo;
 use Wikimedia\FileBackend\SwiftFileBackend;
 
 $wgMirahezeMagicSwiftKey = $wmgSwiftPassword;
+
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift',
@@ -24,6 +25,7 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
+// This is for wikimedias commons wiki
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift-shared',
@@ -44,6 +46,7 @@ $wgFileBackends[] = [
 	'reqTimeout'          => 900,
 ];
 
+// This is for miraheze commonswiki
 $wgFileBackends[] = [
 	'class'              => SwiftFileBackend::class,
 	'name'               => 'miraheze-swift-commons-shared',
