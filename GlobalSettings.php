@@ -519,7 +519,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 
 	$wgForeignFileRepos[] = [
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
-		'backend' => 'miraheze-swift',
+		'backend' => 'miraheze-swift-commons-shared',
 		'url' => 'https://static.wikitide.net/commonswiki',
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
