@@ -981,5 +981,5 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 
 if ( $wi->version === '1.45' ) {
-	$wgSpecialPages['OATHManage'] = MediaWiki\SpecialPage\DisabledSpecialPage::getCallback( 'OATHManage', 'Please use a wiki on MediaWiki 1.44 to manage 2FA due to incompatibilities between MediaWiki 1.44 and 1.45.' );
+	$wgSpecialPages['OATHManage'] = MediaWiki\SpecialPage\DisabledSpecialPage::getCallback( 'OATHManage', 'We are currently in the process of gradually upgrading our wikis to MediaWiki 1.45, but due to some incompatibilities between 1.44 and 1.45, managing 2FA has been disabled on wikis already upgraded to 1.45. You may use a wiki still on 1.44 to manage this, or wait until the upgrade has been completed on all wikis. Thank you.' );
 }
