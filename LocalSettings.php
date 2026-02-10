@@ -1025,7 +1025,7 @@ $wgConf->settings += [
 				'Content Policy (violence, hatred or harrassment)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that promote violence, hatred, or harassment against a person or group of people." Thank you for your understanding.',
 				'Content Policy (Wikimedia-like wikis/forks)' => 'Declining per Content Policy provision, "Direct forks and forks where a substantial amount of content is copied from a Wikimedia project are not allowed." Thank you for your understanding.',
 				'Content Policy (Reception wiki)' => 'Declining per Content Policy provision, "Wikis should not be structured around bullet-point, good/bad commentary." Thank you for your understanding.',
-				/* 'Content Policy (additional restrictions)' => 'Declining per the Content Policy's additional restrictions, which includes the topic of your wiki. Thank you for your understanding.', */
+				'Content Policy (restricted topics)' => 'Declining per the Content Policy\'s additional restrictions, which includes the topic of your wiki. Please see [[Help:Restricted Wiki Topics]] for more information. Thank you for your understanding.',
 				'Author request' => 'Declined at the request of the wiki requester.',
 			],
 			'On hold reasons' => [
