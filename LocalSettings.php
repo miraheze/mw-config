@@ -4602,9 +4602,6 @@ $wgConf->settings += [
 			'*.nexttide.org',
 		],
 		'private' => [],
-		'+gratisdatawiki' => [
-			'gratispaideia.miraheze.org',
-		],
 	],
 	'wgWhitelistRead' => [
 		'default' => [],
