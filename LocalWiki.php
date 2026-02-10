@@ -294,6 +294,12 @@ switch ( $wi->dbname ) {
 		$wgVectorNightMode['logged_out'] = true;
 
 		break;
+	case 'infalsuswiki':
+		$wgVectorNightMode['beta'] = true;
+		$wgVectorNightMode['logged_out'] = true;
+		$wgVectorNightMode['logged_in'] = true;
+
+		break;
 	case 'kaiserreichwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_out'] = true;
