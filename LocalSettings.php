@@ -1363,9 +1363,6 @@ $wgConf->settings += [
 	'wgDataMapsAllowExperimentalFeatures' => [
 		'default' => false,
 	],
-	'wgDataMapsEnableFandomPortingTools' => [
-		'default' => false,
-	],
 
 	// Details
 	'wgDetailsMWCollapsibleCompatibility' => [
