@@ -3497,29 +3497,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to display a Share via WhatsApp button on the sidebar.',
 		'requires' => [],
 	],
-	'wgRandomGameDisplay' => [
-		'name' => 'Random Game Display',
-		'from' => 'randomgameunit',
-		'type' => 'list-multi-bool',
-		'allopts' => [
-			'random_poll',
-			'random_picturegame',
-			'random_quiz',
-		],
-		'options' => [
-			'Poll' => 'random_poll',
-			'PictureGame' => 'random_picturegame',
-			'Quiz' => 'random_quiz',
-		],
-		'overridedefault' => [
-			'random_picturegame' => false,
-			'random_poll' => false,
-			'random_quiz' => false,
-		],
-		'section' => 'socialtools',
-		'help' => 'Controls what games are enabled.',
-		'requires' => [],
-	],
 	'wgUserPageChoice' => [
 		'name' => 'User Page Choice',
 		'from' => 'socialprofile',

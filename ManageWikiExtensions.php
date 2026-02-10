@@ -871,17 +871,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'randomgameunit' => [
-		'name' => 'RandomGameUnit',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomGameUnit',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'socialprofile',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'randomimage' => [
 		'name' => 'RandomImage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomImage',
@@ -1508,26 +1497,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'imagerating' => [
-		'name' => 'ImageRating',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ImageRating',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'voteny',
-			],
-		],
-		'install' => [
-			'permissions' => [
-				'user' => [
-					'permissions' => [
-						'rateimage',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'linter' => [
 		'name' => 'Linter',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Linter',
@@ -1703,32 +1672,6 @@ $wgManageWikiExtensions = [
 				'bureaucrat' => [
 					'permissions' => [
 						'protectsite',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
-	'quizgame' => [
-		'name' => 'QuizGame',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:QuizGame',
-		'conflicts' => false,
-		'requires' => [
-			'extensions' => [
-				'socialprofile',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'quizgame_answers' => 'extensions/QuizGame/sql/quizgame_answers.sql',
-				'quizgame_choice' => 'extensions/QuizGame/sql/quizgame_choice.sql',
-				'quizgame_questions' => 'extensions/QuizGame/sql/quizgame_questions.sql',
-				'quizgame_user_view' => 'extensions/QuizGame/sql/quizgame_user_view.sql',
-			],
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'quizadmin',
 					],
 				],
 			],
