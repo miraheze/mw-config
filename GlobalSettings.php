@@ -983,8 +983,3 @@ $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 if ( $wi->version === '1.45' ) {
 	$wgSpecialPages['OATHManage'] = MediaWiki\SpecialPage\DisabledSpecialPage::getCallback( 'OATHManage', 'Please use a wiki on MediaWiki 1.44 to manage 2FA due to incompatibilities between MediaWiki 1.44 and 1.45.' );
 }
-
-// Disallow wiki creations for 1.45 upgrade
-$wgCreateWikiOpenAIConfig['dryrun'] = true;
-$wgRevokePermissions['*']['createwiki'] = true;
-$wgRevokePermissions['*']['requestwiki'] = true;
