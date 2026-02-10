@@ -4594,13 +4594,14 @@ $wgConf->settings += [
 	],
 	'wgCrossSiteAJAXdomains' => [
 		'default' => [
-			'login.miraheze.org',
-			'meta.miraheze.org',
+			'*.miraheze.org',
+			'*.wikitide.org',
 		],
 		'beta' => [
-			'login.miraheze.org',
-			'meta.mirabeta.org',
+			'*.mirabeta.org',
+			'*.nexttide.org',
 		],
+		'private' => [],
 		'+gratisdatawiki' => [
 			'gratispaideia.miraheze.org',
 		],
