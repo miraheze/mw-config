@@ -1984,6 +1984,7 @@ $wgManageWikiExtensions = [
 		'name' => 'AdvancedSearch',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AdvancedSearch',
 		'conflicts' => false,
+		'help' => 'This extension MUST NOT be disabled via ManageWiki. Please create a [[m:Phorge|Phorge]] task instead.',
 		'requires' => [
 			'extensions' => [
 				'cirrussearch',
