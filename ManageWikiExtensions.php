@@ -2166,11 +2166,8 @@ $wgManageWikiExtensions = [
 		'name' => 'CirrusSearch',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CirrusSearch',
 		'conflicts' => 'titlekey',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
+		'help' => 'This extension MUST NOT be disabled via ManageWiki. Please create a [[m:Phorge|Phorge]] task instead.',
 		'install' => [
 			'mwscript' => [
 				UpdateSearchIndexConfig::class => [],
