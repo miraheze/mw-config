@@ -4602,6 +4602,9 @@ $wgConf->settings += [
 			'*.nexttide.org',
 		],
 		'private' => [],
+		'wikicreatorswiki' => [
+			'meta.miraheze.org',
+		],
 	],
 	'wgWhitelistRead' => [
 		'default' => [],
