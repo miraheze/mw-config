@@ -3646,7 +3646,7 @@ $wgConf->settings += [
 		// Content models that are possible should be setup when doing imports etc...
 		// to avoid potential content model mismatch issues.
 		'default' => [
-			// Flow is being removed and no longer enabled no new wikis
+			// Flow was removed
 			'flow-board',
 			// Interactivemap is a Fandom extension and the compatibility
 			// mode in DataMaps does not work.
@@ -4083,11 +4083,6 @@ $wgConf->settings += [
 				'edit-create' => true,
 			],
 		],
-		'+ext-Flow' => [
-			'suppress' => [
-				'flow-suppress' => true,
-			],
-		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
@@ -4141,7 +4136,6 @@ $wgConf->settings += [
 				'editincidents',
 				'editothersprofiles-private',
 				'sendemail',
-				'flow-suppress',
 				'generate-random-hash',
 				'globalblock',
 				'globalblock-exempt',
@@ -5327,9 +5321,6 @@ $wgConf->settings += [
 		],
 		'+fwtdwiki' => [
 			'minerva-theme' => 'night',
-		],
-		'+isvwiki' => [
-			'flow-topiclist-sortby' => 'newest',
 		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
@@ -7472,7 +7463,6 @@ $wgConf->settings += [
 			'fatal' => 'debug',
 			'FileImporter' => false,
 			'FileOperation' => false,
-			'Flow' => 'debug',
 			'formatnum' => false,
 			'FSFileBackend' => false,
 			'gitinfo' => false,

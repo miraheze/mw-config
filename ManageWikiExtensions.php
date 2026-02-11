@@ -35,7 +35,6 @@
 
 use CirrusSearch\Maintenance\ForceSearchIndex;
 use CirrusSearch\Maintenance\UpdateSearchIndexConfig;
-use Flow\Maintenance\FlowCreateTemplates;
 use Miraheze\MirahezeMagic\Maintenance\CreateCargoDB;
 use Miraheze\MirahezeMagic\Maintenance\PopulateWikibaseSitesTable;
 
@@ -2584,7 +2583,7 @@ $wgManageWikiExtensions = [
 	'newusermessage' => [
 		'name' => 'NewUserMessage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:NewUserMessage',
-		'conflicts' => 'flow',
+		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
 	],
@@ -3042,63 +3041,6 @@ $wgManageWikiExtensions = [
 				'mws_user_index' => 'extensions/OOJSPlus/vendor/mwstake/mediawiki-component-commonwebapis/sql/mysql/mws_user_index.sql',
 			],
 		],
-	],
-	'flow' => [
-		'name' => 'Flow',
-		'displayname' => 'StructuredDiscussions (Flow)',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredDiscussions',
-		'conflicts' => false,
-		'help' => 'No new installed permitted: Deprecated by WMF, please use DiscussionTools instead.',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'flow_revision' => 'extensions/Flow/sql/mysql/tables-generated.sql',
-			],
-			'namespaces' => [
-				'Topic' => [
-					'id' => 2600,
-					'searchable' => 0,
-					'subpages' => 0,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'flow-board',
-					'additional' => []
-				],
-			],
-			'permissions' => [
-				'*' => [
-					'permissions' => [
-						'flow-hide',
-					],
-				],
-				'user' => [
-					'permissions' => [
-						'flow-lock',
-					],
-				],
-				'sysop' => [
-					'permissions' => [
-						'flow-lock',
-						'flow-delete',
-						'flow-edit-post',
-					],
-				],
-				'flow-bot' => [
-					'permissions' => [
-						'flow-create-board',
-					],
-				],
-			],
-			'mwscript' => [
-				FlowCreateTemplates::class => [],
-			],
-		],
-		'section' => 'other',
 	],
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',

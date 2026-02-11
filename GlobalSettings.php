@@ -196,13 +196,6 @@ $wgVirtualRestConfig = [
 	],
 ];
 
-if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
-	$wgFlowParsoidPrefix = $wi->dbname;
-	$wgFlowParsoidTimeout = 50;
-	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
-}
-
 /**
  * Increase the time that entries are kept in the stash when Moderation is enabled
  * so that they are not deleted by cleanupUploadStash.php before they have
@@ -411,28 +404,6 @@ $wgDataDump = [
 		],
 	],
 ];
-
-if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgDataDump['flow'] = [
-		'file_ending' => '.xml.gz',
-		'useBackendTempStore' => true,
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => 'extensions/Flow/dumpBackup',
-			'options' => [
-				'--full',
-				'--output',
-				'gzip:/tmp/${filename}',
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	];
-}
 
 // UploadWizard configuration
 if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
