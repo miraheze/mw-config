@@ -569,10 +569,6 @@ $wgConf->settings += [
 		'default' => 'https://meta.miraheze.org/wiki/Special:RecordImpression',
 		'beta' => 'https://meta.mirabeta.org/wiki/Special:RecordImpression',
 	],
-	'wgCentralDBname' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
 		'beta' => 'https://meta.mirabeta.org',
