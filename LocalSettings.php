@@ -4065,6 +4065,11 @@ $wgConf->settings += [
 				'editor' => true,
 			],
 		],
+		'+testwiki' => [
+			'tech' => [
+				'globalgrouppermissions' => true,
+			],
+		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
