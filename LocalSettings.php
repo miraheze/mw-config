@@ -1326,7 +1326,13 @@ $wgConf->settings += [
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-oauth' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-requestcustomdomain' => [
+				'db' => $wi->getCentralDatabase(),
+			],
+			'virtual-urlshortener' => [
 				'db' => $wi->getCentralDatabase(),
 			],
 		],
@@ -6632,10 +6638,6 @@ $wgConf->settings += [
 	],
 
 	// UrlShortener
-	'wgUrlShortenerDBName' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgUrlShortenerServer' => [
 		'metawiki' => 'wiki.surf',
 	],
