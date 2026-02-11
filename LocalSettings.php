@@ -7386,13 +7386,6 @@ $wgConf->settings += [
 	],
 
 	// Uncategorised
-	'wgRandomGameDisplay' => [
-		'default' => [
-			'random_picturegame' => false,
-			'random_poll' => false,
-			'random_quiz' => false,
-		],
-	],
 	'wgForceHTTPS' => [
 		'default' => true,
 	],
