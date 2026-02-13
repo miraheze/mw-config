@@ -4971,6 +4971,12 @@ $wgConf->settings += [
 			'techteam',
 			'trustandsafety'
 		],
+		'+recaptimesquadwiki' => [
+			'bureaucrat',
+			'crew-recaptime-dev',
+			'interface-admin',
+			'sysop',
+		],
 	],
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
