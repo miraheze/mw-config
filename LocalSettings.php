@@ -5231,6 +5231,14 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
+			'assistant-steward' => [
+				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
+				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+			],
 			'global-admin' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
