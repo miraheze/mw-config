@@ -7732,13 +7732,6 @@ if ( $wgUseQuickInstantCommons ) {
 		'descriptionCacheExpiry' => 604800,
 		'apiThumbCacheExpiry' => 0,
 		'initialCapital' => true,
-		'zones' => [
-			// actual swift containers have 'local-*'
-			'public' => [ 'container' => 'local-public' ],
-			'thumb' => [ 'container' => 'local-thumb' ],
-			'temp' => [ 'container' => 'local-temp' ],
-			'deleted' => [ 'container' => 'local-deleted' ],
-		],
 	];
 }
 
