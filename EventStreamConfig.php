@@ -9,7 +9,7 @@ $wgEventStreamsDefaultSettings = [
 	'canary_events_enabled' => true,
 ];
 
-if ( $cwPrivate ) {
+if ( $wgManageWikiPrivateWiki ) {
 	$wgEventStreamsDefaultSettings += [
 		'producers' => [
 			'mediawiki_eventbus' => [
@@ -27,6 +27,6 @@ $wgEventStreams = [
 	],
 ];
 
-if ( $cwPrivate ) {
+if ( $wgManageWikiPrivateWiki ) {
 	$wgEventStreams['/^mediawiki\\.job\\..+/']['producers']['mediawiki_eventbus']['enabled'] = true;
 }

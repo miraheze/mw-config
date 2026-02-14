@@ -5,7 +5,7 @@ use Wikimedia\EventRelayer\EventRelayerNull;
 
 $wgEnableEventBus = 'TYPE_ALL';
 
-if ( $cwPrivate ) {
+if ( $wgManageWikiPrivateWiki ) {
 	$wgEnableEventBus = 'TYPE_JOB|TYPE_EVENT';
 }
 

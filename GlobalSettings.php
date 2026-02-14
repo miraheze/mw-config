@@ -118,7 +118,7 @@ if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
 	wfLoadExtension( 'OOJSPlus' );
 }
 
-if ( $wgMirahezeCommons && !$cwPrivate ) {
+if ( $wgMirahezeCommons && !$wgManageWikiPrivateWiki ) {
 	wfLoadExtension( 'GlobalUsage' );
 }
 
@@ -184,7 +184,7 @@ $wgVirtualRestConfig = [
 			'url' => 'https://mw-lb.miraheze.org/w/rest.php',
 			'domain' => $wi->server,
 			'prefix' => $wi->dbname,
-			'forwardCookies' => (bool)$cwPrivate,
+			'forwardCookies' => (bool)$wgManageWikiPrivateWiki,
 			'restbaseCompat' => false,
 		],
 	],
@@ -200,7 +200,7 @@ if ( $wi->isExtensionActive( 'Flow' ) ) {
 	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
 	$wgFlowParsoidPrefix = $wi->dbname;
 	$wgFlowParsoidTimeout = 50;
-	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
+	$wgFlowParsoidForwardCookies = (bool)$wgManageWikiPrivateWiki;
 }
 
 /**
@@ -278,7 +278,7 @@ unset( $actions, $articlePath );
 $wgAllowedCorsHeaders[] = 'X-WikiTide-Debug';
 
 // Closed Wikis
-if ( $cwClosed ) {
+if ( $wgManageWikiClosedWiki ) {
 	$wgRevokePermissions = [
 		'*' => [
 			'block' => true,
@@ -298,7 +298,7 @@ if ( $cwClosed ) {
 }
 
 // Public Wikis
-if ( !$cwPrivate ) {
+if ( !$wgManageWikiPrivateWiki ) {
 	$wgRCFeeds['irc'] = [
 		'formatter' => MirahezeIRCRCFeedFormatter::class,
 		'uri' => 'udp://10.0.17.143:' . [ 5070, 5072 ][array_rand( [ 5070, 5072 ] )],
@@ -961,7 +961,7 @@ $wgCaptchaRegexes[] = '/<a +href/i';
 // 12 MB
 $wgAPIMaxResultSize = 12582912;
 
-$wgReferrerPolicy = $cwPrivate ?
+$wgReferrerPolicy = $wgManageWikiPrivateWiki ?
 	'no-referrer' :
 	[ 'origin-when-cross-origin', 'origin' ];
 
