@@ -4996,6 +4996,7 @@ $wgConf->settings += [
 			'interface-admin',
 			'techteam',
 			'trustandsafety',
+			'wiki-mechanics',
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
