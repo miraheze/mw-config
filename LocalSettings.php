@@ -7654,9 +7654,11 @@ $wi::$disabledExtensions = [
 
 	'lingo' => 'Currently broken',
 
+	'video' => 'Incompatible with MediaWiki 1.45',
+
 	// Are these still incompatible?
-	'chameleon' => 'Incompatible with MediaWiki 1.44',
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.44',
+	'chameleon' => 'Incompatible with MediaWiki 1.45',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.45',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
