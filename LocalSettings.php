@@ -4145,7 +4145,6 @@ $wgConf->settings += [
 			'temporary-account-viewer',
 			'techteam',
 			'trustandsafety',
-			'wiki-mechanics',
 		],
 		'+metawiki' => [
 			'electionadmin',
@@ -4999,7 +4998,6 @@ $wgConf->settings += [
 			'interface-admin',
 			'techteam',
 			'trustandsafety',
-			'wiki-mechanics',
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
