@@ -2090,6 +2090,18 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
+	'chart' => [
+		'name' => 'Chart',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Chart',
+		'conflicts' => false,
+		'requires' => [
+			'extensions' => [
+				'jsonconfig',
+			],
+		],
+		'section' => 'other',
+		'help' => 'This extension works differently compared with the documentation on mediawiki.org. Instead of creating chart data pages with suffix .tab, use the .data suffix instead. An example title would be Data:TestChart.data.',
+	],
 	'cirrussearch' => [
 		'name' => 'CirrusSearch',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CirrusSearch',

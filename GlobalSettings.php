@@ -464,6 +464,37 @@ if ( !$wi->isExtensionActive( 'wikiseo' ) ) {
 	$wgSkinMetaTags = [ 'og:title', 'og:type' ];
 }
 
+if ( $wi->isExtensionActive( 'Chart' ) ) {
+	if ($wi->isBeta()) {
+		$wgChartServiceUrl = 'http://test151.fsslc.wtnet:6284/v1/chart/render';
+	} else {
+		// FIXME: decide which mwtask server should go here
+		$wgChartServiceUrl = 'http://mwtask181.fsslc.wtnet:6284/v1/chart/render';
+	}
+
+	// This differs from the default configuration upstream. Upstream uses .tab
+	// to store chart data and forces this to happen on commons. Wikis likely prefer
+	// charts to be stored locally by default, but we don't want to break the existing
+	// JsonConfig behavior of storing .tab pages on commons, so we create a local .data
+	// suffix for storing chart data.
+	$wgJsonConfigModels['ChartData.JsonConfig'] = 'JsonConfig\JCTabularContent';
+	$wgJsonConfigs['ChartData.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		'pattern' => '/.\.data$/',
+		'license' => 'CC0-1.0',
+		'isLocal' => true,
+	];
+	$wgJsonConfigModels['Chart.JsonConfig'] = 'MediaWiki\Extension\Chart\JCChartContent';
+	$wgJsonConfigs['Chart.JsonConfig'] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		'pattern' => '/.\.chart$/',
+		'license' => 'CC0-1.0',
+		'isLocal' => true,
+	];
+}
+
 // $wgFooterIcons
 if ( (bool)$wmgWikiapiaryFooterPageName ) {
 	$wgFooterIcons['wikiapairy']['wikiapiary'] = [
@@ -627,23 +658,24 @@ if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server )
 
 // JsonConfig
 if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
-	$wgJsonConfigs = [
-		'Map.JsonConfig' => [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".map", and contain at least one symbol
-			'pattern' => '/.\.map$/',
-			'license' => 'CC-BY-SA 4.0',
-			'isLocal' => false,
-		],
-		'Tabular.JsonConfig' => [
-			'namespace' => 486,
-			'nsName' => 'Data',
-			// page name must end in ".tab" or ".tabx", and contain at least one symbol
-			'pattern' => '/.\.tab|x$/',
-			'license' => 'CC-BY-SA 4.0',
-			'isLocal' => false,
-		],
+	$wgJsonConfigModels[ 'Map.JsonConfig' ] = 'JsonConfig\JCMapDataContent';
+	$wgJsonConfigModels[ 'Tabular.JsonConfig' ] = 'JsonConfig\JCTabularContent';
+
+	$wgJsonConfigs[ 'Map.JsonConfig' ] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".map", and contain at least one symbol
+		'pattern' => '/.\.map$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => false,
+	];
+	$wgJsonConfigs[ 'Tabular.JsonConfig' ] = [
+		'namespace' => 486,
+		'nsName' => 'Data',
+		// page name must end in ".tab" or ".tabx", and contain at least one symbol
+		'pattern' => '/.\.tab|x$/',
+		'license' => 'CC-BY-SA 4.0',
+		'isLocal' => false,
 	];
 
 	if ( $wgDBname !== 'commonswiki' &&
