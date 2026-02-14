@@ -4990,12 +4990,12 @@ $wgConf->settings += [
 			'user',
 		],
 		'+metawiki' => [
+			'assistant-steward',
 			'electionadmin',
 			'global-admin',
 			'interface-admin',
 			'techteam',
 			'trustandsafety',
-			'assistant-steward'
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
