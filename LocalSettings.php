@@ -7652,7 +7652,6 @@ $wi::$disabledExtensions = [
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
-	'mintydocs' => 'Security vulnerabilities',
 
 	// Are these still incompatible?
 	'chameleon' => 'Incompatible with MediaWiki 1.44',
