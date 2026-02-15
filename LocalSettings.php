@@ -6758,6 +6758,13 @@ $wgConf->settings += [
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
 	],
+	'wgVectorNightMode' => [
+		'default' => [
+			'logged_out' => false,
+			'logged_in' => true,
+			'beta' => false,
+		],
+	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
 			'showThumbnail' => true,
