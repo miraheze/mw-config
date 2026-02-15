@@ -4809,6 +4809,13 @@ $wgConf->settings += [
 	'wgMFUseWikibase' => [
 		'default' => false,
 	],
+	'wgMinervaNightMode' => [
+		'default' => [
+			'amc' => true,
+			'beta' => true,
+			'base' => true,
+		],
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.

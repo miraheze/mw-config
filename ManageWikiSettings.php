@@ -1591,7 +1591,6 @@ $wgManageWikiSettings = [
 		'help' => 'When user changes interface language via ULS, should we also switch the language of the translatable page?',
 		'requires' => [],
 	],
-
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
 		'from' => 'minervaneue',
@@ -3724,6 +3723,29 @@ $wgManageWikiSettings = [
 				'value' => true,
 			]
 		],
+	],
+	'wgMinervaNightMode' => [
+		'name' => 'Minerva Enable Dark Mode',
+		'from' => 'minervaneue',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'amc',
+			'beta',
+			'base',
+		],
+		'options' => [
+			'AMC' => 'amc',
+			'Beta feature' => 'beta',
+			'Default' => 'base',
+		],
+		'overridedefault' => [
+			'amc' => true,
+			'beta' => true,
+			'base' => true,
+		],
+		'section' => 'styling',
+		'help' => 'Enable dark mode for users with these features enabled.',
+		'requires' => [],
 	],
 	'wgWordmark' => [
 		'name' => 'Wordmark',
