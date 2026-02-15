@@ -7434,9 +7434,6 @@ $wgConf->settings += [
 	],
 
 	// Schema migration
-	'wgCategoryLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	],
 	'wgFileSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
