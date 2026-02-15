@@ -2767,16 +2767,6 @@ $wgConf->settings += [
 	],
 
 	// GlobalUsage
-	'wgGlobalUsageDatabase' => [
-		'default' => 'commonswiki',
-		'gpcommonswiki' => 'gpcommonswiki',
-		'gratisdatawiki' => 'gpcommonswiki',
-		'gratispaideiawiki' => 'gpcommonswiki',
-		'intercriaturaswiki' => 'intercriaturaswiki',
-		'tuscriaturaswiki' => 'intercriaturaswiki',
-		'yourcreatureswiki' => 'intercriaturaswiki',
-		'beta' => 'commonswikibeta',
-	],
 	'wgGlobalUsageSharedRepoWiki' => [
 		'default' => false,
 		'gpcommonswiki' => 'gpcommonswiki',
@@ -3648,7 +3638,7 @@ $wgConf->settings += [
 		// Content models that are possible should be setup when doing imports etc...
 		// to avoid potential content model mismatch issues.
 		'default' => [
-			// Flow is being removed and no longer enabled no new wikis
+			// Flow was removed
 			'flow-board',
 			// Interactivemap is a Fandom extension and the compatibility
 			// mode in DataMaps does not work.
@@ -4122,11 +4112,6 @@ $wgConf->settings += [
 				'edit-create' => true,
 			],
 		],
-		'+ext-Flow' => [
-			'suppress' => [
-				'flow-suppress' => true,
-			],
-		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
@@ -4182,7 +4167,6 @@ $wgConf->settings += [
 				'editincidents',
 				'editothersprofiles-private',
 				'sendemail',
-				'flow-suppress',
 				'generate-random-hash',
 				'globalblock',
 				'globalblock-exempt',
@@ -5231,6 +5215,14 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
+			'assistant-steward' => [
+				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
+				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+			],
 			'global-admin' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
@@ -5375,9 +5367,6 @@ $wgConf->settings += [
 		],
 		'+fwtdwiki' => [
 			'minerva-theme' => 'night',
-		],
-		'+isvwiki' => [
-			'flow-topiclist-sortby' => 'newest',
 		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
@@ -7435,9 +7424,6 @@ $wgConf->settings += [
 	],
 
 	// Schema migration
-	'wgCategoryLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	],
 	'wgFileSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
@@ -7516,7 +7502,6 @@ $wgConf->settings += [
 			'fatal' => 'debug',
 			'FileImporter' => false,
 			'FileOperation' => false,
-			'Flow' => 'debug',
 			'formatnum' => false,
 			'FSFileBackend' => false,
 			'gitinfo' => false,
@@ -7654,9 +7639,12 @@ $wi::$disabledExtensions = [
 
 	'lingo' => 'Currently broken',
 
+	'highlightlinksincategory' => 'Incompatible with MediaWiki 1.45',
+	'video' => 'Incompatible with MediaWiki 1.45',
+
 	// Are these still incompatible?
-	'chameleon' => 'Incompatible with MediaWiki 1.44',
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.44',
+	'chameleon' => 'Incompatible with MediaWiki 1.45',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.45',
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
