@@ -3680,7 +3680,7 @@ $wgManageWikiSettings = [
 			'base',
 		],
 		'options' => [
-			'Beta  feature' => 'beta',
+			'Beta feature' => 'beta',
 			'Default' => 'base',
 		],
 		'overridedefault' => [
