@@ -7652,6 +7652,7 @@ $wi::$disabledExtensions = [
 
 	'lingo' => 'Currently broken',
 
+	'highlightlinksincategory' => 'Incompatible with MediaWiki 1.45',
 	'video' => 'Incompatible with MediaWiki 1.45',
 
 	// Are these still incompatible?
