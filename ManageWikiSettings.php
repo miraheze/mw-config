@@ -1591,6 +1591,7 @@ $wgManageWikiSettings = [
 		'help' => 'When user changes interface language via ULS, should we also switch the language of the translatable page?',
 		'requires' => [],
 	],
+
 	'wgMinervaAlwaysShowLanguageButton' => [
 		'name' => 'Minerva Always Show Language Button',
 		'from' => 'minervaneue',
