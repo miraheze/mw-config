@@ -7705,7 +7705,7 @@ require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
 
-if ( $wgUseQuickInstantCommons ) {
+/* if ( $wgUseQuickInstantCommons ) {
 	$wgForeignFileRepos[] = [
 		'class' => Miraheze\MirahezeMagic\ForeignAPIRepoWithFixedUA::class,
 		'name' => 'wikimediacommons',
@@ -7728,7 +7728,7 @@ if ( $wgUseQuickInstantCommons ) {
 			'deleted' => [ 'container' => 'local-deleted' ],
 		],
 	];
-}
+} */
 
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
