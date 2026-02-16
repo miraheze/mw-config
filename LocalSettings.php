@@ -3441,7 +3441,7 @@ $wgConf->settings += [
 	'wmgWikiLicense' => [
 		'default' => 'cc-by-sa',
 	],
-	
+
 	// Links?
 	'+wgUrlProtocols' => [
 		'default' => [],
