@@ -2927,6 +2927,15 @@ $wgManageWikiSettings = [
 		'help' => 'Shows comments in the RecentChanges special page.',
 		'requires' => [],
 	],
+	'wgCommentStreamsSuppressLogsFromRCs' => [
+		'name' => 'CommentStreams Suppress Logs From RecentChanges',
+		'from' => 'commentstreams',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'recentchanges',
+		'help' => 'Supresses CommentStreams-related logs from being added to Special:RecentChanges',
+		'requires' => [],
+	],
 	'wgWikiForumLogsInRC' => [
 		'name' => 'Display WikiForum logs in RecentChanges',
 		'from' => 'wikiforum',

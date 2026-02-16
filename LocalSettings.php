@@ -721,6 +721,9 @@ $wgConf->settings += [
 	'wgCommentStreamsModeratorFastDelete' => [
 		'default' => false,
 	],
+	'wgCommentStreamsSuppressLogsFromRCs' => [
+		'default' => true,
+	],
 
 	// CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
@@ -3438,7 +3441,7 @@ $wgConf->settings += [
 	'wmgWikiLicense' => [
 		'default' => 'cc-by-sa',
 	],
-
+f
 	// Links?
 	'+wgUrlProtocols' => [
 		'default' => [],
