@@ -721,6 +721,9 @@ $wgConf->settings += [
 	'wgCommentStreamsModeratorFastDelete' => [
 		'default' => false,
 	],
+	'wgCommentStreamsSuppressLogsFromRCs' => [
+		'default' => true,
+	],
 
 	// CommonsMetadata
 	'wgCommonsMetadataForceRecalculate' => [
