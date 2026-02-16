@@ -4809,6 +4809,13 @@ $wgConf->settings += [
 	'wgMFUseWikibase' => [
 		'default' => false,
 	],
+	'wgMinervaNightMode' => [
+		'default' => [
+			'amc' => true,
+			'beta' => true,
+			'base' => true,
+		],
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
@@ -6750,6 +6757,13 @@ $wgConf->settings += [
 	],
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
+	],
+	'wgVectorNightMode' => [
+		'default' => [
+			'logged_out' => false,
+			'logged_in' => true,
+			'beta' => false,
+		],
 	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
