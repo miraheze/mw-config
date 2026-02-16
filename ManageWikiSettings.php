@@ -2933,7 +2933,7 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => true,
 		'section' => 'recentchanges',
-		'help' => 'Supresses CommentStreams-related logs from being added to Special:RecentChanges',
+		'help' => 'Suppresses CommentStreams-related logs from being added to Special:RecentChanges',
 		'requires' => [],
 	],
 	'wgWikiForumLogsInRC' => [
