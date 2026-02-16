@@ -7621,6 +7621,9 @@ $wgConf->settings += [
 	],
 ];
 
+// Needed for ManageWiki to access certain variables remotely
+$wgManageWikiSiteConfiguration = $wgConf;
+
 // Start settings requiring external dependency checks/functions
 
 if ( wfHostname() === 'test151' ) {
