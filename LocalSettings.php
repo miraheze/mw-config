@@ -5412,6 +5412,9 @@ $wgConf->settings += [
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 		],
+		'+sp2pediawiki' => [
+			'vector-theme' => 'night',
+		],
 		'+ssbuniversewiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
