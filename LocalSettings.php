@@ -7640,7 +7640,6 @@ $wi::$disabledExtensions = [
 	'drafts' => '[[phorge:T11970|T11970]]',
 	'pageproperties' => '[[phorge:T11641|T11641]]',
 	'score' => '[[phorge:T5863|T5863]]',
-	'simpleblogpage' => '[[phorge:T13252|T13252]]',
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
