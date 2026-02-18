@@ -1,6 +1,7 @@
 <?php
 
 use MediaWiki\Auth\LocalPasswordPrimaryAuthenticationProvider;
+use MediaWiki\Extension\ConfirmEdit\hCaptcha\HCaptcha;
 use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
@@ -924,7 +925,7 @@ $wgMathSvgRenderer = 'mathoid';
 $wgMathUseInternalRestbasePath = false;
 
 // ConfirmEdit (hCaptcha)
-$wgCaptchaClass = 'HCaptcha';
+$wgCaptchaClass = HCaptcha::class;
 $wgCaptchaStorageClass = CaptchaCacheStore::class;
 $wgCaptchaRegexes[] = '/<a +href/i';
 
