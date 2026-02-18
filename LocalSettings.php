@@ -4658,6 +4658,10 @@ $wgConf->settings += [
 	'wgCleanSignatures' => [
 		'default' => true,
 	],
+	'wgResponsiveImages' => [
+		'default' => true,
+		'lookoutsidewiki' => false,
+	],
 
 	// MobileFrontend
 	'wgDefaultMobileSkin' => [
