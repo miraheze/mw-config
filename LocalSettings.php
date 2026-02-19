@@ -7651,6 +7651,7 @@ $wi::$disabledExtensions = [
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
+	'linktitles' => 'Performance and compatibility issues ([[phorge:T14992|T14992]])',
 
 	'video' => 'Incompatible with MediaWiki 1.45',
 
