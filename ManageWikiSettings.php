@@ -3731,18 +3731,18 @@ $wgManageWikiSettings = [
 		'type' => 'list-multi-bool',
 		'allopts' => [
 			'amc',
-			'beta',
 			'base',
+			'loggedin',
 		],
 		'options' => [
 			'AMC' => 'amc',
-			'Beta feature' => 'beta',
 			'Default' => 'base',
+			'Logged in' => 'loggedin',
 		],
 		'overridedefault' => [
 			'amc' => true,
-			'beta' => true,
 			'base' => true,
+			'loggedin' => true,
 		],
 		'section' => 'styling',
 		'help' => 'Enable Minerva\'s dark mode for users with these features enabled.',
