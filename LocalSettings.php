@@ -5393,6 +5393,9 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
 		],
+		'+lazerpigeonwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+mariowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
