@@ -4812,8 +4812,8 @@ $wgConf->settings += [
 	'wgMinervaNightMode' => [
 		'default' => [
 			'amc' => true,
-			'beta' => true,
 			'base' => true,
+			'loggedin' => true,
 		],
 	],
 
