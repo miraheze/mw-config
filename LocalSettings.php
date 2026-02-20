@@ -2259,6 +2259,13 @@ $wgConf->settings += [
 					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
 				],
 			],
+			'freeart' => [
+				'freeart' => [
+					'src' => 'https://static.wikitide.net/thechurchofthestatuewiki/6/68/Free_art_licence_footmark.svg',
+					'url' => 'https://artlibre.org/licence/lal/en/',
+					'alt' => 'Free Art Licence (FAL)',
+				],
+			],
 		],
 		'tnowiki' => [
 			'poweredby' => [
