@@ -34,8 +34,6 @@ if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1'
 	die( "Request must use POST.\n" );
 }
 
-$wgRequestTimeLimit = 1200;
-
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 define( 'MW_DB', isset( $_GET['wiki'] ) ? $_GET['wiki'] : '' );
 
@@ -46,6 +44,7 @@ require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 error_reporting( E_ERROR );
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
+$wgRequestTimeLimit = 1200;
 
 // Session consistency is not helpful here and will slow things down in some cases
 $chronologyProtector = MediaWikiServices::getInstance()->getChronologyProtector();
