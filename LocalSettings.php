@@ -13,7 +13,10 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
-$mwtask = str_starts_with( wfHostname(), 'mwtask' );
+// test also because it acts as its own jobrunner.
+$mwtask = str_starts_with( wfHostname(), 'mwtask' ) ||
+	str_starts_with( wfHostname(), 'test' );
+
 // Higher on mwtask
 if ( $mwtask ) {
 	// 3000MiB
@@ -32,7 +35,7 @@ if ( PHP_SAPI === 'cli' ) {
 		$wgRequestTimeLimit = 86400;
 	} elseif ( str_starts_with( $host, 'jobrunner-high.' ) ) {
 		$wgRequestTimeLimit = 259200;
-	} elseif ( str_starts_with( $host, 'jobrunner.' ) ) {
+	} else {
 		$wgRequestTimeLimit = 1200;
 	}
 } elseif ( ( $_SERVER['REQUEST_METHOD'] ?? '' ) === 'POST' ) {
