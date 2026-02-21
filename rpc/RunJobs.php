@@ -34,6 +34,8 @@ if ( !in_array( $_SERVER['REMOTE_ADDR'], [ '127.0.0.1', '0:0:0:0:0:0:0:1', '::1'
 	die( "Request must use POST.\n" );
 }
 
+$wgRequestTimeLimit = 1200;
+
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 define( 'MW_DB', isset( $_GET['wiki'] ) ? $_GET['wiki'] : '' );
 
