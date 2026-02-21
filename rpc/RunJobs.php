@@ -44,7 +44,6 @@ require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 error_reporting( E_ERROR );
 ini_set( 'display_errors', 1 );
 $wgShowExceptionDetails = true;
-$wgRequestTimeLimit = 1200;
 
 // Session consistency is not helpful here and will slow things down in some cases
 $chronologyProtector = MediaWikiServices::getInstance()->getChronologyProtector();
