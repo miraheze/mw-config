@@ -3632,6 +3632,7 @@ $wgConf->settings += [
 			'mobilefrontend',
 			// T14325: added here after being removed from global skins
 			'modern',
+			'multimediaviewer',
 			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
