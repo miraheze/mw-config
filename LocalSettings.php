@@ -2781,7 +2781,8 @@ $wgConf->settings += [
 
 	// GlobalUsage
 	'wgGlobalUsageSharedRepoWiki' => [
-		'default' => false,
+		'default' => 'commonswiki',
+		'beta' => 'commonswikibeta',
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
