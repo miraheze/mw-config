@@ -183,19 +183,21 @@ $wgParserCacheType = 'mysql-multiwrite';
 $wgChronologyProtectorStash = 'mcrouter';
 
 $wgParsoidCacheConfig = [
-	// Defaults to MainStash
+	// Defaults to using MainStash
 	'StashType' => null,
 	// 24h in production, VE will fail to save after this time.
 	'StashDuration' => 24 * 60 * 60,
+	// Only cache if parsing takes longer than n seconds; 0 means cache all.
 	'CacheThresholdTime' => $wgDBname === 'commonswiki' ? 1.0 : 0.0,
-	'WarmParsoidParserCache' => $wgDBname !== 'commonswiki' ? true : false,
+	// Disable cache warming on commonswiki for now.
+	'WarmParsoidParserCache' => $wgDBname === 'commonswiki' ? false : true,
 ];
 
 if ( $wgDBname === 'commonswiki' ) {
 	$wgParserCacheFilterConfig['parsoid-pcache'] += [
-		// disable parsoid-pcache for file description pages on commons
+		// Disable parsoid-pcache for file description pages on commonswiki.
 		NS_FILE => [
-			// cache none
+			// Cache none
 			'minCpuTime' => PHP_INT_MAX,
 		],
 	];
