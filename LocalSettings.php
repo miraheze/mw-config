@@ -33,7 +33,7 @@ if ( PHP_SAPI === 'cli' ) {
 	$host = $_SERVER['HTTP_HOST'] ?? '';
 	if ( str_starts_with( $host, 'videoscaler.' ) ) {
 		$wgRequestTimeLimit = 86400;
-	} elseif ( str_starts_with( $host, 'jobrunner-high.' ) ) {
+	} elseif ( str_starts_with( $host, 'jobrunner-high.' ) || str_starts_with( wfHostname(), 'test' ) ) {
 		$wgRequestTimeLimit = 259200;
 	} else {
 		$wgRequestTimeLimit = 1200;
