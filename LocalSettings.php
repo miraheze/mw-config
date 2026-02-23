@@ -627,12 +627,14 @@ $wgConf->settings += [
 			'centralDB' => 'metawiki',
 			'groups' => [
 				'steward',
+				'trustandsafety',
 			],
 		],
 		'beta' => [
 			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
+				'trustandsafety',
 			],
 		],
 	],
