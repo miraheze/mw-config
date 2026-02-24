@@ -85,8 +85,9 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 		$excimer->stop();
 		$data = $excimer->getLog()->getSpeedscopeData();
 		$data['profiles'][0]['name'] = $_SERVER['REQUEST_URI'];
-		echo "<!--" . htmlspecialchars( json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) ) .
-			"-->";
+		echo '<script type="application/json" id="speedscope">';
+		echo htmlspecialchars( json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
+		echo '</script>';
 	} );
 }
 
