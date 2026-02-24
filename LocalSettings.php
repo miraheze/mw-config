@@ -76,6 +76,21 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 	// Don't need a global here
 	unset( $xhprofFlags );
 }
+if ( isset( $_GET['forceflame'] ) && extension_loaded( 'excimer' ) ) {
+	$excimer = new \ExcimerProfiler();
+	$excimer->setPeriod( 0.001 );
+	$excimer->setEventType( EXCIMER_REAL );
+	$excimer->start();
+	register_shutdown_function( static function () use ( $excimer ) {
+		$excimer->stop();
+		$data = $excimer->getLog()->getSpeedscopeData();
+		$data['profiles'][0]['name'] = $_SERVER['REQUEST_URI'];
+		file_put_contents(
+			'/srv/mediawiki/speedscope-profile.json',
+			json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE )
+		);
+	} );
+}
 
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenanceType = 'unscheduled';
