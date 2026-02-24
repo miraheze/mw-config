@@ -998,6 +998,18 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
+	'tableprogresstracking' => [
+		'name' => 'TableProgressTracking',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TableProgressTracking',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'table_progress_tracking' => 'extensions/TableProgressTracking/schema/mysql/tables-generated.sql',
+			],
+		],
+		'section' => 'parserhooks',
+	],
 	'tabs' => [
 		'name' => 'Tabs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Tabs',
