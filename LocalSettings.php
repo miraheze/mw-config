@@ -81,14 +81,14 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 	$excimer->setPeriod( 0.001 );
 	$excimer->setEventType( EXCIMER_REAL );
 	$excimer->start();
-	register_shutdown_function( static function () use ( $excimer ) {
+	\MediaWiki\Deferred\DeferredUpdates::addCallableUpdate( static function () use ( $excimer ) {
 		$excimer->stop();
 		$data = $excimer->getLog()->getSpeedscopeData();
 		$data['profiles'][0]['name'] = $_SERVER['REQUEST_URI'];
 		echo '<script type="application/json" id="speedscope">';
 		echo htmlspecialchars( json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE ) );
 		echo '</script>';
-	} );
+	}, \MediaWiki\Deferred\DeferredUpdates::PRESEND );
 }
 
 // Show custom database maintenance error page on these clusters.
