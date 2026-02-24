@@ -75,8 +75,8 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 
 	// Don't need a global here
 	unset( $xhprofFlags );
-} elseif ( str_starts_with( wfHostname(), 'test' ) && isset( $_GET['forceflame'] ) &&
-	extension_loaded( 'excimer' ) ) {
+}
+if ( isset( $_GET['forceflame'] ) && extension_loaded( 'excimer' ) ) {
 	$excimer = new \ExcimerProfiler();
 	$excimer->setPeriod( 0.001 );
 	$excimer->setEventType( EXCIMER_REAL );
