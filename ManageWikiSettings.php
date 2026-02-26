@@ -401,19 +401,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not to enable any disabled-by-default experimental features.',
 		'requires' => [],
 	],
-	'wgDataMapsEnableFandomPortingTools' => [
-		'name' => 'DataMaps: Enable FANDOM porting tools',
-		'from' => 'datamaps',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'other',
-		'help' => 'Whether or not to enable compatibility with Map pages created with the FANDOM InteractiveMaps extension. Restricted as this is only temporarily enabled for a maintenance script run',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-	],
 	'wgDisplayFeedsInSidebar' => [
 		'name' => 'Display feeds in sidebar',
 		'from' => 'featuredfeeds',
@@ -2940,6 +2927,15 @@ $wgManageWikiSettings = [
 		'help' => 'Shows comments in the RecentChanges special page.',
 		'requires' => [],
 	],
+	'wgCommentStreamsSuppressLogsFromRCs' => [
+		'name' => 'CommentStreams Suppress Logs From RecentChanges',
+		'from' => 'commentstreams',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'recentchanges',
+		'help' => 'Suppresses CommentStreams-related logs from being added to Special:RecentChanges',
+		'requires' => [],
+	],
 	'wgWikiForumLogsInRC' => [
 		'name' => 'Display WikiForum logs in RecentChanges',
 		'from' => 'wikiforum',
@@ -3508,29 +3504,6 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'socialtools',
 		'help' => 'Whether to display a Share via WhatsApp button on the sidebar.',
-		'requires' => [],
-	],
-	'wgRandomGameDisplay' => [
-		'name' => 'Random Game Display',
-		'from' => 'randomgameunit',
-		'type' => 'list-multi-bool',
-		'allopts' => [
-			'random_poll',
-			'random_picturegame',
-			'random_quiz',
-		],
-		'options' => [
-			'Poll' => 'random_poll',
-			'PictureGame' => 'random_picturegame',
-			'Quiz' => 'random_quiz',
-		],
-		'overridedefault' => [
-			'random_picturegame' => false,
-			'random_poll' => false,
-			'random_quiz' => false,
-		],
-		'section' => 'socialtools',
-		'help' => 'Controls what games are enabled.',
 		'requires' => [],
 	],
 	'wgUserPageChoice' => [

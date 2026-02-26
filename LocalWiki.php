@@ -76,10 +76,6 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
-	case 'bluearchivewiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-
-		break;
 	case 'cecuwiki':
 		$wgVectorNightMode['beta'] = true;
 		$wgVectorNightMode['logged_in'] = true;
@@ -102,9 +98,6 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'constantnoblewiki':
-		$wgDplSettings['maxResultCount'] = 2500;
-		$wgDplSettings['maxCategoryCount'] = 100;
-
 		// T13620: Show AbuseFilter changes in RecentChanges
 		$wgExtensionFunctions[] = static function () {
 			global $wgLogRestrictions;
@@ -115,7 +108,6 @@ switch ( $wi->dbname ) {
 	case 'dappervolkwiki':
 		$wgVectorNightMode['logged_in'] = true;
 		$wgVectorNightMode['logged_out'] = true;
-		$wgDplSettings['maxCategoryCount'] = 15;
 
 		break;
 	case 'dlfmwiki':
@@ -168,7 +160,6 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'fischwiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgLogRestrictions['newusers'] = 'read';
 
 		break;
@@ -277,11 +268,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
 		];
-
-		break;
-	case 'gui7814sgtafanonwiki':
-		$wgDplSettings['maxCategoryCount'] = 1000;
-		$wgDplSettings['maxResultCount'] = 1000;
 
 		break;
 	case 'hommwiki':
@@ -652,11 +638,6 @@ switch ( $wi->dbname ) {
 		*/
 
 		break;
-	case 'metzowiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-		$wgDplSettings['allowUnlimitedResults'] = true;
-
-		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
 
@@ -680,10 +661,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
-
-		break;
-	case 'persistwiki':
-		$wgDplSettings['maxCategoryCount'] = 10;
 
 		break;
 	case 'picrosswiki':
@@ -1161,11 +1138,6 @@ switch ( $wi->dbname ) {
 			echo $html;
 			return true;
 		}
-
-		break;
-	case 'traceprojectwikiwiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
 	case 'whentheycrywiki':

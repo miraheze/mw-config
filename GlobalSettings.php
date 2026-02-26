@@ -196,13 +196,6 @@ $wgVirtualRestConfig = [
 	],
 ];
 
-if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgFlowParsoidURL = 'https://mw-lb.miraheze.org/w/rest.php';
-	$wgFlowParsoidPrefix = $wi->dbname;
-	$wgFlowParsoidTimeout = 50;
-	$wgFlowParsoidForwardCookies = (bool)$cwPrivate;
-}
-
 /**
  * Increase the time that entries are kept in the stash when Moderation is enabled
  * so that they are not deleted by cleanupUploadStash.php before they have
@@ -412,28 +405,6 @@ $wgDataDump = [
 	],
 ];
 
-if ( $wi->isExtensionActive( 'Flow' ) ) {
-	$wgDataDump['flow'] = [
-		'file_ending' => '.xml.gz',
-		'useBackendTempStore' => true,
-		'generate' => [
-			'type' => 'mwscript',
-			'script' => 'extensions/Flow/dumpBackup',
-			'options' => [
-				'--full',
-				'--output',
-				'gzip:/tmp/${filename}',
-			],
-		],
-		'limit' => 1,
-		'permissions' => [
-			'view' => 'view-dump',
-			'generate' => 'generate-dump',
-			'delete' => 'delete-dump',
-		],
-	];
-}
-
 // UploadWizard configuration
 if ( $wi->isExtensionActive( 'UploadWizard' ) ) {
 	$wgUploadWizardConfig = [
@@ -519,7 +490,7 @@ if ( $wgDBname !== 'commonswiki' && $wgMirahezeCommons && strpos( wfHostname(), 
 	$wgForeignFileRepos[] = [
 		'class' => ForeignDBViaLBRepo::class,
 		'name' => 'mirahezecommons',
-		'backend' => 'miraheze-swift',
+		'backend' => 'miraheze-swift-commons-shared',
 		'url' => 'https://static.wikitide.net/commonswiki',
 		'hashLevels' => 2,
 		'thumbScriptUrl' => false,
@@ -623,13 +594,6 @@ if ( !preg_match( '/(miraheze|mirabeta|nexttide|wikitide)\.org$/', $wi->server )
 		$wgUrlShortenerAllowedDomains,
 		[ preg_quote( str_replace( 'https://', '', $wi->server ) ) ]
 	);
-}
-
-// DataMaps
-if ( $wi->isExtensionActive( 'Interactive Data Maps' ) ) {
-	if ( $wgDataMapsEnableFandomPortingTools ) {
-		$wgDataMapsNamespaceId = 2900;
-	}
 }
 
 // JsonConfig
@@ -812,7 +776,7 @@ if ( $wgConf->get( 'wgRightsIcon', $wi->dbname ) ) {
 
 // Kilobytes
 $wgMaxShellFileSize = 512 * 1024;
-$wgMaxShellMemory = 1024 * 1024 * 2;
+$wgMaxShellMemory = 1024 * 1024;
 
 // 50 seconds
 $wgMaxShellTime = 50;
