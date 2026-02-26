@@ -289,7 +289,8 @@ class MirahezeFunctions {
 			$requestUri = $_SERVER['REQUEST_URI'];
 			$pathBits = explode( '/', $requestUri, 3 );
 			if ( count( $pathBits ) < 3 ) {
-				exit( "Invalid request URI (requestUri=$requestUri), can't determine language." );
+				print_r( "Invalid request URI (requestUri=$requestUri), can't determine language.\n" );
+				exit( 1 );
 			}
 			[ , $dbname, ] = $pathBits;
 			// No validation of $dbname at this point - if it's invalid, an error will be produced
