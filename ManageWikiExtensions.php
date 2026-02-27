@@ -2517,13 +2517,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
-	'mobiletabsplugin' => [
-		'name' => 'MobileTabsPlugin',
-		'linkPage' => 'https://github.com/fuerthwiki/MobileTabsPlugin',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'other',
-	],
 	'multimediaviewer' => [
 		'name' => 'MultimediaViewer',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MultimediaViewer',
