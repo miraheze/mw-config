@@ -7688,9 +7688,7 @@ $wi::$disabledExtensions = [
 
 	// Are these still incompatible?
 	'chameleon' => 'Incompatible with MediaWiki 1.45',
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.45',
-	// imminent removal
-	'mobiletabsplugin' => 'incompatible',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.45'
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
