@@ -2032,7 +2032,12 @@ $wgManageWikiExtensions = [
 		'name' => 'AutoCreatePage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:AutoCreatePage',
 		'conflicts' => false,
-		'requires' => [],
+		'help' => 'Note: This extension should no longer be enabled on new wikis.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'other',
 	],
 	'blogpage' => [
