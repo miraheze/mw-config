@@ -4673,6 +4673,9 @@ $wgConf->settings += [
 	],
 	'wgResponsiveImages' => [
 		'default' => true,
+	],
+	'wgUseImageResize' => [
+		'default' => true,
 		'lookoutsidewiki' => false,
 	],
 
