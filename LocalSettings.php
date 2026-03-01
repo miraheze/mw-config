@@ -406,6 +406,11 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// Bucket
+	'wgBucketDBuser' => [
+		'default' => 'bucketuser2026',
+	],
+
 	// Cache
 	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
@@ -7799,6 +7804,7 @@ require_once '/srv/mediawiki/config/LocalWiki.php';
 
 // Configure late to ensure $wgDBname is set properly
 $wgCargoDBname = $wgDBname . 'cargo';
+$wgBucketDBhostname = $wgDBname . 'bucket';
 
 // Define last - Extension message files for loading extensions
 if (
