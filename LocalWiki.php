@@ -76,16 +76,6 @@ switch ( $wi->dbname ) {
 		};
 
 		break;
-	case 'bluearchivewiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-
-		break;
-	case 'combatinitiationwiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['logged_in'] = true;
-
-		break;
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
@@ -96,19 +86,11 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'constantnoblewiki':
-		$wgDplSettings['maxResultCount'] = 2500;
-		$wgDplSettings['maxCategoryCount'] = 100;
-
 		// T13620: Show AbuseFilter changes in RecentChanges
 		$wgExtensionFunctions[] = static function () {
 			global $wgLogRestrictions;
 			unset( $wgLogRestrictions['abusefilter'] );
 		};
-
-		break;
-	case 'dappervolkwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
 
 		break;
 	case 'dlfmwiki':
@@ -139,13 +121,12 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
-	case 'dragontamerwiki':
-		$wgDplSettings['maxCategoryCount'] = 7;
+	case 'emiliabearwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
 
-		break;
-	case 'dungeonrngwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
 	case 'famedatawiki':
@@ -157,7 +138,6 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'fischwiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
 		$wgLogRestrictions['newusers'] = 'read';
 
 		break;
@@ -265,11 +245,6 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
-	case 'gui7814sgtafanonwiki':
-		$wgDplSettings['maxCategoryCount'] = 1000;
-		$wgDplSettings['maxResultCount'] = 1000;
-
-		break;
 	case 'hommwiki':
 		// T12565: This is a workaround for an upstream bug, please remove when the bug fix is merged
 		$wgEnabledAudioTranscodeSet = [];
@@ -287,17 +262,6 @@ switch ( $wi->dbname ) {
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
-
-		break;
-	case 'hullrotwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-
-		break;
-	case 'kaiserreichwiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['logged_in'] = true;
 
 		break;
 	case 'kagagawiki':
@@ -521,10 +485,10 @@ switch ( $wi->dbname ) {
 						'label-message' => 'contactpage-requestaccount-selectissue',
 						'type' => 'radio',
 						'options-messages' => [
+							'version-other' => 'other',
 							'contactpage-requestaccount-selectissue-abusefilterissue' => 'abusefilter',
 							'contactpage-requestaccount-selectissue-recaptchaissues' => 'captcha',
 							'contactpage-requestaccount-selectissue-globalblock' => 'globalblock',
-							'version-other' => 'other',
 						],
 						'help-message' => 'contactpage-requestaccount-selectissue-help',
 						'required' => true,
@@ -582,7 +546,7 @@ switch ( $wi->dbname ) {
 						'label-message' => 'contactpage-requestaccount-otherdetails',
 						'type' => 'textarea',
 						'help-message' => 'contactpage-requestaccount-otherdetails-help',
-						'required' => false,
+						'required' => true,
 					],
 				],
 				'DisplayFormat' => 'raw',
@@ -638,11 +602,6 @@ switch ( $wi->dbname ) {
 		*/
 
 		break;
-	case 'metzowiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-		$wgDplSettings['allowUnlimitedResults'] = true;
-
-		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
 
@@ -666,10 +625,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
-
-		break;
-	case 'persistwiki':
-		$wgDplSettings['maxCategoryCount'] = 10;
 
 		break;
 	case 'picrosswiki':
@@ -733,12 +688,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'roguetown2ewiki':
-		$wgMinervaNightMode['base'] = true;
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-
-		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
 	case 'sagan4alphawiki':
@@ -759,12 +708,6 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
-
-		break;
-	case 'stopitslenderwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['beta'] = true;
 
 		break;
 	case 'testwikibeta':
@@ -1140,11 +1083,6 @@ switch ( $wi->dbname ) {
 			echo $html;
 			return true;
 		}
-
-		break;
-	case 'traceprojectwikiwiki':
-		$wgDplSettings['allowUnlimitedCategories'] = true;
-		$wgDplSettings['allowUnlimitedResults'] = true;
 
 		break;
 	case 'whentheycrywiki':

@@ -187,7 +187,7 @@ $wgManageWikiNamespacesAdditional = [
 		'from' => 'commentstreams',
 		'type' => 'check',
 		'main' => true,
-		'talk' => false,
+		'talk' => true,
 		'excluded' => [],
 		'overridedefault' => array_merge(
 			array_fill_keys( $wgContentNamespaces, true ),
@@ -248,6 +248,20 @@ $wgManageWikiNamespacesAdditional = [
 		'talk' => false,
 		'excluded' => [],
 		'overridedefault' => false,
+		'help' => '',
+		'requires' => [],
+	],
+	'wgPageImagesNamespaces' => [
+		'name' => 'Should pages in this namespace have page images?',
+		'from' => 'pageimages',
+		'type' => 'check',
+		'main' => true,
+		'talk' => true,
+		'excluded' => [],
+		'overridedefault' => array_merge(
+			array_fill_keys( $wgContentNamespaces, true ),
+			[ 'default' => false ]
+		),
 		'help' => '',
 		'requires' => [],
 	],

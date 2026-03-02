@@ -13,7 +13,10 @@ if ( PHP_SAPI !== 'cli' ) {
 
 setlocale( LC_ALL, 'en_US.UTF-8' );
 
-$mwtask = str_starts_with( wfHostname(), 'mwtask' );
+// test also because it acts as its own jobrunner.
+$mwtask = str_starts_with( wfHostname(), 'mwtask' ) ||
+	str_starts_with( wfHostname(), 'test' );
+
 // Higher on mwtask
 if ( $mwtask ) {
 	// 3000MiB
@@ -30,9 +33,9 @@ if ( PHP_SAPI === 'cli' ) {
 	$host = $_SERVER['HTTP_HOST'] ?? '';
 	if ( str_starts_with( $host, 'videoscaler.' ) ) {
 		$wgRequestTimeLimit = 86400;
-	} elseif ( str_starts_with( $host, 'jobrunner-high.' ) ) {
+	} elseif ( str_starts_with( $host, 'jobrunner-high.' ) || str_starts_with( wfHostname(), 'test' ) ) {
 		$wgRequestTimeLimit = 259200;
-	} elseif ( str_starts_with( $host, 'jobrunner.' ) ) {
+	} else {
 		$wgRequestTimeLimit = 1200;
 	}
 } elseif ( ( $_SERVER['REQUEST_METHOD'] ?? '' ) === 'POST' ) {
@@ -75,6 +78,7 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 }
 
 // Show custom database maintenance error page on these clusters.
+$wgDatabaseClustersMaintenanceType = 'unscheduled';
 $wgDatabaseClustersMaintenance = [];
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
@@ -89,15 +93,72 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
-$wmgHTTPProxy = 'http://bastion.fsslc.wtnet:8080';
+
+// bast161, bast181
+$servers = [ '10.0.16.127', '10.0.18.101' ];
+$proxy = 'http://' . $servers[ array_rand( $servers ) ] . ':8080';
+
+$proxyGlobals = [
+	'wgHTTPProxy',
+	'wgDiscordCurlProxy',
+	'wgCopyUploadProxy',
+	'wgMediaModerationHttpProxy',
+	'wgMathHTTPProxy',
+	'wgRottenLinksHTTPProxy',
+	'wgRSSProxy',
+	'wgTorBlockProxy',
+	'wgHCaptchaProxy',
+];
+
+foreach ( $proxyGlobals as $global ) {
+	$GLOBALS[ $global ] = $proxy;
+}
+
+// Don't need globals here
+unset( $proxy, $proxyGlobals, $servers );
 
 $wgStatsFormat = 'dogstatsd';
 $wgStatsTarget = 'udp://localhost:9125';
 
+$wmgSharedDomainPathPrefix = '';
+
+$wgScriptPath = '/w';
+$wgLoadScript = "$wgScriptPath/load.php";
+
+$wgCanonicalServer = $wi->server;
+
+if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
+	|| getenv( 'MW_USE_SHARED_DOMAIN' )
+) {
+	if ( $wi->dbname === 'ldapwikiwiki' ) {
+		print "Can only be used for SUL wikis\n";
+		exit( 1 );
+	}
+
+	$wmgSharedDomainPathPrefix = "/$wgDBname";
+	$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
+
+	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
+	$wgLoadScript = "{$wgCanonicalServer}$wgScriptPath/load.php";
+
+	$wgUseSiteCss = false;
+	$wgUseSiteJs = false;
+
+	// We use load.php directly from auth for custom domains due to CSP
+	$wgCentralAuthSul3SharedDomainRestrictions['allowedEntryPoints'] = [ 'load' ];
+}
+
+$wgScript = "$wgScriptPath/index.php";
+
+$wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}";
+$wgExtensionAssetsPath = "$wgResourceBasePath/extensions";
+$wgStylePath = "$wgResourceBasePath/skins";
+$wgLocalStylePath = $wgStylePath;
+
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
-		'default' => '10',
+		'default' => '11',
 	],
 
 	'wgEnableEditRecovery' => [
@@ -408,9 +469,11 @@ $wgConf->settings += [
 	'wgCategoryCollation' => [
 		// updateCollation.php should be ran after changing
 		'default' => 'uppercase',
+		'extoniawiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
 		'historikawiki' => 'uca-cs',
+		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
@@ -447,6 +510,10 @@ $wgConf->settings += [
 	'wgCentralAuthAutoMigrateNonGlobalAccounts' => [
 		'default' => true,
 	],
+	'wgCentralAuthCentralWiki' => [
+		'default' => 'metawiki',
+		'beta' => 'metawikibeta',
+	],
 	'wgCentralAuthCookies' => [
 		'default' => true,
 	],
@@ -471,9 +538,15 @@ $wgConf->settings += [
 	'wgCentralAuthPreventUnattached' => [
 		'default' => true,
 	],
+	'wgCentralAuthRestrictSharedDomain' => [
+		'default' => true,
+	],
 	'wmgCentralAuthAutoLoginWikis' => [
 		'default' => [
-			'.miraheze.org' => 'metawiki'
+			'.miraheze.org' => 'metawiki',
+		],
+		'beta' => [
+			'.mirabeta.org' => 'metawikibeta',
 		],
 	],
 	'wgGlobalRenameDenylist' => [
@@ -497,10 +570,6 @@ $wgConf->settings += [
 	'wgCentralBannerRecorder' => [
 		'default' => 'https://meta.miraheze.org/wiki/Special:RecordImpression',
 		'beta' => 'https://meta.mirabeta.org/wiki/Special:RecordImpression',
-	],
-	'wgCentralDBname' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
 	],
 	'wgCentralHost' => [
 		'default' => 'https://meta.miraheze.org',
@@ -557,12 +626,14 @@ $wgConf->settings += [
 			'centralDB' => 'metawiki',
 			'groups' => [
 				'steward',
+				'trustandsafety',
 			],
 		],
 		'beta' => [
 			'centralDB' => 'metawikibeta',
 			'groups' => [
 				'steward',
+				'trustandsafety',
 			],
 		],
 	],
@@ -653,6 +724,9 @@ $wgConf->settings += [
 	],
 	'wgCommentStreamsModeratorFastDelete' => [
 		'default' => false,
+	],
+	'wgCommentStreamsSuppressLogsFromRCs' => [
+		'default' => true,
 	],
 
 	// CommonsMetadata
@@ -877,6 +951,7 @@ $wgConf->settings += [
 			'logging',
 			'monitoring',
 			'analytics',
+			'auth',
 			'csw(\d+)?',
 			'matomo(\d+)?',
 			'prometheus(\d+)?',
@@ -944,7 +1019,7 @@ $wgConf->settings += [
 				'Content Policy (duplicate/similar wiki)' => 'Your proposed wiki appears to duplicate, either substantially or entirely, the scope of an existing wiki, which is prohibited by the Content Policy. Please contribute to the existing wiki instead; if you feel that this is in error, please describe in a few sentences how your wiki will not violate this policy. Thank you.',
 				'Content Policy (file sharing service)' => 'Declining per Content Policy provision, "Miraheze does not host wikis whose main purpose is to act as a file sharing service." Thank you for your understanding.',
 				'Content Policy (forks)' => 'Declining per Content Policy provision, "Direct forks of other Miraheze wikis where no attempts at mediations are made are not allowed." Thank you for your understanding.',
-				'Content Policy (illegal US activity)' => 'Declining per Content Policy provision, "Miraheze does not host any content that is illegal in the United States." Thank you for understanding. If you believe this decline reason was used incorrectly, please address this with the declining wiki creator on their user talk page first before escalating your concern to Steward requests. Thank you.',
+				'Content Policy (illegal US activity)' => 'Declining per Content Policy provision, "Miraheze does not host any content that is illegal in the United States." Thank you for understanding. If you believe this decline reason was used incorrectly, please address this with the declining wiki reviewer on their user talk page first before escalating your concern to Steward requests. Thank you.',
 				'Content Policy (makes it difficult for other wikis)' => 'Declining per Content Policy provision, "A wiki must not create problems which make it difficult for other wikis." Thank you for your understanding.',
 				'Content Policy (no anarchy wikis)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that operate on the basis of an anarchy system (i.e. no leadership and no rules)." Thank you for your understanding.',
 				'Content Policy (sexual nature involving minors)' => 'Declining per Content Policy provision, "Miraheze does not host wikis of a sexual nature which involve minors in any way." Thank you for your understanding.',
@@ -953,12 +1028,13 @@ $wgConf->settings += [
 				'Content Policy (violence, hatred or harrassment)' => 'Declining per Content Policy provision, "Miraheze does not host wikis that promote violence, hatred, or harassment against a person or group of people." Thank you for your understanding.',
 				'Content Policy (Wikimedia-like wikis/forks)' => 'Declining per Content Policy provision, "Direct forks and forks where a substantial amount of content is copied from a Wikimedia project are not allowed." Thank you for your understanding.',
 				'Content Policy (Reception wiki)' => 'Declining per Content Policy provision, "Wikis should not be structured around bullet-point, good/bad commentary." Thank you for your understanding.',
-				/* 'Content Policy (additional restrictions)' => 'Declining per the Content Policy's additional restrictions, which includes the topic of your wiki. Thank you for your understanding.', */
+				'Content Policy (restricted topics)' => 'Declining per the Content Policy\'s additional restrictions, which includes the topic of your wiki. Please see [[Help:Restricted Wiki Topics]] for more information. Thank you for your understanding.',
 				'Author request' => 'Declined at the request of the wiki requester.',
+				'No response' => 'Since we haven\'t heard back from you, this request will now be closed. If you\'re still interested in this wiki, please respond to the questions in comments above. You can reopen the request on the "Edit request" tab to put your request back in the review queue. Thank you.',
 			],
 			'On hold reasons' => [
-				'On hold pending response' => 'On hold pending response from the wiki requester (see the "Request Comments" tab). Please reply to the questions left by the wiki creator on this request, but do not create another wiki request. Thank you.',
-				'On hold pending review from another wiki creator' => 'On hold pending review from another wiki creator or a Steward.',
+				'On hold pending response' => 'On hold pending response from the wiki requester (see the "Request Comments" tab). Please reply to the questions left by the wiki reviewer on this request, but do not create another wiki request. Thank you.',
+				'On hold pending review from another wiki reviewer' => 'On hold pending review from another wiki reviewer or a Steward.',
 			],
 		],
 	],
@@ -976,7 +1052,8 @@ $wgConf->settings += [
 	// Use if you want to stop wikis being created on this cluster
 	'wgCreateWikiDatabaseClustersInactive' => [
 		'default' => [
-			'c2'
+			// DO NOT USE S1! RESERVED FOR CORE DATABASES
+			'db192 (s1)' => 's1',
 		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
@@ -1029,6 +1106,7 @@ $wgConf->settings += [
 			"$IP/extensions/AntiSpoof/sql/mysql/tables-generated.sql",
 			"$IP/extensions/BetaFeatures/sql/tables-generated.sql",
 			"$IP/extensions/CheckUser/schema/mysql/tables-generated.sql",
+			"$IP/extensions/CheckUser/schema/mysql/tables-virtual-checkuser-generated.sql",
 			"$IP/extensions/DataDump/sql/data_dump.sql",
 			"$IP/extensions/Echo/sql/mysql/tables-generated.sql",
 			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
@@ -1227,6 +1305,9 @@ $wgConf->settings += [
 			'virtual-globalnewfiles' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-globalusage' => [
+				'db' => 'commonswiki',
+			],
 			'virtual-importdump' => [
 				'db' => $wi->getCentralDatabase(),
 			],
@@ -1248,8 +1329,25 @@ $wgConf->settings += [
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
+			'virtual-oauth' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-requestcustomdomain' => [
 				'db' => $wi->getCentralDatabase(),
+			],
+			'virtual-urlshortener' => [
+				'db' => $wi->getCentralDatabase(),
+			],
+		],
+		'ldapwikiwiki' => [
+			'virtual-interwiki' => [
+				'db' => $wi->getCentralDatabase(),
+			],
+			'virtual-LoginNotify' => [
+				'db' => 'ldapwikiwiki',
+			],
+			'virtual-oathauth' => [
+				'db' => 'ldapwikiwiki',
 			],
 		],
 		'+beta' => [
@@ -1259,13 +1357,8 @@ $wgConf->settings += [
 			'virtual-globaljsonlinks' => [
 				'db' => 'commonswikibeta',
 			],
-		],
-		'ldapwikiwiki' => [
-			'virtual-LoginNotify' => [
-				'db' => 'ldapwikiwiki',
-			],
-			'virtual-oathauth' => [
-				'db' => 'ldapwikiwiki',
+			'virtual-globalusage' => [
+				'db' => 'commonswikibeta',
 			],
 		],
 	],
@@ -1278,9 +1371,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgDataMapsAllowExperimentalFeatures' => [
-		'default' => false,
-	],
-	'wgDataMapsEnableFandomPortingTools' => [
 		'default' => false,
 	],
 
@@ -1440,9 +1530,6 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgDiscordCurlProxy' => [
-		'default' => $wmgHTTPProxy,
-	],
 	'wgDiscordEnableExperimentalCVTFeatures' => [
 		'default' => true,
 	],
@@ -1496,12 +1583,38 @@ $wgConf->settings += [
 		'default' => '/usr/bin/djvutxt',
 	],
 
-	// DynamicPageList
+	// DynamicPageList (Wikimedia)
 	'wgDLPAllowUnlimitedCategories' => [
 		'default' => false,
 	],
 	'wgDLPAllowUnlimitedResults' => [
 		'default' => false,
+	],
+
+	// DynamicPageList4
+	'wgDPLAllowUnlimitedCategories' => [
+		'default' => false,
+		'bluearchivewiki' => true,
+		'fischwiki' => true,
+		'metzowiki' => true,
+		'traceprojectwikiwiki' => true,
+	],
+	'wgDPLAllowUnlimitedResults' => [
+		'default' => false,
+		'metzowiki' => true,
+		'traceprojectwikiwiki' => true,
+	],
+	'wgDPLMaxCategoryCount' => [
+		'default' => 8,
+		'constantnoblewiki' => 100,
+		'dappervolkwiki' => 15,
+		'gui7814sgtafanonwiki' => 1000,
+		'persistwiki' => 10,
+	],
+	'wgDPLMaxResultCount' => [
+		'default' => 500,
+		'constantnoblewiki' => 2500,
+		'gui7814sgtafanonwiki' => 1000,
 	],
 
 	// DynamicSidebar
@@ -1575,6 +1688,10 @@ $wgConf->settings += [
 	],
 
 	// EmbedVideo
+	'wgEmbedVideoAddFileExtensions' => [
+		'default' => true,
+		'removededmsongswiki' => false,
+	],
 	'wgEmbedVideoEnableVideoHandler' => [
 		'default' => true,
 	],
@@ -1637,11 +1754,6 @@ $wgConf->settings += [
 				'verbose' => true,
 			],
 		],
-	],
-
-	// HTTP
-	'wgHTTPProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 
 	// FeaturedFeeds
@@ -1783,24 +1895,24 @@ $wgConf->settings += [
 				],
 			],
 		],
-		'jbcstudioswiki' => [
+		'itemasylumwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/jbcstudioswiki/f/f7/Poweredbymediawiki_badge.svg',
+					'src' => 'https://static.wikitide.net/itemasylumwiki/f/f7/Poweredbymediawiki_badge.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/jbcstudioswiki/8/81/Miraheze_badge.svg',
+					'src' => 'https://static.wikitide.net/itemasylumwiki/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				],
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/jbcstudioswiki/b/b0/Ccbysa_badge.svg',
+					'src' => 'https://static.wikitide.net/itemasylumwiki/b/b0/Ccbysa_badge.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
 				],
@@ -1972,8 +2084,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
-					"width" => "110",
+					'height' => '36',
+					'width' => '118',
 				],
 			],
 			'miraheze' => [
@@ -1981,8 +2093,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "45",
-					"width" => "45",
+					'height' => '36',
+					'width' => '36',
 				],
 			],
 			'poweredby' => [
@@ -1990,8 +2102,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "42",
-					'width' => "110",
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 			'copyright' => [
@@ -1999,8 +2111,46 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
-					'height' => "42",
-					'width' => "110",
+					'height' => '42',
+					'width' => '110',
+				],
+			],
+		],
+		'snxyzmetawiki' => [
+			'hostedby' => [
+				'songnguxyz' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'url' => 'https://songngu.xyz',
+					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+					'height' => '36',
+					'width' => '118',
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Lưu trữ bởi Miraheze',
+					'height' => '36',
+					'width' => '36',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Xây dựng trên MediaWiki',
+					'height' => '42',
+					'width' => '110',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 		],
@@ -2010,15 +2160,15 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
-					"width" => "110",
+					'height' => '36',
+					'width' => '118',
 				],
 				'indiewikifed' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/a/a2/IWF_Footer.svg',
 					'url' => 'https://lophocmatngu.wiki/WLHMN:Independent_Wiki_Federation',
 					'alt' => 'Một thành viên của Liên Minh Wiki Tự Do',
-					"height" => "40",
-					"width" => "110",
+					'height' => '40',
+					'width' => '110',
 				],
 			],
 			'miraheze' => [
@@ -2026,8 +2176,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "45",
-					"width" => "45",
+					'height' => '36',
+					'width' => '36',
 				],
 			],
 			'poweredby' => [
@@ -2035,8 +2185,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "42",
-					'width' => "110",
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 			'copyright' => [
@@ -2044,8 +2194,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
-					'height' => "42",
-					'width' => "110",
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 		],
@@ -2055,8 +2205,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
-					"height" => "42",
-					"width" => "110",
+					'height' => '36',
+					'width' => '118',
 				],
 			],
 			'miraheze' => [
@@ -2064,8 +2214,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
-					"height" => "45",
-					"width" => "45",
+					'height' => '36',
+					'width' => '36',
 				],
 			],
 			'poweredby' => [
@@ -2073,8 +2223,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
-					'height' => "42",
-					'width' => "110",
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 			'copyright' => [
@@ -2082,8 +2232,8 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/cgwiki/2/27/CC_BY-NC-SA-4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Phi thương mại - Chia sẻ tương tự 4.0 (CC BY-NC-SA 4.0)',
-					'height' => "42",
-					'width' => "110",
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 		],
@@ -2111,6 +2261,13 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/thechurchofthestatuewiki/b/b6/Cc_by_sa.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+			'freeart' => [
+				'freeart' => [
+					'src' => 'https://static.wikitide.net/thechurchofthestatuewiki/6/68/Free_art_licence_footmark.svg',
+					'url' => 'https://artlibre.org/licence/lal/en/',
+					'alt' => 'Free Art Licence (FAL)',
 				],
 			],
 		],
@@ -2179,6 +2336,29 @@ $wgConf->settings += [
 			'copyright' => [
 				'copyright' => [
 					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'rabbidstakeoverwiki' => [
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/rabbidstakeoverwiki/3/33/Badge-ccbyncsa.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
 				],
@@ -2316,6 +2496,27 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'etohwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/etohwiki/a/a3/Badge-mediawiki-icon.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/etohwiki/4/42/Badge-miraheze-icon.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/etohwiki/b/b6/Cc_by_sa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
@@ -2350,9 +2551,6 @@ $wgConf->settings += [
 	'wgCopyUploadsFromSpecialUpload' => [
 		'default' => false,
 	],
-	'wgCopyUploadProxy' => [
-		'default' => $wmgHTTPProxy,
-	],
 	'wgFileExtensions' => [
 		'default' => [
 			'djvu',
@@ -2371,7 +2569,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgQuickInstantCommonsPrefetchMaxLimit' => [
-		'default' => 500,
+		'default' => 1000,
+	],
+	'wgQuickInstantCommonsUserAgentInfo' => [
+		'default' => 'https://miraheze.org; tech@miraheze.org',
 	],
 	'wgMaxImageArea' => [
 		'default' => 10e7,
@@ -2485,14 +2686,14 @@ $wgConf->settings += [
 			'showDimensions' => true,
 			'mode' => 'packed',
 		],
-		'jbcstudioswiki' => [
+		'pilgrammedwiki' => [
 			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
+			'imageWidth' => 180,
+			'imageHeight' => 180,
 			'captionLength' => true,
 			'showBytes' => true,
 			'showDimensions' => true,
-			'mode' => 'packed',
+			'mode' => 'traditional',
 		],
 		'rippaversewiki' => [
 			'imagesPerRow' => 0,
@@ -2580,18 +2781,9 @@ $wgConf->settings += [
 	],
 
 	// GlobalUsage
-	'wgGlobalUsageDatabase' => [
-		'default' => 'commonswiki',
-		'gpcommonswiki' => 'gpcommonswiki',
-		'gratisdatawiki' => 'gpcommonswiki',
-		'gratispaideiawiki' => 'gpcommonswiki',
-		'intercriaturaswiki' => 'intercriaturaswiki',
-		'tuscriaturaswiki' => 'intercriaturaswiki',
-		'yourcreatureswiki' => 'intercriaturaswiki',
-		'beta' => 'commonswikibeta',
-	],
 	'wgGlobalUsageSharedRepoWiki' => [
-		'default' => false,
+		'default' => 'commonswiki',
+		'beta' => 'commonswikibeta',
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
@@ -2677,6 +2869,15 @@ $wgConf->settings += [
 			'Trope' => 'trope',
 			'YMMV_Trope' => 'ymmv',
 		],
+		'pilgrammedwiki' => [
+			'Melee_Weapons' => 'c-Melee_Weapons',
+			'Mage_Weapons' => 'c-Mage_Weapons',
+			'Bows' => 'c-Bows',
+			'Guns' => 'c-Guns',
+			'Bosses' => 'c-Bosses',
+			'Materials' => 'c-Materials',
+			'Quests' => 'c-Quests',
+		],
 	],
 
 	// ImageMagick
@@ -2684,7 +2885,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgImageMagickConvertCommand' => [
-		'default' => '/usr/local/bin/mediawiki-firejail-convert',
+		'default' => '/usr/local/bin/mediawiki-firejail-magick',
 	],
 	'wgJpegPixelFormat' => [
 		'default' => 'yuv420',
@@ -2873,8 +3074,7 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
-			'MacFan4000',
-			'Original Authority',
+			'MacFan4000 (Miraheze)',
 			'Reception123',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
@@ -2882,8 +3082,7 @@ $wgConf->settings += [
 	],
 	'wgImportDumpUsersNotifiedOnFailedImports' => [
 		'default' => [
-			'MacFan4000',
-			'Original Authority',
+			'MacFan4000 (Miraheze)',
 			'Reception123',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
@@ -3026,6 +3225,9 @@ $wgConf->settings += [
 			'Data.JsonConfig' => null,
 		],
 	],
+	'wgTrackGlobalJsonLinks' => [
+		'default' => false,
+	],
 
 	// Kartographer
 	'wgKartographerDfltStyle' => [
@@ -3075,6 +3277,9 @@ $wgConf->settings += [
 	],
 	'wgLakeusShowStickyTOC' => [
 		'default' => false,
+	],
+	'wgLakeusWikiDefaultColorScheme' => [
+		'default' => 'light',
 	],
 
 	// Language
@@ -3413,20 +3618,30 @@ $wgConf->settings += [
 		'default' => '/srv/mediawiki/cache',
 	],
 	'wgManageWikiExtensionsDefault' => [
+		// WARNING: When adding a new extension here, please check whether there are any SQL files that need to be run
+		// during installation! The installation steps defined in ManageWikiExtensions will not be executed here.
+		// Instead, the relevant SQL files should be added to $wgCreateWikiSQLFiles (see also T14385 and T14400).
 		'default' => [
 			'categorytree',
 			'cite',
 			'citethispage',
 			'codeeditor',
 			'codemirror',
-			'darkmode',
+			// T14325: added here after being removed from global skins
+			'cologneblue',
 			'globaluserpage',
 			'minervaneue',
 			'mobilefrontend',
+			// T14325: added here after being removed from global skins
+			'modern',
+			'multimediaviewer',
+			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
+			'templatesandbox',
 			'templatestyles',
 			'textextracts',
+			'thanks',
 			'urlshortener',
 			'wikiseo',
 		],
@@ -3439,7 +3654,7 @@ $wgConf->settings += [
 		// Content models that are possible should be setup when doing imports etc...
 		// to avoid potential content model mismatch issues.
 		'default' => [
-			// Flow is being removed and no longer enabled no new wikis
+			// Flow was removed
 			'flow-board',
 			// Interactivemap is a Fandom extension and the compatibility
 			// mode in DataMaps does not work.
@@ -3640,6 +3855,22 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
+			'assistant-steward' => [
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'centralauth-rename' => true,
+				'createwiki' => true,
+				'createwiki-deleterequest' => true,
+				'globalblock' => true,
+				'handle-import-request-interwiki' => true,
+				'handle-import-requests' => true,
+				'managewiki-extensions' => true,
+				'managewiki-namespaces' => true,
+				'managewiki-permissions' => true,
+				'managewiki-settings' => true,
+				'managewiki-restricted' => true,
+				'noratelimit' => true,
+			],
 			'checkuser' => [
 				'abusefilter-privatedetails' => true,
 				'abusefilter-privatedetails-log' => true,
@@ -3661,6 +3892,7 @@ $wgConf->settings += [
 			'global-admin' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
+				'centralauth-rename' => true,
 				'globalblock' => true,
 			],
 			'proxybot' => [
@@ -3735,6 +3967,22 @@ $wgConf->settings += [
 			],
 		],
 		'+metawikibeta' => [
+			'assistant-steward' => [
+				'abusefilter-modify-global' => true,
+				'centralauth-lock' => true,
+				'centralauth-rename' => true,
+				'createwiki' => true,
+				'createwiki-deleterequest' => true,
+				'globalblock' => true,
+				'handle-import-request-interwiki' => true,
+				'handle-import-requests' => true,
+				'managewiki-extensions' => true,
+				'managewiki-namespaces' => true,
+				'managewiki-permissions' => true,
+				'managewiki-restricted' => true,
+				'managewiki-settings' => true,
+				'noratelimit' => true,
+			],
 			'autopatrolled' => [
 				'autopatrolled' => true,
 			],
@@ -3857,6 +4105,11 @@ $wgConf->settings += [
 				'editor' => true,
 			],
 		],
+		'+testwiki' => [
+			'tech' => [
+				'globalgrouppermissions' => true,
+			],
+		],
 		'+vnenderbotwiki' => [
 			'templateeditor' => [
 				'template' => true,
@@ -3875,19 +4128,16 @@ $wgConf->settings += [
 				'edit-create' => true,
 			],
 		],
-		'+ext-Flow' => [
-			'suppress' => [
-				'flow-suppress' => true,
-			],
-		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
 	],
 	'wgManageWikiPermissionsDisallowedGroups' => [
 		'default' => [
+			'assistant-steward',
 			'checkuser',
 			'checkuser-temporary-account-viewer',
+			'global-admin',
 			'smwadministrator',
 			'oversight',
 			'steward',
@@ -3933,7 +4183,6 @@ $wgConf->settings += [
 				'editincidents',
 				'editothersprofiles-private',
 				'sendemail',
-				'flow-suppress',
 				'generate-random-hash',
 				'globalblock',
 				'globalblock-exempt',
@@ -3949,8 +4198,9 @@ $wgConf->settings += [
 				'ipinfo-view-basic',
 				'ipinfo-view-full',
 				'ipinfo-view-log',
-				'managewiki-restricted',
 				'managewiki-editdefault',
+				'managewiki-privacy',
+				'managewiki-restricted',
 				'moderation-checkuser',
 				'mwoauthmanageconsumer',
 				'mwoauthmanagemygrants',
@@ -3962,6 +4212,7 @@ $wgConf->settings += [
 				'oathauth-disable-for-user',
 				'oathauth-verify-user',
 				'oathauth-view-log',
+				'oathauth-recover-for-user',
 				'renameuser',
 				'renameuser-global',
 				'reportincident',
@@ -4073,9 +4324,6 @@ $wgConf->settings += [
 	// MediaModeration
 	'wgMediaModerationFrom' => [
 		'default' => 'noreply@wikitide.org',
-	],
-	'wgMediaModerationHttpProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 	'wgMediaModerationRecipientList' => [
 		'default' => [
@@ -4233,6 +4481,17 @@ $wgConf->settings += [
 		],
 	],
 
+	// Mirage
+	'wgMirageEnableImageWordmark' => [
+		'default' => true,
+	],
+	'wgMirageHiddenRightRailModules' => [
+		'default' => [],
+	],
+	'wgMirageTheme' => [
+		'default' => false,
+	],
+
 	// MirahezeMagic
 	'wgMirahezeMagicAccessIdsMap' => [
 		'default' => [
@@ -4257,36 +4516,38 @@ $wgConf->settings += [
 			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'staffwiki' => [
-				/** Reception123 (Technology team and Board) */
-				19,
 				/** Labster (Board) */
 				2551,
-				/** Void (Technology team) */
-				5258,
-				/** MacFan4000 (Technology team) */
-				6758,
-				/** Paladox (Technology team) */
-				13554,
 				/** Harej (Board) */
 				13892,
 				/** RhinosF1 (Miraheze) (Technology team) */
 				243629,
 				/** Raidarr (Board) */
 				249078,
+				/** Agent (Miraheze) (Technology team and Board) */
+				330070,
 				/** NotAracham (Board) */
 				345529,
-				/** Original Authority (Technology team) */
-				353865,
-				/** Universal Omega (Technology team and Board) */
-				438966,
+				/** Universal Omega (Miraheze) (Technology team and Board) */
+				459599,
 				/** BlankEclair (Miraheze) (Technology team) */
 				592845,
-				/** Agent Isai (Technology team and Board) */
-				512002,
-				/** SomeRandomDeveloper (Technology team) */
-				542825,
-				/** Skye (Technology team) */
-				583331,
+				/** SomeRandomDeveloper (Miraheze) (Technology team) */
+				650827,
+				/** Skye (Miraheze) (Technology team) */
+				786522,
+				/** MacFan4000 (Miraheze) (Technology team) */
+				796050,
+				/** Paladox (Miraheze) (Technology team) */
+				796073,
+				/** PetraMagna (Miraheze) (Technology team) */
+				796099,
+				/** Original Authority (Miraheze) (Technology team) */
+				796544,
+				/** Reception123 (Miraheze) (Technology team and Board) */
+				796684,
+				/** Void (Miraheze) (Technology team) */
+				798213,
 			],
 		],
 	],
@@ -4377,14 +4638,13 @@ $wgConf->settings += [
 	'wgCrossSiteAJAXdomains' => [
 		'default' => [
 			'login.miraheze.org',
-			'meta.miraheze.org',
 		],
 		'beta' => [
-			'login.miraheze.org',
-			'meta.mirabeta.org',
+			'login.mirabeta.org',
 		],
-		'+gratisdatawiki' => [
-			'gratispaideia.miraheze.org',
+		'private' => [],
+		'wikicreatorswiki' => [
+			'meta.miraheze.org',
 		],
 	],
 	'wgWhitelistRead' => [
@@ -4409,6 +4669,13 @@ $wgConf->settings += [
 	],
 	'wgCleanSignatures' => [
 		'default' => true,
+	],
+	'wgResponsiveImages' => [
+		'default' => true,
+	],
+	'wgUseImageResize' => [
+		'default' => true,
+		'lookoutsidewiki' => false,
 	],
 
 	// MobileFrontend
@@ -4509,6 +4776,11 @@ $wgConf->settings += [
 				'.nomobile',
 			],
 		],
+		'danmachienwiki' => [
+			'base' => [
+				'.nomobile',
+			],
+		],
 		'mcspringfieldserverwiki' => [
 			'base' => [
 				'.nomobile',
@@ -4559,6 +4831,13 @@ $wgConf->settings += [
 	'wgMFUseWikibase' => [
 		'default' => false,
 	],
+	'wgMinervaNightMode' => [
+		'default' => [
+			'amc' => true,
+			'base' => true,
+			'loggedin' => true,
+		],
+	],
 
 	// Moderation extension settings
 	// Enable or disable notifications.
@@ -4582,6 +4861,14 @@ $wgConf->settings += [
 	],
 	'wgModerationOnlyInNamespaces' => [
 		'default' => [],
+	],
+
+	// Monaco
+	'wgMonacoAllowUseTheme' => [
+		'default' => true,
+	],
+	'wgMonacoTheme' => [
+		'default' => 'sapphire',
 	],
 
 	// MsCatSelect vars
@@ -4632,9 +4919,6 @@ $wgConf->settings += [
 		'default' => [
 			'mathml'
 		],
-	],
-	'wgMathHTTPProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 
 	// MultiBoilerplate
@@ -4721,11 +5005,12 @@ $wgConf->settings += [
 			'user',
 		],
 		'+metawiki' => [
+			'assistant-steward',
 			'electionadmin',
 			'global-admin',
 			'interface-admin',
 			'techteam',
-			'trustandsafety'
+			'trustandsafety',
 		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
@@ -4733,6 +5018,12 @@ $wgConf->settings += [
 			'interface-admin',
 			'techteam',
 			'trustandsafety'
+		],
+		'+recaptimesquadwiki' => [
+			'bureaucrat',
+			'crew-recaptime-dev',
+			'interface-admin',
+			'sysop',
 		],
 	],
 	// OAuth
@@ -4761,17 +5052,6 @@ $wgConf->settings += [
 	],
 
 	// Page Images
-	'wgPageImagesNamespaces' => [
-		'default' => [
-			NS_MAIN,
-		],
-		'+giannawiki' => [
-			3000
-		],
-		'+gpcommonswiki' => [
-			NS_CATEGORY,
-		],
-	],
 	'wgPageImagesDenylist' => [
 		'ext-PageImages' => [
 			[
@@ -4783,12 +5063,12 @@ $wgConf->settings += [
 	],
 	'wgPageImagesExpandOpenSearchXml' => [
 		'default' => false,
-		'gratispaideiawiki' => true,
-		'gratisdatawiki' => true,
-		'gpcommonswiki' => true,
 	],
 	'wgPageImagesLeadSectionOnly' => [
-		'default' => false
+		'default' => false,
+	],
+	'wgPageImagesOpenGraph' => [
+		'default' => true,
 	],
 
 	// Pagelang
@@ -4823,6 +5103,24 @@ $wgConf->settings += [
 	// ParserMigration
 	'wgParserMigrationEnableQueryString' => [
 		'default' => true,
+	],
+	'wgParserMigrationEnableReportVisualBug' => [
+		'default' => true,
+		'private' => false,
+	],
+	'wgParserMigrationFeedbackAPIURL' => [
+		'default' => 'https://meta.miraheze.org/w/api.php',
+		'metawiki' => false,
+		'private' => false,
+	],
+	'wgParserMigrationFeedbackTitle' => [
+		'default' => 'Tech:Parsoid/Feedback',
+		'private' => false,
+	],
+	'wgParserMigrationFeedbackTitleURL' => [
+		'default' => 'https://meta.miraheze.org/wiki/Tech:Parsoid/Feedback',
+		'metawiki' => false,
+		'private' => false,
 	],
 
 	// Parsoid
@@ -4946,6 +5244,14 @@ $wgConf->settings += [
 	],
 	'wgCentralAuthGlobalPasswordPolicies' => [
 		'default' => [
+			'assistant-steward' => [
+				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
+				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
+				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'PasswordCannotMatchDefaults' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
+				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
+			],
 			'global-admin' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
@@ -5045,6 +5351,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'wlenhancedfilters-disable' => 1,
 		],
+		'+cecuwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+combatinitiationwiki' => [
 			'vector-theme' => 'os',
 		],
@@ -5062,6 +5371,9 @@ $wgConf->settings += [
 			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
+		],
+		'+dappervolkwiki' => [
+			'vector-theme' => 'os',
 		],
 		'+dccomicswiki' => [
 			'visualeditor-newwikitext' => 1,
@@ -5082,8 +5394,8 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
-		'+isvwiki' => [
-			'flow-topiclist-sortby' => 'newest',
+		'+fwtdwiki' => [
+			'minerva-theme' => 'night',
 		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
@@ -5096,6 +5408,9 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
 		],
+		'+lazerpigeonwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+mariowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
@@ -5107,6 +5422,9 @@ $wgConf->settings += [
 			'wlenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
 			'thumbsize' => 3,
+		],
+		'+piggywiki' => [
+			'vector-theme' => 'night',
 		],
 		'+pokemonwiki' => [
 			'rcenhancedfilters-disable' => 1,
@@ -5123,6 +5441,9 @@ $wgConf->settings += [
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 		],
+		'+sp2pediawiki' => [
+			'vector-theme' => 'night',
+		],
 		'+ssbuniversewiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
@@ -5130,6 +5451,13 @@ $wgConf->settings += [
 			'thumbsize' => 3,
 		],
 		'+stopitslenderwiki' => [
+			'minerva-theme' => 'night',
+			'vector-theme' => 'night',
+		],
+		'+versesanddimensionswiki' => [
+			'vector-theme' => 'night',
+		],
+		'+zenithwiki' => [
 			'vector-theme' => 'night',
 		],
 		'+zhtranswiki' => [
@@ -5202,6 +5530,12 @@ $wgConf->settings += [
 				'user' => [ 1, 259200 ],
 			],
 		],
+		'loginwiki' => [
+			'edit' => [
+				'ip-all' => [ 5, 3600 ],
+				'user' => [ 5, 3600 ],
+			],
+		],
 	],
 
 	// RatePage
@@ -5240,6 +5574,14 @@ $wgConf->settings += [
 	'wgUseRCPatrol' => [
 		'default' => true,
 	],
+	'wmgDefaultRecentChangesDays' => [
+		'default' => 7,
+	],
+
+	// RenderBlocking
+	'wgRenderBlockingInlineAssets' => [
+		'default' => false,
+	],
 
 	// ReportIncident
 	'wgReportIncidentAdministratorsPage' => [
@@ -5256,20 +5598,8 @@ $wgConf->settings += [
 	],
 
 	// Resources
-	'wgExtensionAssetsPath' => [
-		'default' => '/' . $wi->version . '/extensions',
-	],
-	'wgLocalStylePath' => [
-		'default' => '/' . $wi->version . '/skins',
-	],
-	'wgResourceBasePath' => [
-		'default' => '/' . $wi->version,
-	],
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
-	],
-	'wgStylePath' => [
-		'default' => '/' . $wi->version . '/skins',
 	],
 
 	// RelatedArticles
@@ -5336,7 +5666,7 @@ $wgConf->settings += [
 	],
 	'wgRequestCustomDomainUsersNotifiedOnAllRequests' => [
 		'default' => [
-			'MacFan4000',
+			'MacFan4000 (Miraheze)',
 			'Original Authority',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
@@ -5392,12 +5722,18 @@ $wgConf->settings += [
 		'+csydeswiki' => [
 			'editblacklisted',
 		],
+		'+damnationwiki' => [
+			'editmoderatorprotected',
+		],
 		'+devwiki' => [
 			'editinterface',
 		],
 		'+famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'+fischwiki' => [
+			'editmoderatorprotected',
 		],
 		'+gengbaikewiki' => [
 			'bureaucrat',
@@ -5434,6 +5770,11 @@ $wgConf->settings += [
 		],
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
+		],
+		'+mcsosirswiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'+metawiki' => [
 			'editautopatrolprotected',
@@ -5475,6 +5816,9 @@ $wgConf->settings += [
 		'+testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'+tikipediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'+trwdeploymentwiki' => [
 			'bureaucrat',
@@ -5541,9 +5885,15 @@ $wgConf->settings += [
 		'csydeswiki' => [
 			'editblacklisted',
 		],
+		'damnationwiki' => [
+			'editmoderatorprotected',
+		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
+		],
+		'fischwiki' => [
+			'editmoderatorprotected',
 		],
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
@@ -5565,6 +5915,11 @@ $wgConf->settings += [
 		],
 		'knightnwiki' => [
 			'editextendedsemiprotected',
+		],
+		'mcsosirswiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+			'editfounderprotected',
 		],
 		'metawiki' => [
 			'editautopatrolprotected',
@@ -5601,6 +5956,9 @@ $wgConf->settings += [
 		'testwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
+		],
+		'tikipediawiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'ultimatelevelbuilderwiki' => [
 			'editemailconfirmedprotected',
@@ -5667,9 +6025,6 @@ $wgConf->settings += [
 			'www.hinkler.com.au',
 		],
 	],
-	'wgRottenLinksHTTPProxy' => [
-		'default' => $wmgHTTPProxy,
-	],
 
 	// Robot policy
 	'wgDefaultRobotPolicy' => [
@@ -5694,9 +6049,6 @@ $wgConf->settings += [
 	],
 	'wgRSSItemMaxLength' => [
 		'default' => 200,
-	],
-	'wgRSSProxy' => [
-		'default' => $wmgHTTPProxy,
 	],
 	'wgRSSDateDefaultFormat' => [
 		'default' => 'Y-m-d H:i:s',
@@ -5768,9 +6120,6 @@ $wgConf->settings += [
 	],
 	'wgDisableOutputCompression' => [
 		'default' => true,
-	],
-	'wgScriptPath' => [
-		'default' => '/w',
 	],
 	'wgShowHostnames' => [
 		'default' => true,
@@ -6258,9 +6607,6 @@ $wgConf->settings += [
 			'208.80.152.134'
 		]
 	],
-	'wgTorBlockProxy' => [
-		'default' => 'http://bastion.fsslc.wtnet:8080'
-	],
 	'wgTorTagChanges' => [
 		'default' => false
 	],
@@ -6353,10 +6699,6 @@ $wgConf->settings += [
 	],
 
 	// UrlShortener
-	'wgUrlShortenerDBName' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
-	],
 	'wgUrlShortenerServer' => [
 		'metawiki' => 'wiki.surf',
 	],
@@ -6444,6 +6786,13 @@ $wgConf->settings += [
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
 	],
+	'wgVectorNightMode' => [
+		'default' => [
+			'logged_out' => false,
+			'logged_in' => true,
+			'beta' => false,
+		],
+	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
 			'showThumbnail' => true,
@@ -6504,6 +6853,10 @@ $wgConf->settings += [
 				'Special:CreateAccount',
 			],
 		],
+		'piggywiki' => [
+			'exclude' => [],
+			'include' => [],
+		],
 	],
 	'wgVectorStickyHeader' => [
 		'default' => [
@@ -6531,6 +6884,16 @@ $wgConf->settings += [
 		'gratisdatawiki' => [
 			'logged_in' => false,
 			'logged_out' => false,
+		],
+	],
+	'wgVectorLanguageInMainPageHeader' => [
+		'default' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'tkuwiki' => [
+			'logged_in' => true,
+			'logged_out' => true,
 		],
 	],
 
@@ -6579,13 +6942,8 @@ $wgConf->settings += [
 	],
 
 	// WebAuthn
-	'wgWebAuthnRelyingPartyName' => [
-		'default' => 'Miraheze',
-		'beta' => 'beta',
-	],
-	'wgWebAuthnRelyingPartyID' => [
-		'default' => 'miraheze.org',
-		'beta' => 'mirabeta.org',
+	'wgWebAuthnLimitPasskeysToRoaming' => [
+		'default' => true,
 	],
 
 	// Wikibase
@@ -6944,7 +7302,7 @@ $wgConf->settings += [
 	],
 
 	// WikimediaIncubator
-	'wmincProjects' => [
+	'wgWmincProjects' => [
 		'default' => [
 			'p' => [
 				'name' => 'Wikipedia',
@@ -6996,22 +7354,23 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wmincProjectSite' => [
+	'wgWmincProjectSite' => [
 		'default' => [
 			'name' => 'Incubator Plus 2.0',
 			'short' => 'incplus',
 		],
 	],
-	'wmincExistingWikis' => [
-		'default' => null,
-	],
-	'wmincClosedWikis' => [
-		'default' => false,
-	],
-	'wmincMultilingualProjects' => [
+	'wgWmincExistingWikis' => [
+		// empty array, see T14782
 		'default' => [],
 	],
-	'wmincTestWikiNamespaces' => [
+	'wgWmincClosedWikis' => [
+		'default' => false,
+	],
+	'wgWmincMultilingualProjects' => [
+		'default' => [],
+	],
+	'wgWmincTestWikiNamespaces' => [
 		'default' => [
 			NS_MAIN,
 			NS_TALK,
@@ -7103,21 +7462,11 @@ $wgConf->settings += [
 	],
 
 	// Uncategorised
-	'wgRandomGameDisplay' => [
-		'default' => [
-			'random_picturegame' => false,
-			'random_poll' => false,
-			'random_quiz' => false,
-		],
-	],
 	'wgForceHTTPS' => [
 		'default' => true,
 	],
 
 	// Schema migration
-	'wgCategoryLinksSchemaMigrationStage' => [
-		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
-	],
 	'wgFileSchemaMigrationStage' => [
 		'default' => SCHEMA_COMPAT_WRITE_BOTH | SCHEMA_COMPAT_READ_OLD,
 	],
@@ -7140,7 +7489,7 @@ $wgConf->settings += [
 			'api-request' => [ 'graylog' => 'debug', 'buffer' => true ],
 			'api-warning' => false,
 			'authentication' => 'info',
-			'authevents' => 'info',
+			'authevents' => [ 'graylog' => 'info', 'sample' => 1000 ],
 			'autoloader' => false,
 			'BlockManager' => false,
 			'BlogPage' => false,
@@ -7196,7 +7545,6 @@ $wgConf->settings += [
 			'fatal' => 'debug',
 			'FileImporter' => false,
 			'FileOperation' => false,
-			'Flow' => 'debug',
 			'formatnum' => false,
 			'FSFileBackend' => false,
 			'gitinfo' => false,
@@ -7262,6 +7610,7 @@ $wgConf->settings += [
 			'security' => 'debug',
 			'session' => 'info',
 			'session-ip' => 'info',
+			'session-sampled' => [ 'graylog' => 'info', 'sample' => 1000 ],
 			'SimpleAntiSpam' => false,
 			'slow-parse' => 'debug',
 			'slow-parsoid' => 'info',
@@ -7315,6 +7664,9 @@ $wgConf->settings += [
 	],
 ];
 
+// Needed for ManageWiki to access certain variables remotely
+$wgManageWikiSiteConfiguration = $wgConf;
+
 // Start settings requiring external dependency checks/functions
 
 if ( wfHostname() === 'test151' ) {
@@ -7328,22 +7680,29 @@ $wi::$disabledExtensions = [
 	'drafts' => '[[phorge:T11970|T11970]]',
 	'pageproperties' => '[[phorge:T11641|T11641]]',
 	'score' => '[[phorge:T5863|T5863]]',
-	'simpleblogpage' => '[[phorge:T13252|T13252]]',
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
-	'mintydocs' => 'Security vulnerabilities',
-	'semanticdrilldown' => 'Security vulnerabilities; Incompatible with MediaWiki 1.44',
+	'linktitles' => 'Performance and compatibility issues ([[phorge:T14992|T14992]])',
+
+	'video' => 'Incompatible with MediaWiki 1.45',
 
 	// Are these still incompatible?
-	'chameleon' => 'Incompatible with MediaWiki 1.44',
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.44',
+	'chameleon' => 'Incompatible with MediaWiki 1.45',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.45'
 ];
 
 $globals = MirahezeFunctions::getConfigGlobals();
 
 // phpcs:ignore MediaWiki.Usage.ForbiddenFunctions.extract
 extract( $globals );
+
+$wgDiscordNotificationWikiUrl = $wi->server . str_replace( '$1', '', $wgArticlePath );
+
+if ( $wmgSharedDomainPathPrefix ) {
+	$wgArticlePath = $wmgSharedDomainPathPrefix . $wgArticlePath;
+	$wgServer = '//' . $wi->getSharedDomain();
+}
 
 $wi->loadExtensions();
 
@@ -7372,9 +7731,9 @@ if ( extension_loaded( 'wikidiff2' ) ) {
 	$wgDiff = false;
 }
 
-// we set $wgInternalServer to $wgServer to get varnish cache purging working
-// we convert $wgServer to http://, as varnish does not support purging https requests
-$wgInternalServer = str_replace( 'https://', 'http://', $wgServer );
+// To get varnish cache purging working, we convert to http://, as varnish
+// does not support purging https requests.
+$wgInternalServer = str_replace( 'https://', 'http://', $wgCanonicalServer );
 
 if ( $wgRequestTimeLimit ) {
 	$wgHTTPMaxTimeout = $wgHTTPMaxConnectTimeout = $wgRequestTimeLimit;
@@ -7391,6 +7750,31 @@ require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
 
+if ( $wgUseQuickInstantCommons ) {
+	$wgForeignFileRepos[] = [
+		'class' => Miraheze\MirahezeMagic\ForeignAPIRepoWithFixedUA::class,
+		'name' => 'wikimediacommons',
+		'backend' => 'miraheze-swift-shared',
+		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
+		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
+		'directory' => $wgUploadDirectory,
+		'hashLevels' => 2,
+		'transformVia404' => true,
+		'fetchDescription' => true,
+		'descriptionCacheExpiry' => 604800,
+		'apiThumbCacheExpiry' => 0,
+		'initialCapital' => true,
+		'zones' => [
+			// actual swift containers have 'local-*'
+			'public' => [ 'container' => 'local-public' ],
+			'thumb' => [ 'container' => 'local-thumb' ],
+			'temp' => [ 'container' => 'local-temp' ],
+			'deleted' => [ 'container' => 'local-deleted' ],
+		],
+	];
+}
+
 if ( $wi->missing ) {
 	require_once '/srv/mediawiki/ErrorPages/MissingWiki.php';
 }
@@ -7399,7 +7783,8 @@ if ( $cwDeleted ) {
 	if ( MW_ENTRY_POINT === 'cli' ) {
 		wfHandleDeletedWiki();
 	} else {
-		define( 'MW_FINAL_SETUP_CALLBACK', 'wfHandleDeletedWiki' );
+		$wgHooks['ApiBeforeMain'][] = 'wfHandleDeletedWiki';
+		$wgHooks['BeforeInitialize'][] = 'wfHandleDeletedWiki';
 	}
 }
 

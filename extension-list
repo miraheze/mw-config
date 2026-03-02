@@ -1,5 +1,4 @@
 $IP/extensions/ConfirmEdit/hCaptcha/extension.json
-$IP/extensions/Maps/vendor/mediawiki/parser-hooks/ParserHooks.php
 $IP/extensions/SocialProfile/SystemGifts/extension.json
 $IP/extensions/SocialProfile/UserActivity/extension.json
 $IP/extensions/SocialProfile/UserBoard/extension.json
@@ -9,3 +8,4 @@ $IP/extensions/SocialProfile/UserStats/extension.json
 $IP/extensions/SocialProfile/UserWelcome/extension.json
 $IP/extensions/Wikibase/extension-client.json
 $IP/extensions/Wikibase/extension-repo.json
+$IP/vendor/mediawiki/parser-hooks/ParserHooks.php

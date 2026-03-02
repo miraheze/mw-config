@@ -8,7 +8,12 @@ use Wikimedia\ObjectCache\RedisBagOStuff;
 $wgMemCachedServers = [];
 $wgMemCachedPersistent = false;
 
-if ( !$wi->isBeta() ) {
+if ( $wi->isBeta() ) {
+	/* $wgManageWikiServers = [
+		// test151
+		'10.0.15.118:443',
+	]; */
+} else {
 	$wgCdnServers = [
 		/** cp161 */
 		'10.0.16.137:81',
@@ -20,57 +25,57 @@ if ( !$wi->isBeta() ) {
 		'10.0.20.166:81',
 	];
 
-	$wgManageWikiServers = [
-		/** mw151 */
+	/* $wgManageWikiServers = [
+		// mw151
 		'10.0.15.114:443',
-		/** mw152 */
+		// mw152
 		'10.0.15.115:443',
-		/** mw153 */
+		// mw153
 		'10.0.15.140:443',
-		/** mwtask151 */
+		// mwtask151
 		'10.0.15.150:443',
 
-		/** mw161 */
+		// mw161
 		'10.0.16.132:443',
-		/** mw162 */
+		// mw162
 		'10.0.16.133:443',
-		/** mw163 */
+		// mw163
 		'10.0.16.151:443',
-		/** mwtask161 */
+		// mwtask161
 		'10.0.16.157:443',
 
-		/** mw171 */
+		// mw171
 		'10.0.17.122:443',
-		/** mw172 */
+		// mw172
 		'10.0.17.123:443',
-		/** mw173 */
+		// mw173
 		'10.0.17.153:443',
-		/** mwtask171 */
+		// mwtask171
 		'10.0.17.144:443',
 
-		/** mw181 */
+		// mw181
 		'10.0.18.104:443',
-		/** mw182 */
+		// mw182
 		'10.0.18.105:443',
-		/** mw183 */
+		// mw183
 		'10.0.18.155:443',
-		/** mwtask181 */
+		// mwtask181
 		'10.0.18.106:443',
 
-		/** mw191 */
+		// mw191
 		'10.0.19.160:443',
-		/** mw192 */
+		// mw192
 		'10.0.19.161:443',
-		/** mw193 */
+		// mw193
 		'10.0.19.164:443',
 
-		/** mw201 */
+		// mw201
 		'10.0.20.162:443',
-		/** mw202 */
+		// mw202
 		'10.0.20.163:443',
-		/** mw203 */
+		// mw203
 		'10.0.20.165:443',
-	];
+	]; */
 }
 
 $wgObjectCaches['mcrouter'] = [
@@ -116,7 +121,7 @@ $wgObjectCaches['mysql-multiwrite'] = [
 			'servers' => [
 				'pc1' => [
 					'type' => 'mysql',
-					'host' => $wi->isBeta() ? '10.0.17.158' : '10.0.16.128',
+					'host' => $wi->isBeta() ? '10.0.17.158' : '10.0.20.169',
 					'dbname' => $wi->isBeta() ? 'testparsercache' : 'parsercache',
 					'user' => $wgDBuser,
 					'password' => $wgDBpassword,
@@ -149,7 +154,7 @@ $wgMicroStashType = 'mcrouter-primary-dc';
 
 $wgObjectCaches['redis-session'] = [
 	'class' => RedisBagOStuff::class,
-	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.15.142:6379' ],
+	'servers' => [ $wi->isBeta() ? '10.0.15.118:6379' : '10.0.19.149:6379' ],
 	'password' => $wmgRedisPassword,
 	'loggroup' => 'redis',
 	'reportDupes' => false,
@@ -178,19 +183,21 @@ $wgParserCacheType = 'mysql-multiwrite';
 $wgChronologyProtectorStash = 'mcrouter';
 
 $wgParsoidCacheConfig = [
-	// Defaults to MainStash
+	// Defaults to using MainStash
 	'StashType' => null,
 	// 24h in production, VE will fail to save after this time.
 	'StashDuration' => 24 * 60 * 60,
+	// Only cache if parsing takes longer than n seconds; 0 means cache all.
 	'CacheThresholdTime' => $wgDBname === 'commonswiki' ? 1.0 : 0.0,
-	'WarmParsoidParserCache' => $wgDBname !== 'commonswiki' ? true : false,
+	// Disable cache warming on commonswiki for now.
+	'WarmParsoidParserCache' => $wgDBname === 'commonswiki' ? false : true,
 ];
 
 if ( $wgDBname === 'commonswiki' ) {
 	$wgParserCacheFilterConfig['parsoid-pcache'] += [
-		// disable parsoid-pcache for file description pages on commons
+		// Disable parsoid-pcache for file description pages on commonswiki.
 		NS_FILE => [
-			// cache none
+			// Cache none
 			'minCpuTime' => PHP_INT_MAX,
 		],
 	];
@@ -216,13 +223,14 @@ $wgObjectCacheSessionExpiry = 86400;
 $wgDLPMaxCacheTime = 604800;
 
 $wgDLPQueryCacheTime = 120;
-$wgDplSettings['queryCacheTime'] = 120;
-$wgDplSettings['recursivePreprocess'] = true;
+
+$wgDPLAlwaysCacheResults = true;
+$wgDPLQueryCacheTime = 120;
 
 $wgSearchSuggestCacheExpiry = 10800;
 
 // Disable sidebar cache for select wikis as a solution to T8732, T9699, and T9884
-if ( $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBname !== 'nonciclopediawiki' ) {
+if ( !$wmgSharedDomainPathPrefix && $wgDBname !== 'solarawiki' && $wgDBname !== 'constantnoblewiki' && $wgDBname !== 'nonciclopediawiki' ) {
 	$wgEnableSidebarCache = true;
 }
 
