@@ -78,8 +78,8 @@ if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 }
 
 // Show custom database maintenance error page on these clusters.
-$wgDatabaseClustersMaintenanceType = 'scheduled';
-$wgDatabaseClustersMaintenance = [ 'c1', 'c2', 'c3', 'c4', 's1' ];
+$wgDatabaseClustersMaintenanceType = 'unscheduled';
+$wgDatabaseClustersMaintenance = [];
 
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
