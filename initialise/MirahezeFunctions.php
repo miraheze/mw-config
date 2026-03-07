@@ -879,6 +879,7 @@ class MirahezeFunctions {
 				'wiki_private',
 				'wiki_extra',
 			] )
+			->orderBy( 'wiki_dbname' )
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
