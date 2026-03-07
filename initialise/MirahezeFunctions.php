@@ -883,78 +883,81 @@ class MirahezeFunctions {
 			->caller( __METHOD__ )
 			->fetchResultSet();
 
-		$activeList = [];
-		$closedList = [];
-		$combiList = [];
-		$deletedList = [];
-		$inactiveList = [];
-		$publicList = [];
-		$privateList = [];
-		$versions = [];
+		// Prepare output arrays
+		$activeList = $closedList = $combiList = $deletedList = [];
+		$inactiveList = $publicList = $privateList = [];
 
-		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
-			$versions[$version] = [];
-		}
+		// Prepopulate versions array
+		$defaultMWVersion = self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
+		$versions = array_fill_keys( self::MEDIAWIKI_VERSIONS, [] );
 
 		foreach ( $allWikis as $wiki ) {
-			if ( (int)$wiki->wiki_deleted === 1 ) {
-				$deletedList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
+			// Reduce repeated property lookups
+			$db = $wiki->wiki_dbname;
+			$cluster = $wiki->wiki_dbcluster;
+			$sitename = $wiki->wiki_sitename;
+			$deleted = (int)$wiki->wiki_deleted;
+			$closed = (int)$wiki->wiki_closed;
+			$inactive = (int)$wiki->wiki_inactive;
+			$private = (int)$wiki->wiki_private;
+			$url = $wiki->wiki_url;
+			$extra = $wiki->wiki_extra;
+
+			// Reuse base array
+			$base = [ 's' => $sitename, 'c' => $cluster ];
+
+			// Always set public/private
+			if ( $private === 1 ) {
+				$privateList[$db] = $base;
 			} else {
-				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
-					$activeList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
-				}
-
-				if ( (int)$wiki->wiki_closed === 1 ) {
-					$closedList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
-				}
-
-				if ( (int)$wiki->wiki_inactive === 1 ) {
-					$inactiveList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
-				}
-
-				$extraData = json_decode( $wiki->wiki_extra ?: '[]', true );
-
-				$primaryDomain = ( $extraData['primary-domain'] ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $wiki->wiki_dbname )];
-				$wikiVersion = ( $extraData['mediawiki-version'] ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
-
-				$combiList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-					'd' => $primaryDomain,
-					'v' => $wikiVersion,
-				];
-
-				if ( $wiki->wiki_url !== null ) {
-					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
-				}
-
-				if ( isset( $versions[$wikiVersion] ) ) {
-					$versions[$wikiVersion][$wiki->wiki_dbname] = $combiList[$wiki->wiki_dbname];
-				}
+				$publicList[$db] = $base;
 			}
 
-			if ( (int)$wiki->wiki_private === 1 ) {
-				$privateList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
-			} else {
-				$publicList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
+			// Deleted wikis
+			if ( $deleted === 1 ) {
+				$deletedList[$db] = $base;
+				// Skip active/closed/inactive/combi for deleted
+				continue;
+			}
+
+			// Active wikis
+			if ( $closed === 0 && $inactive === 0 ) {
+				$activeList[$db] = $base;
+			}
+
+			// Closed/inactive lists
+			if ( $closed === 1 ) {
+				$closedList[$db] = $base;
+			}
+			if ( $inactive === 1 ) {
+				$inactiveList[$db] = $base;
+			}
+
+			// JSON decoding only when needed
+			$extraData = $extra ? json_decode( $extra, true ) : [];
+
+			// Use null coalescing + fallback pattern
+			$primaryDomain = ( $extraData['primary-domain'] ?? null )
+				?: self::DEFAULT_SERVER[self::getRealm( $db )];
+
+			$wikiVersion = ( $extraData['mediawiki-version'] ?? null )
+				?: $defaultMWVersion;
+
+			// Build combined list
+			$combi = $base + [
+				'd' => $primaryDomain,
+				'v' => $wikiVersion,
+			];
+
+			if ( $url !== null ) {
+				$combi['u'] = $url;
+			}
+
+			$combiList[$db] = $combi;
+
+			// Add to versions list
+			if ( isset( $versions[$wikiVersion] ) ) {
+				$versions[$wikiVersion][$db] = $combi;
 			}
 		}
 
