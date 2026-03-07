@@ -865,100 +865,111 @@ class MirahezeFunctions {
 	}
 
 	private static function generateDatabaseLists( string $globalDatabase ): array {
-		$dbr = self::getDatabaseConnection( $globalDatabase );
-		$allWikis = $dbr->newSelectQueryBuilder()
-			->table( 'cw_wikis' )
-			->fields( [
-				'wiki_dbcluster',
-				'wiki_dbname',
-				'wiki_url',
-				'wiki_sitename',
-				'wiki_deleted',
-				'wiki_closed',
-				'wiki_inactive',
-				'wiki_private',
-				'wiki_extra',
-			] )
-			->caller( __METHOD__ )
-			->fetchResultSet();
-
-		$activeList = [];
-		$closedList = [];
-		$combiList = [];
-		$deletedList = [];
-		$inactiveList = [];
-		$publicList = [];
-		$privateList = [];
-		$versions = [];
-
-		$versions = array_fill_keys( self::MEDIAWIKI_VERSIONS, [] );
-
-		foreach ( $allWikis as $wiki ) {
-			$dbName = $wiki->wiki_dbname;
-			$deleted = (int)$wiki->wiki_deleted;
-			$private = (int)$wiki->wiki_private;
-
-			$baseList = [
-				's' => $wiki->wiki_sitename,
-				'c' => $wiki->wiki_dbcluster,
-			];
-
-			if ( $deleted === 1 ) {
-				$deletedList[$dbName] = $baseList;
-			} else {
-				$closed = (int)$wiki->wiki_closed;
-				$inactive = (int)$wiki->wiki_inactive;
-				if ( $closed === 0 && $inactive === 0 ) {
-					$activeList[$dbName] = $baseList;
-				}
-
-				if ( $closed === 1 ) {
-					$closedList[$dbName] = $baseList;
-				}
-
-				if ( $inactive === 1 ) {
-					$inactiveList[$dbName] = $baseList;
-				}
-
-				$extraData = [];
-				if ( $wiki->wiki_extra !== null && $wiki->wiki_extra !== '' ) {
-					$extraData = json_decode( $wiki->wiki_extra, true );
-				}
-
-				$primaryDomain = ( $extraData['primary-domain'] ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $dbName )];
-				$wikiVersion = ( $extraData['mediawiki-version'] ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
-
-				$combiList[$dbName] = $baseList + [
-					'd' => $primaryDomain,
-					'v' => $wikiVersion,
-				];
-
-				if ( $wiki->wiki_url !== null ) {
-					$combiList[$dbName]['u'] = $wiki->wiki_url;
-				}
-
-				if ( isset( $versions[$wikiVersion] ) ) {
-					$versions[$wikiVersion][$dbName] = $combiList[$dbName];
-				}
-			}
-
-			if ( $private === 1 ) {
-				$privateList[$dbName] = $baseList;
-			} else {
-				$publicList[$dbName] = $baseList;
-			}
-		}
-
-		return [
-			'active' => $activeList,
-			'closed' => $closedList,
-			'databases' => $combiList,
-			'deleted' => $deletedList,
-			'inactive' => $inactiveList,
-			'public' => $publicList,
-			'private' => $privateList,
-			'versions' => $versions,
-		];
+	    $dbr = self::getDatabaseConnection( $globalDatabase );
+	    $allWikis = $dbr->newSelectQueryBuilder()
+	        ->table( 'cw_wikis' )
+	        ->fields( [
+	            'wiki_dbcluster',
+	            'wiki_dbname',
+	            'wiki_url',
+	            'wiki_sitename',
+	            'wiki_deleted',
+	            'wiki_closed',
+	            'wiki_inactive',
+	            'wiki_private',
+	            'wiki_extra',
+	        ] )
+	        ->caller( __METHOD__ )
+	        ->fetchResultSet();
+	
+	    // Prepare output arrays
+	    $activeList = $closedList = $combiList = $deletedList = [];
+	    $inactiveList = $publicList = $privateList = [];
+	
+	    // Prepopulate versions array
+	    $defaultMWVersion = self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
+	    $versions = array_fill_keys(self::MEDIAWIKI_VERSIONS, []);
+	
+	    foreach ( $allWikis as $wiki ) {
+	        // Reduce repeated property lookups
+	        $db = $wiki->wiki_dbname;
+	        $cluster = $wiki->wiki_dbcluster;
+	        $sitename = $wiki->wiki_sitename;
+	        $deleted = (int)$wiki->wiki_deleted;
+	        $closed = (int)$wiki->wiki_closed;
+	        $inactive = (int)$wiki->wiki_inactive;
+	        $private = (int)$wiki->wiki_private;
+	        $url = $wiki->wiki_url;
+	        $extra = $wiki->wiki_extra;
+	
+	        // Reuse base array
+	        $base = [ 's' => $sitename, 'c' => $cluster ];
+	
+	        // Always set public/private
+	        if ( $private === 1 ) {
+	            $privateList[$db] = $base;
+	        } else {
+	            $publicList[$db] = $base;
+	        }
+	
+	        // Deleted wikis
+	        if ( $deleted === 1 ) {
+	            $deletedList[$db] = $base;
+	            // Skip active/closed/inactive/combi for deleted
+	            continue;
+	        }
+	
+	        // Active wikis
+	        if ( $closed === 0 && $inactive === 0 ) {
+	            $activeList[$db] = $base;
+	        }
+	
+	        // Closed/inactive lists
+	        if ( $closed === 1 ) {
+	            $closedList[$db] = $base;
+	        }
+	        if ( $inactive === 1 ) {
+	            $inactiveList[$db] = $base;
+	        }
+	
+	        // JSON decoding only when needed
+	        $extraData = $extra ? json_decode( $extra, true ) : [];
+	
+	        // Use null coalescing + fallback pattern
+	        $primaryDomain = ( $extraData['primary-domain'] ?? null )
+	            ?: self::DEFAULT_SERVER[self::getRealm($db)];
+	
+	        $wikiVersion = ( $extraData['mediawiki-version'] ?? null )
+	            ?: $defaultMWVersion;
+	
+	        // Build combined list
+	        $combi = $base + [
+	            'd' => $primaryDomain,
+	            'v' => $wikiVersion,
+	        ];
+	
+	        if ( $url !== null ) {
+	            $combi['u'] = $url;
+	        }
+	
+	        $combiList[$db] = $combi;
+	
+	        // Add to versions list
+	        if ( isset( $versions[$wikiVersion] ) ) {
+	            $versions[$wikiVersion][$db] = $combi;
+	        }
+	    }
+	
+	    return [
+	        'active' => $activeList,
+	        'closed' => $closedList,
+	        'databases' => $combiList,
+	        'deleted' => $deletedList,
+	        'inactive' => $inactiveList,
+	        'public' => $publicList,
+	        'private' => $privateList,
+	        'versions' => $versions,
+	    ];
 	}
 
 	public static function onGenerateDatabaseLists( array &$databaseLists ): void {
