@@ -891,69 +891,61 @@ class MirahezeFunctions {
 		$privateList = [];
 		$versions = [];
 
-		foreach ( self::MEDIAWIKI_VERSIONS as $name => $version ) {
-			$versions[$version] = [];
-		}
+		$versions = array_fill_keys( self::MEDIAWIKI_VERSIONS, [] );
 
 		foreach ( $allWikis as $wiki ) {
-			if ( (int)$wiki->wiki_deleted === 1 ) {
-				$deletedList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
+			$dbName = $wiki->wiki_dbname;
+			$deleted = (int)$wiki->wiki_deleted;
+			$private = (int)$wiki->wiki_private;
+
+			$baseList = [
+			    's' => $wiki->wiki_sitename,
+			    'c' => $wiki->wiki_dbcluster,
+			];
+
+			if ( $deleted === 1 ) {
+				$deletedList[$dbName] = $baseList;
 			} else {
-				if ( (int)$wiki->wiki_closed === 0 && (int)$wiki->wiki_inactive === 0 ) {
-					$activeList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
+				$closed = (int)$wiki->wiki_closed;
+				$inactive = (int)$wiki->wiki_inactive;
+				if ( $closed === 0 && $inactive === 0 ) {
+					$activeList[$dbName] = $baseList;
 				}
 
-				if ( (int)$wiki->wiki_closed === 1 ) {
-					$closedList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
+				if ( $closed === 1 ) {
+					$closedList[$dbName] = $baseList;
 				}
 
-				if ( (int)$wiki->wiki_inactive === 1 ) {
-					$inactiveList[$wiki->wiki_dbname] = [
-						's' => $wiki->wiki_sitename,
-						'c' => $wiki->wiki_dbcluster,
-					];
+				if ( $inactive === 1 ) {
+					$inactiveList[$dbName] = $baseList;
 				}
 
-				$extraData = json_decode( $wiki->wiki_extra ?: '[]', true );
+				$extraData = [];
+				if ( $wiki->wiki_extra !== null && $wiki->wiki_extra !== '' ) {
+					$extraData = json_decode( $wiki->wiki_extra, true );
+				}
 
-				$primaryDomain = ( $extraData['primary-domain'] ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $wiki->wiki_dbname )];
+				$primaryDomain = ( $extraData['primary-domain'] ?? null ) ?: self::DEFAULT_SERVER[self::getRealm( $dbName )];
 				$wikiVersion = ( $extraData['mediawiki-version'] ?? null ) ?: self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 
-				$combiList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
+				$combiList[$dbName] = $baseList + [
 					'd' => $primaryDomain,
 					'v' => $wikiVersion,
 				];
 
 				if ( $wiki->wiki_url !== null ) {
-					$combiList[$wiki->wiki_dbname]['u'] = $wiki->wiki_url;
+					$combiList[$dbName]['u'] = $wiki->wiki_url;
 				}
 
 				if ( isset( $versions[$wikiVersion] ) ) {
-					$versions[$wikiVersion][$wiki->wiki_dbname] = $combiList[$wiki->wiki_dbname];
+					$versions[$wikiVersion][$dbName] = $combiList[$dbName];
 				}
 			}
 
-			if ( (int)$wiki->wiki_private === 1 ) {
-				$privateList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
+			if ( $private === 1 ) {
+				$privateList[$dbName] = $baseList;
 			} else {
-				$publicList[$wiki->wiki_dbname] = [
-					's' => $wiki->wiki_sitename,
-					'c' => $wiki->wiki_dbcluster,
-				];
+				$publicList[$dbName] = $baseList;
 			}
 		}
 
