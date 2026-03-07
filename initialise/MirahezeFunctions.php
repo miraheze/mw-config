@@ -899,8 +899,8 @@ class MirahezeFunctions {
 			$private = (int)$wiki->wiki_private;
 
 			$baseList = [
-			    's' => $wiki->wiki_sitename,
-			    'c' => $wiki->wiki_dbcluster,
+				's' => $wiki->wiki_sitename,
+				'c' => $wiki->wiki_dbcluster,
 			];
 
 			if ( $deleted === 1 ) {
