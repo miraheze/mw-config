@@ -1614,8 +1614,8 @@ $wgConf->settings += [
 	'wgDPLMaxResultCount' => [
 		'default' => 500,
 		'constantnoblewiki' => 2500,
-		'gui7814sgtafanonwiki' => 1000,
 		'fischwiki' => 2500,
+		'gui7814sgtafanonwiki' => 1000,
 	],
 
 	// DynamicSidebar
