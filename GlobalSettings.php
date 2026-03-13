@@ -948,7 +948,7 @@ $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 // MobileFrontend Setting
 if ( $wmgMobileFrontendAllowNavboxs ) {
 	$wgMFRemovableClasses = [
-	"base": [
+	"base" => [
 		".nomobile"
 	]
 ]
