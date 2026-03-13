@@ -592,6 +592,16 @@ $wgManageWikiSettings = [
 		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
 		'requires' => [],
 	],
+	'wmgMobileFrontendAllowNavboxs' => [
+		'name' => 'Don\'t remove navboxes from MobileFrontend view.',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'This option overrides the default MobileFrontend config to not filter navbox CSS from being displaed on mobile view.',
+		'requires' => [],
+
+	]
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
