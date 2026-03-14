@@ -598,10 +598,20 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'other',
-		'help' => 'This option overrides the default MobileFrontend config to not filter navbox CSS from being displaed on mobile view.',
+		'help' => 'This option overrides the default MobileFrontend config to not filter navbox CSS from being displayed on mobile view.',
 		'requires' => [],
 
-	]
+	],
+	'wmgMobileFrontendRemoveHidden' => [
+		'name' => 'Remove hidden class from MobileFrontend view.',
+		'from' => 'mobilefrontend',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'other',
+		'help' => 'Remove elements with the <code>.hidden</code> CSS class. This setting allows backwards compatibility with FANDOM wiki behavior.',
+		'requires' => [],
+
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
