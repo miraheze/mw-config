@@ -592,25 +592,23 @@ $wgManageWikiSettings = [
 		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
 		'requires' => [],
 	],
-	'wmgMobileFrontendAllowNavboxs' => [
-		'name' => 'Don\'t remove navboxes from MobileFrontend view.',
-		'from' => 'mobilefrontend',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'other',
-		'help' => 'This option overrides the default MobileFrontend config to not filter navbox CSS from being displayed on mobile view.',
-		'requires' => [],
-
-	],
-	'wmgMobileFrontendRemoveHidden' => [
-		'name' => 'Remove hidden class from MobileFrontend view.',
-		'from' => 'mobilefrontend',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'other',
-		'help' => 'Remove elements with the <code>.hidden</code> CSS class. This setting allows backwards compatibility with FANDOM wiki behavior.',
-		'requires' => [],
-
+		'wgMFRemovableClasses' => [
+			'associativeKey' => 'base',
+			'name' => 'Classes to strip from mobile view',
+			'from' => 'mobilefrontend',
+			'type' => 'list-multi',
+			'overridedefault' => [
+				".navbox",
+				".vertical-navbox",
+				".nomobile"
+			],
+			'section' => 'other',
+			'options' => ['.navbox' => '.navbox',
+				'.vertical-navbox' => '.vertical-navbox',
+				'.nomobile' => '.nomobile',
+				'.hidden' => '.hidden'],
+			'help' => 'Element with these CSS classes will be be removed from being show on mobile view pages. The <code>.hidden</code> class is used on FANDOM, and may be enabled for compatibility with FANDOM imports.',
+			'requires' => [],
 	],
 
 	// Beta Feature related stuff

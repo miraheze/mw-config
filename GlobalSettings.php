@@ -943,12 +943,3 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 
 // RecentChanges
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
-
-
-// MobileFrontend Setting
-if ( $wmgMobileFrontendAllowNavboxs ) {
-	$wgMFRemovableClasses['base'] = ['.nomobile'];
-}
-if ( $wmgMobileFrontendRemoveHidden ) {
-	$wgMFRemovableClasses['base'][] = '.hidden';
-}
