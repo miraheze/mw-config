@@ -7808,5 +7808,8 @@ if (
 	require_once __DIR__ . '/ExtensionMessageFiles-' . $wi->version . '.php';
 }
 
+$wgBucketDBuser = $wgDBuser;
+$wgBucketDBpassword = $wgDBpassword;
+
 // Don't need a global here
 unset( $wi );
