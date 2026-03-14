@@ -609,8 +609,9 @@ $wgManageWikiSettings = [
 			'options' => ['.navbox' => '.navbox',
 				'.vertical-navbox' => '.vertical-navbox',
 				'.nomobile' => '.nomobile',
-				'.hidden' => '.hidden'],
-			'help' => 'Element with these CSS classes will be be removed from being show on mobile view pages. The <code>.hidden</code> class is used on FANDOM, and may be enabled for compatibility with FANDOM imports.',
+				'.hidden' => '.hidden',
+				'.mobile-hidden' => '.mobile-hidden'],
+			'help' => 'Element with these CSS classes will be removed from being show on mobile view pages. The <code>.hidden</code> and <code>.mobile-hidden</code> class are used on FANDOM, and may be enabled for compatibility with FANDOM imports.',
 			'requires' => [],
 	],
 
