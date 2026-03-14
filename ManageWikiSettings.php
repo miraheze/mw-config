@@ -592,6 +592,28 @@ $wgManageWikiSettings = [
 		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
 		'requires' => [],
 	],
+		'wgMFRemovableClasses' => [
+			'associativeKey' => 'base',
+			'name' => 'Classes to strip from mobile view',
+			'from' => 'mobilefrontend',
+			'type' => 'list-multi',
+			'overridedefault' => [
+				'beta' => [],
+				'base' => [
+					'.navbox',
+					'.vertical-navbox',
+					'.nomobile',
+				],
+			],
+			'section' => 'other',
+			'options' => ['.navbox' => '.navbox',
+				'.vertical-navbox' => '.vertical-navbox',
+				'.nomobile' => '.nomobile',
+				'.hidden' => '.hidden',
+				'.mobile-hidden' => '.mobile-hidden'],
+			'help' => 'Element with these CSS classes will be removed from being show on mobile view pages. The <code>.hidden</code> and <code>.mobile-hidden</code> class are used on FANDOM, and may be enabled for compatibility with FANDOM imports.',
+			'requires' => [],
+	],
 
 	// Beta Feature related stuff
 	'wgEchoUseCrossWikiBetaFeature' => [
