@@ -598,9 +598,12 @@ $wgManageWikiSettings = [
 			'from' => 'mobilefrontend',
 			'type' => 'list-multi',
 			'overridedefault' => [
-				".navbox",
-				".vertical-navbox",
-				".nomobile"
+				'beta' => [],
+				'base' => [
+					'.navbox',
+					'.vertical-navbox',
+					'.nomobile',
+				],
 			],
 			'section' => 'other',
 			'options' => ['.navbox' => '.navbox',
