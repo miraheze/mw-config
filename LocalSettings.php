@@ -117,8 +117,8 @@ foreach ( $proxyGlobals as $global ) {
 // Don't need globals here
 unset( $proxy, $proxyGlobals, $servers );
 
-$wgStatsFormat = 'dogstatsd';
-$wgStatsTarget = 'udp://localhost:9125';
+// $wgStatsFormat = 'dogstatsd';
+// $wgStatsTarget = 'udp://localhost:9125';
 
 $wmgSharedDomainPathPrefix = '';
 
