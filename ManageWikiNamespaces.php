@@ -381,7 +381,7 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgWPBNamespaces' => [
 		'name' => 'Allow WikidataPageBanner to work in these namespaces?',
-		'from' => 'WikidataPageBanner',
+		'from' => 'wikidatapagebanner',
 		'type' => 'check',
 		'main' => true,
 		'talk' => true,
@@ -392,7 +392,7 @@ $wgManageWikiNamespacesAdditional = [
 	],
 	'wgWPBDisabledNamespaces' => [
 		'name' => 'Disable WikidataPageBanner from working in these namespaces?',
-		'from' => 'WikidataPageBanner',
+		'from' => 'wikidatapagebanner',
 		'type' => 'check',
 		'main' => true,
 		'talk' => true,
