@@ -2877,8 +2877,8 @@ $wgConf->settings += [
 			'Guns' => 'c-Guns',
 			'Bosses' => 'c-Bosses',
 			'Materials' => 'c-Materials',
-			'Quests' => 'c-Quests',
-	        'Locations' => 'c-Locations',
+			'Quests' => 'c-Quests',	
+			'Locations' => 'c-Locations',
 		],
 	],
 
