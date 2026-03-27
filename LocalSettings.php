@@ -2878,6 +2878,7 @@ $wgConf->settings += [
 			'Bosses' => 'c-Bosses',
 			'Materials' => 'c-Materials',
 			'Quests' => 'c-Quests',
+	        'Locations' => 'c-Locations',
 		],
 	],
 
