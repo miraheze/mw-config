@@ -2640,6 +2640,11 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Gadgets
+	'wgGadgetsRepo' => [
+		'default' => 'definition',
+	],
+
 	// Gallery Options
 	'wgGalleryOptions' => [
 		'default' => [
