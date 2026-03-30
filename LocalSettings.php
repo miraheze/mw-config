@@ -2651,70 +2651,23 @@ $wgConf->settings += [
 	],
 
 	// Gallery Options
-	'wgGalleryOptions' => [
-		'default' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'traditional',
-		],
-		'darkangelwiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'dccomicswiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'dcmultiversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'ghostmachinewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'pilgrammedwiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 180,
-			'imageHeight' => 180,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'traditional',
-		],
-		'rippaversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
+	'wmgGalleryOptionsImagesPerRow' => [
+		'default' => 0,
+	],
+	'wmgGalleryOptionsImageWidth' => [
+		'default' => 120,
+	],
+	'wmgGalleryOptionsImageHeight' => [
+		'default' => 120,
+	],
+	'wmgGalleryOptionsShowBytes' => [
+		'default' => true,
+	],
+	'wmgGalleryOptionsShowDimensions' => [
+		'default' => true,
+	],
+	'wmgGalleryOptionsMode' => [
+		'default' => 'traditional',
 	],
 
 	// GeoData

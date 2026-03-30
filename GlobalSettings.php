@@ -576,6 +576,17 @@ if ( $wgWordmark ) {
 	];
 }
 
+// $wgGalleryOptions
+$wgGalleryOptions = [
+	'imagesPerRow' => $wmgGalleryOptionsImagesPerRow,
+	'imageWidth' => $wmgGalleryOptionsImageWidth,
+	'imageHeight' => $wmgGalleryOptionsImageHeight,
+	'captionLength' => true,
+	'showBytes' => $wmgGalleryOptionsShowBytes,
+	'showDimensions' => $wmgGalleryOptionsShowDimensions,
+	'mode' => $wmgGalleryOptionsMode,
+];
+
 // $wgUrlShortenerAllowedDomains
 $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?miraheze\.org',
