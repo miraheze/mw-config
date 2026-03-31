@@ -447,6 +447,20 @@ $wgManageWikiSettings = [
 		'help' => 'Selectors for elements which will be excluded from extraction.',
 		'requires' => [],
 	],
+	'wgGadgetsRepo' => [
+		'name' => 'Gadgets repository',
+		'from' => 'gadgets',
+		'type' => 'list',
+		'options' => [
+			'MediaWiki:Gadgets-definition' => 'definition',
+			'JSON subpages under MediaWiki:Gadgets/' => 'json',
+			'Both definition page and JSON subpages' => 'json+definition',
+		],
+		'overridedefault' => 'definition',
+		'help' => 'Change which way are gadgets defined. By default, gadgets are defined on the [[MediaWiki:Gadgets-definition]] page, but can be configured to use JSON subpages of <code>MediaWiki:Gadgets/</code> instead. If you are moving from one format to another, you can enable both at once.',
+		'section' => 'other',
+		'requires' => [],
+	],
 	'wgRSSAllowLinkTag' => [
 		'name' => 'Allow links in RSS feeds',
 		'from' => 'rss',

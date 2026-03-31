@@ -405,6 +405,11 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// Bucket
+	'wgBucketDBuser' => [
+		'default' => 'bucketuser',
+	],
+
 	// Cache
 	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
@@ -2641,6 +2646,11 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Gadgets
+	'wgGadgetsRepo' => [
+		'default' => 'definition',
+	],
+
 	// Gallery Options
 	'wgGalleryOptions' => [
 		'default' => [
@@ -2879,6 +2889,7 @@ $wgConf->settings += [
 			'Bosses' => 'c-Bosses',
 			'Materials' => 'c-Materials',
 			'Quests' => 'c-Quests',
+			'Locations' => 'c-Locations',
 		],
 	],
 
@@ -4550,6 +4561,8 @@ $wgConf->settings += [
 				796684,
 				/** Void (Miraheze) (Technology team) */
 				798213,
+				/** TheWWRNerdGuy (Miraheze) (Technology team) */
+				825247,
 			],
 		],
 	],
@@ -5809,7 +5822,7 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'+tikipediawiki' => [
+		'+tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'+trwdeploymentwiki' => [
@@ -5949,7 +5962,7 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'tikipediawiki' => [
+		'tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'ultimatelevelbuilderwiki' => [
@@ -7742,6 +7755,7 @@ require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
+require_once '/srv/mediawiki/config/ContentSecurityPolicy.php';
 
 if ( $wgUseQuickInstantCommons ) {
 	$wgForeignFileRepos[] = [
