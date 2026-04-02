@@ -932,7 +932,7 @@ $wgCaptchaRegexes[] = '/<a +href/i';
 // 12 MB
 $wgAPIMaxResultSize = 12582912;
 
-$wgReferrerPolicy = $cwPrivate ?
+$wgReferrerPolicy = ( $cwPrivate && !$wi->isExtensionActive( 'maps' ) ) ?
 	'no-referrer' :
 	[ 'origin-when-cross-origin', 'origin' ];
 
