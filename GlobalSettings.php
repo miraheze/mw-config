@@ -932,6 +932,7 @@ $wgCaptchaRegexes[] = '/<a +href/i';
 // 12 MB
 $wgAPIMaxResultSize = 12582912;
 
+// Referrer Policy. Check whether the wiki is private and have maps extension not active
 $wgReferrerPolicy = ( $cwPrivate && !$wi->isExtensionActive( 'maps' ) ) ?
 	'no-referrer' :
 	[ 'origin-when-cross-origin', 'origin' ];
