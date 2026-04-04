@@ -932,7 +932,7 @@ $wgCaptchaRegexes[] = '/<a +href/i';
 // 12 MB
 $wgAPIMaxResultSize = 12582912;
 
-//T15102: Extension: Maps doesn't work without a referrer
+// T15102: Extension:Maps doesn't work without a referrer
 $wgReferrerPolicy = ( $cwPrivate && !$wi->isExtensionActive( 'Maps' ) ) ?
 	'no-referrer' :
 	[ 'origin-when-cross-origin', 'origin' ];
