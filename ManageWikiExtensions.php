@@ -666,26 +666,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'linktitles' => [
-		'name' => 'LinkTitles',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkTitles',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'install' => [
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'linktitles-batch',
-					],
-				],
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'logofunctions' => [
 		'name' => 'LogoFunctions',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LogoFunctions',

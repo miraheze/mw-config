@@ -3455,59 +3455,6 @@ $wgConf->settings += [
 		],
 	],
 
-	// LinkTitles
-	'wgLinkTitlesCheckRedirect' => [
-		'default' => true,
-	],
-	'wgLinkTitlesEnableNoTargetMagicWord' => [
-		'default' => false,
-	],
-	'wgLinkTitlesFirstOnly' => [
-		'default' => true,
-	],
-	'wgLinkTitlesBlackList' => [
-		'default' => [],
-	],
-	'wgLinkTitlesMinimumTitleLength' => [
-		'default' => 4,
-	],
-	'wgLinkTitlesParseHeadings' => [
-		'default' => false,
-	],
-	'wgLinkTitlesParseOnEdit' => [
-		'default' => true,
-	],
-	'wgLinkTitlesParseOnRender' => [
-		'default' => false,
-	],
-	'wgLinkTitlesPreferShortTitles' => [
-		'default' => false,
-	],
-	'wgLinkTitlesSmartMode' => [
-		'default' => true,
-	],
-	'wgLinkTitlesSameNamespace' => [
-		'default' => true,
-	],
-	'wgLinkTitlesSkipTemplates' => [
-		'default' => false,
-	],
-	'wgLinkTitlesSpecialPageReloadAfter' => [
-		'default' => 1,
-	],
-	'wgLinkTitlesSourceNamespaces' => [
-		'default' => [],
-	],
-	'wgLinkTitlesTargetNamespaces' => [
-		'default' => [],
-	],
-	'wgLinkTitlesWordStartOnly' => [
-		'default' => false,
-	],
-	'wgLinkTitlesWordEndOnly' => [
-		'default' => false,
-	],
-
 	// LiliPond
 	'wgScoreLilyPond' => [
 		'default' => '/dev/null',
@@ -7642,7 +7589,6 @@ $wi::$disabledExtensions = [
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
-	'linktitles' => 'Performance and compatibility issues ([[phorge:T14992|T14992]])',
 
 	'editsimilar' => 'Incompatible with MediaWiki 1.45',
 	'video' => 'Incompatible with MediaWiki 1.45',
