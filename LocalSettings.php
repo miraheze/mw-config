@@ -405,6 +405,11 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// Bucket
+	'wgBucketDBuser' => [
+		'default' => 'bucketuser',
+	],
+
 	// Cache
 	'wgCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
@@ -475,6 +480,7 @@ $wgConf->settings += [
 		'historikawiki' => 'uca-cs',
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
+		'wikitransportwiki' => 'numeric',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
@@ -682,6 +688,7 @@ $wgConf->settings += [
 	],
 	'wgCitizenOverflowNowrapClasses' => [
 		'default' => [
+			'noresize',
 			'citizen-table-nowrap',
 			'cargoDynamicTable',
 			'dataTable',
@@ -2640,71 +2647,29 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Gadgets
+	'wgGadgetsRepo' => [
+		'default' => 'definition',
+	],
+
 	// Gallery Options
-	'wgGalleryOptions' => [
-		'default' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'traditional',
-		],
-		'darkangelwiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'dccomicswiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'dcmultiversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'ghostmachinewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
-		'pilgrammedwiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 180,
-			'imageHeight' => 180,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'traditional',
-		],
-		'rippaversewiki' => [
-			'imagesPerRow' => 0,
-			'imageWidth' => 120,
-			'imageHeight' => 120,
-			'captionLength' => true,
-			'showBytes' => true,
-			'showDimensions' => true,
-			'mode' => 'packed',
-		],
+	'wmgGalleryOptionsImagesPerRow' => [
+		'default' => 0,
+	],
+	'wmgGalleryOptionsImageWidth' => [
+		'default' => 120,
+	],
+	'wmgGalleryOptionsImageHeight' => [
+		'default' => 120,
+	],
+	'wmgGalleryOptionsShowBytes' => [
+		'default' => true,
+	],
+	'wmgGalleryOptionsShowDimensions' => [
+		'default' => true,
+	],
+	'wmgGalleryOptionsMode' => [
+		'default' => 'traditional',
 	],
 
 	// GeoData
@@ -2878,6 +2843,7 @@ $wgConf->settings += [
 			'Bosses' => 'c-Bosses',
 			'Materials' => 'c-Materials',
 			'Quests' => 'c-Quests',
+			'Locations' => 'c-Locations',
 		],
 	],
 
@@ -3490,59 +3456,6 @@ $wgConf->settings += [
 		],
 	],
 
-	// LinkTitles
-	'wgLinkTitlesCheckRedirect' => [
-		'default' => true,
-	],
-	'wgLinkTitlesEnableNoTargetMagicWord' => [
-		'default' => false,
-	],
-	'wgLinkTitlesFirstOnly' => [
-		'default' => true,
-	],
-	'wgLinkTitlesBlackList' => [
-		'default' => [],
-	],
-	'wgLinkTitlesMinimumTitleLength' => [
-		'default' => 4,
-	],
-	'wgLinkTitlesParseHeadings' => [
-		'default' => false,
-	],
-	'wgLinkTitlesParseOnEdit' => [
-		'default' => true,
-	],
-	'wgLinkTitlesParseOnRender' => [
-		'default' => false,
-	],
-	'wgLinkTitlesPreferShortTitles' => [
-		'default' => false,
-	],
-	'wgLinkTitlesSmartMode' => [
-		'default' => true,
-	],
-	'wgLinkTitlesSameNamespace' => [
-		'default' => true,
-	],
-	'wgLinkTitlesSkipTemplates' => [
-		'default' => false,
-	],
-	'wgLinkTitlesSpecialPageReloadAfter' => [
-		'default' => 1,
-	],
-	'wgLinkTitlesSourceNamespaces' => [
-		'default' => [],
-	],
-	'wgLinkTitlesTargetNamespaces' => [
-		'default' => [],
-	],
-	'wgLinkTitlesWordStartOnly' => [
-		'default' => false,
-	],
-	'wgLinkTitlesWordEndOnly' => [
-		'default' => false,
-	],
-
 	// LiliPond
 	'wgScoreLilyPond' => [
 		'default' => '/dev/null',
@@ -3744,6 +3657,7 @@ $wgConf->settings += [
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
 				'user' => true,
+				'echo-read-notifications' => true,
 			],
 		],
 		'+allpediawiki' => [
@@ -4549,6 +4463,8 @@ $wgConf->settings += [
 				796684,
 				/** Void (Miraheze) (Technology team) */
 				798213,
+				/** TheWWRNerdGuy (Miraheze) (Technology team) */
+				825247,
 			],
 		],
 	],
@@ -5808,7 +5724,7 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'+tikipediawiki' => [
+		'+tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'+trwdeploymentwiki' => [
@@ -5948,7 +5864,7 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'tikipediawiki' => [
+		'tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'ultimatelevelbuilderwiki' => [
@@ -7674,7 +7590,6 @@ $wi::$disabledExtensions = [
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 
 	'lingo' => 'Currently broken',
-	'linktitles' => 'Performance and compatibility issues ([[phorge:T14992|T14992]])',
 
 	'editsimilar' => 'Incompatible with MediaWiki 1.45',
 	'video' => 'Incompatible with MediaWiki 1.45',
@@ -7741,6 +7656,7 @@ require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
+require_once '/srv/mediawiki/config/ContentSecurityPolicy.php';
 
 if ( $wgUseQuickInstantCommons ) {
 	$wgForeignFileRepos[] = [

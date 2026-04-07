@@ -247,6 +247,52 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'parserhooks',
 	],
+	'bucket' => [
+		'name' => 'Bucket',
+		'linkPage' => 'https://meta.weirdgloop.org/w/Extension:Bucket',
+		'conflicts' => false,
+		'requires' => [],
+		'install' => [
+			'sql' => [
+				'bucket_pages' => 'extensions/Bucket/sql/tables-generated.sql',
+				'bucket_schemas' => 'extensions/Bucket/sql/tables-generated.sql',
+				'bucket__bucket_issues' => 'extensions/Bucket/sql/issues-table.sql',
+			],
+			'mwscript' => [
+				'Bucket:CreateInitialSchemaForBucketIssues' => [],
+			],
+			'permissions' => [
+				'sysop' => [
+					'permissions' => [
+						'editbucket',
+					],
+				],
+			],
+			'namespaces' => [
+				'Bucket' => [
+					'id' => 9592,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => 'editbucket',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'json',
+					'additional' => [],
+				],
+				'Bucket_talk' => [
+					'id' => 9593,
+					'searchable' => 0,
+					'subpages' => 0,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => [],
+				],
+			],
+		],
+		'section' => 'parserhooks',
+	],
 	'calendar-wikivoyage' => [
 		'name' => 'Calendar',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Calendar-Wikivoyage',
@@ -618,26 +664,6 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkCards',
 		'conflicts' => false,
 		'requires' => [],
-		'section' => 'parserhooks',
-	],
-	'linktitles' => [
-		'name' => 'LinkTitles',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LinkTitles',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'install' => [
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'linktitles-batch',
-					],
-				],
-			],
-		],
 		'section' => 'parserhooks',
 	],
 	'logofunctions' => [
@@ -2492,8 +2518,12 @@ $wgManageWikiExtensions = [
 		'name' => 'Language Selector',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LanguageSelector',
 		'conflicts' => false,
-		'help' => 'Note: This extension is unmaintained and has a known bug of showing pages in a random language. Consider using UniversalLanguageSelector instead.',
-		'requires' => [],
+		'help' => 'Note: This extension is unmaintained and has a known bug of showing pages in a random language. Consider using UniversalLanguageSelector instead. If you want to disable this extension, please file a task on [[meta:Phorge|Phorge]].',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'other',
 	],
 	'lastmodified' => [

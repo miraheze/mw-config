@@ -1085,11 +1085,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'whentheycrywiki':
-		$wgGalleryOptions['imageWidth'] = 200;
-		$wgGalleryOptions['imageHeight'] = 200;
-
-		break;
 	case 'wikigeniuswiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
