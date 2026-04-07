@@ -2924,7 +2924,7 @@ $wgManageWikiSettings = [
 		'maxint' => 62208000,
 		'overridedefault' => 180 * 24 * 3600,
 		'section' => 'recentchanges',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted. Restricted in a5b3549.',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted. Restricted as if configured incorrectly, it will evict entries from RecentChanges and cause wikis to close earlier than they should.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2958,7 +2958,7 @@ $wgManageWikiSettings = [
 			'autoconfirmed'
 		],
 		'section' => 'permissions',
-		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else. Restricted in a5b3549.',
+		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else. Restricted as when misconfigured it can cause issues with assigning permissions.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2991,7 +2991,7 @@ $wgManageWikiSettings = [
 		'maxint' => 25,
 		'overridedefault' => 0,
 		'section' => 'restricted',
-		'help' => 'Number of editors to attribute. Restricted in 1e94a75.',
+		'help' => 'Number of editors to attribute. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3004,7 +3004,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => 'HAWelcome',
 		'section' => 'restricted',
-		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit. Note: this should not be set to the same name of an existing user. Restricted in 535625c.',
+		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit. Note: this should not be set to the same name of an existing user, as doing so will lock that user out of the account. Restricted due to that issue.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
