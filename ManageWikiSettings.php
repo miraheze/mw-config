@@ -2908,7 +2908,7 @@ $wgManageWikiSettings = [
 		'maxint' => 90000000,
 		'overridedefault' => 5242880,
 		'section' => 'restricted',
-		'help' => 'Don\'t read SVG metadata beyond this point.',
+		'help' => 'Don\'t read SVG metadata beyond this point. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2975,7 +2975,7 @@ $wgManageWikiSettings = [
 		'maxint' => 10000,
 		'overridedefault' => 2048,
 		'section' => 'restricted',
-		'help' => 'Maximum page size in kilobytes.',
+		'help' => 'Maximum page size in kilobytes. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3020,7 +3020,7 @@ $wgManageWikiSettings = [
 		'maxint' => 500,
 		'overridedefault' => 99,
 		'section' => 'restricted',
-		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500.',
+		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
