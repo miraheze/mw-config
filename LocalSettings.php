@@ -3626,6 +3626,7 @@ $wgConf->settings += [
 				'read' => true,
 				'oathauth-enable' => true,
 				'viewmyprivateinfo' => true,
+				'echo-read-notifications' => true,
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
 				'editmywatchlist' => true,
@@ -3657,7 +3658,6 @@ $wgConf->settings += [
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
 				'user' => true,
-				'echo-read-notifications' => true,
 			],
 		],
 		'+allpediawiki' => [
