@@ -1822,17 +1822,19 @@ $wgManageWikiExtensions = [
 				'Translations' => [
 					'id' => 1198,
 					'searchable' => 0,
-					'subpages' => 0,
+					'subpages' => 1,
 					'protection' => 'translate',
 					'content' => 0,
 					'aliases' => [],
 					'contentmodel' => 'wikitext',
-					'additional' => [],
+					'additional' => [
+						'wgNamespaceRobotPolicies' => 'noindex',
+					],
 				],
 				'Translations_talk' => [
 					'id' => 1199,
 					'searchable' => 0,
-					'subpages' => 0,
+					'subpages' => 1,
 					'protection' => '',
 					'content' => 0,
 					'aliases' => [],
