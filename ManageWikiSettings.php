@@ -1453,6 +1453,15 @@ $wgManageWikiSettings = [
 		'help' => 'Enables CodeMirror 6, which provides various improvements to the code editor, including code folding and autocompletion.',
 		'requires' => [],
 	],
+	'wmgCodeMirrorReplaceCodeEditor' => [
+		'name' => 'Replace CodeEditor with CodeMirror',
+		'from' => 'codemirror',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'This replaces the default CodeEditor with CodeMirror for all users.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [

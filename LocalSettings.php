@@ -704,6 +704,9 @@ $wgConf->settings += [
 	'wgCodeMirrorV6' => [
 		'default' => false,
 	],
+	'wmgCodeMirrorReplaceCodeEditor' => [
+		'default' => false,
+	],
 
 	// Comments
 	'wgCommentsDefaultAvatar' => [

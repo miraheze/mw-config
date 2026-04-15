@@ -171,6 +171,41 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 
 if ( $wi->isExtensionActive( 'CodeMirror' ) ) {
 	$wgDefaultUserOptions['usecodemirror'] = (int)$wmgCodeMirrorEnableDefault;
+	if ( $wmgCodeMirrorReplaceCodeEditor ) {
+		// Taken from WMF's configuration.
+		$wgCodeMirrorEnabledModes['javascript'] = true;
+		$wgCodeMirrorEnabledModes['json'] = true;
+		$wgCodeMirrorEnabledModes['css'] = true;
+		$wgCodeMirrorEnabledModes['lua'] = true;
+		$wgCodeMirrorEnabledModes['vue'] = true;
+		// CodeEditor
+		$wgCodeEditorEnabledModes['javascript'] = false;
+		$wgCodeEditorEnabledModes['json'] = false;
+		$wgCodeEditorEnabledModes['css'] = false;
+		$wgCodeEditorEnabledModes['lua'] = false;
+		$wgCodeEditorEnabledModes['vue'] = false;
+		// AbuseFilter
+		$wgAbuseFilterUseCodeEditor = false;
+		$wgAbuseFilterUseCodeMirror = true;
+		// DataMaps
+		$wgDataMapsUseCodeEditor = false;
+		$wgDataMapsUseCodeMirror = true;
+		// Gadgets
+		$wgGadgetsDefinitionsUseCodeEditor = false;
+		$wgGadgetsDefinitionsUseCodeMirror = true;
+		// JsonConfig
+		$wgJsonConfigUseCodeEditor = false;
+		$wgJsonConfigUseCodeMirror = true;
+		// Scribunto
+		$wgScribuntoUseCodeEditor = false;
+		$wgScribuntoUseCodeMirror = true;
+		// TemplateStyles
+		$wgTemplateStylesUseCodeEditor = false;
+		$wgTemplateStylesUseCodeMirror = true;
+		// UploadWizard
+		$wgUploadWizardUseCodeEditor = false;
+		$wgUploadWizardUseCodeMirror = true;
+	}
 }
 
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
