@@ -589,6 +589,7 @@ switch ( $wi->dbname ) {
 			'GlobalWatchlist',
 			'IncidentReporting',
 			'RequestCustomDomain',
+			'SecurePoll',
 		] );
 
 		/*
