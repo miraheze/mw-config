@@ -5596,6 +5596,12 @@ $wgConf->settings += [
 			'templateeditor',
 			'extendedconfirmed',
 		],
+		'+blutigeskareuzwiki' => [
+			'editextendedconfirmedprotected',
+			'editbureaucratprotected',
+			'edittemplateeditorprotected',
+			'editmoderatorprotected',
+		],
 		'+brandonwmwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
@@ -5772,6 +5778,12 @@ $wgConf->settings += [
 		],
 		'allpediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'blutigeskareuzwiki' => [
+			'editextendedconfirmedprotected',
+			'editbureaucratprotected',
+			'edittemplateeditorprotected',
+			'editmoderatorprotected',
 		],
 		'cgwiki' => [
 			'cg'
