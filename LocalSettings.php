@@ -5659,7 +5659,6 @@ $wgConf->settings += [
 			'templateeditor',
 			'extendedconfirmed',
 			'author',
-			'moderator',
 			'sysop',
 			'bureaucrat',
 		],
@@ -5809,7 +5808,6 @@ $wgConf->settings += [
 		'hypotheticalweatherwiki' => [
 			'templateeditor',
 			'extendedconfirmed',
-			'moderator',
 			'bureaucrat',
 		],
 		'infopediawiki' => [
