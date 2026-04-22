@@ -8,6 +8,7 @@ require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\Content\TextContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 
 $page = MediaWikiServices::getInstance()
@@ -39,7 +40,37 @@ if ( $page->exists() ) {
 $lastmod = gmdate( 'D, j M Y H:i:s', $mtime ) . ' GMT';
 header( "Last-modified: $lastmod" );
 
-fpassthru( $robots );
+// Localized special page paths
+$specialPagePath = SpecialPage::getTitleFor( 'DOESNOTEXIST' )->getLocalURL();
+$specialPrefix = substr( $specialPagePath, 0, strpos( $specialPagePath, 'DOESNOTEXIST' ) );
+while ( true ) {
+	$line = fgets( $robots );
+	if ( $line === false ) {
+		break;
+	}
+	if ( strpos( $line, 'REPLACEME_SPECIAL' ) !== false ) {
+		// Some robots.txt parsers don't like the percent-encoded form
+		$prefix2 = rawurldecode( $specialPrefix );
+		if ( $specialPrefix === $prefix2 ) {
+			$prefixes = [ $specialPrefix ];
+		} else {
+			$prefixes = [ $specialPrefix, $prefix2 ];
+		}
+
+		foreach ( $prefixes as $prefix ) {
+			echo "Disallow: $prefix\n";
+			// Handle the other URL pattern in case article root changes
+			if ( str_starts_with( $prefix, '/wiki/' ) ) {
+				$newPrefix = str_replace( '/wiki/', '/', $prefix );
+			} else {
+				$newPrefix = '/wiki' . $prefix;
+			}
+			echo "Disallow: $newPrefix\n";
+		}
+	} else {
+		echo $line;
+	}
+}
 
 echo "#\n#\n#----------------------------------------------------------#\n#\n#\n#\n";
 # Dynamic sitemap url
