@@ -2940,7 +2940,7 @@ $wgManageWikiSettings = [
 		'maxint' => 360,
 		'overridedefault' => 7,
 		'section' => 'recentchanges',
-		'help' => 'Default amount of days to show at Special:RecentChanges. Users can override this at Special:Preferences. Added in 773ac87.',
+		'help' => 'Default amount of days to show at Special:RecentChanges. Users can override this at Special:Preferences. Restricted as setting this higher can make tables grow too big on large wikis.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
