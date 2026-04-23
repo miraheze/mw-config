@@ -5340,10 +5340,10 @@ $wgConf->settings += [
 			'thumbsize' => 3,
 		],
 		'+realitycompromisedwiki' => [
-			'vector-limited-width' => '0',
-			'vector-page-tools-pinned' => '0',
-			'vector-appearance-pinned' => '0',
-			'vector-font-size' => '1',
+			'vector-limited-width' => 0,
+			'vector-page-tools-pinned' => 0,
+			'vector-appearance-pinned' => 0,
+			'vector-font-size' => 1,
 			'vector-theme' => 'night',
 		],
 		'+reviwiki' => [
