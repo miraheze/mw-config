@@ -2945,6 +2945,9 @@ $wgConf->settings += [
 			// Prevent mh from being treated as an interlanguage link (T11615)
 			'mh' => '',
 		],
+		'+anduranwiki' => [
+			'x-qan' => 'Andurnsprek',
+		],
 		'+benpediawiki' => [
 			'qbg' => 'bengénesk',
 		],
