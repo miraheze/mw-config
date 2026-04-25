@@ -4046,6 +4046,11 @@ $wgConf->settings += [
 				'edit-create' => true,
 			],
 		],
+		'+ext-ArticleFeedbackv5' => [
+    		'suppress' => [
+        		'aft-oversighter' => true,
+    		],
+		],
 	],
 	'wgManageWikiPermissionsDefaultPrivateGroup' => [
 		'default' => 'member',
