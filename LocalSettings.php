@@ -257,6 +257,16 @@ $wgConf->settings += [
 	'wgAdvancedSearchDeepcatEnabled' => [
 		'default' => false,
 	],
+	'+wgAdvancedSearchNamespacePresets' => [
+		'default' => [],
+		'criticalrolewiki' => [
+			'transcripts' => [
+				'enabled' => true,
+				'namespaces' => [ '3002' ],
+				'label' => 'Transcripts'
+			],
+		],
+	],
 
 	'wgPasswordAttemptThrottle' => [
 		'default' => [
