@@ -2763,6 +2763,9 @@ $wgConf->settings += [
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
+		'govnpcommonswiki' => 'govnpcommonswiki',
+		'govnpwiki' => 'govnpcommonswiki',
+		'hinduwiki' => 'govnpcommonswiki',
 	],
 	'wgGlobalUsagePurgeBacklinks' => [
 		'default' => true,
@@ -5678,6 +5681,14 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
+		'+govnpwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'+hinduwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
 		'+hypotheticalweatherwiki' => [
 			'',
 			'user',
@@ -5835,6 +5846,14 @@ $wgConf->settings += [
 			'editmoderatorprotected',
 		],
 		'gratispaideiawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'+govnpwiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		],
+		'+hinduwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -6792,6 +6811,39 @@ $wgConf->settings += [
 				'Special:CreateAccount',
 			],
 		],
+	 		'+govnpwiki' => [
+			'include' => [
+				'Special:Preferences',
+				'Special:UserLogin',
+				'Special:CreateAccount',
+			],
+		],
+		'+govnpcommonswiki' => [
+			'include' => [
+				'Special:Preferences',
+				'Special:UserLogin',
+				'Special:CreateAccount',
+			],
+		],
+		'hinduwiki' => [
+			'exclude' => [
+				'mainpage' => false,
+				'querystring' => [
+					'action' => '(history|edit)',
+					'diff' => '.+',
+				],
+				'namespaces' => [
+					NS_MAIN,
+					NS_SPECIAL,
+					NS_CATEGORY,
+				],
+			],
+			'include' => [
+				'Special:Preferences',
+				'Special:UserLogin',
+				'Special:CreateAccount',
+			],
+		],
 		'piggywiki' => [
 			'exclude' => [],
 			'include' => [],
@@ -6807,6 +6859,18 @@ $wgConf->settings += [
 			'logged_out' => false,
 		],
 		'gratisdatawiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'govnpcommonswiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'govnpwiki' => [
+			'logged_in' => false,
+			'logged_out' => false,
+		],
+		'hinduwiki' => [
 			'logged_in' => false,
 			'logged_out' => false,
 		],
