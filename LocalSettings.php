@@ -5677,6 +5677,10 @@ $wgConf->settings += [
 		'+googlewiki' => [
 			'editbureaucratprotected',
 		],
+	    '+gratispaideiawiki' => [
+			'editextendedconfirmedprotected',
+			'edittemplateprotected',
+		], 
 		'+govnpwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
