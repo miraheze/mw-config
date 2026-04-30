@@ -5681,11 +5681,11 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+govnpwiki' => [
+	   '+govnpwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+hinduwiki' => [
+	   '+hinduwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -5852,11 +5852,11 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+govnpwiki' => [
+	   '+govnpwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-		'+hinduwiki' => [
+	   '+hinduwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -6817,7 +6817,7 @@ $wgConf->settings += [
 				'Special:CreateAccount',
 			],
 		],
-	 		'+govnpwiki' => [
+	 	'+govnpwiki' => [
 			'include' => [
 				'Special:Preferences',
 				'Special:UserLogin',
