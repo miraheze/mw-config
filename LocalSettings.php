@@ -5719,6 +5719,9 @@ $wgConf->settings += [
 		'+mypediawiki' => [
 			'editextendedconfirmedprotected',
 		],
+		'+nomifactoryceuwiki' => [
+			'editmostlyprotectedprotected',
+		],
 		'+phightingwiki' => [
 			'edittrusteduserprotected',
 		],
@@ -5865,6 +5868,9 @@ $wgConf->settings += [
 		],
 		'mypediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'nomifactoryceuwiki' => [
+			'editmostlyprotectedprotected',
 		],
 		'phightingwiki' => [
 			'edittrusteduserprotected',
