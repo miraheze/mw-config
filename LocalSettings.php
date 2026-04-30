@@ -6817,39 +6817,6 @@ $wgConf->settings += [
 				'Special:CreateAccount',
 			],
 		],
-	 	'+govnpwiki' => [
-			'include' => [
-				'Special:Preferences',
-				'Special:UserLogin',
-				'Special:CreateAccount',
-			],
-		],
-		'+govnpcommonswiki' => [
-			'include' => [
-				'Special:Preferences',
-				'Special:UserLogin',
-				'Special:CreateAccount',
-			],
-		],
-		'hinduwiki' => [
-			'exclude' => [
-				'mainpage' => false,
-				'querystring' => [
-					'action' => '(history|edit)',
-					'diff' => '.+',
-				],
-				'namespaces' => [
-					NS_MAIN,
-					NS_SPECIAL,
-					NS_CATEGORY,
-				],
-			],
-			'include' => [
-				'Special:Preferences',
-				'Special:UserLogin',
-				'Special:CreateAccount',
-			],
-		],
 		'piggywiki' => [
 			'exclude' => [],
 			'include' => [],
