@@ -5681,11 +5681,11 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-	   '+govnpwiki' => [
+	    '+govnpwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-	   '+hinduwiki' => [
+	    '+hinduwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
@@ -5852,11 +5852,11 @@ $wgConf->settings += [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-	   '+govnpwiki' => [
+	    'govnpwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
-	   '+hinduwiki' => [
+	    'hinduwiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
 		],
