@@ -3694,6 +3694,10 @@ $wgConf->settings += [
 				'read' => true,
 			],
 		],
+	    '+govnpwiki' => [
+	        '*' => [
+	           'read' => false;
+	        ],
 		'+famedatawiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
