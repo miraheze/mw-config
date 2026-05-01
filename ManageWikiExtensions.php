@@ -2024,6 +2024,11 @@ $wgManageWikiExtensions = [
 						'aft-monitor',
 					],
 				],
+				'suppress' => [
+					'permissions' => [
+						'aft-oversighter',
+					],
+				],
 				'sysop' => [
 					'permissions' => [
 						'aft-editor',
