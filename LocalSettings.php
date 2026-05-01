@@ -6076,6 +6076,9 @@ $wgConf->settings += [
 	],
 
 	// Server
+	'wgScriptPath' => [
+		'default' => $wgScriptPath,
+	],
 	'wgArticlePath' => [
 		'default' => '/wiki/$1',
 	],
