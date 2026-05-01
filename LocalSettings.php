@@ -2763,9 +2763,6 @@ $wgConf->settings += [
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
-		'govnpwiki' => 'gpcommonswiki',
-		'hinduwiki' => 'gpcommonswiki',
-		'govnpcommonswiki' => 'gpcommonswiki',
 	],
 	'wgGlobalUsagePurgeBacklinks' => [
 		'default' => true,
