@@ -3710,6 +3710,14 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
+		'govnpcommonswiki' => [
+			'autopatrolled' => [
+				'editautopatrolprotected' => true,
+			],
+			'templateeditor' => [
+				'templateeditor' => true,
+			],
+		],
 		'+igrovyesistemywiki' => [
 			'autopatrolled' => [
 				'trusted' => true,
@@ -5674,6 +5682,10 @@ $wgConf->settings += [
 		'+googlewiki' => [
 			'editbureaucratprotected',
 		],
+		'+govnpcommonswiki' => [
+			'editautopatrolprotected',
+			'templateeditor',
+		],
 		'+gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -5836,6 +5848,10 @@ $wgConf->settings += [
 		],
 		'fischwiki' => [
 			'editmoderatorprotected',
+		],
+		'govnpcommonswiki' => [
+			'editautopatrolprotected',
+			'templateeditor',
 		],
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
