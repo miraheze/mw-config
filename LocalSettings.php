@@ -2763,6 +2763,9 @@ $wgConf->settings += [
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
+		'govnpwiki' => 'gpcommonswiki',
+		'hinduwiki' => 'gpcommonswiki',
+		'govnpcommonswiki' => 'gpcommonswiki',
 	],
 	'wgGlobalUsagePurgeBacklinks' => [
 		'default' => true,
@@ -3708,6 +3711,17 @@ $wgConf->settings += [
 			],
 			'templateeditor' => [
 				'edittemplateprotected' => true,
+			],
+		],
+		'+govnpcommonswiki' => [
+			'autopatrolled' => [
+				'editautopatrolprotected' => true,
+			],
+			'sysop' => [
+				'editprotected' => true,
+			],
+			'templateeditor' => [
+				'templateeditor' => true,
 			],
 		],
 		'+igrovyesistemywiki' => [
@@ -5837,6 +5851,11 @@ $wgConf->settings += [
 		'fischwiki' => [
 			'editmoderatorprotected',
 		],
+		'govnpcommonswiki' => [
+			'editautopatrolprotected',
+			'editprotected',
+			'templateeditor',
+		], 
 		'gratispaideiawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
