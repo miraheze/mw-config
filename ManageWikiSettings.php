@@ -1536,6 +1536,16 @@ $wgManageWikiSettings = [
 		'help' => 'If enabled, external links in wikitext will be given the <code>rel="nofollow"</code> attribute.',
 		'requires' => [],
 	],
+	'wgNoFollowDomainExceptions' => [
+		'name' => 'NoFollow Domain Exceptions',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'texts',
+		'overridedefault' => [],
+		'section' => 'links',
+		'help' => 'External links to these domain names (or any subdomains) will not be set to rel="nofollow", even if $wgNoFollowLinks is enabled.',
+		'requires' => [],
+	],
 	'wgRottenLinksCurlTimeout' => [
 		'name' => 'RottenLinks Timeout Threshold',
 		'from' => 'rottenlinks',
