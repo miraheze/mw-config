@@ -3710,14 +3710,6 @@ $wgConf->settings += [
 				'edittemplateprotected' => true,
 			],
 		],
-		'govnpcommonswiki' => [
-			'autopatrolled' => [
-				'editautopatrolprotected' => true,
-			],
-			'templateeditor' => [
-				'templateeditor' => true,
-			],
-		],
 		'+igrovyesistemywiki' => [
 			'autopatrolled' => [
 				'trusted' => true,
