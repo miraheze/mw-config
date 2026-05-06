@@ -430,14 +430,6 @@ $wgConf->settings += [
 		],
 	],
 
-	// CampaignEvents
-	'wgCampaignEventsProgramsAndEventsDashboardInstance' => [
-		'default' => null,
-	],
-	'wgCampaignEventsEnableWikimediaParticipantQuestions' => [
-		'default' => true,
-	],
-
 	// Captcha
 	'wgCaptchaTriggers' => [
 		'default' => [
@@ -4165,7 +4157,6 @@ $wgConf->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'campaignevents-organize-events',
 			],
 			'user' => [
 				'autoconfirmed',
