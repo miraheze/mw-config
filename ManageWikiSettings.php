@@ -816,6 +816,20 @@ $wgManageWikiSettings = [
 		'help' => 'This sorts comments by descending date, with the new comment box and most recent comments at the top when enabled.',
 		'requires' => [],
 	],
+	'wgDiscussionTools_visualenhancements' => [
+		'name' => 'DiscussionTools Visual Enhancements',
+		'from' => 'discussiontools',
+		'type' => 'list',
+		'options' => [
+			'Default' => 'default',
+			'Available' => 'available',
+			'Unavailable' => 'unavailable',
+		],
+		'overridedefault' => 'default',
+		'section' => 'discussion',
+		'help' => 'Whether to enable visual enhancements for DiscussionTools.',
+		'requires' => [],
+	],
 	'wgWebChatServer' => [
 		'name' => 'WebChat Server',
 		'from' => 'webchat',
