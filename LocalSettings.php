@@ -3626,7 +3626,6 @@ $wgConf->settings += [
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
 				'editmywatchlist' => true,
-				'reportincident' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -4126,7 +4125,6 @@ $wgConf->settings += [
 				'oathauth-recover-for-user',
 				'renameuser',
 				'renameuser-global',
-				'reportincident',
 				'request-custom-domain',
 				'request-import',
 				'requestwiki',
@@ -5493,20 +5491,6 @@ $wgConf->settings += [
 	// RenderBlocking
 	'wgRenderBlockingInlineAssets' => [
 		'default' => false,
-	],
-
-	// ReportIncident
-	'wgReportIncidentAdministratorsPage' => [
-		'default' => 'meta:Trust_and_Safety',
-	],
-	'wgReportIncidentEmailFromAddress' => [
-		'default' => $wgPasswordSender,
-	],
-	'wgReportIncidentRecipientEmails' => [
-		'default' => [
-			// Don't put plain text email here.
-			base64_decode( 'dHNAd2lraXRpZGUub3Jn' ),
-		],
 	],
 
 	// Resources
