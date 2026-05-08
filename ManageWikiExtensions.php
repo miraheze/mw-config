@@ -1399,7 +1399,7 @@ $wgManageWikiExtensions = [
 		'name' => 'FlaggedRevs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FlaggedRevs',
 		'conflicts' => false,
-		'help' => 'Note: This extension is unmaintained (see [[phorge:T15345|T15345]]). It is recommended to use [[mw:Extension:Approved Revs]] instead. If you want to disable this extension, please file a task on [[m:Phorge|Phorge]].',
+		'help' => 'Note: This extension is unmaintained (see [[phorge:T15345|T15345]]). It is recommended to use [[mw:Extension:Approved Revs|ApprovedRevs]] instead. If you want to disable this extension, please file a task on [[m:Phorge|Phorge]].',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
