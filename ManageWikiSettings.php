@@ -2291,6 +2291,16 @@ $wgManageWikiSettings = [
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
 		'requires' => [],
 	],
+	'wgSVGNativeRendering' => [
+		'name' => 'SVG Native Rendering',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Whether native SVGs are rendered directly by the browser.',
+		'requires' => [],
+	],
 	'wgEnableTranscode' => [
 		'name' => 'TimedMediaHandler Enable Transcode',
 		'from' => 'timedmediahandler',
