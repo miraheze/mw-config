@@ -307,7 +307,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => 'semanticmediawiki',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'install' => [
@@ -1402,7 +1404,9 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension is unmaintained (see [[phorge:T15345|T15345]]). It is recommended to use [[mw:Extension:Approved Revs|ApprovedRevs]] instead. If you want to disable this extension, please file a task on [[m:Phorge|Phorge]].',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'install' => [
@@ -1655,7 +1659,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'install' => [
@@ -2025,7 +2031,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'section' => 'other',
@@ -2037,7 +2045,9 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension should no longer be enabled on new wikis.',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'section' => 'other',
@@ -2259,7 +2269,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'install' => [
@@ -2497,7 +2509,9 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension is unmaintained and has a known bug of showing pages in a random language. Consider using UniversalLanguageSelector instead. If you want to disable this extension, please file a task on [[meta:Phorge|Phorge]].',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted'
+				],
 			],
 		],
 		'section' => 'other',
