@@ -631,7 +631,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	if ( $wgDBname !== 'commonswiki' &&
 		$wgDBname !== 'gpcommonswiki' &&
 		$wgDBname !== 'needforspeedwiki' &&
-		$wgDBname !== 'emiliabearwiki'
+		$wgDBname !== 'emiliabearwiki' &&
+		$wgDBname !== 'blutigeskareuzwiki'
 	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.miraheze.org/w/api.php'
