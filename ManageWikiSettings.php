@@ -816,6 +816,20 @@ $wgManageWikiSettings = [
 		'help' => 'This sorts comments by descending date, with the new comment box and most recent comments at the top when enabled.',
 		'requires' => [],
 	],
+	'wgDiscussionTools_visualenhancements' => [
+		'name' => 'DiscussionTools Visual Enhancements',
+		'from' => 'discussiontools',
+		'type' => 'list',
+		'options' => [
+			'Default' => 'default',
+			'Available' => 'available',
+			'Unavailable' => 'unavailable',
+		],
+		'overridedefault' => 'default',
+		'section' => 'discussion',
+		'help' => 'Whether to enable visual enhancements for DiscussionTools.',
+		'requires' => [],
+	],
 	'wgWebChatServer' => [
 		'name' => 'WebChat Server',
 		'from' => 'webchat',
@@ -858,28 +872,6 @@ $wgManageWikiSettings = [
 	],
 
 	// Editing
-	'wgCampaignEventsProgramsAndEventsDashboardInstance' => [
-		'name' => 'CampaignEvents Programs and Events Dashboard Instance',
-		'from' => 'campaignevents',
-		'type' => 'list',
-		'options' => [
-			'Production' => 'production',
-			'Staging' => 'staging',
-		],
-		'overridedefault' => null,
-		'section' => 'editing',
-		'help' => 'Determines which instance of the P&E Dashboard should be used.',
-		'requires' => [],
-	],
-	'wgCampaignEventsEnableWikimediaParticipantQuestions' => [
-		'name' => 'CampaignEvents Enable Wikimedia Participant Questions',
-		'from' => 'campaignevents',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'editing',
-		'help' => 'Whether to enable Wikimedia-specific questions that can be asked to participants, such as whether they belong to a Wikimedia affiliate.',
-		'requires' => [],
-	],
 	'wgEditSimilarMaxResultsPool' => [
 		'name' => 'EditSimilar Max Results Pool',
 		'from' => 'editsimilar',
@@ -1474,6 +1466,14 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgBreadCrumbs2HideUnmatched' => [
+		'name' => 'Bread Crumbs 2 Hide Unmatched',
+		'from' => 'breadcrumbs2',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'links',
+		'help' => 'If no breadcrumbs are defined for this page, show nothing.',
+	],
 	'wgCapitalLinks' => [
 		'name' => 'Capital Links',
 		'from' => 'mediawiki',
@@ -1534,6 +1534,16 @@ $wgManageWikiSettings = [
 		'overridedefault' => true,
 		'section' => 'links',
 		'help' => 'If enabled, external links in wikitext will be given the <code>rel="nofollow"</code> attribute.',
+		'requires' => [],
+	],
+	'wgNoFollowDomainExceptions' => [
+		'name' => 'NoFollow Domain Exceptions',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'texts',
+		'overridedefault' => [],
+		'section' => 'links',
+		'help' => 'External links to these domain names (or any subdomains) will not be set to rel="nofollow", even if $wgNoFollowLinks is enabled.',
 		'requires' => [],
 	],
 	'wgRottenLinksCurlTimeout' => [
@@ -2287,6 +2297,16 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'media',
 		'help' => 'This is the list of preferred extensions for uploading files. Uploading files with extensions not selected in this list will trigger a warning.',
+		'requires' => [],
+	],
+	'wgSVGNativeRendering' => [
+		'name' => 'SVG Native Rendering',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'media',
+		'help' => 'Whether native SVGs are rendered directly by the browser.',
 		'requires' => [],
 	],
 	'wgEnableTranscode' => [

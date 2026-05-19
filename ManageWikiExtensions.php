@@ -303,7 +303,7 @@ $wgManageWikiExtensions = [
 	'cargo' => [
 		'name' => 'Cargo',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Cargo',
-		'help' => 'Stewards: it is recommended to not enable this extension on wikis with more than <b>50,000</b> pages. This includes all pages, <b>not</b> only content pages. Please use discretion.',
+		'help' => '<br/>Consider using [[weirdgloop:Extension:Bucket|Bucket]] instead: it is an unrestricted extension. If you prefer a wikitext interface, you may find the Cargo-like syntax in [[mh:bucket:Module:Bucket|Module:Bucket]] convenient. <br/>Stewards: it is recommended to not enable this extension on wikis with more than <b>50,000</b> pages. This includes all pages, <b>not</b> only content pages. Please use discretion.',
 		'conflicts' => 'semanticmediawiki',
 		'requires' => [
 			'permissions' => [
@@ -477,6 +477,7 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
+		'help' => 'Note: This extension does not do what the name suggests. If you are having issues with <code><nowiki>{{DISPLAYTITLE}}</nowiki></code>, disable <code>$wgRestrictDisplayTitle</code> in [[Special:ManageWiki/settings]].',
 	],
 	'dplforum' => [
 		'name' => 'DPLforum',
@@ -748,7 +749,7 @@ $wgManageWikiExtensions = [
 		'name' => 'MsCatSelect',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MsCatSelect',
 		'conflicts' => false,
-		'help' => 'Note: This extension can interfere with categories on non-content pages such as templates. Consider using [[meta:Gadgets/HotCat|HotCat]] instead.',
+		'help' => 'Note: This extension can interfere with categories on non-content pages such as templates. Consider using [[m:Gadgets/HotCat|HotCat]] instead.',
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
@@ -1319,65 +1320,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
-	'campaignevents' => [
-		'name' => 'CampaignEvents',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CampaignEvents',
-		'conflicts' => false,
-		'help' => 'Stewards: Do not enable this without T&S authority',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'campaign_events' => 'extensions/CampaignEvents/db_patches/mysql/tables-generated.sql',
-			],
-			'namespaces' => [
-				'Event' => [
-					'id' => 1728,
-					'searchable' => 0,
-					'subpages' => 1,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => [],
-				],
-				'Event_talk' => [
-					'id' => 1729,
-					'searchable' => 0,
-					'subpages' => 1,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => [],
-				],
-			],
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'campaignevents-delete-registration',
-					],
-					'addgroups' => [
-						'event-organizer',
-					],
-					'removegroups' => [
-						'event-organizer',
-					],
-				],
-				'event-organizer' => [
-					'permissions' => [
-						'campaignevents-enable-registration',
-						'campaignevents-organize-events',
-						'campaignevents-email-participants',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'citethispage' => [
 		'name' => 'CiteThisPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CiteThisPage',
@@ -1457,7 +1399,12 @@ $wgManageWikiExtensions = [
 		'name' => 'FlaggedRevs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FlaggedRevs',
 		'conflicts' => false,
-		'requires' => [],
+		'help' => 'Note: This extension is unmaintained (see [[phorge:T15345|T15345]]). It is recommended to use [[mw:Extension:Approved Revs|ApprovedRevs]] instead. If you want to disable this extension, please file a task on [[m:Phorge|Phorge]].',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'flaggedpages' => 'extensions/FlaggedRevs/includes/backend/schema/mysql/tables-generated.sql',
@@ -1818,6 +1765,30 @@ $wgManageWikiExtensions = [
 				'translate_tms' => 'extensions/Translate/sql/mysql/translate_tm.sql',
 				'translate_translatable_bundles' => 'extensions/Translate/sql/mysql/translate_translatable_bundles.sql',
 			],
+			'namespaces' => [
+				'Translations' => [
+					'id' => 1198,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => 'translate',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => [
+						'wgNamespaceRobotPolicies' => 'noindex',
+					],
+				],
+				'Translations_talk' => [
+					'id' => 1199,
+					'searchable' => 0,
+					'subpages' => 1,
+					'protection' => '',
+					'content' => 0,
+					'aliases' => [],
+					'contentmodel' => 'wikitext',
+					'additional' => [],
+				],
+			],
 		],
 		'section' => 'specialpages',
 	],
@@ -1997,6 +1968,11 @@ $wgManageWikiExtensions = [
 					'permissions' => [
 						'aft-editor',
 						'aft-monitor',
+					],
+				],
+				'suppress' => [
+					'permissions' => [
+						'aft-oversighter',
 					],
 				],
 				'sysop' => [
@@ -2194,7 +2170,7 @@ $wgManageWikiExtensions = [
 	'customsearchprofiles' => [
 		'name' => 'CustomSearchProfiles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CustomSearchProfiles',
-		'help' => 'Note: This extension is currently not configurable in ManageWiki. Please create a task on Phorge or a pull request to configure it.',
+		'help' => 'Note: This extension is currently not configurable in ManageWiki. Please create a task on [[m:Phorge|Phorge]] or a pull request to configure it.',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other',
@@ -2296,7 +2272,7 @@ $wgManageWikiExtensions = [
 	'featuredfeeds' => [
 		'name' => 'FeaturedFeeds',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',
-		'help' => '<b>Configuration of</b> <code>$wgFeaturedFeeds</code> <b>is not possible in ManageWiki.</b><br />File a task on [[m:Special:MyLanguage/Phorge|Phorge]] or a pull request on our mw-config repository with the desired configuration.',
+		'help' => '<b>Configuration of</b> <code>$wgFeaturedFeeds</code> <b>is not possible in ManageWiki.</b><br />File a task on [[m:Phorge|Phorge]] or a pull request on our mw-config repository with the desired configuration.',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'other'
@@ -3090,7 +3066,7 @@ $wgManageWikiExtensions = [
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
-		'help' => '<br />Permanently "experimental" and may be removed with little to no prior notice. Consider using [[mw:Extension:Cargo|Cargo]] instead. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well.',
+		'help' => '<br />Permanently "experimental" and may be removed with little to no prior notice. Only enabled for extenuating circumstances such when migrating from other services. Consider using [[weirdgloop:Extension:Bucket|Bucket]] or [[mw:Extension:Cargo|Cargo]] instead. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well.',
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
@@ -3320,7 +3296,7 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TitleKey',
 		'conflicts' => 'cirrussearch',
 		// Message added due to T14896. Remove this when the task is resolved.
-		'help' => 'Note: If pages are missing from search suggestions after enabling this extension, please file a task on [[meta:Phorge|Phorge]] to report.',
+		'help' => 'Note: If pages are missing from search suggestions after enabling this extension, please file a task on [[m:Phorge|Phorge]] to report.',
 		'requires' => [],
 		'install' => [
 			'sql' => [
