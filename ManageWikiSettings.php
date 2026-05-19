@@ -1466,6 +1466,14 @@ $wgManageWikiSettings = [
 			],
 		],
 	],
+	'wgBreadCrumbs2HideUnmatched' => [
+		'name' => 'Bread Crumbs 2 Hide Unmatched',
+		'from' => 'breadcrumbs2',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'links',
+		'help' => 'If no breadcrumbs are defined for this page, show nothing.',
+	],
 	'wgCapitalLinks' => [
 		'name' => 'Capital Links',
 		'from' => 'mediawiki',

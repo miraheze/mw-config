@@ -415,6 +415,11 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
+	// BreadCrumbs2
+	'wgBreadCrumbs2HideUnmatched' => [
+		'default' => false,
+	],
+
 	// Bucket
 	'wgBucketDBuser' => [
 		'default' => 'bucketuser',
@@ -2835,6 +2840,7 @@ $wgConf->settings += [
 		'pilgrammedwiki' => [
 			'Melee_Weapons' => 'c-Melee_Weapons',
 			'Mage_Weapons' => 'c-Mage_Weapons',
+			'Summon_Weapons' => 'c-Summon_Weapons',
 			'Bows' => 'c-Bows',
 			'Guns' => 'c-Guns',
 			'Bosses' => 'c-Bosses',
