@@ -419,6 +419,10 @@ $wgConf->settings += [
 	'wgBucketDBuser' => [
 		'default' => 'bucketuser',
 	],
+	'wgBucketMaxDataPerPage' => [
+		'default' => 1000000,
+		'sagan4alphawiki' => 10000000,
+	],
 
 	// Cache
 	'wgCacheDirectory' => [
