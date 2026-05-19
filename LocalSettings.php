@@ -257,6 +257,16 @@ $wgConf->settings += [
 	'wgAdvancedSearchDeepcatEnabled' => [
 		'default' => false,
 	],
+	'+wgAdvancedSearchNamespacePresets' => [
+		'default' => [],
+		'criticalrolewiki' => [
+			'transcripts' => [
+				'enabled' => true,
+				'namespaces' => [ '3002' ],
+				'label' => 'Transcripts'
+			],
+		],
+	],
 
 	'wgPasswordAttemptThrottle' => [
 		'default' => [
@@ -415,6 +425,10 @@ $wgConf->settings += [
 	'wgBucketDBuser' => [
 		'default' => 'bucketuser',
 	],
+	'wgBucketMaxDataPerPage' => [
+		'default' => 1000000,
+		'sagan4alphawiki' => 10000000,
+	],
 
 	// Cache
 	'wgCacheDirectory' => [
@@ -424,14 +438,6 @@ $wgConf->settings += [
 		'default' => [
 			'/srv/mediawiki/config/extension-list'
 		],
-	],
-
-	// CampaignEvents
-	'wgCampaignEventsProgramsAndEventsDashboardInstance' => [
-		'default' => null,
-	],
-	'wgCampaignEventsEnableWikimediaParticipantQuestions' => [
-		'default' => true,
 	],
 
 	// Captcha
@@ -1556,15 +1562,6 @@ $wgConf->settings += [
 	// DiscussionTools
 	'wgDiscussionTools_visualenhancements' => [
 		'default' => 'default',
-		'isvwiki' => 'available',
-	],
-	'wgDiscussionTools_visualenhancements_reply' => [
-		'default' => 'default',
-		'isvwiki' => 'available',
-	],
-	'wgDiscussionTools_visualenhancements_pageframe' => [
-		'default' => 'default',
-		'isvwiki' => 'available',
 	],
 
 	// Description2
@@ -2952,6 +2949,9 @@ $wgConf->settings += [
 			// Prevent mh from being treated as an interlanguage link (T11615)
 			'mh' => '',
 		],
+		'+anduranwiki' => [
+			'x-qan' => 'Andurnsprek',
+		],
 		'+benpediawiki' => [
 			'qbg' => 'bengénesk',
 		],
@@ -3637,7 +3637,6 @@ $wgConf->settings += [
 				'editmyoptions' => true,
 				'editmyprivateinfo' => true,
 				'editmywatchlist' => true,
-				'reportincident' => true,
 			],
 			'checkuser' => [
 				'checkuser' => true,
@@ -4137,7 +4136,6 @@ $wgConf->settings += [
 				'oathauth-recover-for-user',
 				'renameuser',
 				'renameuser-global',
-				'reportincident',
 				'request-custom-domain',
 				'request-import',
 				'requestwiki',
@@ -4159,7 +4157,6 @@ $wgConf->settings += [
 				'viewglobalprivatefiles',
 				'viewpmlog',
 				'viewsuppressed',
-				'campaignevents-organize-events',
 			],
 			'user' => [
 				'autoconfirmed',
@@ -4873,6 +4870,9 @@ $wgConf->settings += [
 	'wgNoFollowLinks' => [
 		'default' => true,
 	],
+	'wgNoFollowDomainExceptions' => [
+		'default' => [],
+	],
 	'wgNoFollowNsExceptions' => [
 		'default' => [],
 	],
@@ -5346,6 +5346,13 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+realitycompromisedwiki' => [
+			'vector-limited-width' => 0,
+			'vector-page-tools-pinned' => 0,
+			'vector-appearance-pinned' => 0,
+			'vector-font-size' => 1,
+			'vector-theme' => 'night',
+		],
 		'+reviwiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'usenewrc' => 0,
@@ -5497,20 +5504,6 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
-	// ReportIncident
-	'wgReportIncidentAdministratorsPage' => [
-		'default' => 'meta:Trust_and_Safety',
-	],
-	'wgReportIncidentEmailFromAddress' => [
-		'default' => $wgPasswordSender,
-	],
-	'wgReportIncidentRecipientEmails' => [
-		'default' => [
-			// Don't put plain text email here.
-			base64_decode( 'dHNAd2lraXRpZGUub3Jn' ),
-		],
-	],
-
 	// Resources
 	'wgResourceLoaderMaxQueryLength' => [
 		'default' => 5000,
@@ -5603,6 +5596,12 @@ $wgConf->settings += [
 			'templateeditor',
 			'extendedconfirmed',
 		],
+		'+blutigeskareuzwiki' => [
+			'editextendedconfirmedprotected',
+			'editbureaucratprotected',
+			'edittemplateeditorprotected',
+			'editmoderatorprotected',
+		],
 		'+brandonwmwiki' => [
 			'editbureaucratprotected',
 			'editconsulprotected',
@@ -5666,7 +5665,6 @@ $wgConf->settings += [
 			'templateeditor',
 			'extendedconfirmed',
 			'author',
-			'moderator',
 			'sysop',
 			'bureaucrat',
 		],
@@ -5699,6 +5697,9 @@ $wgConf->settings += [
 		],
 		'+mypediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'+nomifactoryceuwiki' => [
+			'editmostlyprotectedprotected',
 		],
 		'+phightingwiki' => [
 			'edittrusteduserprotected',
@@ -5780,6 +5781,12 @@ $wgConf->settings += [
 		'allpediawiki' => [
 			'editextendedconfirmedprotected',
 		],
+		'blutigeskareuzwiki' => [
+			'editextendedconfirmedprotected',
+			'editbureaucratprotected',
+			'edittemplateeditorprotected',
+			'editmoderatorprotected',
+		],
 		'cgwiki' => [
 			'cg'
 		],
@@ -5816,7 +5823,6 @@ $wgConf->settings += [
 		'hypotheticalweatherwiki' => [
 			'templateeditor',
 			'extendedconfirmed',
-			'moderator',
 			'bureaucrat',
 		],
 		'infopediawiki' => [
@@ -5840,6 +5846,9 @@ $wgConf->settings += [
 		],
 		'mypediawiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'nomifactoryceuwiki' => [
+			'editmostlyprotectedprotected',
 		],
 		'phightingwiki' => [
 			'edittrusteduserprotected',
@@ -6857,7 +6866,7 @@ $wgConf->settings += [
 
 	// WebAuthn
 	'wgWebAuthnLimitPasskeysToRoaming' => [
-		'default' => true,
+		'1.45' => true,
 	],
 
 	// Wikibase

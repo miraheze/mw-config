@@ -34,7 +34,6 @@ wfLoadExtensions( [
 	'ParserFunctions',
 	'ParserMigration',
 	// 'QuickInstantCommons',
-	// 'ReportIncident',
 	'RottenLinks',
 	'Scribunto',
 	// 'SecureLinkFixer',
@@ -42,10 +41,13 @@ wfLoadExtensions( [
 	// 'StopForumSpam',
 	'TitleBlacklist',
 	'TorBlock',
-	'WebAuthn',
 	'WikiDiscover',
 	'WikiEditor',
 	'cldr',
 ] );
+
+if ( $wi->version < 1.46 ) {
+	wfLoadExtension( 'WebAuthn' );
+}
 
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

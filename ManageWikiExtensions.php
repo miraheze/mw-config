@@ -1320,65 +1320,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'specialpages',
 	],
-	'campaignevents' => [
-		'name' => 'CampaignEvents',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CampaignEvents',
-		'conflicts' => false,
-		'help' => 'Stewards: Do not enable this without T&S authority',
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'install' => [
-			'sql' => [
-				'campaign_events' => 'extensions/CampaignEvents/db_patches/mysql/tables-generated.sql',
-			],
-			'namespaces' => [
-				'Event' => [
-					'id' => 1728,
-					'searchable' => 0,
-					'subpages' => 1,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => [],
-				],
-				'Event_talk' => [
-					'id' => 1729,
-					'searchable' => 0,
-					'subpages' => 1,
-					'protection' => '',
-					'content' => 0,
-					'aliases' => [],
-					'contentmodel' => 'wikitext',
-					'additional' => [],
-				],
-			],
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'campaignevents-delete-registration',
-					],
-					'addgroups' => [
-						'event-organizer',
-					],
-					'removegroups' => [
-						'event-organizer',
-					],
-				],
-				'event-organizer' => [
-					'permissions' => [
-						'campaignevents-enable-registration',
-						'campaignevents-organize-events',
-						'campaignevents-email-participants',
-					],
-				],
-			],
-		],
-		'section' => 'specialpages',
-	],
 	'citethispage' => [
 		'name' => 'CiteThisPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CiteThisPage',
@@ -1458,7 +1399,12 @@ $wgManageWikiExtensions = [
 		'name' => 'FlaggedRevs',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FlaggedRevs',
 		'conflicts' => false,
-		'requires' => [],
+		'help' => 'Note: This extension is unmaintained (see [[phorge:T15345|T15345]]). It is recommended to use [[mw:Extension:Approved Revs|ApprovedRevs]] instead. If you want to disable this extension, please file a task on [[m:Phorge|Phorge]].',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'install' => [
 			'sql' => [
 				'flaggedpages' => 'extensions/FlaggedRevs/includes/backend/schema/mysql/tables-generated.sql',
@@ -2022,6 +1968,11 @@ $wgManageWikiExtensions = [
 					'permissions' => [
 						'aft-editor',
 						'aft-monitor',
+					],
+				],
+				'suppress' => [
+					'permissions' => [
+						'aft-oversighter',
 					],
 				],
 				'sysop' => [
