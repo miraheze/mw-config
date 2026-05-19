@@ -821,7 +821,7 @@ switch ( $wi->dbname ) {
 		// Remove the language tag from page display title
 		// and show the localized namespace name in display title
 		// when in view action and without {{DISPLAYTITLE: being set.
-		$wgHooks['BeforePageDisplay'][] = function ( &$out, &$skin ) {
+		$wgHooks['BeforePageDisplay'][] = static function ( &$out, &$skin ) {
 			$title = $out->getTitle();
 			$titleInfo = getTitleInfo( $title );
 
@@ -854,7 +854,7 @@ switch ( $wi->dbname ) {
 		};
 
 		// Remove language tag from default sort key.
-		$wgHooks['GetDefaultSortkey'][] = function ( $title, &$sortkey ) {
+		$wgHooks['GetDefaultSortkey'][] = static function ( $title, &$sortkey ) {
 			$titleInfo = getTitleInfo( $title );
 
 			if ( $titleInfo === false ) {
@@ -872,7 +872,7 @@ switch ( $wi->dbname ) {
 		};
 
 		// Set page language based on language tag in page title.
-		$wgHooks['PageContentLanguage'][] = function ( $title, &$pageLang, $userLang ) {
+		$wgHooks['PageContentLanguage'][] = static function ( $title, &$pageLang, $userLang ) {
 			$service = MediaWikiServices::getInstance();
 			$titleInfo = getTitleInfo( $title );
 
@@ -889,7 +889,7 @@ switch ( $wi->dbname ) {
 		};
 
 		// Set displaytitle page property with the language tag removed.
-		$wgHooks['ParserAfterParse'][] = function ( $parser, &$text, $stripState ) {
+		$wgHooks['ParserAfterParse'][] = static function ( $parser, &$text, $stripState ) {
 			$title = $parser->getPage();
 			$titleInfo = getTitleInfo( $title );
 
@@ -912,7 +912,7 @@ switch ( $wi->dbname ) {
 		};
 
 		// Set the system message used on the namespace tabs (nstab).
-		$wgHooks['SkinTemplateNavigation::Universal'][] = function ( $skinTemplate, &$links ) {
+		$wgHooks['SkinTemplateNavigation::Universal'][] = static function ( $skinTemplate, &$links ) {
 			$title = $skinTemplate->getRelevantTitle();
 
 			if ( $title->canExist() ) {
@@ -957,7 +957,7 @@ switch ( $wi->dbname ) {
 		};
 
 		// Set the user interface language based on page by default.
-		$wgHooks['UserGetLanguageObject'][] = function ( $user, &$code, $context ) {
+		$wgHooks['UserGetLanguageObject'][] = static function ( $user, &$code, $context ) {
 			$request = $context->getRequest();
 			$title = $context->getTitle();
 			$titleInfo = getTitleInfo( $title );
@@ -1077,7 +1077,7 @@ switch ( $wi->dbname ) {
 		$wgMatomoAnalyticsDisableJS = true;
 		$wgMatomoAnalyticsDisableCookie = true;
 
-		$wgHooks['HtmlPageLinkRendererEnd'][] = function (
+		$wgHooks['HtmlPageLinkRendererEnd'][] = static function (
 			$linkRenderer,
 			$target,
 			$isKnown,
