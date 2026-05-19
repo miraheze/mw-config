@@ -85,13 +85,11 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'dmlwikiwiki':
-		$wgHooks['SpecialPage_initList'][] = 'onSpecialPage_initList';
-
-		function onSpecialPage_initList( &$specialPages ) {
+		$wgHooks['SpecialPage_initList'][] = static function ( &$specialPages ) {
 			unset( $specialPages['Export'] );
 
 			return true;
-		}
+		};
 
 		break;
 	case 'dragonquestxwiki':
@@ -110,11 +108,9 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'famedatawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
+		$wgHooks['BeforePageDisplay'][] = static function ( OutputPage $out ) {
 			$out->addMeta( 'og:image:width', '1200' );
-		}
+		};
 
 		break;
 	case 'fischwiki':
@@ -155,9 +151,7 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'gratisdatawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $outputPage ) {
+		$wgHooks['BeforePageDisplay'][] = static function ( OutputPage $outputPage ) {
 			$outputPage->addMeta( 'og:image:width', '1200' );
 
 			$meta = $outputPage->getProperty( 'wikibase-meta-tags' );
@@ -173,7 +167,7 @@ switch ( $wi->dbname ) {
 					$outputPage->addMeta( 'og:type', 'summary' );
 				}
 			}
-		}
+		};
 
 		$wgJsonConfigs['Tabular.JsonConfig']['remote'] = [
 			'url' => 'https://gpcommons.miraheze.org/w/api.php'
@@ -614,9 +608,7 @@ switch ( $wi->dbname ) {
 		];
 		break;
 	case 'paneidoversewiki':
-		$wgHooks['AdminLinks'][] = 'onAdminLinks';
-
-		function onAdminLinks( &$adminLinksTree ) {
+		$wgHooks['AdminLinks'][] = static function ( &$adminLinksTree ) {
 			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
 			$generalRow = $general->getRow( 'main' );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
@@ -634,20 +626,25 @@ switch ( $wi->dbname ) {
 			$browseAndSearch = $adminLinksTree->getSection( wfMessage( 'adminlinks_browsesearch' )->text() );
 			$browseAndSearchRow = $browseAndSearch->getRow( 'main' );
 			$browseAndSearchRow->addItem( ALItem::newFromSpecialPage( 'UnusedFiles' ) );
-		}
+		};
 
 		break;
 	case 'polandballruwiki':
-		$wgHooks['BeforeInitialize'][] = 'onBeforeInitialize';
-
-		function onBeforeInitialize( Title &$title, $unused, OutputPage $output, User $user, WebRequest $request, ActionEntryPoint $mediaWikiEntryPoint ) {
+		$wgHooks['BeforeInitialize'][] = static function (
+			Title &$title,
+			$unused,
+			OutputPage $output,
+			User $user,
+			WebRequest $request,
+			ActionEntryPoint $mediaWikiEntryPoint
+		) {
 			if ( $title && $title->getNamespace() === 201 ) {
 				$newTitle = Title::newFromText( $title->getText(), 3 );
 				if ( $newTitle ) {
 					$output->redirect( $newTitle->getFullURL() );
 				}
 			}
-		}
+		};
 
 		break;
 	case 'rainversewiki':
@@ -660,13 +657,11 @@ switch ( $wi->dbname ) {
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
 
-		$wgHooks['SkinAddFooterLinks'][] = 'onSkinAddFooterLinks';
-
-		function onSkinAddFooterLinks( Skin $skin, string $key, array &$footerlinks ) {
+		$wgHooks['SkinAddFooterLinks'][] = static function ( Skin $skin, string $key, array &$footerlinks ) {
 			if ( $key === 'info' && $skin->getSkinName() !== 'citizen' ) {
 				$footerlinks['tagline'] = $skin->msg( 'citizen-footer-tagline' )->parse();
 			}
-		}
+		};
 
 		break;
 	case 'sagan4wiki':
@@ -684,11 +679,9 @@ switch ( $wi->dbname ) {
 
 		break;
 	case 'snapwikiwiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
+		$wgHooks['BeforePageDisplay'][] = static function ( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
-		}
+		};
 
 		break;
 	case 'testwikibeta':
@@ -825,12 +818,10 @@ switch ( $wi->dbname ) {
 			];
 		}
 
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
 		// Remove the language tag from page display title
 		// and show the localized namespace name in display title
 		// when in view action and without {{DISPLAYTITLE: being set.
-		function onBeforePageDisplay( &$out, &$skin ) {
+		$wgHooks['BeforePageDisplay'][] = function ( &$out, &$skin ) {
 			$title = $out->getTitle();
 			$titleInfo = getTitleInfo( $title );
 
@@ -860,12 +851,10 @@ switch ( $wi->dbname ) {
 
 			$out->setPageTitle( $pageTitle );
 			$out->setHTMLTitle( $pageTitleMsg->text() );
-		}
-
-		$wgHooks['GetDefaultSortkey'][] = 'onGetDefaultSortkey';
+		};
 
 		// Remove language tag from default sort key.
-		function onGetDefaultSortkey( $title, &$sortkey ) {
+		$wgHooks['GetDefaultSortkey'][] = function ( $title, &$sortkey ) {
 			$titleInfo = getTitleInfo( $title );
 
 			if ( $titleInfo === false ) {
@@ -873,21 +862,17 @@ switch ( $wi->dbname ) {
 			}
 
 			$sortkey = $titleInfo[ 'display_title_main_text' ];
-		}
-
-		$wgHooks['GetPreferences'][] = 'onGetPreferences';
+		};
 
 		// Add per page language preference option.
-		function onGetPreferences( $user, &$preferences ) {
+		$wgHooks['GetPreferences'][] = static function ( $user, &$preferences ) {
 			$preferences['language']['options'] = [
 				'x-default - ' . wfMessage( 'pagelang-use-default' )->text() => 'x-default',
 			] + $preferences['language']['options'];
-		}
-
-		$wgHooks['PageContentLanguage'][] = 'onPageContentLanguage';
+		};
 
 		// Set page language based on language tag in page title.
-		function onPageContentLanguage( $title, &$pageLang, $userLang ) {
+		$wgHooks['PageContentLanguage'][] = function ( $title, &$pageLang, $userLang ) {
 			$service = MediaWikiServices::getInstance();
 			$titleInfo = getTitleInfo( $title );
 
@@ -901,12 +886,10 @@ switch ( $wi->dbname ) {
 			}
 
 			$pageLang = $titleInfo['page_lang'];
-		}
-
-		$wgHooks['ParserAfterParse'][] = 'onParserAfterParse';
+		};
 
 		// Set displaytitle page property with the language tag removed.
-		function onParserAfterParse( $parser, &$text, $stripState ) {
+		$wgHooks['ParserAfterParse'][] = function ( $parser, &$text, $stripState ) {
 			$title = $parser->getPage();
 			$titleInfo = getTitleInfo( $title );
 
@@ -926,12 +909,10 @@ switch ( $wi->dbname ) {
 
 			$parser->getOutput()
 				->setPageProperty( 'displaytitle', $pageTitlePlain );
-		}
-
-		$wgHooks['SkinTemplateNavigation::Universal'][] = 'SkinTemplateNavigation__Universal';
+		};
 
 		// Set the system message used on the namespace tabs (nstab).
-		function SkinTemplateNavigation__Universal( $skinTemplate, &$links ) {
+		$wgHooks['SkinTemplateNavigation::Universal'][] = function ( $skinTemplate, &$links ) {
 			$title = $skinTemplate->getRelevantTitle();
 
 			if ( $title->canExist() ) {
@@ -968,19 +949,15 @@ switch ( $wi->dbname ) {
 					$subjectPage, $subjectMsg, !$isTalk, '', $userCanRead
 				);
 			}
-		}
-
-		$wgHooks['UserGetDefaultOptions'][] = 'onUserGetDefaultOptions';
+		};
 
 		// Set the added per page language preference option as default.
-		function onUserGetDefaultOptions( &$defaultOptions ) {
+		$wgHooks['UserGetDefaultOptions'][] = static function ( &$defaultOptions ) {
 			$defaultOptions['language'] = 'x-default';
-		}
-
-		$wgHooks['UserGetLanguageObject'][] = 'onUserGetLanguageObject';
+		};
 
 		// Set the user interface language based on page by default.
-		function onUserGetLanguageObject( $user, &$code, $context ) {
+		$wgHooks['UserGetLanguageObject'][] = function ( $user, &$code, $context ) {
 			$request = $context->getRequest();
 			$title = $context->getTitle();
 			$titleInfo = getTitleInfo( $title );
@@ -1011,21 +988,17 @@ switch ( $wi->dbname ) {
 			}
 
 			$code = RequestContext::sanitizeLangCode( $titleInfo['page_view_lang'] );
-		}
+		};
 
 		break;
 	case 'towerworldwiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
+		$wgHooks['BeforePageDisplay'][] = static function ( OutputPage $out ) {
 			$out->addMeta( 'theme-color', '#2fd991' );
-		}
+		};
 
 		break;
 	case 'tuscriaturaswiki':
-		$wgHooks['AfterFinalPageOutput'][] = 'onAfterFinalPageOutput';
-
-		function onAfterFinalPageOutput( $output ) {
+		$wgHooks['AfterFinalPageOutput'][] = static function ( $output ) {
 			$title = $output->getTitle();
 			if ( $title === null || $title->getNamespace() < 3000 ) {
 				return true;
@@ -1063,13 +1036,11 @@ switch ( $wi->dbname ) {
 			ob_start();
 			echo $html;
 			return true;
-		}
+		};
 
 		break;
 	case 'wikigeniuswiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $output ) {
+		$wgHooks['BeforePageDisplay'][] = static function ( OutputPage $output ) {
 			$output->addHeadItem( 'script-schema-ldjson', Html::rawElement( 'script', [ 'type' => 'application/ld+json' ], <<<END
 				{
 				  "@context": "https://schema.org",
@@ -1098,7 +1069,7 @@ switch ( $wi->dbname ) {
 				  }
 				}
 			END ) );
-		}
+		};
 
 		break;
 	case 'genshinimpactwiki':
@@ -1106,9 +1077,7 @@ switch ( $wi->dbname ) {
 		$wgMatomoAnalyticsDisableJS = true;
 		$wgMatomoAnalyticsDisableCookie = true;
 
-		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
-
-		function onHtmlPageLinkRendererEnd(
+		$wgHooks['HtmlPageLinkRendererEnd'][] = function (
 			$linkRenderer,
 			$target,
 			$isKnown,
@@ -1123,7 +1092,7 @@ switch ( $wi->dbname ) {
 			$attribs['rel'] = 'nofollow';
 
 			return true;
-		}
+		};
 
 		break;
 }
