@@ -418,7 +418,6 @@ $wgConf->settings += [
 	// BreadCrumbs2
 	'wgBreadCrumbs2HideUnmatched' => [
 		'default' => false,
-		'pilgrammedwiki' => true,
 	],
 
 	// Bucket
