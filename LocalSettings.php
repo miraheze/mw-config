@@ -1182,8 +1182,8 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiInactiveExemptReasonOptions' => [
 		'default' => [
-			'Wiki is well-documented, publicly useful, and unlikely to need frequent edits.' => 'comp'
-			'The wiki covers a recurring event and will remain inactive until the next occurrence.' => 'tbg',
+			'Wiki is well-documented, publicly useful, and unlikely to need frequent edits.' => 'comp',
+			'Wiki covers a recurring event and will remain inactive until the next occurrence.' => 'tbg',
 			'Primary contributors are temporarily unavailable but intend to return.' => 'temphardship',
 			'Other exceptional cases at Stewards’ discretion.' => 'other',
 		],
