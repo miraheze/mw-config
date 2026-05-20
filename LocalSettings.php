@@ -3544,17 +3544,19 @@ $wgConf->settings += [
 		'default' => [
 			'categorytree',
 			'cite',
-			'citethispage',
 			'codeeditor',
 			'codemirror',
 			// T14325: added here after being removed from global skins
 			'cologneblue',
+			'gadgets',
 			'globaluserpage',
+			'inputbox',
 			'minervaneue',
 			'mobilefrontend',
 			// T14325: added here after being removed from global skins
 			'modern',
 			'multimediaviewer',
+			'pageimages',
 			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
@@ -3563,6 +3565,7 @@ $wgConf->settings += [
 			'textextracts',
 			'thanks',
 			'urlshortener',
+			'visualeditor',
 			'wikiseo',
 		],
 	],
