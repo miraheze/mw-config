@@ -474,6 +474,8 @@ switch ( $wi->dbname ) {
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
+		// Temporarily added for debugging tallies of 2026 board election
+		$wgSecurePollShowErrorDetail = true;
 		$wgContactConfig = [
 			'default' => [
 				'RecipientUser' => null,
