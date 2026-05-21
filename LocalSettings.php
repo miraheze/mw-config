@@ -2527,6 +2527,7 @@ $wgConf->settings += [
 				],
 			],
 		],
+	],
 		'etohwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
