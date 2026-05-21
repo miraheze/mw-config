@@ -1,6 +1,7 @@
 {
 	"name": "miraheze/mw-config",
-	"description": "",
+	"description": "Production MediaWiki configuration for Miraheze",
+	"license": "GPL-3.0-or-later",
 	"require-dev": {
 		"mediawiki/mediawiki-codesniffer": "51.0.0",
 		"mediawiki/minus-x": "2.0.1",
