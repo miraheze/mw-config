@@ -1126,6 +1126,8 @@ $wgConf->settings += [
 			"$IP/extensions/CheckUser/schema/mysql/tables-generated.sql",
 			"$IP/extensions/CheckUser/schema/mysql/tables-virtual-checkuser-generated.sql",
 			"$IP/extensions/DataDump/sql/data_dump.sql",
+			"$IP/extensions/DiscussionTools/sql/mysql/discussiontools_persistent.sql",
+			"$IP/extensions/DiscussionTools/sql/mysql/discussiontools_subscription.sql",
 			"$IP/extensions/Echo/sql/mysql/tables-generated.sql",
 			"$IP/extensions/GlobalBlocking/sql/mysql/tables-generated-global_block_whitelist.sql",
 			"$IP/extensions/Linter/sql/mysql/tables-generated.sql",
@@ -3569,9 +3571,11 @@ $wgConf->settings += [
 			'codemirror',
 			// T14325: added here after being removed from global skins
 			'cologneblue',
+			'discussiontools',
 			'gadgets',
 			'globaluserpage',
 			'inputbox',
+			'linter',
 			'minervaneue',
 			'mobilefrontend',
 			// T14325: added here after being removed from global skins
