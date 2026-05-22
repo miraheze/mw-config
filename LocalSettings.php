@@ -1182,11 +1182,10 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiInactiveExemptReasonOptions' => [
 		'default' => [
-			'Wiki completed and made to be read' => 'comp',
-			'Wiki made for time-based gathering' => 'tbg',
-			'Wiki made to be read' => 'mtr',
-			'Temporary exemption for exceptional hardship, see DPE' => 'temphardship',
-			'Other, see DPE' => 'other',
+			'Wiki is well-documented, publicly useful, and unlikely to need frequent edits.' => 'comp',
+			'Wiki covers a recurring event and will remain inactive until the next occurrence.' => 'tbg',
+			'Primary contributors are temporarily unavailable but intend to return.' => 'temphardship',
+			'Other exceptional cases at Stewards’ discretion.' => 'other',
 		],
 	],
 	'wgCreateWikiRequestCountWarnThreshold' => [
