@@ -158,7 +158,7 @@ $wgLocalStylePath = $wgStylePath;
 $wgConf->settings += [
 	// Invalidates user sessions - do not change unless it is an emergency!
 	'wgAuthenticationTokenVersion' => [
-		'default' => '12',
+		'default' => '13',
 	],
 
 	'wgEnableEditRecovery' => [
