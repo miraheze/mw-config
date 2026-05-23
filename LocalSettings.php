@@ -3916,6 +3916,7 @@ $wgConf->settings += [
 			'wiki-mechanic' => [
 				'handle-import-requests' => true,
 				'handle-import-request-interwiki' => true,
+			],
 		],
 		'+metawikibeta' => [
 			'assistant-steward' => [
