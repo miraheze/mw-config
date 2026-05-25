@@ -6,7 +6,7 @@ use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
-use MediaWiki\RCFeed\;
+use MediaWiki\RCFeed\UDPRCFeedEngine;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
