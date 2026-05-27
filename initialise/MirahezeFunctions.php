@@ -857,6 +857,20 @@ class MirahezeFunctions {
 				ExtensionRegistry::getInstance()->queue( $path );
 			}
 		}
+
+		$this->loadFallbackContentHandlers();
+	}
+
+	private function loadFallbackContentHandlers(): void {
+		global $wgManageWikiExtensions, $wgContentHandlers;
+
+		foreach ( $wgManageWikiExtensions as $_ => $extData ) {
+			if ( isset( $extData['contentModels'] ) && !$this->isExtensionActive( $extData['name'] ) ) {
+				foreach ( $extData['contentModels'] as $contentModel ) {
+					$wgContentHandlers[$contentModel] = 'FallbackContentHandler';
+				}
+			}
+		}
 	}
 
 	private static function getDatabaseConnection( string $databaseName ): IReadableDatabase {

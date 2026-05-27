@@ -89,6 +89,13 @@ class ExtensionsTest extends ManageWikiTestCase {
 								],
 							],
 						],
+						'contentModels' => [
+							'description' => 'array of content models added by this extension.',
+							'type' => 'array',
+							'items' => [
+								'type' => 'string',
+							],
+						],
 						'requires' => [
 							'type' => 'object',
 							'additionalProperties' => false,
