@@ -289,6 +289,10 @@ if ( $cwClosed ) {
 	if ( $wi->isExtensionActive( 'Comments' ) ) {
 		$wgRevokePermissions['*']['comment'] = true;
 	}
+
+	if ( $wi->isExtensionActive( 'BlogPage' ) ) {
+		$wgRevokePermissions['user']['createblogpost'] = true;
+	}
 }
 
 // Public Wikis
