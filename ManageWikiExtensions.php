@@ -2300,7 +2300,7 @@ $wgManageWikiExtensions = [
 		'name' => 'Flex Diagrams',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Flex_Diagrams',
 		'conflicts' => false,
-		'contentHandlers' => [
+		'contentModels' => [
 			'flexdiagrams-bpmn',
 			'flexdiagrams-gantt',
 			'flexdiagrams-drawio',
