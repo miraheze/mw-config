@@ -864,8 +864,8 @@ class MirahezeFunctions {
 	private function loadFallbackContentHandlers(): void {
 		global $wgManageWikiExtensions, $wgContentHandlers;
 
-		foreach ( $wgManageWikiExtensions as $name => $extData ) {
-			if ( isset( $extData['contentModels'] ) && !$this->isExtensionActive( $name ) ) {
+		foreach ( $wgManageWikiExtensions as $_ => $extData ) {
+			if ( isset( $extData['contentModels'] ) && !$this->isExtensionActive( $extData['name'] ) ) {
 				foreach ( $extData['contentModels'] as $contentModel ) {
 					$wgContentHandlers[$contentModel] = 'FallbackContentHandler';
 				}
