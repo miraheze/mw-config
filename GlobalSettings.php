@@ -960,7 +960,7 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 
 // Temporary fix for Maps GeoJson content to not throw MWUnknownContentHandlerExeptions for everyone
-if ( array_key_exists( 'maps', $wi::$disabledExtensions ) {
+if ( array_key_exists( 'maps', $wi::$disabledExtensions ) ) {
 	$cacheData = MirahezeFunctions::getCacheArray();
 	if ( $cacheData && $cacheData['extensions'] && in_array( 'maps', $cacheData['extensions'], true ) ) {
 		$wgContentHandlers['GeoJson'] = 'JsonContentHandler';
