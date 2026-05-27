@@ -9,6 +9,7 @@
  * description: the plain text description, or a localised message key to be displayed.
  * help: additional help information for the extension.
  * conflicts: string of extensions that cause this extension to not work.
+ * contentModels: an array of content models added by the extension.
  * requires: an array. See below for available options.
  * install: an array. See below for available options.
  * remove: an array. See install for available options.
@@ -156,6 +157,9 @@ $wgManageWikiExtensions = [
 		'name' => 'Upload Wizard',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:UploadWizard',
 		'conflicts' => false,
+		'contentModels' => [
+			'Campaign',
+		],
 		'requires' => [],
 		'install' => [
 			'sql' => [
@@ -692,6 +696,9 @@ $wgManageWikiExtensions = [
 		'name' => 'Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Maps',
 		'conflicts' => false,
+		'contentModels' => [
+			'GeoJson',
+		],
 		'requires' => [],
 		'install' => [
 			'namespaces' => [
@@ -1055,6 +1062,9 @@ $wgManageWikiExtensions = [
 		'name' => 'TemplateStyles',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:TemplateStyles',
 		'conflicts' => false,
+		'contentModels' => [
+			'sanitized-css',
+		],
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
@@ -1499,6 +1509,9 @@ $wgManageWikiExtensions = [
 		'name' => 'MassMessage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MassMessage',
 		'conflicts' => false,
+		'contentModels' => [
+			'MassMessageListContent'
+		],
 		'requires' => [],
 		'install' => [
 			'permissions' => [
@@ -1725,6 +1738,9 @@ $wgManageWikiExtensions = [
 		'name' => 'Translate',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Translate',
 		'conflicts' => false,
+		'contentModels' => [
+			'translate-messagebundle',
+		],
 		'requires' => [
 			'extensions' => [
 				'universallanguageselector',
@@ -2194,6 +2210,9 @@ $wgManageWikiExtensions = [
 		'name' => 'Interactive Data Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:DataMaps',
 		'conflicts' => false,
+		'contentModels' => [
+			'datamap',
+		],
 		'requires' => [],
 		'section' => 'other',
 	],
@@ -2281,6 +2300,13 @@ $wgManageWikiExtensions = [
 		'name' => 'Flex Diagrams',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Flex_Diagrams',
 		'conflicts' => false,
+		'contentHandlers' => [
+			'flexdiagrams-bpmn',
+			'flexdiagrams-gantt',
+			'flexdiagrams-drawio',
+			'flexdiagrams-mermaid',
+			'flexdiagrams-dot',
+		],
 		'requires' => [],
 		'install' => [
 			'namespaces' => [
@@ -2395,6 +2421,9 @@ $wgManageWikiExtensions = [
 		'name' => 'Gadgets',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Gadgets',
 		'conflicts' => false,
+		'contentModels' => [
+			'GadgetDefinition',
+		],
 		'requires' => [],
 		'section' => 'other',
 	],
@@ -2486,6 +2515,9 @@ $wgManageWikiExtensions = [
 		'name' => 'JsonConfig',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:JsonConfig',
 		'conflicts' => false,
+		'contentModels' => [
+			'JsonConfig',
+		],
 		'help' => 'Note: This extension stores JSON configuration for other extensions. Storing JSON data on a wiki page is supported by MediaWiki already and does not require enabling this extension.',
 		'requires' => [],
 		'section' => 'other',
@@ -2560,6 +2592,9 @@ $wgManageWikiExtensions = [
 		'name' => 'Newsletter',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Newsletter',
 		'conflicts' => 'lingo',
+		'contentModels' => [
+			'Newsletter',
+		],
 		'requires' => [],
 		'install' => [
 			'namespaces' => [
@@ -2713,6 +2748,10 @@ $wgManageWikiExtensions = [
 		'name' => 'ProofreadPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Proofread_Page',
 		'conflicts' => false,
+		'contentModels' => [
+			'proofread-index',
+			'proofread-page',
+		],
 		'requires' => [],
 		'install' => [
 			'sql' => [
@@ -2952,6 +2991,9 @@ $wgManageWikiExtensions = [
 		'name' => 'SimpleBlogPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SimpleBlogPage',
 		'conflicts' => 'blogpage',
+		'contentModels' => [
+			'blog_post',
+		],
 		'requires' => [],
 		'install' => [
 			'namespaces' => [
@@ -3068,6 +3110,9 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
 		'help' => '<br />Permanently "experimental" and may be removed with little to no prior notice. Only enabled for extenuating circumstances such when migrating from other services. Consider using [[weirdgloop:Extension:Bucket|Bucket]] or [[mw:Extension:Cargo|Cargo]] instead. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well.',
 		'conflicts' => false,
+		'contentModels' => [
+			'smw/schema',
+		],
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3217,6 +3262,9 @@ $wgManageWikiExtensions = [
 		'name' => 'StructuredNavigation',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:StructuredNavigation',
 		'conflicts' => false,
+		'contentModels' => [
+			'StructuredNavigation',
+		],
 		'requires' => [],
 		'install' => [
 			'namespaces' => [
@@ -3415,6 +3463,10 @@ $wgManageWikiExtensions = [
 		'name' => 'WikibaseRepository',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Wikibase_Repository',
 		'conflicts' => 'semanticmediawiki',
+		'contentModels' => [
+			'wikibase-item',
+			'wikibase-property',
+		],
 		'requires' => [],
 		'install' => [
 			'sql' => [
@@ -3512,6 +3564,9 @@ $wgManageWikiExtensions = [
 		'name' => 'WikibaseLexeme',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikibaseLexeme',
 		'conflicts' => false,
+		'contentModels' => [
+			'wikibase-lexeme',
+		],
 		'requires' => [
 			'extensions' => [
 				'wikibaserepository',
