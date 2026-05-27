@@ -3210,10 +3210,6 @@ $wgConf->settings += [
 		'commonswiki' => 'meta',
 	],
 	'wgJsonConfigModels' => [
-		'default' => [
-			'Map.JsonConfig' => JsonConfig\JCMapDataContent::class,
-			'Tabular.JsonConfig' => JsonConfig\JCTabularContent::class,
-		],
 		'+ftlmultiversewiki' => [
 			'Data.JsonConfig' => null,
 		],
