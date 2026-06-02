@@ -4439,8 +4439,6 @@ $wgConf->settings += [
 			// Only the board are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
 			'iowiki' => [
-				/** Reception123 */
-				19,
 				/** Labster */
 				2551,
 				/** Harej */
@@ -4453,6 +4451,8 @@ $wgConf->settings += [
 				438966,
 				/** Agent Isai */
 				512002,
+				/** Skye (Miraheze) */
+				786522,
 			],
 			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
