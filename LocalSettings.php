@@ -5359,6 +5359,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+otherkinwiki' => [
+			'vector-theme' => 'os',
+		],
 		'+piggywiki' => [
 			'vector-theme' => 'night',
 		],
