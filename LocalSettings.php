@@ -2023,6 +2023,29 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'dragonbloxwiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/dragonbloxwiki/9/95/Mediawiki-badge-dark.png',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/dragonbloxwiki/9/91/Miraheze-badge-dark.png',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				]
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/dragonbloxwiki/0/05/Cc-bysa-badge-dark.png',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 		'fischwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -4416,6 +4439,11 @@ $wgConf->settings += [
 			'amc' => true,
 		],
 		'osmaniawiki' => [
+			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
+		],
+		'pangarwiki' => [
 			'base' => true,
 			'loggedin' => true,
 			'amc' => true,
