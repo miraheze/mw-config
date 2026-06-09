@@ -3589,15 +3589,11 @@ $wgConf->settings += [
 			'cite',
 			'codeeditor',
 			'codemirror',
-			// T14325: added here after being removed from global skins
-			'cologneblue',
 			'gadgets',
 			'globaluserpage',
 			'inputbox',
 			'minervaneue',
 			'mobilefrontend',
-			// T14325: added here after being removed from global skins
-			'modern',
 			'multimediaviewer',
 			'pageimages',
 			'portableinfobox',
