@@ -602,14 +602,6 @@ $wgConf->settings += [
 		'default' => true,
 	],
 
-	// Chameleon
-	'egChameleonLayoutFile' => [
-		'default' => '/srv/mediawiki/config/chameleon-layouts/standard.xml',
-	],
-	'egChameleonEnableExternalLinkIcons' => [
-		'default' => false,
-	],
-
 	// CheckUser
 	'wgCheckUserForceSummary' => [
 		'default' => true,
@@ -7665,7 +7657,6 @@ $wi::$disabledExtensions = [
 	'video' => 'Incompatible with MediaWiki 1.45',
 
 	// Are these still incompatible?
-	'chameleon' => 'Incompatible with MediaWiki 1.45',
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.45'
 ];
 
