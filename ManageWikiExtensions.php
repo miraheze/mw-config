@@ -3689,13 +3689,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'skins',
 	],
-	'chameleon' => [
-		'name' => 'chameleon',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Chameleon',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'skins',
-	],
 	'citizen' => [
 		'name' => 'Citizen',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Skin:Citizen',
