@@ -59,10 +59,6 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	}
 }
 
-if ( $wi->isExtensionActive( 'chameleon' ) ) {
-	wfLoadExtension( 'Bootstrap' );
-}
-
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 	wfLoadExtension( 'Elastica' );
 	$wgCirrusSearchClusters = [
