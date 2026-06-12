@@ -2053,6 +2053,13 @@ $wgConf->settings += [
 					'alt' => 'Hosted by Miraheze',
 				]
 			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/fischwiki/3/33/Badge-ccbyncsa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
 		],
 		'outlasterwiki' => [
 			'poweredby' => [
