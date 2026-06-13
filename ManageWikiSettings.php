@@ -2928,7 +2928,7 @@ $wgManageWikiSettings = [
 		'maxint' => 90000000,
 		'overridedefault' => 5242880,
 		'section' => 'restricted',
-		'help' => 'Don\'t read SVG metadata beyond this point.',
+		'help' => 'Don\'t read SVG metadata beyond this point. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2944,7 +2944,7 @@ $wgManageWikiSettings = [
 		'maxint' => 62208000,
 		'overridedefault' => 180 * 24 * 3600,
 		'section' => 'recentchanges',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted.',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted. Restricted as if configured incorrectly, it will evict entries from RecentChanges and cause wikis to close earlier than they should.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2960,7 +2960,7 @@ $wgManageWikiSettings = [
 		'maxint' => 360,
 		'overridedefault' => 7,
 		'section' => 'recentchanges',
-		'help' => 'Default amount of days to show at Special:RecentChanges. Users can override this at Special:Preferences.',
+		'help' => 'Default amount of days to show at Special:RecentChanges. Users can override this at Special:Preferences. Restricted as setting this higher can make tables grow too big on large wikis.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2978,7 +2978,7 @@ $wgManageWikiSettings = [
 			'autoconfirmed'
 		],
 		'section' => 'permissions',
-		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else.',
+		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else. Restricted as when misconfigured it can cause issues with assigning permissions.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -2995,7 +2995,7 @@ $wgManageWikiSettings = [
 		'maxint' => 10000,
 		'overridedefault' => 2048,
 		'section' => 'restricted',
-		'help' => 'Maximum page size in kilobytes.',
+		'help' => 'Maximum page size in kilobytes. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3011,7 +3011,7 @@ $wgManageWikiSettings = [
 		'maxint' => 25,
 		'overridedefault' => 0,
 		'section' => 'restricted',
-		'help' => 'Number of editors to attribute.',
+		'help' => 'Number of editors to attribute. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3024,7 +3024,7 @@ $wgManageWikiSettings = [
 		'type' => 'text',
 		'overridedefault' => 'HAWelcome',
 		'section' => 'restricted',
-		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit. Note: this should not be set to the same name of an existing user.',
+		'help' => 'This configuration variable contains the name of the user that should leave the welcome message. If this user is flagged as a bot, the edits will be marked as a bot edit. Restricted as if this name is set to the name of an existing user, then that user will be locked out of their account.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
@@ -3040,7 +3040,7 @@ $wgManageWikiSettings = [
 		'maxint' => 500,
 		'overridedefault' => 99,
 		'section' => 'restricted',
-		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500.',
+		'help' => 'Number of expensive parser functions allowed on a single page. Min: 50. Max: 500. Restricted for performance reasons.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
