@@ -4516,8 +4516,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgRestrictDisplayTitle' => [
-		'default' => true,
-		'ext-NoTitle' => false,
+		'default' => false,
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
@@ -4581,7 +4580,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgNativeImageLazyLoading' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
@@ -6278,7 +6277,7 @@ $wgConf->settings += [
 
 	// Statistics
 	'wgArticleCountMethod' => [
-		'default' => 'link',
+		'default' => 'any',
 	],
 
 	// StopForumSpam
@@ -6335,7 +6334,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgTabberNeueEnableAnimation' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
@@ -6745,7 +6744,7 @@ $wgConf->settings += [
 
 	// Vector
 	'wgVectorResponsive' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
