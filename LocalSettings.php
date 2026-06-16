@@ -257,9 +257,33 @@ $wgConf->settings += [
 	'wgAdvancedSearchDeepcatEnabled' => [
 		'default' => false,
 	],
-	'+wgAdvancedSearchNamespacePresets' => [
-		'default' => [],
-		'criticalrolewiki' => [
+	'wgAdvancedSearchNamespacePresets' => [
+		'default' => [
+			'defaultNamespaces' => [
+				'enabled' => true,
+				'provider' => 'defaultNamespaces',
+				'label' => 'advancedsearch-namespaces-preset-default',
+			],
+			'discussion' => [
+				'enabled' => true,
+				'provider' => 'discussion',
+				'label' => 'advancedsearch-namespaces-preset-discussion',
+			],
+			'generalHelp' => [
+				'enabled' => true,
+				'namespaces' => [
+					'4',
+					'12',
+				],
+				'label' => 'advancedsearch-namespaces-preset-general-help',
+			],
+			'all' => [
+				'enabled' => true,
+				'provider' => 'all',
+				'label' => 'advancedsearch-namespaces-preset-all',
+			],
+		],
+		'+criticalrolewiki' => [
 			'transcripts' => [
 				'enabled' => true,
 				'namespaces' => [ '3002' ],
