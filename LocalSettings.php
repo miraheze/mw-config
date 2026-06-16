@@ -7523,7 +7523,7 @@ $wgConf->settings += [
 			'EventBus' => [ 'graylog' => 'error' ],
 			// Please make sure wgEventLoggingBaseUri is set before re-enabling this group
 			'EventLogging' => false,
-			'EventStreamConfig' => 'warning',
+			'EventStreamConfig' => false,
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',
