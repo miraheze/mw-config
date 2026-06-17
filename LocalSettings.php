@@ -839,6 +839,13 @@ $wgConf->settings += [
 				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 		],
+		'kratimawiki' => [
+			'interface' => [
+				'cosmos-custom-rail-module' => 'normal',
+				'cosmos-custom-sticky-rail-module' => 'sticky',		
+			'recentchanges' => 'normal',
+			],
+		],
 	],
 	'wgCosmosEnableWantedPages' => [
 		'default' => false,
