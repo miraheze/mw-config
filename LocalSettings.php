@@ -3723,11 +3723,6 @@ $wgConf->settings += [
 				'user' => true,
 			],
 		],
-		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
@@ -5653,9 +5648,6 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+allpediawiki' => [
-			'editextendedconfirmedprotected',
-		],
 		'+321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
@@ -5841,9 +5833,6 @@ $wgConf->settings += [
 		'321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
-		],
-		'allpediawiki' => [
-			'editextendedconfirmedprotected',
 		],
 		'blutigeskareuzwiki' => [
 			'editextendedconfirmedprotected',
