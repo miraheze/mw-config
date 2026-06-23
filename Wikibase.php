@@ -84,44 +84,6 @@ $wgWBClientSettings['recentChangesBatchSize'] = 100;
 $wgMFUseWikibase = true;
 
 // Per-wiki
-if ( $wgDBname === 'famedatawiki' ) {
-	$wgWBRepoSettings['statementSections'] = [
-		'item' => [
-			'statements' => null,
-			'identifiers' => [
-				'type' => 'dataType',
-				'dataTypes' => [
-					'external-id',
-				],
-			],
-		],
-		'property' => [
-			'statements' => null,
-			'constraints' => [
-				'type' => 'propertySet',
-				'propertyIds' => [
-					'P142',
-				],
-			],
-		],
-	];
-}
-
-if ( $wgDBname === 'famepediawiki' ) {
-	$wgWBRepoSettings['useKartographerGlobeCoordinateFormatter'] = true;
-	$wgWBRepoSettings['siteLinkGroups'] = [
-		'famepedia' => [
-			'site' => 'famepedia',
-			'title' => 'Famepedia',
-			'namespace' => 0,
-			'interwiki' => 'famepedia'
-		],
-	];
-
-	$wgWBClientSettings['useKartographerMaplinkInWikitext'] = true;
-	$wgWBClientSettings['repoSiteName'] = 'FAMEData';
-}
-
 if ( $wgDBname === 'gpcommonswiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
@@ -318,18 +280,6 @@ if ( $wgDBname === 'gratispaideiawiki' ) {
 if ( $wgDBname === 'benpediawiki' ) {
 	$wgWBClientSettings['repoSiteName'] = 'Gratisdata';
 	$wgWBClientSettings['pageSchemaNamespaces'] = [ 0 ];
-}
-
-if ( $wgDBname === 'horimiyawiki' ) {
-	$wgWBRepoSettings['statementSections'] = [
-		'item' => [
-			'statements' => null,
-			'identifiers' => [
-				'type' => 'dataType',
-				'dataTypes' => [ 'external-id' ],
-			],
-		],
-	];
 }
 
 if ( $wgDBname === 'utgwiki' ) {

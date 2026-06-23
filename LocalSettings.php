@@ -1684,7 +1684,6 @@ $wgConf->settings += [
 	// Editing
 	'wgEditSubmitButtonLabelPublish' => [
 		'default' => false,
-		'ysmwikiwiki' => true,
 	],
 
 	// EditSimilar
@@ -2611,8 +2610,6 @@ $wgConf->settings += [
 		'dragdownwiki' => 1024 * 1024 * 10,
 		/** T12515 - 2MB */
 		'irisstationwiki' => 1024 * 1024 * 2,
-		/** T13930 - 5MB */
-		'wikigeniuswiki' => 1024 * 1024 * 5,
 	],
 	'wgAllowCopyUploads' => [
 		'default' => false,
@@ -3478,9 +3475,7 @@ $wgConf->settings += [
 		'saozhwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/cn/',
 		'sekatetwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'spnatiwiki' => 'https://gitgud.io/spnati/spnati/-/blob/master/LICENSE',
-		'tlhwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'wikilexiconwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
-		'worldtrainwikiwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 	],
 	'wmgWikiLicense' => [
 		'default' => 'cc-by-sa',
@@ -3490,7 +3485,6 @@ $wgConf->settings += [
 	'+wgUrlProtocols' => [
 		'default' => [],
 		'cloudstreamwiki' => [ 'cloudstreamrepo://' ],
-		'downgradegameswiki' => [ 'steam://' ],
 		'cafewiki' => [ 'roblox://', 'discord://' ],
 		'urbanshadewiki' => [ 'roblox://' ],
 		'utgwiki' => [ 'roblox://' ],
@@ -3503,13 +3497,6 @@ $wgConf->settings += [
 	// LinkTarget
 	'wgLinkTargetParentClasses' => [
 		'default' => [],
-		'anewc0dawiki' => [
-			[ 'newtablinks', 'wikiwalk' ],
-			'_self' => [ 'sametablinks' ]
-		],
-		'randrwiki' => [
-			'_blank' => [ '' ]
-		],
 		'scruffwiki' => [
 			'_blank' => [ '' ]
 		],
@@ -3739,10 +3726,6 @@ $wgConf->settings += [
 				'read' => true,
 			],
 		],
-		'+famedatawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
 			'templateeditor' => [
 				'edittemplateprotected' => true,
 			],
@@ -3812,11 +3795,6 @@ $wgConf->settings += [
 			],
 			'UserType7' => [
 				'UserType7' => true,
-			],
-		],
-		'+infopediawiki' => [
-			'wikistaff' => [
-				'editwikistaffprotected' => true,
 			],
 		],
 		'+ldapwikiwiki' => [
@@ -4642,7 +4620,6 @@ $wgConf->settings += [
 	],
 	'wgDefaultLanguageVariant' => [
 		'default' => false,
-		'zhtranswiki' => 'zh-cn',
 	],
 	'wgCleanSignatures' => [
 		'default' => true,
@@ -4758,9 +4735,6 @@ $wgConf->settings += [
 		'default' => [
 			'ppprop' => 'displaytitle',
 		],
-		'famedatawiki' => [
-			'wbetterms' => 'label',
-		],
 		'gratisdatawiki' => [
 			'wbetterms' => 'label',
 		],
@@ -4769,10 +4743,6 @@ $wgConf->settings += [
 		'default' => [
 			'name' => 'prefixsearch',
 			'prefix' => 'ps',
-		],
-		'famedatawiki' => [
-			'name' => 'wbsearch',
-			'prefix' => 'wbs',
 		],
 		'gratisdatawiki' => [
 			'name' => 'wbsearch',
@@ -5440,20 +5410,6 @@ $wgConf->settings += [
 		'+zenithwiki' => [
 			'vector-theme' => 'night',
 		],
-		'+zhtranswiki' => [
-			'echo-subscriptions-email-dt-subscription' => true,
-			'echo-subscriptions-email-dt-subscription-archiving' => true,
-			'echo-subscriptions-email-mention' => true,
-			'echo-subscriptions-email-reverted' => true,
-			'echo-subscriptions-web-mention-failure' => true,
-			'echo-subscriptions-web-mention-success' => true,
-			'echo-subscriptions-web-reverted' => true,
-			'enotifwatchlistpages' => true,
-			'toc-expand' => true,
-			'visualeditor-tabs' => 'prefer-wt',
-			'uselivepreview' => true,
-			'watchlistunwatchlinks' => true,
-		],
 		'+ext-CleanChanges' => [
 			'usenewrc' => 1,
 		],
@@ -5697,10 +5653,6 @@ $wgConf->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
-		'+famedatawiki' => [
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
-		],
 		'+fischwiki' => [
 			'editmoderatorprotected',
 		],
@@ -5811,9 +5763,6 @@ $wgConf->settings += [
 			'editautopatrolprotected',
 			'edittechprotected',
 		],
-		'+ysmwikiwiki' => [
-			'editextendedconfirmedprotected',
-		],
 		'+ext-AuthorProtect' => [
 			'author',
 		],
@@ -5861,10 +5810,6 @@ $wgConf->settings += [
 		],
 		'damnationwiki' => [
 			'editmoderatorprotected',
-		],
-		'famedatawiki' => [
-			'editextendedconfirmedprotected',
-			'edittemplateprotected',
 		],
 		'fischwiki' => [
 			'editmoderatorprotected',
@@ -5950,9 +5895,6 @@ $wgConf->settings += [
 		'xyywiki' => [
 			'editautopatrolprotected',
 			'edittechprotected',
-		],
-		'ysmwikiwiki' => [
-			'editextendedconfirmedprotected',
 		],
 		'+ext-SocialProfile' => [
 			'updatepoints',

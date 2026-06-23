@@ -137,14 +137,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'famedatawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addMeta( 'og:image:width', '1200' );
-		}
-
-		break;
 	case 'fischwiki':
 		$wgLogRestrictions['newusers'] = 'read';
 
@@ -1127,31 +1119,6 @@ switch ( $wi->dbname ) {
 				  }
 				}
 			END ) );
-		}
-
-		break;
-	case 'genshinimpactwiki':
-		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
-		$wgMatomoAnalyticsDisableJS = true;
-		$wgMatomoAnalyticsDisableCookie = true;
-
-		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
-
-		function onHtmlPageLinkRendererEnd(
-			$linkRenderer,
-			$target,
-			$isKnown,
-			&$text,
-			&$attribs,
-			&$ret
-		) {
-			if ( $isKnown || $target->isExternal() ) {
-				return true;
-			}
-
-			$attribs['rel'] = 'nofollow';
-
-			return true;
 		}
 
 		break;
