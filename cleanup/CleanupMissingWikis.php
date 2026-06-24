@@ -4,17 +4,17 @@
  * unaware of MediaWiki and performs its functions accordingly.
  */
 
-class Cleanup {
+class CleanupMissingWikis {
     /**
-     * Static list of all known wikis, used to perform {@see Cleanup::WikiExists()}
+     * Static list of all known wikis, used to perform {@see CleanupMissingWikis::wikiExists()}
      * lookups without performing multiple requests.
      */
     private static array $wikiList;
 
     /**
-     * Simple Curl wrapper solely intended for use by {@see Cleanup::GetWikiList()}.
+     * Simple Curl wrapper solely intended for use by {@see CleanupMissingWikis::getWikiList()}.
      */
-    private static function CurlGet(array $get): string {
+    private static function curlGet(array $get): string {
         $ch = curl_init();
         curl_setopt_array( $ch, [
             CURLOPT_URL => 'https://meta.miraheze.org/w/api.php?' . http_build_query($get),
@@ -34,9 +34,9 @@ class Cleanup {
      * 
      * Deleted wikis are included in the list, on the chance they might be undeleted.
      * 
-     * @see Cleanup::WikiExists()
+     * @see CleanupMissingWikis::wikiExists()
      */
-    private static function GetWikiList(): array {
+    private static function getWikiList(): array {
         $query = [
             'action' => 'query',
             'format' => 'json',
@@ -47,13 +47,13 @@ class Cleanup {
         $count = 0;
 
         do {
-            $res = json_decode( self::CurlGet( $query ), true );
+            $res = json_decode( self::curlGet( $query ), true );
 
             if ( $res['query']['wikidiscover']['count'] === 0 ) {
                 break;
             }
 
-            $wikis = array_merge( $wikis,  array_keys( $res['query']['wikidiscover']['wikis'] ) );
+            $wikis = array_merge( $wikis, array_keys( $res['query']['wikidiscover']['wikis'] ) );
             $count += $res['query']['wikidiscover']['count'];
             $query['wdoffset'] = $count;
         } while ( true );
@@ -64,8 +64,8 @@ class Cleanup {
     /**
      * Returns true if the wiki is known to exist.
      */
-    public static function WikiExists( string $dbname ): bool {
-        self::$wikiList ??= self::GetWikiList();
+    public static function wikiExists( string $dbname ): bool {
+        self::$wikiList ??= self::getWikiList();
         return in_array( $dbname, self::$wikiList, true );
     }
 
@@ -76,7 +76,7 @@ class Cleanup {
      * The opening bracket of `"{$this->variable}"` is a string token consisting of `"{`,
      * while the closing bracket is a plain string of `}`.
      */
-    private static function TokenDepthChange( string|array $token ): int {
+    private static function tokenDepthChange( string|array $token ): int {
         switch ( $token ) {
             //case '{':
             case '[':
@@ -90,10 +90,10 @@ class Cleanup {
     }
 
     /**
-     * For the purposes of {@see Cleanup::SeekTokenBlock()} we consider a block to end on a
+     * For the purposes of {@see CleanupMissingWikis::SeekTokenBlock()} we consider a block to end on a
      * whitespace token containing a newline.
      */
-    private static function IsEndingToken( string|array $token ): bool {
+    private static function isEndingToken( string|array $token ): bool {
         return is_array( $token ) && $token[0] === T_WHITESPACE && str_contains( $token[1], "\n" );
     }
 
@@ -107,7 +107,7 @@ class Cleanup {
      * @param int $offset Integer offset in array to start search from
      * @return array May be empty.
      */
-    private static function SeekTokenBlock( array $tokens, array|string $searchToken, int $offset = 0 ): array {
+    private static function seekTokenBlock( array $tokens, array|string $searchToken, int $offset = 0 ): array {
         $block = [];
         $blockStart = array_find_key( $tokens, function( mixed $token, int $key ) use ( $searchToken, $offset ) {
             if ( $key < $offset ) {
@@ -147,7 +147,7 @@ class Cleanup {
             // This allows us to use the ending index ($blockEnd) as a count.
             foreach ( array_slice( $tokens, $blockStart ) as $index => $token ) {
                 $depth += self::TokenDepthChange($token);
-                if ( $index != 0 && $depth === 0 && self::IsEndingToken( $token ) ) {
+                if ( $index != 0 && $depth === 0 && self::isEndingToken( $token ) ) {
                     $blockEnd = $index;
                     break;
                 }
@@ -161,30 +161,34 @@ class Cleanup {
     /**
      * Processes cleanup for LocalSettings.php.
      */
-    private static function ProcessLocalSettings(): void {
+    private static function processLocalSettings(): void {
         $tokens = token_get_all( file_get_contents( __DIR__ . '/../LocalSettings.php' ) );
         // Narrow our search down explicitly to $wgConf.
-        $confTokens = self::SeekTokenBlock( $tokens, [ T_VARIABLE, '$wgConf' ] );
+        $confTokens = self::seekTokenBlock( $tokens, [ T_VARIABLE, '$wgConf' ] );
         $conf = [];
-        $offsetConf = array_key_first( $confTokens ) + 2; // First item is whitespace, second item is $wgConf.
+        // First item is whitespace, second item is $wgConf.
+        $offsetConf = array_key_first( $confTokens ) + 2;
         // Search through each config option sequentially.
-        while ( !empty( $conf = self::SeekTokenBlock( $confTokens, [ T_CONSTANT_ENCAPSED_STRING ], $offsetConf ) ) ) {
+        while ( !empty( $conf = self::seekTokenBlock( $confTokens, [ T_CONSTANT_ENCAPSED_STRING ], $offsetConf ) ) ) {
             $block = [];
-            $offsetBlock = array_key_first( $conf ) + 2; // First item is whitespace, second item is our conf.
-            $offsetConf = array_key_last( $conf ) + 1; // Don't repeat on the last item.
+            // First item is whitespace, second item is our conf.
+            $offsetBlock = array_key_first( $conf ) + 2;
+            // Don't repeat on the last item.
+            $offsetConf = array_key_last( $conf ) + 1;
             // Search through each wiki identifier in the config.
-            while ( !empty( $block = self::SeekTokenBlock( $conf, [ T_CONSTANT_ENCAPSED_STRING ], $offsetBlock ) ) ) {
+            while ( !empty( $block = self::seekTokenBlock( $conf, [ T_CONSTANT_ENCAPSED_STRING ], $offsetBlock ) ) ) {
                 // Don't select any whitespace that may be before the wiki identifier.
                 $wiki = $block[array_key_first( $block )][0] === T_WHITESPACE ? $block[array_key_first( $block ) + 1][1] : array_first( $block )[1];
                 // Wikis will be wrapped in single quotes and may be prepended with a `+`.
                 $wiki = trim( $wiki, "'+");
-                $offsetBlock = array_key_last( $block ) + 1; // Don't repeat on last item.
+                // Don't repeat on last item.
+                $offsetBlock = array_key_last( $block ) + 1;
                 // Only search for wikis, beta not included.
                 if ( !str_ends_with( $wiki, 'wiki' ) ) {
                     continue;
                 }
                 // Delete tokens for any block where the wiki does not exist.
-                if ( !self::WikiExists( $wiki ) ) {
+                if ( !self::wikiExists( $wiki ) ) {
                     foreach ( $block as $index => $_ ) {
                         $tokens[$index] = '';
                     }
@@ -206,9 +210,9 @@ class Cleanup {
     /**
      * Expected entry point.
      */
-    public static function Process(): void {
-        self::ProcessLocalSettings();
+    public static function process(): void {
+        self::processLocalSettings();
     }
 }
 
-Cleanup::Process();
+CleanupMissingWikis::process();
