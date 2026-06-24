@@ -69,8 +69,8 @@ class MirahezeFunctions {
 	private const string MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	public const array MEDIAWIKI_VERSIONS = [
-		'alpha' => '1.45',
-		'beta' => '1.45',
+		'alpha' => '1.46',
+		'beta' => '1.46',
 		'stable' => '1.45',
 	];
 
@@ -855,6 +855,20 @@ class MirahezeFunctions {
 			$path = $list[$name] ?? null;
 			if ( $path && pathinfo( $path, PATHINFO_EXTENSION ) === 'json' ) {
 				ExtensionRegistry::getInstance()->queue( $path );
+			}
+		}
+
+		$this->loadFallbackContentHandlers();
+	}
+
+	private function loadFallbackContentHandlers(): void {
+		global $wgManageWikiExtensions, $wgContentHandlers;
+
+		foreach ( $wgManageWikiExtensions as $_ => $extData ) {
+			if ( isset( $extData['contentModels'] ) && !$this->isExtensionActive( $extData['name'] ) ) {
+				foreach ( $extData['contentModels'] as $contentModel ) {
+					$wgContentHandlers[$contentModel] = 'FallbackContentHandler';
+				}
 			}
 		}
 	}

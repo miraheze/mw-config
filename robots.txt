@@ -1,15 +1,29 @@
 # robots.txt for Miraheze
 
-# Throttle access to certain pages
-# Do not include special pages and other pages where indexing is undesirable if they are likely to be linked to; use noindex instead.
-# That's because Google can still index pages in here without crawling them if the pages are linked to
-# See https://developers.google.com/search/docs/crawling-indexing/robots/intro
+# Control access to certain pages
 User-Agent: *
 Allow: /w/api.php?action=mobileview&
 Allow: /w/load.php?
 Disallow: /w/
 Disallow: /geoip$
 Disallow: /rest_v1/
+# All action pages and veaction
+Disallow: /*?action=
+Disallow: /*?*&action=
+Disallow: /*?veaction=
+Disallow: /*?*&veaction=
+# Diffs and permalinks
+Disallow: /*?diff=
+Disallow: /*?*&diff=
+Disallow: /*?curid=
+Disallow: /*?*&curid=
+Disallow: /*?oldid=
+Disallow: /*?*&oldid=
+Disallow: /*?curid=
+Disallow: /*?*&curid=
+# Special pages, only include English for now
+Disallow: /wiki/Special:
+Disallow: /Special:
 
 # Block SemrushBot
 User-Agent: SemrushBot

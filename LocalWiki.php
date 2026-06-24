@@ -63,6 +63,14 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'blutigeskareuzwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'battlebornwiki':
 	case 'gogiganticwiki':
 	case 'pizzatowerwiki':
@@ -466,6 +474,8 @@ switch ( $wi->dbname ) {
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
+		// Temporarily added for debugging tallies of 2026 board election
+		$wgSecurePollShowErrorDetail = true;
 		$wgContactConfig = [
 			'default' => [
 				'RecipientUser' => null,
@@ -589,6 +599,7 @@ switch ( $wi->dbname ) {
 			'GlobalWatchlist',
 			'IncidentReporting',
 			'RequestCustomDomain',
+			'SecurePoll',
 		] );
 
 		/*
@@ -639,7 +650,6 @@ switch ( $wi->dbname ) {
 			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
 			$generalRow = $general->getRow( 'main' );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
-			$generalRow->addItem( ALItem::newFromSpecialPage( 'ArticlesHome' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'Upload' ) );

@@ -6,6 +6,7 @@ use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
+use MediaWiki\RCFeed\UDPRCFeedEngine;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
@@ -56,10 +57,6 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 		$wgCheckUserClientHintsEnabled = true;
 		$wgCheckUserAlwaysSetClientHintHeaders = true;
 	}
-}
-
-if ( $wi->isExtensionActive( 'chameleon' ) ) {
-	wfLoadExtension( 'Bootstrap' );
 }
 
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
@@ -288,6 +285,10 @@ if ( $cwClosed ) {
 	if ( $wi->isExtensionActive( 'Comments' ) ) {
 		$wgRevokePermissions['*']['comment'] = true;
 	}
+
+	if ( $wi->isExtensionActive( 'BlogPage' ) ) {
+		$wgRevokePermissions['user']['createblogpost'] = true;
+	}
 }
 
 // Public Wikis
@@ -297,6 +298,7 @@ if ( !$cwPrivate ) {
 		'uri' => 'udp://10.0.17.143:' . [ 5070, 5072 ][array_rand( [ 5070, 5072 ] )],
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
+		'class' => UDPRCFeedEngine::class,
 	];
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
@@ -631,7 +633,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	if ( $wgDBname !== 'commonswiki' &&
 		$wgDBname !== 'gpcommonswiki' &&
 		$wgDBname !== 'needforspeedwiki' &&
-		$wgDBname !== 'emiliabearwiki'
+		$wgDBname !== 'emiliabearwiki' &&
+		$wgDBname !== 'blutigeskareuzwiki'
 	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.miraheze.org/w/api.php'
