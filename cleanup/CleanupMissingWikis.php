@@ -169,14 +169,14 @@ class CleanupMissingWikis {
         // First item is whitespace, second item is $wgConf.
         $offsetConf = array_key_first( $confTokens ) + 2;
         // Search through each config option sequentially.
-        while ( !empty( $conf = self::seekTokenBlock( $confTokens, [ T_CONSTANT_ENCAPSED_STRING ], $offsetConf ) ) ) {
+        while ( !empty( ($conf = self::seekTokenBlock( $confTokens, [ T_CONSTANT_ENCAPSED_STRING ], $offsetConf )) ) ) {
             $block = [];
             // First item is whitespace, second item is our conf.
             $offsetBlock = array_key_first( $conf ) + 2;
             // Don't repeat on the last item.
             $offsetConf = array_key_last( $conf ) + 1;
             // Search through each wiki identifier in the config.
-            while ( !empty( $block = self::seekTokenBlock( $conf, [ T_CONSTANT_ENCAPSED_STRING ], $offsetBlock ) ) ) {
+            while ( !empty( ($block = self::seekTokenBlock( $conf, [ T_CONSTANT_ENCAPSED_STRING ], $offsetBlock )) ) ) {
                 // Don't select any whitespace that may be before the wiki identifier.
                 $wiki = $block[array_key_first( $block )][0] === T_WHITESPACE ? $block[array_key_first( $block ) + 1][1] : array_first( $block )[1];
                 // Wikis will be wrapped in single quotes and may be prepended with a `+`.
