@@ -2924,7 +2924,7 @@ $wgManageWikiSettings = [
 		'maxint' => 62208000,
 		'overridedefault' => 180 * 24 * 3600,
 		'section' => 'recentchanges',
-		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted. Restricted as if configured incorrectly, it will evict entries from RecentChanges and cause wikis to close earlier than they should.',
+		'help' => 'Items in the recentchanges table are periodically purged; entries older than this many seconds will be deleted.',
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
