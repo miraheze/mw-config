@@ -5688,9 +5688,6 @@ $wgConf->settings += [
 			'editstaffprotected',
 			'edittemplateprotected',
 		],
-		'+csydeswiki' => [
-			'editblacklisted',
-		],
 		'+damnationwiki' => [
 			'editmoderatorprotected',
 		],
@@ -5855,9 +5852,6 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editstaffprotected',
 			'edittemplateprotected',
-		],
-		'csydeswiki' => [
-			'editblacklisted',
 		],
 		'damnationwiki' => [
 			'editmoderatorprotected',
