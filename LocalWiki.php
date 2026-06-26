@@ -650,7 +650,6 @@ switch ( $wi->dbname ) {
 			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
 			$generalRow = $general->getRow( 'main' );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
-			$generalRow->addItem( ALItem::newFromSpecialPage( 'ArticlesHome' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'Upload' ) );

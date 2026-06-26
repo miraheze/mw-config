@@ -3730,11 +3730,6 @@ $wgConf->settings += [
 				'user' => true,
 			],
 		],
-		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
-			],
-		],
 		'+autocountwiki' => [
 			'authors' => [
 				'torunblocked' => true,
@@ -5660,9 +5655,6 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+allpediawiki' => [
-			'editextendedconfirmedprotected',
-		],
 		'+321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
@@ -5848,9 +5840,6 @@ $wgConf->settings += [
 		'321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
-		],
-		'allpediawiki' => [
-			'editextendedconfirmedprotected',
 		],
 		'blutigeskareuzwiki' => [
 			'editextendedconfirmedprotected',
@@ -7530,7 +7519,7 @@ $wgConf->settings += [
 			'EventBus' => [ 'graylog' => 'error' ],
 			// Please make sure wgEventLoggingBaseUri is set before re-enabling this group
 			'EventLogging' => false,
-			'EventStreamConfig' => 'warning',
+			'EventStreamConfig' => false,
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',

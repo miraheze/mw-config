@@ -1473,6 +1473,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'links',
 		'help' => 'If no breadcrumbs are defined for this page, show nothing.',
+		'requires' => [],
 	],
 	'wgCapitalLinks' => [
 		'name' => 'Capital Links',
