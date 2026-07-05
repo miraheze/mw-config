@@ -257,9 +257,33 @@ $wgConf->settings += [
 	'wgAdvancedSearchDeepcatEnabled' => [
 		'default' => false,
 	],
-	'+wgAdvancedSearchNamespacePresets' => [
-		'default' => [],
-		'criticalrolewiki' => [
+	'wgAdvancedSearchNamespacePresets' => [
+		'default' => [
+			'defaultNamespaces' => [
+				'enabled' => true,
+				'provider' => 'defaultNamespaces',
+				'label' => 'advancedsearch-namespaces-preset-default',
+			],
+			'discussion' => [
+				'enabled' => true,
+				'provider' => 'discussion',
+				'label' => 'advancedsearch-namespaces-preset-discussion',
+			],
+			'generalHelp' => [
+				'enabled' => true,
+				'namespaces' => [
+					'4',
+					'12',
+				],
+				'label' => 'advancedsearch-namespaces-preset-general-help',
+			],
+			'all' => [
+				'enabled' => true,
+				'provider' => 'all',
+				'label' => 'advancedsearch-namespaces-preset-all',
+			],
+		],
+		'+criticalrolewiki' => [
 			'transcripts' => [
 				'enabled' => true,
 				'namespaces' => [ '3002' ],
@@ -3588,15 +3612,11 @@ $wgConf->settings += [
 			'cite',
 			'codeeditor',
 			'codemirror',
-			// T14325: added here after being removed from global skins
-			'cologneblue',
 			'gadgets',
 			'globaluserpage',
 			'inputbox',
 			'minervaneue',
 			'mobilefrontend',
-			// T14325: added here after being removed from global skins
-			'modern',
 			'multimediaviewer',
 			'pageimages',
 			'portableinfobox',
@@ -3708,11 +3728,6 @@ $wgConf->settings += [
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
 				'user' => true,
-			],
-		],
-		'+allpediawiki' => [
-			'extendedconfirmed' => [
-				'editextendedconfirmedprotected' => true,
 			],
 		],
 		'+autocountwiki' => [
@@ -4527,8 +4542,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgRestrictDisplayTitle' => [
-		'default' => true,
-		'ext-NoTitle' => false,
+		'default' => false,
 	],
 	'wgCapitalLinks' => [
 		'default' => true,
@@ -4592,7 +4606,7 @@ $wgConf->settings += [
 		],
 	],
 	'wgNativeImageLazyLoading' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgShellRestrictionMethod' => [
 		'default' => 'firejail',
@@ -5641,9 +5655,6 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'sysop'
 		],
-		'+allpediawiki' => [
-			'editextendedconfirmedprotected',
-		],
 		'+321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
@@ -5829,9 +5840,6 @@ $wgConf->settings += [
 		'321nailswiki' => [
 			'templateeditor',
 			'extendedconfirmed',
-		],
-		'allpediawiki' => [
-			'editextendedconfirmedprotected',
 		],
 		'blutigeskareuzwiki' => [
 			'editextendedconfirmedprotected',
@@ -6289,7 +6297,7 @@ $wgConf->settings += [
 
 	// Statistics
 	'wgArticleCountMethod' => [
-		'default' => 'link',
+		'default' => 'any',
 	],
 
 	// StopForumSpam
@@ -6346,7 +6354,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgTabberNeueEnableAnimation' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgTabberNeueParseTabName' => [
 		'default' => false,
@@ -6756,7 +6764,7 @@ $wgConf->settings += [
 
 	// Vector
 	'wgVectorResponsive' => [
-		'default' => false,
+		'default' => true,
 	],
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
@@ -7511,7 +7519,7 @@ $wgConf->settings += [
 			'EventBus' => [ 'graylog' => 'error' ],
 			// Please make sure wgEventLoggingBaseUri is set before re-enabling this group
 			'EventLogging' => false,
-			'EventStreamConfig' => 'warning',
+			'EventStreamConfig' => false,
 			'exception' => 'debug',
 			'exception-json' => false,
 			'exec' => 'debug',

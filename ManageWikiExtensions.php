@@ -698,6 +698,7 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'contentModels' => [
 			'GeoJson',
+			'GeoJSON',
 		],
 		'requires' => [],
 		'install' => [
