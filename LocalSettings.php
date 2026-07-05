@@ -3456,7 +3456,6 @@ $wgConf->settings += [
 		'rctwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'revitwiki' => '©2013-2025 by Lionel J. Camara (All Rights Reserved)',
 		'reviwiki' => 'Creative Commons Attribution Share Alike',
-		'saozhwiki' => '署名-非商业性使用-相同方式共享 3.0 中国大陆 (CC BY-NC-SA 3.0 CN)',
 		'sekatetwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'spnatiwiki' => 'Copyright (c) 2015 The SPNATI Contributors',
 		'wikilexiconwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
@@ -3475,7 +3474,6 @@ $wgConf->settings += [
 		'rctwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'revitwiki' => 'https://revit.miraheze.org/wiki/MediaWiki:Copyright',
 		'reviwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
-		'saozhwiki' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/cn/',
 		'sekatetwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'spnatiwiki' => 'https://gitgud.io/spnati/spnati/-/blob/master/LICENSE',
 		'tlhwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
@@ -5760,11 +5758,6 @@ $wgConf->settings += [
 		'+phightingwiki' => [
 			'edittrusteduserprotected',
 		],
-		'+saozhwiki' => [
-			'edittech',
-			'editarbiter',
-			'editpatrol',
-		],
 		'+sesupportwiki' => [
 			'editor',
 		],
@@ -5911,11 +5904,6 @@ $wgConf->settings += [
 		],
 		'projectsekaiwiki' => [
 			'editguide',
-		],
-		'saozhwiki' => [
-			'edittech',
-			'editarbiter',
-			'editpatrol',
 		],
 		'scratchpadwiki' => [
 			'templateeditor',
