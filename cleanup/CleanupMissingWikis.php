@@ -275,6 +275,7 @@ class CleanupMissingWikis {
 		$tokens = token_get_all( file_get_contents( __DIR__ . '/../LocalWiki.php' ) );
 		$case = [];
 		$offset = 0;
+		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
 		while( !empty( $case = self::seekCaseBlock( $tokens, $offset ) ) ) {
 			// Case statements are T_WHITESPACE T_CASE T_WHITESPACE 'wiki':
 			$wiki = $case[array_key_first( $case ) + 3][1];
