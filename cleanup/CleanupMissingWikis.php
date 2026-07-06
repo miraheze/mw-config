@@ -99,7 +99,7 @@ class CleanupMissingWikis {
 
 	/**
 	 * Contains logic for using `array_find_key` on an array of tokens.
-	 * 
+	 *
 	 * @param mixed $token PHP lanugage token to compare.
 	 * @param int $key Integer offset of $token in the array being searched.
 	 * @param array|string $searchToken An array or exact string to match against the token.
@@ -128,7 +128,7 @@ class CleanupMissingWikis {
 
 	/**
 	 * Searches a list of PHP lanugage tokens for a 'block' associated with the search token.
-	 * 
+	 *
 	 * A valid block could be `'somewiki' => [ 'someconfig' ],`.
 	 *
 	 * @param array $tokens List of PHP language tokens to search through.
@@ -226,10 +226,10 @@ class CleanupMissingWikis {
 
 	/**
 	 * Seeks a block of tokens explicitly defined by T_CASE and T_BREAK as the start and end of the block.
-	 * 
+	 *
 	 * It is important to note that the logic for this function and {@see CleanupMissingWikis::seekTokenBlock()}
 	 * are not interchangable.
-	 * 
+	 *
 	 * @param array $tokens Array of PHP language tokens to search.
 	 * @param int $offset Integer offset to begin searching from.
 	 * @return array May be empty if no block is found.
@@ -271,15 +271,15 @@ class CleanupMissingWikis {
 	/**
 	 * Perform cleanup for LocalWiki.php.
 	 */
-	private static function processLocalWiki(): void{
+	private static function processLocalWiki(): void {
 		$tokens = token_get_all( file_get_contents( __DIR__ . '/../LocalWiki.php' ) );
 		$case = [];
 		$offset = 0;
 		// phpcs:ignore Generic.CodeAnalysis.AssignmentInCondition.FoundInWhileCondition
-		while( !empty( $case = self::seekCaseBlock( $tokens, $offset ) ) ) {
+		while ( !empty( $case = self::seekCaseBlock( $tokens, $offset ) ) ) {
 			// Case statements are T_WHITESPACE T_CASE T_WHITESPACE 'wiki':
 			$wiki = $case[array_key_first( $case ) + 3][1];
-			$wiki = trim( $wiki, '\'"');
+			$wiki = trim( $wiki, '\'"' );
 			$offset += count( $case );
 			// Only search for wikis, beta not included.
 			if ( !str_ends_with( $wiki, 'wiki' ) ) {
