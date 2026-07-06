@@ -3144,11 +3144,6 @@ $wgConf->settings += [
 				'en',
 			],
 		],
-		'+brolandiawiki' => [
-			'wikipedia' => [
-				'fr',
-			],
-		],
 		'+devwiki' => [
 			'templatewikiarchive',
 		],
@@ -3201,11 +3196,6 @@ $wgConf->settings += [
 		'+snapwikiwiki' => [
 			'scratchwiki',
 			'd',
-		],
-		'+wikitrashwiki' => [
-			'wikipedia' => [
-				'it',
-			],
 		],
 		'+yahyawiki' => [
 			'wikipedia' => [
@@ -3461,7 +3451,6 @@ $wgConf->settings += [
 		'reviwiki' => 'Creative Commons Attribution Share Alike',
 		'sekatetwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 		'spnatiwiki' => 'Copyright (c) 2015 The SPNATI Contributors',
-		'wikilexiconwiki' => 'Creative Commons Attribution-ShareAlike 3.0 Unported (CC BY-SA 3.0)',
 	],
 	'wgRightsUrl' => [
 		'default' => '',
@@ -3479,7 +3468,6 @@ $wgConf->settings += [
 		'reviwiki' => 'https://creativecommons.org/licenses/by-sa/2.0/kr',
 		'sekatetwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 		'spnatiwiki' => 'https://gitgud.io/spnati/spnati/-/blob/master/LICENSE',
-		'wikilexiconwiki' => 'https://creativecommons.org/licenses/by-sa/3.0',
 	],
 	'wmgWikiLicense' => [
 		'default' => 'cc-by-sa',
@@ -4004,14 +3992,6 @@ $wgConf->settings += [
 				'createwiki' => true,
 			],
 		],
-		'+moviepediawiki' => [
-			'bureaucrat' => [
-				'bureaucrat' => true,
-			],
-			'founder' => [
-				'founder' => true,
-			],
-		],
 		'+mypediawiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
@@ -4319,12 +4299,6 @@ $wgConf->settings += [
 				'user' => true
 			]
 		],
-		'thegreatwarwiki' => [
-			'collapsiblenav' => [
-				'global' => true,
-				'user' => true
-			]
-		],
 	],
 
 	// MinervaNeue
@@ -4411,11 +4385,6 @@ $wgConf->settings += [
 			'amc' => true,
 		],
 		'isvwiki' => [
-			'base' => true,
-			'loggedin' => true,
-			'amc' => true,
-		],
-		'osmaniawiki' => [
 			'base' => true,
 			'loggedin' => true,
 			'amc' => true,
@@ -5277,12 +5246,6 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
 		],
-		'+banjokazooiewiki' => [
-			'rcenhancedfilters-disable' => 1,
-			'thumbsize' => 3,
-			'usenewrc' => 0,
-			'wlenhancedfilters-disable' => 1,
-		],
 		'+cecuwiki' => [
 			'vector-theme' => 'os',
 		],
@@ -5310,19 +5273,11 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
-		'+fwtdwiki' => [
-			'minerva-theme' => 'night',
-		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
 		],
 		'+kirbywiki' => [
 			'thumbsize' => 3,
-		],
-		'+landarwiki' => [
-			'usenewrc' => 0,
-			'rcenhancedfilters-disable' => 1,
-			'wlenhancedfilters-disable' => 1,
 		],
 		'+lazerpigeonwiki' => [
 			'vector-theme' => 'os',
@@ -5358,12 +5313,6 @@ $wgConf->settings += [
 		],
 		'+sp2pediawiki' => [
 			'vector-theme' => 'night',
-		],
-		'+ssbuniversewiki' => [
-			'rcenhancedfilters-disable' => 1,
-			'wlenhancedfilters-disable' => 1,
-			'usenewrc' => 0,
-			'thumbsize' => 3,
 		],
 		'+stopitslenderwiki' => [
 			'minerva-theme' => 'night',
@@ -5659,10 +5608,6 @@ $wgConf->settings += [
 		'+metawiki' => [
 			'editautopatrolprotected',
 		],
-		'+moviepediawiki' => [
-			'bureaucrat',
-			'founder',
-		],
 		'+mypediawiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -5687,9 +5632,6 @@ $wgConf->settings += [
 		],
 		'+starstruckwiki' => [
 			'editinterfaceadminprotected',
-		],
-		'+stickmancomicwiki' => [
-			'editbureaucratprotected',
 		],
 		'+testwiki' => [
 			'editbureaucratprotected',
@@ -5815,9 +5757,6 @@ $wgConf->settings += [
 		],
 		'starstruckwiki' => [
 			'editinterfaceadminprotected',
-		],
-		'stickmancomicwiki' => [
-			'editbureaucratprotected',
 		],
 		'testwiki' => [
 			'editbureaucratprotected',

@@ -137,14 +137,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'famedatawiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $out ) {
-			$out->addMeta( 'og:image:width', '1200' );
-		}
-
-		break;
 	case 'fischwiki':
 		$wgLogRestrictions['newusers'] = 'read';
 
@@ -1091,66 +1083,6 @@ switch ( $wi->dbname ) {
 
 			ob_start();
 			echo $html;
-			return true;
-		}
-
-		break;
-	case 'wikigeniuswiki':
-		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
-
-		function onBeforePageDisplay( OutputPage $output ) {
-			$output->addHeadItem( 'script-schema-ldjson', Html::rawElement( 'script', [ 'type' => 'application/ld+json' ], <<<END
-				{
-				  "@context": "https://schema.org",
-				  "@type": "Organization",
-				  "name": "WikiGenius",
-				  "url": "https://wikigenius.org/",
-				  "logo": "https://static.wikitide.net/wikigeniuswiki/6/68/Wikigenius_logo_02.png",
-				  "foundingDate": "2023-07-22",
-				  "founder": {
-				    "@type": "Person",
-				    "name": "Shovon Ahmed",
-				    "sameAs": [
-				      "https://g.co/kgs/VEEEjKG",
-				      "https://www.google.com/search?kgmid=/g/11r3_4dnj8"
-				    ]
-				  },
-				  "sameAs": [
-				    "https://www.facebook.com/profile.php?id=61574894462519",
-				    "https://www.instagram.com/wiki.genius/",
-				    "https://www.linkedin.com/company/wikigenius10/"
-				  ],
-				  "address": {
-				    "@type": "PostalAddress",
-				    "addressRegion": "Florida",
-				    "addressCountry": "United States"
-				  }
-				}
-			END ) );
-		}
-
-		break;
-	case 'genshinimpactwiki':
-		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
-		$wgMatomoAnalyticsDisableJS = true;
-		$wgMatomoAnalyticsDisableCookie = true;
-
-		$wgHooks['HtmlPageLinkRendererEnd'][] = 'onHtmlPageLinkRendererEnd';
-
-		function onHtmlPageLinkRendererEnd(
-			$linkRenderer,
-			$target,
-			$isKnown,
-			&$text,
-			&$attribs,
-			&$ret
-		) {
-			if ( $isKnown || $target->isExternal() ) {
-				return true;
-			}
-
-			$attribs['rel'] = 'nofollow';
-
 			return true;
 		}
 
