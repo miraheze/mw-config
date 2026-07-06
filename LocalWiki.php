@@ -3,7 +3,6 @@
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
-use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
