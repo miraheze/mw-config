@@ -1904,13 +1904,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'wikipoints' => [
-		'name' => 'WikiPoints',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:WikiPoints',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'specialpages',
-	],
 
 	// Other
 	'advancedsearch' => [
