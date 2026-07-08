@@ -842,7 +842,7 @@ $wgConf->settings += [
 		'psaltictheorywiki' => [
 			'interface' => [
 				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',	
+				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 			'recentchanges' => 'normal',
 		],
@@ -7669,6 +7669,8 @@ $wi::$disabledExtensions = [
 
 	'editsimilar' => 'Incompatible with MediaWiki 1.45',
 	'video' => 'Incompatible with MediaWiki 1.45',
+
+	'wikipoints' => '[[phorge:T15625|T15625]]',
 
 	// Are these still incompatible?
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.45'
