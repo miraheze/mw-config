@@ -842,7 +842,7 @@ $wgConf->settings += [
 		'psaltictheorywiki' => [
 			'interface' => [
 				'cosmos-custom-rail-module' => 'normal',
-				'cosmos-custom-sticky-rail-module' => 'sticky',	
+				'cosmos-custom-sticky-rail-module' => 'sticky',
 			],
 			'recentchanges' => 'normal',
 		],
