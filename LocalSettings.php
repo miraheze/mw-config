@@ -7670,8 +7670,6 @@ $wi::$disabledExtensions = [
 	'editsimilar' => 'Incompatible with MediaWiki 1.45',
 	'video' => 'Incompatible with MediaWiki 1.45',
 
-	'wikipoints' => '[[phorge:T15625|T15625]]',
-
 	// Are these still incompatible?
 	'snapwikiskin' => 'Incompatible with MediaWiki 1.45'
 ];
