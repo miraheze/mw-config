@@ -3519,6 +3519,10 @@ $wgConf->settings += [
 			[ 'newtablinks', 'wikiwalk' ],
 			'_self' => [ 'sametablinks' ]
 		],
+		'exttestwikibeta' => [
+			'foo',
+			'bar',
+		],
 		'randrwiki' => [
 			'_blank' => [ '' ]
 		],
