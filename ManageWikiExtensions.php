@@ -2987,6 +2987,7 @@ $wgManageWikiExtensions = [
 		'conflicts' => 'blogpage',
 		'contentModels' => [
 			'blog_post',
+			'blog_root'
 		],
 		'requires' => [],
 		'install' => [
