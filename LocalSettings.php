@@ -5428,6 +5428,9 @@ $wgConf->settings += [
 			'usenewrc' => 0,
 			'thumbsize' => 3,
 		],
+		'+primemonsterwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+realitycompromisedwiki' => [
 			'vector-limited-width' => 0,
 			'vector-page-tools-pinned' => 0,
