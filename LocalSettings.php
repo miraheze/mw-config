@@ -2029,21 +2029,21 @@ $wgConf->settings += [
 		'cafewiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://hybridcafe.wiki/w/img_auth.php/b/b0/PoweredByMediaWiki.svg',
+					'src' => 'https://cafe.miraheze.org/w/img_auth.php/b/b0/PoweredByMediaWiki.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://hybridcafe.wiki/w/img_auth.php/8/81/Miraheze_badge.svg',
+					'src' => 'https://cafe.miraheze.org/w/img_auth.php/8/81/Miraheze_badge.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				]
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://hybridcafe.wiki/w/img_auth.php/0/0f/Badge-ccbysa.svg',
+					'src' => 'https://cafe.miraheze.org/w/img_auth.php/0/0f/Badge-ccbysa.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
 				],
