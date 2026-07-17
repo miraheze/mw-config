@@ -2527,7 +2527,7 @@ $wgConf->settings += [
 					'alt' => 'Powered by MediaWiki',
 				],
 				'miraheze' => [
-					'src' => ' https://static.wikitide.net/computerunionwiki/c/c5/HostedByMiraheze2.svg',
+					'src' => 'https://static.wikitide.net/computerunionwiki/c/c5/HostedByMiraheze2.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				],
