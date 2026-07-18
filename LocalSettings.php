@@ -2522,12 +2522,12 @@ $wgConf->settings += [
 		'computerunionwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/computerunionwiki/4/42/PoweredByMediawiki2.svg',
+					'src' => 'https://static.wikitide.net/computerunionwiki/f/f3/PoweredByMediawiki_2.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
 				],
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/computerunionwiki/c/c5/HostedByMiraheze2.svg',
+					'src' => 'https://static.wikitide.net/computerunionwiki/0/07/HostedByMiraheze_2.svg',
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
 					'alt' => 'Hosted by Miraheze',
 				],
