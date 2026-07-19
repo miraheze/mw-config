@@ -4086,7 +4086,7 @@ $wgConf->settings += [
 		],
 		'+otshestwiki' => [
 			'extendedconfirmed' => [
-				'editextendeconfirmedprotected' => true,
+				'editextendedconfirmedprotected' => true,
 			],
 		],
 		'+phightingwiki' => [
@@ -5790,6 +5790,7 @@ $wgConf->settings += [
 		],
 		'+otshestwiki' => [
 			'editextendedconfirmedprotected',
+			'sysop',
 		],
 		'+phightingwiki' => [
 			'edittrusteduserprotected',
