@@ -5932,7 +5932,7 @@ $wgConf->settings += [
 		'nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
 		],
-		'otshwiki' => [
+		'otshestwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'phightingwiki' => [
