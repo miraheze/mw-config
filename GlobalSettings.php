@@ -123,7 +123,7 @@ if ( $wi->isExtensionActive( 'InterwikiSorting' ) ) {
 	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
 }
 
-if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
+if ( $wi->isAllOfExtensionsActive( '3D', 'MultimediaViewer' ) ) {
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 }
 
