@@ -4085,7 +4085,7 @@ $wgConf->settings += [
 			],
 		],
 		'+otshestwiki' => [
-			'extendedconfirmed' [
+			'extendedconfirmed' => [
 				'editextendeconfirmedprotected' => true,
 			],
 		],
