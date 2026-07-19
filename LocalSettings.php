@@ -176,7 +176,7 @@ $wgConf->settings += [
 
 	// 3D
 	'wg3dProcessor' => [
-		'ext-3d' => [
+		'ext-3D' => [
 			'/usr/bin/xvfb-run',
 			'-a',
 			'-s',
@@ -4617,7 +4617,7 @@ $wgConf->settings += [
 		'+polytopewiki' => [
 			MEDIATYPE_TEXT,
 		],
-		'+ext-3d' => [
+		'+ext-3D' => [
 			'application/sla',
 		],
 	],
