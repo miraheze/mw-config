@@ -4088,7 +4088,7 @@ $wgConf->settings += [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
 			],
-				'sysop' => [
+			'sysop' => [
 				'editextendedconfirmedprotected' => true,
 			],
 		],
