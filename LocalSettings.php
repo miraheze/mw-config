@@ -4084,6 +4084,14 @@ $wgConf->settings += [
 				'edit-admin-pages' => true,
 			],
 		],
+		'+otshestwiki' => [
+			'extendedconfirmed' => [
+				'editextendedconfirmedprotected' => true,
+			],
+			'sysop' => [
+				'editextendedconfirmedprotected' => true,
+			],
+		],
 		'+phightingwiki' => [
 			'trusted_users' => [
 				'edittrusteduserprotected' => true,
@@ -5783,6 +5791,9 @@ $wgConf->settings += [
 		'+nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
 		],
+		'+otshestwiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+phightingwiki' => [
 			'edittrusteduserprotected',
 		],
@@ -5923,6 +5934,9 @@ $wgConf->settings += [
 		],
 		'nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
+		],
+		'otshestwiki' => [
+			'editextendedconfirmedprotected',
 		],
 		'phightingwiki' => [
 			'edittrusteduserprotected',
