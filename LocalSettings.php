@@ -5346,6 +5346,10 @@ $wgConf->settings += [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
 		],
+		'+andrewvanweywiki' => [
+			'minerva-theme' => 'night',
+			'vector-theme' => 'night',
+		],
 		'+banjokazooiewiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'thumbsize' => 3,
