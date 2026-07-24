@@ -130,9 +130,30 @@ class ExtensionsTest extends ManageWikiTestCase {
 									'description' => 'max integer amount of pages a wiki may have in order to enable this extension.',
 								],
 								'permissions' => [
-									'type' => 'array',
-									'items' => [
-										'type' => 'string'
+									'anyOf' => [
+										[
+											'type' => 'object',
+											'properties' => [
+												'enable' => [
+													'type' => 'array',
+													'items' => [
+														'type' => 'string'
+													],
+												],
+												'disable' => [
+													'type' => 'array',
+													'items' => [
+														'type' => 'string'
+													],
+												],
+											],
+										],
+										[
+											'type' => 'array',
+											'itmes' => [
+												'type' => 'string',
+											]
+										]
 									]
 								],
 								'users' => [
