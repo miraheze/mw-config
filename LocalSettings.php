@@ -3300,6 +3300,7 @@ $wgConf->settings += [
 		'gratisdatawiki' => false,
 		'isvwiki' => false,
 		'leborkwiki' => false,
+		'umemorywiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
