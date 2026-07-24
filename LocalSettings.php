@@ -1696,6 +1696,9 @@ $wgConf->settings += [
 		'default' => false,
 		'ysmwikiwiki' => true,
 	],
+	'wgNamespacesWithoutAutoSummaries' => [
+		'1.46' => [],
+	],
 
 	// EditSimilar
 	'wgEditSimilarMaxResultsPool' => [
@@ -1866,7 +1869,10 @@ $wgConf->settings += [
 	],
 
 	'wgWatchlistExpiry' => [
-		'default' => true
+		'default' => true,
+	],
+	'wgEnableWatchlistLabels' => [
+		'1.46' => false,
 	],
 	'wgShortPagesNamespaceExclusions' => [
 		'default' => [],
@@ -5494,6 +5500,12 @@ $wgConf->settings += [
 	],
 	'wmgCodeMirrorEnableDefault' => [
 		'default' => false,
+	],
+	'wgBotPasswordsLimit' => [
+		'1.46' => 100,
+	],
+	'wgUserJsPrefLimit' => [
+		'1.46' => 100,
 	],
 
 	// Preloader
