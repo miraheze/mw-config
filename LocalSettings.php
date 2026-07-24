@@ -6038,7 +6038,7 @@ $wgConf->settings += [
 	],
 	'wgNamespaceRobotPolicies' => [
 		'default' => [
-			NS_SPECIAL => 'noindex',
+			NS_SPECIAL => 'noindex,nofollow',
 		],
 	],
 
