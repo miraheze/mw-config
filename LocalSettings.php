@@ -1082,25 +1082,6 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgCreateWikiClosedReasons' => [
-		'default' => [
-			'Bureaucrat closure' => 'bureaucrat',
-			'Inactivity' => 'inactivity',
-			'Content Policy (commercial activity)' => 'cp-commercial',
-			'Content Policy (deceive, defraud or mislead)' => 'cp-deceive',
-			'Content Policy (duplicate/similar wiki)' => 'cp-duplicate',
-			'Content Policy (file sharing service)' => 'cp-filesharing',
-			'Content Policy (forks)' => 'cp-forks',
-			'Content Policy (illegal US activity)' => 'cp-illegal',
-			'Content Policy (makes it difficult for other wikis)' => 'cp-disruptive',
-			'Content Policy (sexual nature involving minors)' => 'cp-minors',
-			'Content Policy (unsubstantiated insult)' => 'cp-insult',
-			'Content Policy (violence, hatred or harrassment)' => 'cp-violence',
-			'Content Policy (Wikimedia-like wikis/forks)' => 'cp-wikimediafork',
-			'Content Policy (restricted topics)' => 'cp-restricted',
-			'Only contributor and/or bureaucrat banned' => 'contributor-banned',
-		],
-	],
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'db151 (c1)' => 'c1',
