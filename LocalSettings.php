@@ -1084,7 +1084,8 @@ $wgConf->settings += [
 	],
 	'wgCreateWikiClosedReasons' => [
 		'default' => [
-			'Bureaucrat closure' => 'bureaucrat',
+			'Closed by bureaucrat' => 'bureaucrat',
+			'Community initiated closure' => 'community',
 			'Inactivity' => 'inactivity',
 			'Content Policy (commercial activity)' => 'cp-commercial',
 			'Content Policy (deceive, defraud or mislead)' => 'cp-deceive',
@@ -1098,7 +1099,8 @@ $wgConf->settings += [
 			'Content Policy (violence, hatred or harrassment)' => 'cp-violence',
 			'Content Policy (Wikimedia-like wikis/forks)' => 'cp-wikimediafork',
 			'Content Policy (restricted topics)' => 'cp-restricted',
-			'Only contributor and/or bureaucrat banned' => 'contributor-banned',
+			'Terms of Use violation' => 'tou',
+			'Unmanaged wiki' => 'unmanaged',
 		],
 	],
 	'wgCreateWikiDatabaseClusters' => [
