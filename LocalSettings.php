@@ -1094,6 +1094,7 @@ $wgConf->settings += [
 			'Content Policy (forks)' => 'cp-forks',
 			'Content Policy (illegal US activity)' => 'cp-illegal',
 			'Content Policy (makes it difficult for other wikis)' => 'cp-disruptive',
+			'Content Policy (lack of scope or unauthorised scope change)' => 'cp-scope',
 			'Content Policy (sexual nature involving minors)' => 'cp-minors',
 			'Content Policy (unsubstantiated insult)' => 'cp-insult',
 			'Content Policy (violence, hatred or harrassment)' => 'cp-violence',
