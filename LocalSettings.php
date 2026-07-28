@@ -1103,6 +1103,7 @@ $wgConf->settings += [
 			'Trust and Safety action' => 'ts',
 			'Technology Team Action (Terms of Use)' => 'tech-tou',
 			'Unmanaged wiki' => 'unmanaged',
+			'Other' => 'other',
 		],
 	],
 	'wgCreateWikiDatabaseClusters' => [
