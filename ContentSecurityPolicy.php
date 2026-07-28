@@ -52,7 +52,7 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'flo.uri.sh',
 		'challenges.cloudflare.com',
 		'www.youtube.com',
-		'www.wowhead.com'
+		'www.wowhead.com',
 		'tally.so'
 	],
 	'style-src' => [
