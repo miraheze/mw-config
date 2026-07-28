@@ -51,7 +51,9 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'bandcamp.com',
 		'flo.uri.sh',
 		'challenges.cloudflare.com',
-		'www.youtube.com'
+		'www.youtube.com',
+		'www.wowhead.com'
+		'tally.so'
 	],
 	'style-src' => [
 		"'self'",
@@ -151,7 +153,8 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'www.divine-pride.net',
 		'static.divine-pride.net',
 		'legacyofnightwind.com',
-		'cdn.jsdelivr.net'
+		'cdn.jsdelivr.net',
+		'mc-heads.net'
 	],
 	'font-src' => [
 		"'self'",
@@ -226,6 +229,7 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'video.fastly.steamstatic.com',
 		'shared.fastly.steamstatic.com',
 		'*.instatus.com'
+		'tally.so'
 	],
 	'connect-src' => [
 		"'self'",
@@ -253,7 +257,9 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'discord.com',
 		'discordapp.com',
 		'api.steampowered.com',
-		'*.instatus.com'
+		'*.instatus.com',
+		'ss14.com.ua',
+		'www.wowhead.com'
 	],
 ];
 
