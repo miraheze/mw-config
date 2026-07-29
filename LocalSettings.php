@@ -2582,7 +2582,6 @@ $wgConf->settings += [
 				],
 			],
 		],
-	],
 		'etohwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -2627,6 +2626,7 @@ $wgConf->settings += [
 				],
 			],
 		],
+	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
 	],
