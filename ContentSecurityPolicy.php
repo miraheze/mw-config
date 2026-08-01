@@ -228,7 +228,7 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'clips.twitch.tv',
 		'video.fastly.steamstatic.com',
 		'shared.fastly.steamstatic.com',
-		'*.instatus.com'
+		'*.instatus.com',
 		'tally.so'
 	],
 	'connect-src' => [
