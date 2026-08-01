@@ -2653,7 +2653,7 @@ $wgConf->settings += [
 		'ablocksjourneywiki' => [
 			'conecorp' => [
 				'conecorp' => [
-					'src' => 'https://static.wikitide.net/superstarracerswiki/5/53/CONECORP_web_badge.png',
+					'src' => 'https://static.wikitide.net/superstarracerswiki/2/2a/Group_Icon.png',
 					'url' => 'https://conecorp.cc',
 					'alt' => 'An official CONECORP wiki',
 				],
@@ -2683,7 +2683,7 @@ $wgConf->settings += [
 		'superstarracerswiki' => [
 			'conecorp' => [
 				'conecorp' => [
-					'src' => 'https://static.wikitide.net/superstarracerswiki/5/53/CONECORP_web_badge.png',
+					'src' => 'https://static.wikitide.net/superstarracerswiki/2/2a/Group_Icon.png',
 					'url' => 'https://conecorp.cc',
 					'alt' => 'An official CONECORP wiki',
 				],
@@ -2713,7 +2713,7 @@ $wgConf->settings += [
 		'superblox64wiki' => [
 			'conecorp' => [
 				'conecorp' => [
-					'src' => 'https://static.wikitide.net/superstarracerswiki/5/53/CONECORP_web_badge.png',
+					'src' => 'https://static.wikitide.net/superstarracerswiki/2/2a/Group_Icon.png',
 					'url' => 'https://conecorp.cc',
 					'alt' => 'An official CONECORP wiki',
 				],
