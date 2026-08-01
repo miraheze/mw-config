@@ -1954,7 +1954,7 @@ $wgConf->settings += [
 				],
 			],
 		],
-	'arsenalrefreshedwiki' => [
+		'arsenalrefreshedwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
 					'src' => 'https://static.wikitide.net/arsenalrefreshedwiki/b/b0/PoweredByMediaWiki.svg',
@@ -2606,7 +2606,6 @@ $wgConf->settings += [
 				],
 			],
 		],
-	],
 		'etohwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -2628,6 +2627,97 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'ablocksjourneywiki' => [
+			'conecorp' => [
+				'conecorp' => [
+					'src' => 'https://static.wikitide.net/superstarracerswiki/5/53/CONECORP_web_badge.png',
+					'url' => 'https://conecorp.cc',
+					'alt' => 'An official CONECORP wiki',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'superstarracerswiki' => [
+			'conecorp' => [
+				'conecorp' => [
+					'src' => 'https://static.wikitide.net/superstarracerswiki/5/53/CONECORP_web_badge.png',
+					'url' => 'https://conecorp.cc',
+					'alt' => 'An official CONECORP wiki',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'superblox64wiki' => [
+			'conecorp' => [
+				'conecorp' => [
+					'src' => 'https://static.wikitide.net/superstarracerswiki/5/53/CONECORP_web_badge.png',
+					'url' => 'https://conecorp.cc',
+					'alt' => 'An official CONECORP wiki',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
 	],
