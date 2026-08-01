@@ -2627,6 +2627,29 @@ $wgConf->settings += [
 				],
 			],
 		],
+    		'zvhwiki' => [
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/zvhwiki/d/db/MirahezeIcon_Footer.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/zvhwiki/0/08/PoweredByMediaWiki_Footer.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/zvhwiki/6/6c/CC_BY-NC-SA_Footer.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
 		'ablocksjourneywiki' => [
 			'conecorp' => [
 				'conecorp' => [
