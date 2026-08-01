@@ -2627,7 +2627,7 @@ $wgConf->settings += [
 				],
 			],
 		],
-    		'zvhwiki' => [
+		'zvhwiki' => [
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/zvhwiki/d/db/MirahezeIcon_Footer.svg',
@@ -3340,8 +3340,8 @@ $wgConf->settings += [
 		],
 		'+shemwiki' => [
 			'wikipedia' => [
-			'fr',
-			'en'
+				'fr',
+				'en'
 			],
 		],
 		'+snapdatawiki' => [
