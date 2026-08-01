@@ -1982,7 +1982,7 @@ $wgConf->settings += [
                     'url' => 'https://indierobloxwikis.org/',
                     'alt' => 'Part of the Independent Roblox Wiki Alliance'
                 ]             
-            ]
+            ],
             'poweredby' => [
                 'mediawiki' => [
                     'src' => 'https://static.wikitide.net/itemasylumwiki/f/f7/Poweredbymediawiki_badge.svg',
