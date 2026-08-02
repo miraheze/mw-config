@@ -5990,7 +5990,7 @@ $wgConf->settings += [
 		'+ext-AuthorProtect' => [
 			'author',
 		],
-		'+thechurchofthestatuewiki' =>
+		'+thechurchofthestatuewiki' => [
 			'edituserprotected',
 		],
 	],
