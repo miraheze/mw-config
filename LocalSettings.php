@@ -5990,6 +5990,9 @@ $wgConf->settings += [
 		'+ext-AuthorProtect' => [
 			'author',
 		],
+		'+thechurchofthestatuewiki' =>
+			'edituserprotected',
+		],
 	],
 	'wgRestrictionTypes' => [
 		'default' => [
@@ -6124,6 +6127,9 @@ $wgConf->settings += [
 		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
+		],
+		'thechurchofthestatuewiki' => [
+			'edituserprotected',
 		],
 		'+ext-SocialProfile' => [
 			'updatepoints',
