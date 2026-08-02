@@ -1978,7 +1978,7 @@ $wgConf->settings += [
 		'itemasylumwiki' => [
             'irwa' => [
                 'irwa' => [
-                    'src' => 'https://indierobloxwikis.org/assets/website/IRWA-Logo1-white.svg',
+                    'src' => 'https://static.wikitide.net/itemasylumwiki/8/8f/IRWA-logo.svg',
                     'url' => 'https://indierobloxwikis.org/',
                     'alt' => 'Part of the Independent Roblox Wiki Alliance'
                 ]             
