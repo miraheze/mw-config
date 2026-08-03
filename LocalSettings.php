@@ -744,6 +744,12 @@ $wgConf->settings += [
 			'icons' => [],
 		],
 	],
+	'wgCitizenEnableShare' => [
+		'default' => true,
+	],
+	'wgCitizenShareMode' => [
+		'default' => 'auto',
+	],
 
 	// CodeMirror
 	'wgCodeMirrorV6' => [

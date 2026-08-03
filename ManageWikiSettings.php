@@ -4457,6 +4457,34 @@ $wgManageWikiSettings = [
 		'section' => 'styling',
 		'requires' => [],
 	],
+	'wgCitizenEnableShare' => [
+		'name' => 'Citizen Enable Share',
+		'from' => 'citizen',
+		'type' => 'check',
+		'overridedefault' => true,
+		'section' => 'styling',
+		'help' => 'Enable or disable the share button',
+		'requires' => [],
+	],
+	'wgCitizenShareMode' => [
+		'name' => 'Citizen Share Mode',
+		'from' => 'citizen',
+		'type' => 'list',
+		'options' => [
+			'auto' => 'auto',
+			'panel' => 'panel',
+			'native' => 'native',
+		],
+		'overridedefault' => 'auto',
+		'section' => 'styling',
+		'help' => 'Which share UI to present. "auto" (default): try the browser\'s Web Share API first and fall back to Citizen\'s panel when unavailable. "panel": always use Citizen\'s panel. "native": always use the Web Share API, with a clipboard fallback on unsupported browsers.',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgCitizenEnableShare',
+				'value' => true,
+			],
+		],
+	],
 	'wgRelatedArticlesFooterAllowedSkins' => [
 		'name' => 'RelatedArticles Footer Allowed Skins',
 		'from' => 'relatedarticles',
