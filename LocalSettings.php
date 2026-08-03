@@ -698,18 +698,6 @@ $wgConf->settings += [
 	'wgCitizenThemeColor' => [
 		'default' => '#131a21',
 	],
-	'wgCitizenSearchGateway' => [
-		'default' => 'mwActionApi',
-	],
-	'wgCitizenSearchDescriptionSource' => [
-		'default' => 'textextracts',
-	],
-	'wgCitizenMaxSearchResults' => [
-		'default' => 6,
-	],
-	'wgCitizenEnableCommandPalette' => [
-		'default' => true,
-	],
 	'wgCitizenEnableCJKFonts' => [
 		'default' => false,
 	],
