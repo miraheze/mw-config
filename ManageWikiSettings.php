@@ -4406,16 +4406,16 @@ $wgManageWikiSettings = [
 		'help' => 'Defines CSS classes ignored by overflow wrapper',
 		'requires' => [],
 	],
-	'wgCitizenOverflowNowrapClasses' => [
+	'wgCitizenOverflowInheritedClasses' => [
 		'name' => 'Citizen Overflow Inherited Classes',
 		'from' => 'citizen',
 		'type' => 'texts',
 		'overridedefault' => [
-			"floatleft",
-			"floatright",
+			'floatleft',
+			'floatright',
 		],
 		'section' => 'styling',
-		'help' => 'Defines css classes inherited by overflow wrapper',
+		'help' => 'Defines CSS classes inherited by overflow wrapper',
 		'requires' => [],
 	],
 	'wgCitizenHeaderPosition' => [
