@@ -4319,7 +4319,7 @@ $wgManageWikiSettings = [
 		],
 		'overridedefault' => 'auto',
 		'section' => 'styling',
-		'help' => 'The default theme of the citizen skin.',
+		'help' => 'The default theme of the Citizen skin.',
 		'requires' => [],
 	],
 	'wgCitizenEnableCollapsibleSections' => [
