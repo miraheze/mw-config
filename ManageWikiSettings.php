@@ -4311,15 +4311,10 @@ $wgManageWikiSettings = [
 	'wgCitizenThemeDefault' => [
 		'name' => 'Citizen Theme Default',
 		'from' => 'citizen',
-		'type' => 'list',
-		'options' => [
-			'Use System Setting' => 'auto',
-			'Light Mode' => 'light',
-			'Dark Mode' => 'dark',
-		],
+		'type' => 'text',
 		'overridedefault' => 'auto',
 		'section' => 'styling',
-		'help' => 'The default theme of the Citizen skin.',
+		'help' => 'Default theme of the Citizen skin. Accepts "auto", "light", "dark", or any theme value such as "black" or a wiki-defined theme.',
 		'requires' => [],
 	],
 	'wgCitizenEnableCollapsibleSections' => [
