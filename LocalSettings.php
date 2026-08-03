@@ -2429,6 +2429,13 @@ $wgConf->settings += [
 			],
 		],
 		'utgwiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
