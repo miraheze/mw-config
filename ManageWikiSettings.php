@@ -4100,7 +4100,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgMedikMobileSitename' => [
-	'name' => 'Medik Mobile Sitename',
+		'name' => 'Medik Mobile Sitename',
 		'from' => 'medik',
 		'type' => 'text',
 		'overridedefault' => 'null',
@@ -4411,8 +4411,8 @@ $wgManageWikiSettings = [
 		'from' => 'citizen',
 		'type' => 'texts',
 		'overridedefault' => [
-				"floatleft",
-				"floatright",
+			"floatleft",
+			"floatright",
 		],
 		'section' => 'styling',
 		'help' => 'Defines css classes inherited by overflow wrapper',
@@ -4433,7 +4433,7 @@ $wgManageWikiSettings = [
 		'help' => 'Position of the header on the desktop layout of the Citizen skin.',
 		'requires' => [],
 	],
-		'wgCitizenHeaderPositionMobile' => [
+	'wgCitizenHeaderPositionMobile' => [
 		'name' => 'Citizen Header Position Mobile',
 		'from' => 'citizen',
 		'type' => 'list',
@@ -4446,7 +4446,7 @@ $wgManageWikiSettings = [
 		'help' => 'Position of the header on the mobile and tablet layout (below the desktop breakpoint).',
 		'requires' => [],
 	],
-		'wgCitizenTableOfContentsCollapseAtCount' => [
+	'wgCitizenTableOfContentsCollapseAtCount' => [
 		'name' => 'Table of Contents Collapse at Count',
 		'from' => 'citizen',
 		'type' => 'integer',
