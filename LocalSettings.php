@@ -5961,6 +5961,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
+		'+thechurchofthestatuewiki' => [
+			'edituserprotected',
+		],
 		'+tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -5989,9 +5992,6 @@ $wgConf->settings += [
 		],
 		'+ext-AuthorProtect' => [
 			'author',
-		],
-		'+thechurchofthestatuewiki' => [
-			'edituserprotected',
 		],
 	],
 	'wgRestrictionTypes' => [
@@ -6107,16 +6107,19 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'tikiwiki' => [
-			'editextendedconfirmedprotected',
+		'thechurchofthestatuewiki' => [
+			'edituserprotected',
 		],
-		'ultimatelevelbuilderwiki' => [
-			'editemailconfirmedprotected',
+		'tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
+		],
+		'ultimatelevelbuilderwiki' => [
+			'editemailconfirmedprotected',
+			'editextendedconfirmedprotected',
 		],
 		'weltseelewiki' => [
 			'editresearcherprotected',
@@ -6127,9 +6130,6 @@ $wgConf->settings += [
 		],
 		'ysmwikiwiki' => [
 			'editextendedconfirmedprotected',
-		],
-		'thechurchofthestatuewiki' => [
-			'edituserprotected',
 		],
 		'+ext-SocialProfile' => [
 			'updatepoints',
