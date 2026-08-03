@@ -689,6 +689,9 @@ $wgConf->settings += [
 	'wgCitizenEnableCollapsibleSections' => [
 		'default' => true,
 	],
+	'wgCitizenEnableDrawerSiteStats' => [
+		'default' => true,
+	],
 	'wgCitizenGlobalToolsPortlet' => [
 		'default' => '',
 	],
@@ -701,6 +704,9 @@ $wgConf->settings += [
 	'wgCitizenEnableCJKFonts' => [
 		'default' => false,
 	],
+	'wgCitizenEnableARFonts' => [
+		'default' => false,
+	],
 	'wgCitizenOverflowNowrapClasses' => [
 		'default' => [
 			'noresize',
@@ -711,8 +717,20 @@ $wgConf->settings += [
 			'srf-datatable',
 		],
 	],
+	'wgCitizenOverflowInheritedClasses' => [
+		'default' => [
+			'floatleft',
+			'floatright',
+		],
+	],
 	'wgCitizenHeaderPosition' => [
 		'default' => 'left',
+	],
+	'wgCitizenHeaderPositionMobile' => [
+		'default' => 'bottom',
+	],
+	'wgCitizenTableOfContentsCollapseAtCount' => [
+		'default' => 28,
 	],
 
 	// CodeMirror
