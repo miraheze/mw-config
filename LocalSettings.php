@@ -732,6 +732,18 @@ $wgConf->settings += [
 	'wgCitizenTableOfContentsCollapseAtCount' => [
 		'default' => 28,
 	],
+	'wgCitizenEnableManifest' => [
+		'default' => true,
+	],
+	'wgCitizenManifestOptions' => [
+		'default' => [
+			'background_color' => '#0d0e12',
+			'description' => '',
+			'short_name' => '',
+			'theme_color' => '#0d0e12',
+			'icons' => [],
+		],
+	],
 
 	// CodeMirror
 	'wgCodeMirrorV6' => [
