@@ -3510,7 +3510,7 @@ $wgConf->settings += [
 		'urbanshadewiki' => [ 'roblox://' ],
 		'utgwiki' => [ 'roblox://' ],
 		'farmwiki' => [ 'roblox://' ],
-		'reticulum' => [ 'nomadnetwork://', 'rns://' ],
+		'reticulumwiki' => [ 'nomadnetwork://', 'rns://' ],
 		// file protocol only allowed on private wikis
 		'rainversewiki' => [ 'gemini://' ],
 		'100acgwiki' => [ 'infoflow://' ],
