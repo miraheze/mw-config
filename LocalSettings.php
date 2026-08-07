@@ -4371,6 +4371,7 @@ $wgConf->settings += [
 				'createwiki-deleterequest',
 				'createwiki-suppressionlog',
 				'createwiki-suppressrequest',
+				'editallcustomprotected',
 				'editincidents',
 				'editothersprofiles-private',
 				'generate-random-hash',
