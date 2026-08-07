@@ -6014,6 +6014,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
+		'+thechurchofthestatuewiki' => [
+			'edituserprotected',
+		],
 		'+tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -6157,16 +6160,19 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'tikiwiki' => [
-			'editextendedconfirmedprotected',
+		'thechurchofthestatuewiki' => [
+			'edituserprotected',
 		],
-		'ultimatelevelbuilderwiki' => [
-			'editemailconfirmedprotected',
+		'tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
+		],
+		'ultimatelevelbuilderwiki' => [
+			'editemailconfirmedprotected',
+			'editextendedconfirmedprotected',
 		],
 		'weltseelewiki' => [
 			'editresearcherprotected',
