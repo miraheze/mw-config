@@ -1539,6 +1539,7 @@ $wgManageWikiSettings = [
 	''wgIWDprefixes' => [
     	'name' => 'Interwiki Dispatcher',
 		'from' => 'mediawiki',
+		'type' => 'array',
 		'global' => true,
 		'type' => 'check'
     	'section' => 'links',
