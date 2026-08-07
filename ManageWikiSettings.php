@@ -1536,6 +1536,17 @@ $wgManageWikiSettings = [
 		'help' => 'Set a default target for external links.',
 		'requires' => [],
 	],
+	''wgIWDprefixes' => [
+    	'name' => 'Interwiki Dispatcher',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check'
+    	'section' => 'links',
+    	'overridedefault' => true,
+    	'section' => 'links',
+    	'help' => 'If enabled, you will be able to control multi-level interwiki prefixes on your [[Special:Interwiki]] table', // i18n key or descriptive comment
+		'requires' => [],
+	],
 	'wgNoFollowLinks' => [
 		'name' => 'NoFollow Links',
 		'from' => 'mediawiki',
