@@ -3490,6 +3490,7 @@ $wgConf->settings += [
 		'gratisdatawiki' => false,
 		'isvwiki' => false,
 		'leborkwiki' => false,
+		'umemorywiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
@@ -4371,6 +4372,7 @@ $wgConf->settings += [
 				'createwiki-deleterequest',
 				'createwiki-suppressionlog',
 				'createwiki-suppressrequest',
+				'editallcustomprotected',
 				'editincidents',
 				'editothersprofiles-private',
 				'generate-random-hash',
