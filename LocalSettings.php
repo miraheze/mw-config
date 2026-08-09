@@ -1088,6 +1088,7 @@ $wgConf->settings += [
 			'Community initiated closure' => 'community',
 			'Inactivity' => 'inactivity',
 			'Content Policy (commercial activity)' => 'cp-commercial',
+			'Content Policy (copyright and/or licensing violations)' => 'cp-copyright',
 			'Content Policy (deceive, defraud or mislead)' => 'cp-deceive',
 			'Content Policy (duplicate/similar wiki)' => 'cp-duplicate',
 			'Content Policy (file sharing service)' => 'cp-filesharing',
