@@ -165,7 +165,7 @@ $wgManageWikiNamespacesAdditional = [
 			NS_PROJECT => true,
 			NS_TEMPLATE => true,
 			NS_HELP => true,
-			NS_MODULE => true,
+			828 => true,
 			'default' => false,
 		],
 		'help' => '',
