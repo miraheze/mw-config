@@ -2794,6 +2794,15 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'+capoeirawiki' => [
+			'iwf' => [
+				'iwf' => [
+					'src' => 'https://static.wikitide.net/capoeirawiki/3/38/Iwf_footer_icon.png',
+					'url' => 'https://independentwikifederation.org',
+					'alt' => 'Member of the Independent Wiki Federation',
+				],
+			],
+		],
 	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
