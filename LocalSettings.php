@@ -1977,6 +1977,13 @@ $wgConf->settings += [
 			],
 		],
 		'itemasylumwiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/itemasylumwiki/8/8f/IRWA-logo.svg',
+					'url' => 'https://indierobloxwikis.org/',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'poweredby' => [
 				'mediawiki' => [
 					'src' => 'https://static.wikitide.net/itemasylumwiki/f/f7/Poweredbymediawiki_badge.svg',
