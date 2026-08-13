@@ -1088,6 +1088,7 @@ $wgConf->settings += [
 			'Community initiated closure' => 'community',
 			'Inactivity' => 'inactivity',
 			'Content Policy (commercial activity)' => 'cp-commercial',
+			'Content Policy (copyright and/or licensing violations)' => 'cp-copyright',
 			'Content Policy (deceive, defraud or mislead)' => 'cp-deceive',
 			'Content Policy (duplicate/similar wiki)' => 'cp-duplicate',
 			'Content Policy (file sharing service)' => 'cp-filesharing',
@@ -1954,7 +1955,7 @@ $wgConf->settings += [
 				],
 			],
 		],
-	'arsenalrefreshedwiki' => [
+		'arsenalrefreshedwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
 					'src' => 'https://static.wikitide.net/arsenalrefreshedwiki/b/b0/PoweredByMediaWiki.svg',
@@ -2436,6 +2437,13 @@ $wgConf->settings += [
 			],
 		],
 		'utgwiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
@@ -2452,7 +2460,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'src' => 'https://static.wikitide.net/utgwiki/3/33/Badge-ccbyncsa.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
 				],
@@ -2613,7 +2621,6 @@ $wgConf->settings += [
 				],
 			],
 		],
-	],
 		'etohwiki' => [
 			'poweredby' => [
 				'mediawiki' => [
@@ -2635,6 +2642,166 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'zvhwiki' => [
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/zvhwiki/d/db/MirahezeIcon_Footer.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/zvhwiki/0/08/PoweredByMediaWiki_Footer.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/zvhwiki/6/6c/CC_BY-NC-SA_Footer.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'ablocksjourneywiki' => [
+			'conecorp' => [
+				'conecorp' => [
+					'src' => 'https://static.wikitide.net/superstarracerswiki/2/2a/Group_Icon.png',
+					'url' => 'https://conecorp.cc',
+					'alt' => 'An official CONECORP wiki',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'superstarracerswiki' => [
+			'conecorp' => [
+				'conecorp' => [
+					'src' => 'https://static.wikitide.net/superstarracerswiki/2/2a/Group_Icon.png',
+					'url' => 'https://conecorp.cc',
+					'alt' => 'An official CONECORP wiki',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'superblox64wiki' => [
+			'conecorp' => [
+				'conecorp' => [
+					'src' => 'https://static.wikitide.net/superstarracerswiki/2/2a/Group_Icon.png',
+					'url' => 'https://conecorp.cc',
+					'alt' => 'An official CONECORP wiki',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/utgwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/utgwiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/utgwiki/0/0f/Badge-ccbysa.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International (CC BY-NC-SA 4.0)',
+				],
+			],
+		],
+		'lectvswiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/lectvswiki/9/9e/Footer-MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/lectvswiki/8/89/Footer-Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/lectvswiki/7/7a/Footer-License.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
+		'blocktaleswiki' => [
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/blocktaleswiki/9/9e/Footer-MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/blocktaleswiki/8/89/Footer-Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/blocktaleswiki/7/7a/Footer-License.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
+	],
 	'wmgWikiapiaryFooterPageName' => [
 		'default' => '',
 	],
@@ -3234,8 +3401,8 @@ $wgConf->settings += [
 		],
 		'+shemwiki' => [
 			'wikipedia' => [
-			'fr',
-			'en'
+				'fr',
+				'en'
 			],
 		],
 		'+snapdatawiki' => [
@@ -3331,6 +3498,7 @@ $wgConf->settings += [
 		'gratisdatawiki' => false,
 		'isvwiki' => false,
 		'leborkwiki' => false,
+		'umemorywiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
@@ -4212,6 +4380,7 @@ $wgConf->settings += [
 				'createwiki-deleterequest',
 				'createwiki-suppressionlog',
 				'createwiki-suppressrequest',
+				'editallcustomprotected',
 				'editincidents',
 				'editothersprofiles-private',
 				'generate-random-hash',
@@ -5855,6 +6024,9 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
+		'+thechurchofthestatuewiki' => [
+			'edituserprotected',
+		],
 		'+tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -5998,16 +6170,19 @@ $wgConf->settings += [
 			'editbureaucratprotected',
 			'editconsulprotected',
 		],
-		'tikiwiki' => [
-			'editextendedconfirmedprotected',
+		'thechurchofthestatuewiki' => [
+			'edituserprotected',
 		],
-		'ultimatelevelbuilderwiki' => [
-			'editemailconfirmedprotected',
+		'tikiwiki' => [
 			'editextendedconfirmedprotected',
 		],
 		'trwdeploymentwiki' => [
 			'bureaucrat',
 			'consul',
+		],
+		'ultimatelevelbuilderwiki' => [
+			'editemailconfirmedprotected',
+			'editextendedconfirmedprotected',
 		],
 		'weltseelewiki' => [
 			'editresearcherprotected',
