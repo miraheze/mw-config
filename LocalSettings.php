@@ -2794,7 +2794,7 @@ $wgConf->settings += [
 				],
 			],
 		],
-		'+capoeirawiki' => [
+		'capoeirawiki' => [
 			'iwf' => [
 				'iwf' => [
 					'src' => 'https://static.wikitide.net/capoeirawiki/3/38/Iwf_footer_icon.png',
