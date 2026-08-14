@@ -4453,7 +4453,6 @@ $wgConf->settings += [
 			'user' => [
 				'autoconfirmed',
 				'noratelimit',
-				'skipcaptcha',
 				'managewiki-core',
 				'managewiki-extensions',
 				'managewiki-namespaces',
