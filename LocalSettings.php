@@ -7907,6 +7907,7 @@ $wi::$disabledExtensions = [
 	'score' => '[[phorge:T5863|T5863]]',
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 	'maps' => '[[phorge:T15445|T15445]]',
+	'externaldata' => '[[phorge:T15833|T15833]]',
 
 	'lingo' => 'Currently broken',
 
