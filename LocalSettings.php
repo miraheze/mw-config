@@ -7640,6 +7640,9 @@ $wgConf->settings += [
 	'wgNaverSiteVerificationKey' => [
 		'default' => false,
 	],
+	'wgBaiduSiteVerificationKey' => [
+		'default' => false,
+	],
 	'wgWikiSeoDefaultImage' => [
 		'default' => null,
 	],
