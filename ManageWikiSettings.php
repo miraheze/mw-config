@@ -3150,6 +3150,15 @@ $wgManageWikiSettings = [
 		'help' => 'Site verification key for Naver.',
 		'requires' => [],
 	],
+	'wgBaiduSiteVerificationKey' => [
+		'name' => 'Baidu Site Verification Key (WikiSEO)',
+		'from' => 'wikiseo',
+		'type' => 'text',
+		'overridedefault' => false,
+		'section' => 'seo',
+		'help' => 'Site verification key for Baidu Search Resource Platform.',
+		'requires' => [],
+	],
 	'wgWikiSeoDefaultImage' => [
 		'name' => 'Default SEO Image (WikiSEO)',
 		'from' => 'wikiseo',
