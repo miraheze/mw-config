@@ -5311,6 +5311,18 @@ $wgConf->settings += [
 	],
 
 	// ParserMigration
+	'wgParserMigrationEnableParsoidMobileArticlePages' => [
+		'default' => false,
+	],
+	'wgParserMigrationEnableParsoidMobileTalkPages' => [
+		'default' => false,
+	],
+	'wgParserMigrationEnableParsoidArticlePages' => [
+		'default' => false,
+	],
+	'wgParserMigrationEnableParsoidTalkPages' => [
+		'default' => false,
+	],
 	'wgParserMigrationEnableQueryString' => [
 		'default' => true,
 	],
