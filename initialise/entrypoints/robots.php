@@ -52,11 +52,13 @@ function wfRobotsGetDefaultRules(): array {
 		'Disallow: /w/',
 		'Disallow: /geoip',
 		'Disallow: /rest_v1/',
-		# All action pages and veaction
+		# All action pages, veaction and mobileaction
 		'Disallow: /*?action=',
 		'Disallow: /*?*&action=',
 		'Disallow: /*?veaction=',
 		'Disallow: /*?*&veaction=',
+		'Disallow: /*?mobileaction=',
+		'Disallow: /*?*&mobileaction=',
 		# Diffs and permalinks
 		'Disallow: /*?diff=',
 		'Disallow: /*?*&diff=',
