@@ -5544,7 +5544,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgPortableInfoboxUseHeadings' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgPortableInfoboxCacheRenderers' => [
 		'default' => true,
