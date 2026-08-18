@@ -1572,9 +1572,8 @@ $wgManageWikiExtensions = [
 	'pageforms' => [
 		'name' => 'PageForms',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Page_Forms',
-		'help' => 'Not enabled on new wikis, per preformance issues.'
+		'help' => 'Not enabled on new wikis, per preformance issues.',
 		'conflicts' => false,
-		
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
