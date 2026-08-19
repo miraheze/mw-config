@@ -3813,10 +3813,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgEnableSpecialMute' => [
-		'default' => true,
+		'1.45' => true,
 	],
 	'wgEnableUserEmailMuteList' => [
-		'default' => true,
+		'1.45' => true,
 	],
 
 	// ManageWiki
@@ -7033,7 +7033,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgVectorNightMode' => [
-		'default' => [
+		'1.45' => [
 			'logged_out' => false,
 			'logged_in' => true,
 			'beta' => false,
