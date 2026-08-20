@@ -49,7 +49,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'hcaptcha.com',
 		'*.hcaptcha.com',
 		'bandcamp.com',
-		'flo.uri.sh',
 		'challenges.cloudflare.com',
 		'www.youtube.com',
 		'www.wowhead.com',
@@ -99,6 +98,7 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'*.wikitide.org',
 		'*.wikitide.net',
 		'upload.wikimedia.org',
+		'thumb.wikimedia.org',
 		'wikimedia.org',
 		'maps.google.com',
 		'www.gstatic.com',
@@ -132,7 +132,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'platform.twitter.com',
 		'syndication.twitter.com',
 		'img.newspapers.com',
-		'cdn.smutstone.com',
 		'storage.googleapis.com',
 		'*.fbcdn.net',
 		'i.ytimg.com',
@@ -150,9 +149,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'cms-imgp.jw-cdn.org',
 		'hosted.weblate.org',
 		'minecraft.wiki',
-		'www.divine-pride.net',
-		'static.divine-pride.net',
-		'legacyofnightwind.com',
 		'cdn.jsdelivr.net',
 		'mc-heads.net'
 	],
@@ -258,7 +254,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'discordapp.com',
 		'api.steampowered.com',
 		'*.instatus.com',
-		'ss14.com.ua',
 		'www.wowhead.com'
 	],
 ];
@@ -276,6 +271,27 @@ switch ( $wgDBname ) {
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'script-src' => [
 				'example.com',
+			],
+		];
+		break;
+	case 'actewiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'script-src' => [
+				'flo.uri.sh',
+			],
+		];
+		break;
+	case 'smutstonewiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'img-src' => [
+				'cdn.smutstone.com',
+			],
+		];
+		break;
+	case 'ss14uawiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'connect-src' => [
+				'ss14.com.ua',
 			],
 		];
 		break;

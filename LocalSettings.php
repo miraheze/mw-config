@@ -3814,10 +3814,10 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgEnableSpecialMute' => [
-		'default' => true,
+		'1.45' => true,
 	],
 	'wgEnableUserEmailMuteList' => [
-		'default' => true,
+		'1.45' => true,
 	],
 
 	// ManageWiki
@@ -4071,6 +4071,7 @@ $wgConf->settings += [
 				'managewiki-settings' => true,
 				'managewiki-restricted' => true,
 				'noratelimit' => true,
+				'massmessage' => true,
 			],
 			'checkuser' => [
 				'abusefilter-privatedetails' => true,
@@ -4105,19 +4106,14 @@ $wgConf->settings += [
 				'centralauth-lock' => true,
 				'centralauth-suppress' => true,
 				'centralauth-rename' => true,
+				'centralnotice-admin' => true,
 				'createwiki' => true,
 				'createwiki-deleterequest' => true,
-				'sendemail' => true,
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
 				'managewiki-core' => true,
-				'managewiki-extensions' => true,
-				'managewiki-namespaces' => true,
-				'managewiki-permissions' => true,
-				'managewiki-settings' => true,
-				'managewiki-restricted' => true,
-				'noratelimit' => true,
+				'managewiki-editdefault' => true,
 				'oathauth-verify-user' => true,
 				'userrights' => true,
 				'userrights-interwiki' => true,
@@ -4126,12 +4122,17 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'techteam' => [
-				'sendemail' => true,
+				'createwiki-deleterequest' => true,
+				'centralauth-rename' => true,
+				'centralnotice-admin' => true,
+				'createwiki' => true,
 				'globalgroupmembership' => true,
 				'globalgrouppermissions' => true,
 				'handle-custom-domain-requests' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'managewiki-editdefault' => true,
+				'massmessage' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
 				'view-private-import-requests' => true,
@@ -4141,6 +4142,7 @@ $wgConf->settings += [
 				'createwiki-suppressionlog' => true,
 			],
 			'trustandsafety' => [
+				'createwiki-deleterequest' => true,
 				'userrights' => true,
 				'sendemail' => true,
 				'globalblock' => true,
@@ -4153,6 +4155,9 @@ $wgConf->settings += [
 				'oathauth-disable-for-user' => true,
 				'oathauth-verify-user' => true,
 				'view-private-import-requests' => true,
+				'managewiki-core' => true,
+				'managewiki-privacy' => true,
+				'massmessage' => true,
 			],
 			'sysop' => [
 				'interwiki' => true,
@@ -4165,6 +4170,10 @@ $wgConf->settings += [
 			'wiki-creator' => [
 				'createwiki' => true,
 				'createwiki-deleterequest' => true,
+			],
+			'wiki-mechanic' => [
+				'handle-import-requests' => true,
+				'handle-import-request-interwiki' => true,
 			],
 		],
 		'+metawikibeta' => [
@@ -5515,7 +5524,7 @@ $wgConf->settings += [
 				'MaximalPasswordLength' => [ 'value' => 4096, 'suggestChangeOnLogin' => true ],
 				'PasswordNotInCommonList' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
 			],
-			'wiki-mechanics' => [
+			'wiki-mechanic' => [
 				'MinimalPasswordLength' => [ 'value' => 10, 'suggestChangeOnLogin' => true, 'forceChange' => true ],
 				'MinimumPasswordLengthToLogin' => [ 'value' => 1 ],
 				'PasswordCannotBeSubstringInUsername' => [ 'value' => true, 'suggestChangeOnLogin' => true ],
@@ -7025,7 +7034,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgVectorNightMode' => [
-		'default' => [
+		'1.45' => [
 			'logged_out' => false,
 			'logged_in' => true,
 			'beta' => false,
