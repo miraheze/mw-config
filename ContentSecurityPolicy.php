@@ -99,7 +99,7 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'*.wikitide.org',
 		'*.wikitide.net',
 		'upload.wikimedia.org',
-	    'thumb.wikimedia.org',
+		'thumb.wikimedia.org',
 		'wikimedia.org',
 		'maps.google.com',
 		'www.gstatic.com',
