@@ -5927,16 +5927,16 @@ $wgConf->settings += [
 	'wgRequestImportUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000 (Miraheze)',
-			'Reception123',
-			'Universal Omega',
+			'Reception123 (Miraheze)',
+			'Universal Omega (Miraheze)',
 			'RhinosF1 (Miraheze)',
 		],
 	],
 	'wgRequestImportUsersNotifiedOnFailedImports' => [
 		'default' => [
 			'MacFan4000 (Miraheze)',
-			'Reception123',
-			'Universal Omega',
+			'Reception123 (Miraheze)',
+			'Universal Omega (Miraheze)',
 			'RhinosF1 (Miraheze)',
 		],
 	],
