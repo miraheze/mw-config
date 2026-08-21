@@ -3441,7 +3441,9 @@ $wgConf->settings += [
 			'zhwikipedia',
 		],
 		'+ext-Bucket' => [
-			'bucketwiki',
+			'mh' => [
+				'bucket',
+			],
 		],
 	],
 
