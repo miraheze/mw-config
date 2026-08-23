@@ -54,10 +54,10 @@ if ( PHP_SAPI === 'cli' ) {
 }
 
 /**
- * When using ?forceprofile=1, a profile can be found as an HTML comment
+ * When using ?forcexhprof=1, a profile can be found as an HTML comment
  * Disabled on production hosts because it seems to be causing performance issues (how ironic)
  */
-$forceprofile = (int)( $_GET['forceprofile'] ?? 0 );
+$forceprofile = (int)( $_GET['forcexhprof'] ?? 0 );
 if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
 	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
 	xhprof_enable( $xhprofFlags );
