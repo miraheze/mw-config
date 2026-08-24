@@ -3799,11 +3799,24 @@ $wgConf->settings += [
 	],
 	'wgSMTP' => [
 		'default' => [
-			'host' => 'ssl://smtp-relay.gmail.com',
+			'host' => 'ssl://bastion.fsslc.wtnet',
 			'localhost' => '::1',
 			'port' => 465,
 			'IDHost' => 'miraheze.org',
 			'auth' => false,
+			/**
+			 * Connection is still TLS end to end, socat just passes the raw bytes through.
+			 * The cert returned belongs to smtp-relay.gmail.com, not the bastion.
+			 * Hostname check would fail every time since the names can never match.
+			 * Peer verification off here does not mean unencrypted.
+			 */
+			'socket_options' => [
+				'ssl' => [
+					'verify_peer' => false,
+					'verify_peer_name' => false,
+					'allow_self_signed' => true,
+				],
+			],
 		],
 	],
 	'wgEnotifWatchlist' => [
