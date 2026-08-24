@@ -7,7 +7,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-if ( str_starts_with( wfHostname(), 'test' ) ) {
+if ( $wi->isBeta() ) {
 	$wgSpeedscopeEndpoint = 'https://speedscope.wikitide.net';
 	$wgSpeedscopeEnvironment = 'beta';
 	$wgSpeedscopeExposeCPUInfo = false;
