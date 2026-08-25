@@ -7,14 +7,15 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 	die( 'Not an entry point.' );
 }
 
-if ( str_starts_with( wfHostname(), 'test' ) ) {
-	$wgSpeedscopeEndpoint = 'https://speedscope.wikitide.net';
-	$wgSpeedscopeEnvironment = 'beta';
-	$wgSpeedscopeExposeCPUInfo = false;
-	$wgSpeedscopeSamplingRates = [];
-	require_once "$IP/extensions/Speedscope/bootstrap.php";
-	wfLoadExtension( 'Speedscope' );
-}
+$wgSpeedscopeEndpoint = 'https://speedscope.wikitide.net';
+$wgSpeedscopeEnvironment = str_starts_with( wfHostname(), 'test' ) ? 'beta' : 'prod';
+$wgSpeedscopeExcludedEntryPoints = [ 'cli', 'RunSingleJob' ];
+$wgSpeedscopeExposeCPUInfo = false;
+$wgSpeedscopeSamplingRates = [
+	'prod' => 0,
+];
+$wgSpeedscopeLogToStatsd = false;
+require_once "$IP/extensions/Speedscope/bootstrap.php";
 
 if ( PHP_SAPI !== 'cli' ) {
 	header( "Cache-control: no-cache" );

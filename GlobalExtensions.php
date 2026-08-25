@@ -38,6 +38,7 @@ wfLoadExtensions( [
 	'Scribunto',
 	// 'SecureLinkFixer',
 	'SpamBlacklist',
+	'Speedscope',
 	// 'StopForumSpam',
 	'TitleBlacklist',
 	'TorBlock',
