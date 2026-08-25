@@ -45,11 +45,13 @@ if ( !isset( $event['database'] ) ) {
 	throw new Exception( 'Invalid event received! ' . json_encode( $event ) );
 }
 
+define( 'MW_ENTRY_POINT', 'RunSingleJob' );
 define( 'MEDIAWIKI_JOB_RUNNER', 1 );
 define( 'MW_DB', $event['database'] );
 
 require_once __DIR__ . '/../initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
+MediaWiki\Profiler\ProfilingContext::singleton()->init( 'miraheze', MW_ENTRY_POINT );
 
 // fatals but not random I/O warnings
 error_reporting( E_ERROR );
