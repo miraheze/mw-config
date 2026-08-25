@@ -9,7 +9,7 @@ if ( !defined( 'MEDIAWIKI' ) ) {
 
 $wgSpeedscopeEndpoint = 'https://speedscope.wikitide.net';
 $wgSpeedscopeEnvironment = str_starts_with( wfHostname(), 'test' ) ? 'beta' : 'prod';
-$wgSpeedscopeExcludedEntryPoints = ['cli', 'RunSingleJob'];
+$wgSpeedscopeExcludedEntryPoints = [ 'cli', 'RunSingleJob' ];
 $wgSpeedscopeExposeCPUInfo = false;
 $wgSpeedscopeSamplingRates = [
 	'prod' => 0,
