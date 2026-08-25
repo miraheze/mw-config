@@ -24,6 +24,7 @@
 use MediaWiki\Exception\MWExceptionHandler;
 use MediaWiki\Extension\EventBus\JobExecutor;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Profiler\ProfilingContext;
 
 if ( $_SERVER['REQUEST_METHOD'] !== 'POST' ) {
 	http_response_code( 405 );
@@ -51,7 +52,7 @@ define( 'MW_DB', $event['database'] );
 
 require_once __DIR__ . '/../initialise/MirahezeFunctions.php';
 require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
-MediaWiki\Profiler\ProfilingContext::singleton()->init( 'miraheze', MW_ENTRY_POINT );
+ProfilingContext::singleton()->init( 'miraheze', MW_ENTRY_POINT );
 
 // fatals but not random I/O warnings
 error_reporting( E_ERROR );
