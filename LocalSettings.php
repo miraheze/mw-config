@@ -14,7 +14,7 @@ $wgSpeedscopeExposeCPUInfo = false;
 $wgSpeedscopeSamplingRates = [
 	'prod' => 0.002,
 ];
-$wgSpeedscopeLogToStatsd = false;
+$wgSpeedscopeLogToStatsd = true;
 require_once "$IP/extensions/Speedscope/bootstrap.php";
 
 if ( PHP_SAPI !== 'cli' ) {
