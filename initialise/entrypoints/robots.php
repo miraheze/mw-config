@@ -8,8 +8,11 @@ require MirahezeFunctions::getMediaWiki( 'includes/WebStart.php' );
 
 use MediaWiki\Content\TextContent;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\Profiler\ProfilingContext;
 use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
+
+ProfilingContext::singleton()->init( 'miraheze', MW_ENTRY_POINT );
 
 /**
  * Disallow lines for the localized/percent-decoded Special: page prefixes.
