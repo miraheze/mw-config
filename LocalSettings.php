@@ -1241,6 +1241,14 @@ $wgConf->settings += [
 			'Uncategorised' => 'uncategorised',
 		],
 	],
+	'wgCreateWikiInactiveExemptExpiryOptions' => [
+		'default' => [
+			'Indefinite' => 'indefinite',
+			'1 year' => '1 year',
+			'2 years' => '2 years',
+			'3 years' => '3 years',
+		],
+	],
 	'wgCreateWikiInactiveExemptReasonOptions' => [
 		'default' => [
 			'Wiki is well-documented, publicly useful, and unlikely to need frequent edits.' => 'comp',
