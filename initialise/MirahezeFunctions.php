@@ -269,6 +269,7 @@ class MirahezeFunctions {
 
 					$servers[$db] = $data['u']
 						?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
+					break;
 				}
 			}
 		}
