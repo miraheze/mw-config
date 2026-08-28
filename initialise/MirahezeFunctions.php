@@ -95,15 +95,17 @@ class MirahezeFunctions {
 
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
+		$sitenames = self::getSitenames();
+
 		$this->server = self::getServer();
-		$this->sitename = self::getSiteName();
+		$this->sitename = self::getSiteName( $sitenames );
 		$this->missing = self::isMissing();
 		$this->realm = self::getRealm();
 		$this->version = self::getMediaWikiVersion();
 
 		$this->setDatabase();
 		$this->setServers();
-		$this->setSiteNames();
+		$this->setSiteNames( $sitenames );
 	}
 
 	public static function getLocalDatabases(): array {
@@ -405,10 +407,10 @@ class MirahezeFunctions {
 		$wgServer = $this->server;
 	}
 
-	public function setSiteNames(): void {
+	public function setSiteNames( array $sitenames ): void {
 		global $wgConf, $wgSitename;
 
-		$wgConf->settings['wgSitename'] = self::getSiteNames();
+		$wgConf->settings['wgSitename'] = $sitenames;
 		$wgSitename = $this->sitename;
 	}
 
@@ -433,9 +435,9 @@ class MirahezeFunctions {
 		return $siteNames;
 	}
 
-	public static function getSiteName(): string {
+	public static function getSiteName( array $sitenames ): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
-		return self::getSiteNames()[ self::$currentDatabase ] ?? self::getSiteNames()['default'];
+		return $sitenames[ self::$currentDatabase ] ?? $sitenames['default'];
 	}
 
 	public static function getDefaultMediaWikiVersion(): string {
