@@ -249,8 +249,7 @@ class MirahezeFunctions {
 			if ( $database !== 'default' ) {
 				foreach ( self::SUFFIXES as $suffix => $domains ) {
 					if ( str_ends_with( $database, $suffix ) ) {
-						$defaultServer = $databases['d']
-							?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix], true ) ];
+						$defaultServer = $databases['d'] ?? self::DEFAULT_SERVER[$realm];
 
 						return $databases['u']
 							?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
@@ -266,8 +265,7 @@ class MirahezeFunctions {
 		foreach ( $databases as $db => $data ) {
 			foreach ( self::SUFFIXES as $suffix => $domains ) {
 				if ( str_ends_with( $db, $suffix ) ) {
-					$defaultServer = $data['d']
-						?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix], true ) ];
+					$defaultServer = $data['d'] ?? self::DEFAULT_SERVER[$realm];
 
 					$servers[$db] = $data['u']
 						?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
