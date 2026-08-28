@@ -370,15 +370,14 @@ class MirahezeFunctions {
 		$allDatabases ??= self::readDbListFile( 'databases', false );
 		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 
-		$databases = [ ...$allDatabases, ...$deletedDatabases ];
-		if ( !$databases ) {
-			return [];
+		$res = [];
+		foreach ( $allDatabases as $db => $data ) {
+			$res[$db] = $data['c'];
 		}
-
-		return array_combine(
-			array_keys( $databases ),
-			array_column( $databases, 'c' )
-		);
+		foreach ( $deletedDatabases as $db => $data ) {
+			$res[$db] = $data['c'];
+		}
+		return $res;
 	}
 
 	public static function getPrimaryDomain( string $database ): string {
