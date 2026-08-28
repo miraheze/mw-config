@@ -263,12 +263,15 @@ class MirahezeFunctions {
 
 		// Build list of all known wiki URLs
 		foreach ( $databases as $db => $data ) {
+			if ( isset( $data['u'] ) ) {
+				$servers[$db] = $data['u'];
+				continue;
+			}
 			foreach ( self::SUFFIXES as $suffix => $domains ) {
 				if ( str_ends_with( $db, $suffix ) ) {
 					$defaultServer = $data['d'] ?? self::DEFAULT_SERVER[$realm];
 
-					$servers[$db] = $data['u']
-						?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
+					$servers[$db] = 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 					break;
 				}
 			}
