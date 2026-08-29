@@ -3318,9 +3318,8 @@ $wgConf->settings += [
 			],
 			'wikioasis' => [
 				/** WikiOasis */
-				'interwiki' => 'wo',
+				'interwiki' => 'woasis',
 				'url' => 'https://$2.wikioasis.org/wiki/$1',
-				'urlInt' => 'https://$2.wikioasis.org/$3/wiki/$1',
 				'baseTransOnly' => true,
 			],
 		],
