@@ -271,6 +271,8 @@ switch ( $wgDBname ) {
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'script-src' => [
 				'example.com',
+			],
+			'frame-src' => [
 				'player.bilibili.com',
 			],
 			'img-src' => [
