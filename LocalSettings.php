@@ -3316,6 +3316,12 @@ $wgConf->settings += [
 				'urlInt' => 'https://$2.wiki.gg/$3/wiki/$1',
 				'baseTransOnly' => true,
 			],
+			'wikioasis' => [
+				/** WikiOasis */
+				'interwiki' => 'woasis',
+				'url' => 'https://$2.wikioasis.org/wiki/$1',
+				'baseTransOnly' => true,
+			],
 		],
 		'+utgwiki' => [
 			'translate' => [
