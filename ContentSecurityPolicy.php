@@ -271,6 +271,18 @@ switch ( $wgDBname ) {
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'script-src' => [
 				'example.com',
+				'player.bilibili.com',
+			],
+			'img-src' => [
+				'*.hdslb.com',
+			],
+			'connect-src' => [
+				'api.bilibili.com',
+				'data.bilibili.com',
+				'broadcast.chat.bilibili.com',
+			],
+			'media-src' => [
+				'upos-hz-mirrorakam.akamaized.net',
 			],
 		];
 		break;
