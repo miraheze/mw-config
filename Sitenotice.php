@@ -7,7 +7,7 @@ if ( $wmgSiteNoticeOptOut ) {
 }
 
 // Increment this version number whenever you change the site notice
-$wgMajorSiteNoticeID = 92;
+$wgMajorSiteNoticeID = 93;
 
 /**
  * Wrap your sitenotice with <div data-nosnippet>(sitenotice)</div>
@@ -17,7 +17,7 @@ $wgMajorSiteNoticeID = 92;
 // Global SiteNotice
 // if ( !$wmgSiteNoticeOptOut ) {
 
-/*$wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
+/* $wgHooks['SiteNoticeAfter'][] = 'wfGlobalSiteNotice';
 
 function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 	$skin->getOutput()->enableOOUI();
@@ -41,7 +41,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 					<tr>
 						<td>
 							<div style="padding-bottom: 15px; font-size: 13pt; color: black;">
-								Miraheze will be conducting maintenance on database servers on January 20, 2026 from 19:00 to 23:00 UTC. During that time wikis may be totally unavailable for read intermittently and all wikis may be placed in read-only at times.
+								Miraheze will be performing upgrades on cloud servers on March 5, 2026 from 20:00 to March 6 03:00 UTC. During this time Miraheze will be completely unavailable. We apologize for the inconvenience and thank you for your understanding.
 							</div>
 						</td>
 					</tr>
@@ -49,7 +49,7 @@ function wfGlobalSiteNotice( &$siteNotice, $skin ) {
 			</tbody>
 		</table>
 	EOF;
-}*/
+} */
 
 // }
 

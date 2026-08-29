@@ -92,11 +92,11 @@ $wgUploadThumbnailRenderMethod = 'http';
 $wgUploadThumbnailRenderHttpCustomHost = 'static.wikitide.net';
 $wgUploadThumbnailRenderHttpCustomDomain = 'swift-lb.wikitide.net';
 
-$wgThumbnailBuckets = [ 1920 ];
+$wgThumbnailBuckets = [ 1280 ];
 $wgThumbnailMinimumBucketDistance = 100;
 
 // Thumbnail prerendering at upload time
-$wgUploadThumbnailRenderMap = [ 320, 640, 800, 1024, 1280, 1920 ];
+$wgUploadThumbnailRenderMap = [ 320, 640, 800, 1280 ];
 
 if ( $cwPrivate ) {
 	$wgUploadThumbnailRenderMap = [];

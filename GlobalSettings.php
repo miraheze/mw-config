@@ -6,6 +6,7 @@ use MediaWiki\Extension\ConfirmEdit\Store\CaptchaCacheStore;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Password\InvalidPassword;
 use MediaWiki\PoolCounter\PoolCounterClient;
+use MediaWiki\RCFeed\UDPRCFeedEngine;
 use Miraheze\MirahezeMagic\Maintenance\GenerateManageWikiBackup;
 use Miraheze\MirahezeMagic\Maintenance\SwiftDump;
 use Miraheze\MirahezeMagic\MirahezeIRCRCFeedFormatter;
@@ -56,10 +57,6 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 		$wgCheckUserClientHintsEnabled = true;
 		$wgCheckUserAlwaysSetClientHintHeaders = true;
 	}
-}
-
-if ( $wi->isExtensionActive( 'chameleon' ) ) {
-	wfLoadExtension( 'Bootstrap' );
 }
 
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
@@ -114,7 +111,7 @@ if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 	}
 }
 
-if ( $wi->isExtensionActive( 'StandardDialogs' ) ) {
+if ( $wi->isAnyOfExtensionsActive( 'StandardDialogs', 'SimpleBlogPage' ) ) {
 	wfLoadExtension( 'OOJSPlus' );
 }
 
@@ -126,7 +123,7 @@ if ( $wi->isExtensionActive( 'InterwikiSorting' ) ) {
 	$wgInterwikiSortingInterwikiSortOrders = include __DIR__ . '/InterwikiSortOrders.php';
 }
 
-if ( $wi->isAllOfExtensionsActive( '3d', 'MultimediaViewer' ) ) {
+if ( $wi->isAllOfExtensionsActive( '3D', 'MultimediaViewer' ) ) {
 	$wgMediaViewerExtensions['stl'] = 'mmv.3d';
 }
 
@@ -171,6 +168,41 @@ if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
 
 if ( $wi->isExtensionActive( 'CodeMirror' ) ) {
 	$wgDefaultUserOptions['usecodemirror'] = (int)$wmgCodeMirrorEnableDefault;
+	if ( $wmgCodeMirrorReplaceCodeEditor ) {
+		// Taken from WMF's configuration.
+		$wgCodeMirrorEnabledModes['javascript'] = true;
+		$wgCodeMirrorEnabledModes['json'] = true;
+		$wgCodeMirrorEnabledModes['css'] = true;
+		$wgCodeMirrorEnabledModes['lua'] = true;
+		$wgCodeMirrorEnabledModes['vue'] = true;
+		// CodeEditor
+		$wgCodeEditorEnabledModes['javascript'] = false;
+		$wgCodeEditorEnabledModes['json'] = false;
+		$wgCodeEditorEnabledModes['css'] = false;
+		$wgCodeEditorEnabledModes['lua'] = false;
+		$wgCodeEditorEnabledModes['vue'] = false;
+		// AbuseFilter
+		$wgAbuseFilterUseCodeEditor = false;
+		$wgAbuseFilterUseCodeMirror = true;
+		// DataMaps
+		$wgDataMapsUseCodeEditor = false;
+		$wgDataMapsUseCodeMirror = true;
+		// Gadgets
+		$wgGadgetsDefinitionsUseCodeEditor = false;
+		$wgGadgetsDefinitionsUseCodeMirror = true;
+		// JsonConfig
+		$wgJsonConfigUseCodeEditor = false;
+		$wgJsonConfigUseCodeMirror = true;
+		// Scribunto
+		$wgScribuntoUseCodeEditor = false;
+		$wgScribuntoUseCodeMirror = true;
+		// TemplateStyles
+		$wgTemplateStylesUseCodeEditor = false;
+		$wgTemplateStylesUseCodeMirror = true;
+		// UploadWizard
+		$wgUploadWizardUseCodeEditor = false;
+		$wgUploadWizardUseCodeMirror = true;
+	}
 }
 
 if ( $wi->isAnyOfExtensionsActive( 'WikibaseClient', 'WikibaseRepository' ) ) {
@@ -288,6 +320,10 @@ if ( $cwClosed ) {
 	if ( $wi->isExtensionActive( 'Comments' ) ) {
 		$wgRevokePermissions['*']['comment'] = true;
 	}
+
+	if ( $wi->isExtensionActive( 'BlogPage' ) ) {
+		$wgRevokePermissions['user']['createblogpost'] = true;
+	}
 }
 
 // Public Wikis
@@ -297,6 +333,7 @@ if ( !$cwPrivate ) {
 		'uri' => 'udp://10.0.17.143:' . [ 5070, 5072 ][array_rand( [ 5070, 5072 ] )],
 		'add_interwiki_prefix' => false,
 		'omit_bots' => true,
+		'class' => UDPRCFeedEngine::class,
 	];
 
 	$wgDiscordIncomingWebhookUrl = $wmgGlobalDiscordWebhookUrl;
@@ -576,6 +613,17 @@ if ( $wgWordmark ) {
 	];
 }
 
+// $wgGalleryOptions
+$wgGalleryOptions = [
+	'imagesPerRow' => $wmgGalleryOptionsImagesPerRow,
+	'imageWidth' => $wmgGalleryOptionsImageWidth,
+	'imageHeight' => $wmgGalleryOptionsImageHeight,
+	'captionLength' => true,
+	'showBytes' => $wmgGalleryOptionsShowBytes,
+	'showDimensions' => $wmgGalleryOptionsShowDimensions,
+	'mode' => $wmgGalleryOptionsMode,
+];
+
 // $wgUrlShortenerAllowedDomains
 $wgUrlShortenerAllowedDomains = [
 	'(.*\.)?miraheze\.org',
@@ -620,7 +668,8 @@ if ( $wi->isExtensionActive( 'JsonConfig' ) ) {
 	if ( $wgDBname !== 'commonswiki' &&
 		$wgDBname !== 'gpcommonswiki' &&
 		$wgDBname !== 'needforspeedwiki' &&
-		$wgDBname !== 'emiliabearwiki'
+		$wgDBname !== 'emiliabearwiki' &&
+		$wgDBname !== 'blutigeskareuzwiki'
 	) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.miraheze.org/w/api.php'
@@ -932,7 +981,8 @@ $wgCaptchaRegexes[] = '/<a +href/i';
 // 12 MB
 $wgAPIMaxResultSize = 12582912;
 
-$wgReferrerPolicy = $cwPrivate ?
+// T15102: Extension:Maps doesn't work without a referrer
+$wgReferrerPolicy = ( $cwPrivate && !$wi->isExtensionActive( 'Maps' ) ) ?
 	'no-referrer' :
 	[ 'origin-when-cross-origin', 'origin' ];
 

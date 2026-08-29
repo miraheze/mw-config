@@ -15,11 +15,11 @@ jobs:
 
     steps:
     - name: Cancel Previous Runs
-      uses: styfle/cancel-workflow-action@0.13.0
+      uses: styfle/cancel-workflow-action@0.13.1
       with:
         access_token: ${{ github.token }}
 
-    - uses: actions/checkout@v6
+    - uses: actions/checkout@v7
 
     - name: Set up PHP
       uses: shivammathur/setup-php@v2

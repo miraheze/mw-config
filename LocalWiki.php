@@ -63,6 +63,14 @@ switch ( $wi->dbname ) {
 		];
 
 		break;
+	case 'blutigeskareuzwiki':
+		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['isLocal'] = true;
+
+		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
+		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
 	case 'battlebornwiki':
 	case 'gogiganticwiki':
 	case 'pizzatowerwiki':
@@ -74,18 +82,6 @@ switch ( $wi->dbname ) {
 				$event['section'] = 'alert';
 			}
 		};
-
-		break;
-	case 'cecuwiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-
-		break;
-	case 'combatinitiationwiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['logged_in'] = true;
 
 		break;
 	case 'commonswiki':
@@ -103,11 +99,6 @@ switch ( $wi->dbname ) {
 			global $wgLogRestrictions;
 			unset( $wgLogRestrictions['abusefilter'] );
 		};
-
-		break;
-	case 'dappervolkwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
 
 		break;
 	case 'dlfmwiki':
@@ -136,11 +127,6 @@ switch ( $wi->dbname ) {
 			'image' => true,
 			'description' => false,
 		];
-
-		break;
-	case 'dungeonrngwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
 
 		break;
 	case 'emiliabearwiki':
@@ -184,9 +170,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Map.JsonConfig']['remote'] = [
 			'url' => 'https://commons.wikimedia.org/w/api.php'
 		];
-		break;
-	case 'fwtdwiki':
-		$wgMinervaNightMode['base'] = true;
 		break;
 	case 'gpcommonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['isLocal'] = true;
@@ -287,17 +270,6 @@ switch ( $wi->dbname ) {
 	case 'houkai2ndwiki':
 		$wgSpecialPages['Analytics'] = DisabledSpecialPage::getCallback( 'Analytics', 'MatomoAnalytics-disabled' );
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
-
-		break;
-	case 'hullrotwiki':
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-
-		break;
-	case 'kaiserreichwiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['logged_in'] = true;
 
 		break;
 	case 'kagagawiki':
@@ -502,6 +474,8 @@ switch ( $wi->dbname ) {
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
+		// Temporarily added for debugging tallies of 2026 board election
+		$wgSecurePollShowErrorDetail = true;
 		$wgContactConfig = [
 			'default' => [
 				'RecipientUser' => null,
@@ -625,6 +599,7 @@ switch ( $wi->dbname ) {
 			'GlobalWatchlist',
 			'IncidentReporting',
 			'RequestCustomDomain',
+			'SecurePoll',
 		] );
 
 		/*
@@ -668,12 +643,6 @@ switch ( $wi->dbname ) {
 			'svg' => "https://static.wikitide.net/picrosswiki/0/0a/Pikuw.svg",
 		];
 		break;
-	case 'piggywiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['logged_in'] = true;
-
-		break;
 	case 'paneidoversewiki':
 		$wgHooks['AdminLinks'][] = 'onAdminLinks';
 
@@ -681,7 +650,6 @@ switch ( $wi->dbname ) {
 			$general = $adminLinksTree->getSection( wfMessage( 'adminlinks_general' )->text() );
 			$generalRow = $general->getRow( 'main' );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'TimeMachine' ) );
-			$generalRow->addItem( ALItem::newFromSpecialPage( 'ArticlesHome' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'EditWatchlist' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'GlobalPreferences' ) );
 			$generalRow->addItem( ALItem::newFromSpecialPage( 'Upload' ) );
@@ -730,12 +698,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'roguetown2ewiki':
-		$wgMinervaNightMode['base'] = true;
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-
-		break;
 	case 'sagan4wiki':
 	case 'sagan4betawiki':
 	case 'sagan4alphawiki':
@@ -756,13 +718,6 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $out ) {
 			$out->addMeta( 'viewport', 'width=device-width, initial-scale=1' );
 		}
-
-		break;
-	case 'stopitslenderwiki':
-		$wgMinervaNightMode['base'] = true;
-		$wgVectorNightMode['logged_in'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['beta'] = true;
 
 		break;
 	case 'testwikibeta':
@@ -1140,11 +1095,6 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-	case 'whentheycrywiki':
-		$wgGalleryOptions['imageWidth'] = 200;
-		$wgGalleryOptions['imageHeight'] = 200;
-
-		break;
 	case 'wikigeniuswiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
@@ -1178,12 +1128,6 @@ switch ( $wi->dbname ) {
 				}
 			END ) );
 		}
-
-		break;
-	case 'zenithwiki':
-		$wgVectorNightMode['beta'] = true;
-		$wgVectorNightMode['logged_out'] = true;
-		$wgVectorNightMode['logged_in'] = true;
 
 		break;
 	case 'genshinimpactwiki':
