@@ -95,15 +95,17 @@ class MirahezeFunctions {
 
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
+		$sitenames = self::getSitenames();
+
 		$this->server = self::getServer();
-		$this->sitename = self::getSiteName();
+		$this->sitename = self::getSiteName( $sitenames );
 		$this->missing = self::isMissing();
 		$this->realm = self::getRealm();
 		$this->version = self::getMediaWikiVersion();
 
 		$this->setDatabase();
 		$this->setServers();
-		$this->setSiteNames();
+		$this->setSiteNames( $sitenames );
 	}
 
 	public static function getLocalDatabases(): array {
@@ -247,8 +249,7 @@ class MirahezeFunctions {
 			if ( $database !== 'default' ) {
 				foreach ( self::SUFFIXES as $suffix => $domains ) {
 					if ( str_ends_with( $database, $suffix ) ) {
-						$defaultServer = $databases['d']
-							?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix], true ) ];
+						$defaultServer = $databases['d'] ?? self::DEFAULT_SERVER[$realm];
 
 						return $databases['u']
 							?? 'https://' . substr( $database, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
@@ -262,13 +263,16 @@ class MirahezeFunctions {
 
 		// Build list of all known wiki URLs
 		foreach ( $databases as $db => $data ) {
+			if ( isset( $data['u'] ) ) {
+				$servers[$db] = $data['u'];
+				continue;
+			}
 			foreach ( self::SUFFIXES as $suffix => $domains ) {
 				if ( str_ends_with( $db, $suffix ) ) {
-					$defaultServer = $data['d']
-						?? self::SUFFIXES[$suffix][ array_search( self::DEFAULT_SERVER[$realm], self::SUFFIXES[$suffix], true ) ];
+					$defaultServer = $data['d'] ?? self::DEFAULT_SERVER[$realm];
 
-					$servers[$db] = $data['u']
-						?? 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
+					$servers[$db] = 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
+					break;
 				}
 			}
 		}
@@ -366,15 +370,14 @@ class MirahezeFunctions {
 		$allDatabases ??= self::readDbListFile( 'databases', false );
 		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 
-		$databases = [ ...$allDatabases, ...$deletedDatabases ];
-		if ( !$databases ) {
-			return [];
+		$res = [];
+		foreach ( $allDatabases as $db => $data ) {
+			$res[$db] = $data['c'];
 		}
-
-		return array_combine(
-			array_keys( $databases ),
-			array_column( $databases, 'c' )
-		);
+		foreach ( $deletedDatabases as $db => $data ) {
+			$res[$db] = $data['c'];
+		}
+		return $res;
 	}
 
 	public static function getPrimaryDomain( string $database ): string {
@@ -405,10 +408,10 @@ class MirahezeFunctions {
 		$wgServer = $this->server;
 	}
 
-	public function setSiteNames(): void {
+	public function setSiteNames( array $sitenames ): void {
 		global $wgConf, $wgSitename;
 
-		$wgConf->settings['wgSitename'] = self::getSiteNames();
+		$wgConf->settings['wgSitename'] = $sitenames;
 		$wgSitename = $this->sitename;
 	}
 
@@ -433,9 +436,9 @@ class MirahezeFunctions {
 		return $siteNames;
 	}
 
-	public static function getSiteName(): string {
+	public static function getSiteName( array $sitenames ): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
-		return self::getSiteNames()[ self::$currentDatabase ] ?? self::getSiteNames()['default'];
+		return $sitenames[ self::$currentDatabase ] ?? $sitenames['default'];
 	}
 
 	public static function getDefaultMediaWikiVersion(): string {
