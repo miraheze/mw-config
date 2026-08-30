@@ -267,7 +267,7 @@ class MirahezeFunctions {
 				$servers[$db] = $data['u'];
 				continue;
 			}
-			$server = self::getServerForWiki( $realm, $db );
+			$server = self::getServerForWiki( $realm, $db, $data['d'] ?? null );
 			if ( $server !== null ) {
 				$servers[$db] = $server;
 			}
@@ -279,10 +279,10 @@ class MirahezeFunctions {
 		return $servers;
 	}
 
-	private static function getServerForWiki( string $realm, string $wiki ): ?string {
+	private static function getServerForWiki( string $realm, string $wiki, ?string $default = null ): ?string {
 		foreach ( self::SUFFIXES as $suffix => $domains ) {
 			if ( str_ends_with( $wiki, $suffix ) ) {
-				$defaultServer = $data['d'] ?? self::DEFAULT_SERVER[$realm];
+				$defaultServer = $default ?? self::DEFAULT_SERVER[$realm];
 
 				return 'https://' . substr( $wiki, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
 			}
