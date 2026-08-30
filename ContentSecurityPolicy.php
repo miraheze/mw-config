@@ -45,13 +45,11 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'fastly.jsdelivr.net',
 		'cdn.syndication.twimg.com',
 		'openlayers.org',
-		'www.gstatic.cn',
 		'hcaptcha.com',
 		'*.hcaptcha.com',
 		'bandcamp.com',
 		'challenges.cloudflare.com',
 		'www.youtube.com',
-		'www.wowhead.com',
 		'tally.so'
 	],
 	'style-src' => [
@@ -113,7 +111,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'*.redditmedia.com',
 		'mirrors.creativecommons.org',
 		'www.gnu.org',
-		'live.staticflikr.com',
 		'cdn.pixabay.com',
 		'cdn.geogebra.org',
 		'docs.blender.org',
@@ -121,7 +118,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'tile.openstreetmap.org',
 		'*.tile.openstreetmap.org',
 		'cdn.discordapp.com',
-		'na.llnet.sims3storee.cdn.ea.com',
 		'*.fastly.net',
 		'minotar.net',
 		'db.onlinewebfonts.com',
@@ -146,8 +142,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'postimg.cc',
 		'*.postimg.cc',
 		'*.rbxcdn.com',
-		'cms-imgp.jw-cdn.org',
-		'hosted.weblate.org',
 		'minecraft.wiki',
 		'cdn.jsdelivr.net',
 		'mc-heads.net'
@@ -220,7 +214,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'*.hcaptcha.com',
 		'bandcamp.com',
 		'challenges.cloudflare.com',
-		'map.showdown.wiki',
 		'clips.twitch.tv',
 		'video.fastly.steamstatic.com',
 		'shared.fastly.steamstatic.com',
@@ -253,8 +246,7 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'discord.com',
 		'discordapp.com',
 		'api.steampowered.com',
-		'*.instatus.com',
-		'www.wowhead.com'
+		'*.instatus.com'
 	],
 ];
 
@@ -281,6 +273,21 @@ switch ( $wgDBname ) {
 			],
 		];
 		break;
+	case 'cloudstreamwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'img-src' => [
+				'hosted.weblate.org',
+			],
+		];
+		break;
+	case 'jwikiwiki':
+	case 'jwmeetingwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'img-src' => [
+				'cms-imgp.jw-cdn.org',
+			],
+		];
+		break;
 	case 'smutstonewiki':
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'img-src' => [
@@ -292,6 +299,16 @@ switch ( $wgDBname ) {
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'connect-src' => [
 				'ss14.com.ua',
+			],
+		];
+		break;
+	case 'wowlibrarywiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'script-src' => [
+				'www.wowhead.com',
+			],
+			'connect-src' => [
+				'www.wowhead.com',
 			],
 		];
 		break;
