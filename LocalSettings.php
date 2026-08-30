@@ -1421,6 +1421,9 @@ $wgConf->settings += [
 			'virtual-requestcustomdomain' => [
 				'db' => $wi->getCentralDatabase(),
 			],
+			'virtual-requestimport' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-urlshortener' => [
 				'db' => $wi->getCentralDatabase(),
 			],
@@ -5940,6 +5943,37 @@ $wgConf->settings += [
 			'MacFan4000 (Miraheze)',
 			'Original Authority',
 			'Universal Omega',
+			'RhinosF1 (Miraheze)',
+		],
+	],
+
+	// RequestImport
+	'wgRequestImportEnableAutomatedJob' => [
+		'default' => true,
+	],
+	'wgRequestImportImportDumpScriptCommand' => [
+		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+	],
+	'wgRequestImportInterwikiMap' => [
+		'default' => [
+			'fandom.com' => 'fandom',
+			'miraheze.org' => 'mh',
+		],
+	],
+	'wgRequestImportUsersNotifiedOnAllRequests' => [
+		'default' => [
+			'MacFan4000 (Miraheze)',
+			'Reception123 (Miraheze)',
+			'Universal Omega (Miraheze)',
+			'RhinosF1 (Miraheze)',
+		],
+	],
+	'wgRequestImportUsersNotifiedOnFailedImports' => [
+		'default' => [
+			'MacFan4000 (Miraheze)',
+			'Reception123 (Miraheze)',
+			'Universal Omega (Miraheze)',
 			'RhinosF1 (Miraheze)',
 		],
 	],
