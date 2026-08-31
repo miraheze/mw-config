@@ -279,7 +279,7 @@ class MirahezeFunctions {
 		return $servers;
 	}
 
-	private static function getServerForWiki( string $realm, string $wiki, ?string $default = null ): ?string {
+	private static function getServerForWiki( string $realm, string $wiki, ?string $default ): ?string {
 		foreach ( self::SUFFIXES as $suffix => $domains ) {
 			if ( str_ends_with( $wiki, $suffix ) ) {
 				$defaultServer = $default ?? self::DEFAULT_SERVER[$realm];
