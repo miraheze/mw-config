@@ -977,7 +977,7 @@ class MirahezeFunctions {
 				'v' => $wikiVersion,
 			];
 
-			$url = $url ?: self::getServerForWiki( $realm, $db );
+			$url = $url ?? self::getServerForWiki( $realm, $db );
 			if ( $url !== null ) {
 				$combi['u'] = $url;
 			}
