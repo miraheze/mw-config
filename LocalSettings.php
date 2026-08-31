@@ -5683,6 +5683,10 @@ $wgConf->settings += [
 		'+lazerpigeonwiki' => [
 			'vector-theme' => 'os',
 		],
+		'+mappingwiki' => [
+			'vector-limited-width' => 0,
+			'vector-theme' => 'os',
+		],
 		'+mariowiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
