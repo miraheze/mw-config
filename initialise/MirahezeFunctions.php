@@ -267,13 +267,9 @@ class MirahezeFunctions {
 				$servers[$db] = $data['u'];
 				continue;
 			}
-			foreach ( self::SUFFIXES as $suffix => $domains ) {
-				if ( str_ends_with( $db, $suffix ) ) {
-					$defaultServer = $data['d'] ?? self::DEFAULT_SERVER[$realm];
-
-					$servers[$db] = 'https://' . substr( $db, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
-					break;
-				}
+			$server = self::getServerForWiki( $realm, $db, $data['d'] ?? null );
+			if ( $server !== null ) {
+				$servers[$db] = $server;
 			}
 		}
 
@@ -281,6 +277,17 @@ class MirahezeFunctions {
 		$servers['default'] = $default;
 
 		return $servers;
+	}
+
+	private static function getServerForWiki( string $realm, string $wiki, ?string $default ): ?string {
+		foreach ( self::SUFFIXES as $suffix => $domains ) {
+			if ( str_ends_with( $wiki, $suffix ) ) {
+				$defaultServer = $default ?? self::DEFAULT_SERVER[$realm];
+
+				return 'https://' . substr( $wiki, 0, -strlen( $suffix ) ) . '.' . $defaultServer;
+			}
+		}
+		return null;
 	}
 
 	public static function getCurrentDatabase( bool $ignorePrimary = false ): string {
@@ -910,6 +917,8 @@ class MirahezeFunctions {
 		$defaultMWVersion = self::MEDIAWIKI_VERSIONS[self::getDefaultMediaWikiVersion()];
 		$versions = array_fill_keys( self::MEDIAWIKI_VERSIONS, [] );
 
+		$realm = self::getRealm();
+
 		foreach ( $allWikis as $wiki ) {
 			// Reduce repeated property lookups
 			$db = $wiki->wiki_dbname;
@@ -968,6 +977,7 @@ class MirahezeFunctions {
 				'v' => $wikiVersion,
 			];
 
+			$url ??= self::getServerForWiki( $realm, $db, $primaryDomain );
 			if ( $url !== null ) {
 				$combi['u'] = $url;
 			}
