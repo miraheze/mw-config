@@ -104,10 +104,6 @@ require_once '/srv/mediawiki/config/GlobalSkins.php';
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
 
-// bast161, bast181
-$servers = [ '10.0.16.127', '10.0.18.101' ];
-$proxy = 'http://' . $servers[ array_rand( $servers ) ] . ':8080';
-
 $proxyGlobals = [
 	'wgHTTPProxy',
 	'wgDiscordCurlProxy',
@@ -121,11 +117,12 @@ $proxyGlobals = [
 ];
 
 foreach ( $proxyGlobals as $global ) {
-	$GLOBALS[ $global ] = $proxy;
+	// bast181
+	$GLOBALS[ $global ] = 'http://10.0.18.101:8080';
 }
 
 // Don't need globals here
-unset( $proxy, $proxyGlobals, $servers );
+unset( $proxyGlobals, $servers );
 
 // $wgStatsFormat = 'dogstatsd';
 // $wgStatsTarget = 'udp://localhost:9125';
