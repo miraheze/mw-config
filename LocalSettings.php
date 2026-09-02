@@ -696,6 +696,9 @@ $wgConf->settings += [
 	'wgCitizenEnableCollapsibleSections' => [
 		'default' => true,
 	],
+	'wgCitizenEnableDrawerSiteStats' => [
+		'default' => true,
+	],
 	'wgCitizenGlobalToolsPortlet' => [
 		'default' => '',
 	],
@@ -705,19 +708,10 @@ $wgConf->settings += [
 	'wgCitizenThemeColor' => [
 		'default' => '#131a21',
 	],
-	'wgCitizenSearchGateway' => [
-		'default' => 'mwActionApi',
-	],
-	'wgCitizenSearchDescriptionSource' => [
-		'default' => 'textextracts',
-	],
-	'wgCitizenMaxSearchResults' => [
-		'default' => 6,
-	],
-	'wgCitizenEnableCommandPalette' => [
-		'default' => true,
-	],
 	'wgCitizenEnableCJKFonts' => [
+		'default' => false,
+	],
+	'wgCitizenEnableARFonts' => [
 		'default' => false,
 	],
 	'wgCitizenOverflowNowrapClasses' => [
@@ -730,8 +724,38 @@ $wgConf->settings += [
 			'srf-datatable',
 		],
 	],
+	'wgCitizenOverflowInheritedClasses' => [
+		'default' => [
+			'floatleft',
+			'floatright',
+		],
+	],
 	'wgCitizenHeaderPosition' => [
 		'default' => 'left',
+	],
+	'wgCitizenHeaderPositionMobile' => [
+		'default' => 'bottom',
+	],
+	'wgCitizenTableOfContentsCollapseAtCount' => [
+		'default' => 28,
+	],
+	'wgCitizenEnableManifest' => [
+		'default' => true,
+	],
+	'wgCitizenManifestOptions' => [
+		'default' => [
+			'background_color' => '#0d0e12',
+			'description' => '',
+			'short_name' => '',
+			'theme_color' => '#0d0e12',
+			'icons' => [],
+		],
+	],
+	'wgCitizenEnableShare' => [
+		'default' => true,
+	],
+	'wgCitizenShareMode' => [
+		'default' => 'auto',
 	],
 
 	// CodeMirror
