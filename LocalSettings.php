@@ -101,6 +101,9 @@ require_once '/srv/mediawiki/config/PrivateSettings.php';
 require_once '/srv/mediawiki/config/GlobalExtensions.php';
 require_once '/srv/mediawiki/config/GlobalSkins.php';
 
+// Defines variables needed in settings
+require_once '/srv/mediawiki/config/ContentSecurityPolicy.php';
+
 $wgPasswordSender = 'noreply@miraheze.org';
 $wmgUploadHostname = 'static.wikitide.net';
 
@@ -783,6 +786,11 @@ $wgConf->settings += [
 		'default' => [
 			'showcaptcha',
 		],
+	],
+
+	// Content Security Policy
+	'wgMirahezeMagicCSPEnabledServices' => [
+		'default' => $wgMirahezeMagicCSPEnabledServicesDefault,
 	],
 
 	// Contribution Scores
@@ -8033,7 +8041,6 @@ require_once '/srv/mediawiki/config/GlobalCache.php';
 require_once '/srv/mediawiki/config/GlobalLogging.php';
 require_once '/srv/mediawiki/config/Sitenotice.php';
 require_once '/srv/mediawiki/config/FileBackend.php';
-require_once '/srv/mediawiki/config/ContentSecurityPolicy.php';
 
 if ( $wgUseQuickInstantCommons ) {
 	$wgForeignFileRepos[] = [

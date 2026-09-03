@@ -13,6 +13,10 @@ class MirahezeFunctions {
 		return [];
 	}
 
+	public function isBeta(): bool {
+		return false;
+	}
+
 	public function isAllOfExtensionsActive(): true {
 		return true;
 	}
