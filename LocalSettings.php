@@ -3857,6 +3857,16 @@ $wgConf->settings += [
 	'wgManageWikiCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
 	],
+	'wgManageWikiCacheUpdateDebugHeader' => [
+		'default' => 'X-WikiTide-Debug',
+	],
+	'wgManageWikiCacheUpdateDomain' => [
+		'default' => 'meta.miraheze.org',
+		'beta' => 'meta.mirabeta.org',
+	],
+	'wgManageWikiCacheUpdateRestEnabled' => [
+		'default' => true,
+	],
 	'wgManageWikiExtensionsDefault' => [
 		// WARNING: When adding a new extension here, please check whether there are any SQL files that need to be run
 		// during installation! The installation steps defined in ManageWikiExtensions will not be executed here.
@@ -4534,6 +4544,35 @@ $wgConf->settings += [
 				'noratelimit',
 				'autoconfirmed',
 			],
+		],
+	],
+	'wgManageWikiServers' => [
+		'default' => [
+			'mw151',
+			'mw152',
+			'mw153',
+			'mw161',
+			'mw162',
+			'mw163',
+			'mw171',
+			'mw172',
+			'mw173',
+			'mw181',
+			'mw182',
+			'mw183',
+			'mw191',
+			'mw192',
+			'mw193',
+			'mw201',
+			'mw202',
+			'mw203',
+			'mwtask151',
+			'mwtask161',
+			'mwtask171',
+			'mwtask181',
+		],
+		'beta' => [
+			'test151',
 		],
 	],
 	'wgManageWikiUseCustomDomains' => [
