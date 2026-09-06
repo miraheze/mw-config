@@ -4442,7 +4442,7 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgCitizenTableOfContentsCollapseAtCount' => [
-		'name' => 'Table of Contents Collapse at Count',
+		'name' => 'Citizen Table of Contents Collapse at Count',
 		'from' => 'citizen',
 		'type' => 'integer',
 		'minint' => 0,
