@@ -6289,6 +6289,13 @@ $wgConf->settings += [
 			'userId' => 86400,
 			'userInfo' => 86400,
 		],
+		'+doorswiki' => [
+			'ext-RobloxAPI' => [
+				'*' => 6000,
+				'gameData' => 120,
+				'groupRoles' => 180,
+			]
+		],
 	],
 
 	// RottenLinks
