@@ -6947,6 +6947,12 @@ $wgConf->settings += [
 	],
 
 	// Uploads
+	'wgForeignUploadTargets' => [
+		'default' => [
+			'local',
+		],
+		'maillewiki' => [],
+	],
 	'wmgEnableSharedUploads' => [
 		'default' => false,
 	],
