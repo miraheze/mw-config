@@ -122,6 +122,14 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'doorswiki':
+		$wgRobloxAPICachingExpiries = [
+			'*' => 6000,
+			'gameData' => 120,
+			'groupRoles' => 180,
+		];
+
+		break;
 	case 'dragonquestxwiki':
 		$wgPopupsConf['contentPreviews'] = [
 			'image' => true,
