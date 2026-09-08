@@ -129,9 +129,6 @@ unset( $proxyGlobals, $servers );
 
 $wmgSharedDomainPathPrefix = '';
 
-$wgScriptPath = '/w';
-$wgLoadScript = "$wgScriptPath/load.php";
-
 $wgCanonicalServer = $wi->server;
 
 if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
@@ -143,10 +140,8 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 	}
 
 	$wmgSharedDomainPathPrefix = "/$wgDBname";
-	$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
 
 	$wgCanonicalServer = 'https://' . $wi->getSharedDomain();
-	$wgLoadScript = "{$wgCanonicalServer}$wgScriptPath/load.php";
 
 	$wgUseSiteCss = false;
 	$wgUseSiteJs = false;
@@ -154,8 +149,6 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 	// We use load.php directly from auth for custom domains due to CSP
 	$wgCentralAuthSul3SharedDomainRestrictions['allowedEntryPoints'] = [ 'load' ];
 }
-
-$wgScript = "$wgScriptPath/index.php";
 
 $wgResourceBasePath = "$wmgSharedDomainPathPrefix/{$wi->version}";
 $wgExtensionAssetsPath = "$wgResourceBasePath/extensions";
@@ -6399,6 +6392,9 @@ $wgConf->settings += [
 	],
 
 	// Server
+	'wgScriptPath' => [
+		'default' => '/w',
+	],
 	'wgArticlePath' => [
 		'default' => '/wiki/$1',
 	],
@@ -7994,9 +7990,15 @@ extract( $globals );
 $wgDiscordNotificationWikiUrl = $wi->server . str_replace( '$1', '', $wgArticlePath );
 
 if ( $wmgSharedDomainPathPrefix ) {
-	$wgArticlePath = $wmgSharedDomainPathPrefix . $wgArticlePath;
+	$wgScriptPath  = "$wmgSharedDomainPathPrefix/w";
+	$wgArticlePath = "{$wmgSharedDomainPathPrefix}$wgArticlePath";
 	$wgServer = '//' . $wi->getSharedDomain();
+	$wgLoadScript = "{$wgCanonicalServer}$wgScriptPath/load.php";
+} else {
+	$wgLoadScript = "$wgScriptPath/load.php";
 }
+
+$wgScript = "$wgScriptPath/index.php";
 
 $wi->loadExtensions();
 
