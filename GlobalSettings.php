@@ -76,13 +76,12 @@ if ( $wmgEnableTemporaryAccounts || $wmgTemporaryAccountsKnown ) {
 		]
 	];
 
-	// ldapwiki doesn't have CentralAuth; harmless for now but if we enable this globally it'll cause issues
-	if ( $wi->dbname !== 'ldapwikiwiki' ) {
-		$wgAutoCreateTempUser['serialProvider'] = [
-			'type' => 'centralauth',
-			'useYear' => true,
-		];
-	}
+	// Wikis without CentralAuth (e.g. ldap) will have issues; harmless until we enable temp accounts globally and enable
+	// anon editing, which is unlikely.
+	$wgAutoCreateTempUser['serialProvider'] = [
+		'type' => 'centralauth',
+		'useYear' => true,
+	];
 }
 
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
