@@ -4537,6 +4537,35 @@ $wgConf->settings += [
 				'noratelimit',
 				'autoconfirmed',
 			],
+			// Temp accounts are basically anons. Duplicate the list for '*' for now.
+			'temp' => [
+				'read',
+				'skipcaptcha',
+				'torunblocked',
+				'centralauth-merge',
+				'generate-dump',
+				'editsitecss',
+				'editsitejson',
+				'editsitejs',
+				'editusercss',
+				'edituserjson',
+				'edituserjs',
+				'editmyoptions',
+				'editmyprivateinfo',
+				'editmywatchlist',
+				'globalblock-whitelist',
+				'interwiki',
+				'ipblock-exempt',
+				'viewmyprivateinfo',
+				'viewmywatchlist',
+				'managewiki-core',
+				'managewiki-extensions',
+				'managewiki-namespaces',
+				'managewiki-permissions',
+				'managewiki-settings',
+				'noratelimit',
+				'autoconfirmed',
+			],
 		],
 	],
 	'wgManageWikiUseCustomDomains' => [
@@ -6693,6 +6722,14 @@ $wgConf->settings += [
 			],
 			'css' => [],
 		],
+	],
+
+	// Temporary accounts
+	'wmgEnableTemporaryAccounts' => [
+		'default' => false,
+	],
+	'wmgTemporaryAccountsKnown' => [
+		'default' => false,
 	],
 
 	// TextExtracts

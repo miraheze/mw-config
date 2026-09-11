@@ -59,6 +59,20 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	}
 }
 
+// Temporary accounts (T16002)
+if ( $wmgEnableTemporaryAccounts || $wmgTemporaryAccountsKnown ) {
+	$wgAutoCreateTempUser['known'] = true;
+	$wgAutoCreateTempUser['enabled'] = $wmgEnableTemporaryAccounts;
+
+	// ldapwiki doesn't have CentralAuth; harmless for now but if we enable this globally it'll cause issues
+	if ( $wi->dbname !== 'ldapwikiwiki' ) {
+		$wgAutoCreateTempUser['serialProvider'] = [
+			'type' => 'centralauth',
+			'useYear' => true,
+		];
+	}
+}
+
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 	wfLoadExtension( 'Elastica' );
 	$wgCirrusSearchClusters = [
