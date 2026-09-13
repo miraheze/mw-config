@@ -952,7 +952,7 @@ $wgConf->settings += [
 	'wgCreateWikiCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
 	],
-	'wgCreateWikiCacheUpdateDebugHeader' => [
+	'wgCreateWikiCacheUpdateDebugAccessKeyHeader' => [
 		'default' => 'X-WikiTide-Debug-Access-Key',
 	],
 	'wgCreateWikiCacheUpdateDebugHeader' => [
@@ -3902,7 +3902,7 @@ $wgConf->settings += [
 	'wgManageWikiCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache',
 	],
-	'wgManageWikiCacheUpdateDebugHeader' => [
+	'wgManageWikiCacheUpdateDebugAccessKeyHeader' => [
 		'default' => 'X-WikiTide-Debug-Access-Key',
 	],
 	'wgManageWikiCacheUpdateDebugHeader' => [
