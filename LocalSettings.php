@@ -946,6 +946,54 @@ $wgConf->settings += [
 	'wgCreateWikiAIThreshold' => [
 		'default' => -1,
 	],
+	'wgCreateWikiCacheDirectory' => [
+		'default' => '/srv/mediawiki/cache',
+	],
+	'wgCreateWikiCacheDirectory' => [
+		'default' => '/srv/mediawiki/cache',
+	],
+	'wgCreateWikiCacheUpdateDebugHeader' => [
+		'default' => 'X-WikiTide-Debug-Access-Key',
+	],
+	'wgCreateWikiCacheUpdateDebugHeader' => [
+		'default' => 'X-WikiTide-Debug',
+	],
+	'wgCreateWikiCacheUpdateDomain' => [
+		'default' => 'meta.miraheze.org',
+		'beta' => 'meta.mirabeta.org',
+	],
+	'wgCreateWikiCacheUpdateRestEnabled' => [
+		'default' => true,
+	],
+	'wgCreateWikiCacheUpdateServers' => [
+		'default' => [
+			'mw151',
+			'mw152',
+			'mw153',
+			'mw161',
+			'mw162',
+			'mw163',
+			'mw171',
+			'mw172',
+			'mw173',
+			'mw181',
+			'mw182',
+			'mw183',
+			'mw191',
+			'mw192',
+			'mw193',
+			'mw201',
+			'mw202',
+			'mw203',
+			'mwtask151',
+			'mwtask161',
+			'mwtask171',
+			'mwtask181',
+		],
+		'beta' => [
+			'test151',
+		],
+	],
 	'wgCreateWikiDisallowedSubdomains' => [
 		'default' => [
 			'(.*)miraheze(.*)',
@@ -1200,9 +1248,6 @@ $wgConf->settings += [
 			'removed' => 245,
 			'deleted' => 31
 		],
-	],
-	'wgCreateWikiCacheDirectory' => [
-		'default' => '/srv/mediawiki/cache'
 	],
 	'wgCreateWikiCategories' => [
 		'default' => [
