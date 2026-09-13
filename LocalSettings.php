@@ -8075,7 +8075,7 @@ $wi::$disabledExtensions = [
 	'video' => 'Incompatible with MediaWiki 1.45',
 
 	// Are these still incompatible?
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.45'
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.45',
 ];
 
 if ( $wi->version >= 1.46 ) {
@@ -8086,6 +8086,8 @@ if ( $wi->version >= 1.46 ) {
 		'featuredfeeds' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'geogebra' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
+
+		'themetoggle' => 'Incompatible with MediaWiki 1.46',
 	];
 }
 
