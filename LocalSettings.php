@@ -8085,8 +8085,6 @@ if ( $wi->version >= 1.46 ) {
 		'datatransfer' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'featuredfeeds' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'geogebra' => 'Disabled with the MediaWiki 1.46 upgrade.',
-		'interwikisorting' => 'Disabled with the MediaWiki 1.46 upgrade.',
-		'languageselector' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
 	];
 }
