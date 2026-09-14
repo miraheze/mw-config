@@ -872,7 +872,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'portableinfobox' => [
-		'name' => 'Portable Infobox',
+		'name' => 'PortableInfobox',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PortableInfobox',
 		'conflicts' => false,
 		'requires' => [],
