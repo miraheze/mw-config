@@ -29,6 +29,8 @@ class MirahezeFunctions {
 	private const array ALLOWED_DOMAINS = [
 		'default' => [
 			'miraheze.org',
+			'orain.org',
+			'wiki.surf',
 			'wikitide.org',
 		],
 		'beta' => [
