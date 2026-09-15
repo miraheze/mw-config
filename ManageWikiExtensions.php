@@ -2535,20 +2535,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'other',
 	],
-	'languageselector' => [
-		'name' => 'Language Selector',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LanguageSelector',
-		'conflicts' => false,
-		'help' => 'Note: This extension is unmaintained and has a known bug of showing pages in a random language. Consider using UniversalLanguageSelector instead. If you want to disable this extension, please file a task on [[meta:Phorge|Phorge]].',
-		'requires' => [
-			'permissions' => [
-				'enable' => [
-					'managewiki-restricted',
-				],
-			],
-		],
-		'section' => 'other',
-	],
 	'lastmodified' => [
 		'name' => 'LastModified',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:LastModified',
