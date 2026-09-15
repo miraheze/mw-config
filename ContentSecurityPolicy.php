@@ -266,7 +266,7 @@ switch ( $wgDBname ) {
 			],
 			'frame-src' => [
 				'player.bilibili.com',
-				'www.bilibili.com',
+				'www.bilibili.com/blackboard/webplayer/',
 			],
 			'img-src' => [
 				'*.hdslb.com',
