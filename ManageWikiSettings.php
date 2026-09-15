@@ -57,6 +57,9 @@
  * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  */
 
+// Defines variables needed in settings
+require_once __DIR__ . '/ContentSecurityPolicy.php';
+
 $wgManageWikiSettings = [
 	// Anti-Spam
 	'wgAbuseFilterActions' => [
@@ -629,6 +632,26 @@ $wgManageWikiSettings = [
 		],
 		'help' => 'Element with these CSS classes will be removed on mobile view pages. The <code>.hidden</code> and <code>.mobile-hidden</code> classes are used on FANDOM, and may be enabled for compatibility with FANDOM imports.',
 		'requires' => [],
+	],
+	'wgMirahezeMagicCSPEnabledServices' => [
+		'name' => 'Content Security Policy services',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'list-multi',
+		'overridedefault' => $wgMirahezeMagicCSPEnabledServicesDefault,
+		'section' => 'other',
+		'options' => array_combine(
+			array_column( $wgMirahezeMagicCSPServices, 'label' ),
+			array_keys( $wgMirahezeMagicCSPServices )
+		),
+		'help' => 'Third party services that pages on this wiki are allowed to load content from. Sites selected here will be added to the CSP. See [[m:Help:Content_Security_Policy|Help:Content Security Policy]] for details.',
+		// Restricted for now since it doesn't actually do anything and we don't want to
+		// confuse users.
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 	],
 
 	// Beta Feature related stuff
