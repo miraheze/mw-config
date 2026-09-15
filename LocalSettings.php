@@ -5863,6 +5863,7 @@ $wgConf->settings += [
 		'+mappingwiki' => [
 			'vector-limited-width' => 0,
 			'vector-theme' => 'os',
+			'minerva-theme' => 'os',
 		],
 		'+mariowiki' => [
 			'rcenhancedfilters-disable' => 1,
