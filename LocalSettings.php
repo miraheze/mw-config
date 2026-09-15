@@ -8176,8 +8176,6 @@ if ( $wi->version >= 1.46 ) {
 		'featuredfeeds' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'geogebra' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
-
-		'themetoggle' => 'Incompatible with MediaWiki 1.46',
 	];
 }
 
