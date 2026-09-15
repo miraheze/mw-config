@@ -1924,11 +1924,6 @@ $wgConf->settings += [
 			],
 		],
 	],
-	'wgFlaggedRevsTagsAuto' => [
-		'default' => [
-			'accuracy' => 1,
-		],
-	],
 	'wgFlaggedRevsAutopromote' => [
 		'default' => false,
 	],
