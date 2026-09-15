@@ -311,7 +311,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => 'semanticmediawiki',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'install' => [
@@ -870,7 +872,7 @@ $wgManageWikiExtensions = [
 		'section' => 'parserhooks',
 	],
 	'portableinfobox' => [
-		'name' => 'Portable Infobox',
+		'name' => 'PortableInfobox',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:PortableInfobox',
 		'conflicts' => false,
 		'requires' => [],
@@ -1413,7 +1415,9 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension is unmaintained (see [[phorge:T15345|T15345]]). It is recommended to use [[mw:Extension:Approved Revs|ApprovedRevs]] instead. If you want to disable this extension, please file a task on [[m:Phorge|Phorge]].',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'install' => [
@@ -1576,7 +1580,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'install' => [
@@ -1674,7 +1680,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'install' => [
@@ -2040,7 +2048,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'section' => 'other',
@@ -2052,7 +2062,9 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension should no longer be enabled on new wikis.',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'section' => 'other',
@@ -2277,7 +2289,9 @@ $wgManageWikiExtensions = [
 		'conflicts' => false,
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'install' => [
@@ -2528,7 +2542,9 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension is unmaintained and has a known bug of showing pages in a random language. Consider using UniversalLanguageSelector instead. If you want to disable this extension, please file a task on [[meta:Phorge|Phorge]].',
 		'requires' => [
 			'permissions' => [
-				'managewiki-restricted',
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'section' => 'other',
@@ -3108,7 +3124,7 @@ $wgManageWikiExtensions = [
 	'semanticmediawiki' => [
 		'name' => 'SemanticMediaWiki',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SemanticMediaWiki',
-		'help' => '<br />Permanently "experimental" and may be removed with little to no prior notice. Only enabled for extenuating circumstances such when migrating from other services. Consider using [[weirdgloop:Extension:Bucket|Bucket]] or [[mw:Extension:Cargo|Cargo]] instead. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well.',
+		'help' => '<br />Permanently "experimental" and may be removed with little to no prior notice. Only enabled for extenuating circumstances such when migrating from other services. Consider using [[weirdgloop:Extension:Bucket|Bucket]] instead. WARNING: Disabling this extension after it\'s already been enabled will clear all SemanticMediaWiki database tables as well.',
 		'conflicts' => false,
 		'contentModels' => [
 			'smw/schema',
