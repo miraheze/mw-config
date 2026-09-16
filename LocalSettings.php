@@ -7006,10 +7006,10 @@ $wgConf->settings += [
 	// Translate
 	'wgPageTranslationAllowedContentModels' => [
 		'default' => [
-			CONTENT_MODEL_WIKITEXT => true,
+			'wikitext' => true,
 		],
 		'+moddedminecraftwiki' => [
-			CONTENT_MODEL_SCRIBUNTO => true,
+			'Scribunto' => true,
 		],
 	],
 	'wgTranslateDisabledTargetLanguages' => [
