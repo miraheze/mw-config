@@ -6651,6 +6651,19 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Sitemap
+	'wgSitemapNamespaces' => [
+		'default' => [
+			NS_MAIN,
+			NS_USER,
+			NS_PROJECT,
+			NS_TEMPLATE,
+			NS_HELP,
+			// NS_MODULE
+			828,
+		],
+	],
+
 	// Skins
 	'wgSkipSkins' => [
 		'default' => [],
