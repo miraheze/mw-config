@@ -312,10 +312,13 @@ switch ( $wgDBname ) {
 			],
 		];
 		break;
+	case 'assassinscreedwiki':
 	case 'bluearchivezhwiki':
+	case 'bolanqiuwiki':
 	case 'fukafanswiki':
 	case 'memepediawiki':
 	case 'redstonewiki':
+	case 'utaitewiki':
 	case 'vocaloidlyricswiki':
 	case 'xyywiki':
 		$wgMirahezeMagicCSPHeaderOverrides = [
