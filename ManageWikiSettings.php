@@ -401,15 +401,6 @@ $wgManageWikiSettings = [
 		'help' => 'Whether or not to enable any disabled-by-default experimental features.',
 		'requires' => [],
 	],
-	'wgDisplayFeedsInSidebar' => [
-		'name' => 'Display feeds in sidebar',
-		'from' => 'featuredfeeds',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'other',
-		'help' => 'This option controls whether or not feeds will be linked to in the sidebar',
-		'requires' => [],
-	],
 	'wgExportAllowListContributors' => [
 		'name' => 'Allow exporting contributor list on Special:Export',
 		'from' => 'mediawiki',
@@ -595,15 +586,6 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'other',
 		'help' => 'Is an array of standard predefined screen widths which increases in order of size.',
-		'requires' => [],
-	],
-	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
-		'name' => 'Should feeds honor the user\'s preferred language?',
-		'from' => 'featuredfeeds',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'other',
-		'help' => 'This option sets <code>$wgFeaturedFeedsDefaults["inUserLanguage"]</code>',
 		'requires' => [],
 	],
 	'wgMFRemovableClasses' => [
