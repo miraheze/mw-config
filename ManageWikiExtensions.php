@@ -2276,24 +2276,6 @@ $wgManageWikiExtensions = [
 		'install' => [],
 		'section' => 'other',
 	],
-	'externaldata' => [
-		'name' => 'External Data',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'enable' => [
-					'managewiki-restricted',
-				],
-			],
-		],
-		'install' => [
-			'sql' => [
-				'ed_url_cache' => 'extensions/ExternalData/sql/mysql/ExternalData.sql',
-			],
-		],
-		'section' => 'other',
-	],
 	'featuredfeeds' => [
 		'name' => 'FeaturedFeeds',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',

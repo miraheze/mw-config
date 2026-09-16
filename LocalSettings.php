@@ -1823,56 +1823,6 @@ $wgConf->settings += [
 		'inforevivalwiki' => 640,
 	],
 
-	// External Data
-	'wgExternalDataSources' => [
-		/**
-		 * @note Databases should NEVER be configured here!
-		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Databases
-		 *
-		 * @note Programs should NEVER be configured here!
-		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Local_programs
-		 *
-		 * @note LDAP should NEVER be configured here!
-		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/LDAP
-		 *
-		 * @note If configuring local files here, please be mindful of how it is done to avoid security implications.
-		 * @see https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:External_Data/Local_files
-		 *
-		 * @note SOAP should NEVER be configured here, unless you understand it and can confirm the security of it is acceptable.
-		 */
-		'ext-ExternalData' => [
-			'*' => [
-				'min cache seconds' => 3600,
-				'always use stale cache' => false,
-				'throttle key' => '$2nd_lvl_domain$',
-				'throttle interval' => 0,
-				'replacements' => [],
-				'allowed urls' => [],
-				'options' => [
-					'timeout' => 'default',
-					// MediaWiki's documentation (to be specific, MediaWiki\Http\HttpRequestFactory#create()) states that this
-					// should be enabled only for trusted URLs, as an attacker-controlled URL can cause a redirect to bounce
-					// off to intranet services. However, we do not have any filtering on the URL, so an attacker already has
-					// SSRF by virtue of having ExternalData enabled. Therefore, the issue raised by the docs are a non-issue
-					// for this specific usecase.
-					'followRedirects' => true,
-				],
-				'encodings' => [
-					'ASCII',
-					'UTF-8',
-					'Windows-1251',
-					'Windows-1252',
-					'Windows-1254',
-					'KOI8-R',
-					'ISO-8859-1',
-				],
-				'params' => [],
-				'param filters' => [],
-				'verbose' => true,
-			],
-		],
-	],
-
 	// FeaturedFeeds
 	'wgFeaturedFeedsDefaults' => [
 		'default' => [
@@ -8170,7 +8120,6 @@ $wi::$disabledExtensions = [
 	'score' => '[[phorge:T5863|T5863]]',
 	'wikiforum' => '[[phorge:T13064|T13064]]',
 	'maps' => '[[phorge:T15445|T15445]]',
-	'externaldata' => '[[phorge:T15833|T15833]]',
 
 	'lingo' => 'Currently broken',
 

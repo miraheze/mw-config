@@ -89,10 +89,6 @@ switch ( $wi->dbname ) {
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
 
 		break;
-	case 'comprehensibleinputwiki':
-		$wgExternalDataSources['*']['min cache seconds'] = 0;
-
-		break;
 	case 'constantnoblewiki':
 		// T13620: Show AbuseFilter changes in RecentChanges
 		$wgExtensionFunctions[] = static function () {
