@@ -8135,7 +8135,6 @@ if ( $wi->version >= 1.46 ) {
 		'autocreatepage' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'datatransfer' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'featuredfeeds' => 'Disabled with the MediaWiki 1.46 upgrade.',
-		'geogebra' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
 	];
 }
