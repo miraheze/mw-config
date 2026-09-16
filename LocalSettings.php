@@ -7004,6 +7004,14 @@ $wgConf->settings += [
 	],
 
 	// Translate
+	'wgPageTranslationAllowedContentModels' => [
+		'default' => [
+			CONTENT_MODEL_WIKITEXT => true,
+		],
+		'+moddedminecraftwiki' => [
+			CONTENT_MODEL_SCRIBUNTO => true,
+		],
+	],
 	'wgTranslateDisabledTargetLanguages' => [
 		'default' => [],
 		'astralpartywiki' => [
