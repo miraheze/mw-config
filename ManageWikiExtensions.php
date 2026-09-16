@@ -2170,7 +2170,11 @@ $wgManageWikiExtensions = [
 		'name' => 'Clean Changes',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CleanChanges',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'other',
 	],
 	'collapsiblevector' => [
