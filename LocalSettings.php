@@ -5937,9 +5937,6 @@ $wgConf->settings += [
 			'uselivepreview' => true,
 			'watchlistunwatchlinks' => true,
 		],
-		'+ext-CleanChanges' => [
-			'usenewrc' => 1,
-		],
 	],
 	'wmgCodeMirrorEnableDefault' => [
 		'default' => false,
@@ -8187,7 +8184,6 @@ $wi::$disabledExtensions = [
 if ( $wi->version >= 1.46 ) {
 	$wi::$disabledExtensions += [
 		'autocreatepage' => 'Disabled with the MediaWiki 1.46 upgrade.',
-		'cleanchanges' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'datatransfer' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'featuredfeeds' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'geogebra' => 'Disabled with the MediaWiki 1.46 upgrade.',
