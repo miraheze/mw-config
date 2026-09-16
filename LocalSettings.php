@@ -1823,23 +1823,6 @@ $wgConf->settings += [
 		'inforevivalwiki' => 640,
 	],
 
-	// FeaturedFeeds
-	'wgFeaturedFeedsDefaults' => [
-		'default' => [
-			'limit' => 10,
-			'frequency' => 'daily',
-			'inUserLanguage' => false,
-		],
-	],
-
-	'wmgMirahezeFeaturedFeedsInUserLanguage' => [
-		'default' => false,
-	],
-
-	'wgDisplayFeedsInSidebar' => [
-		'default' => true,
-	],
-
 	// FlaggedRevs
 	'wgFlaggedRevsProtection' => [
 		'default' => false,
@@ -8134,7 +8117,6 @@ if ( $wi->version >= 1.46 ) {
 	$wi::$disabledExtensions += [
 		'autocreatepage' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'datatransfer' => 'Disabled with the MediaWiki 1.46 upgrade.',
-		'featuredfeeds' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
 	];
 }
