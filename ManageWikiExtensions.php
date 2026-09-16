@@ -1373,7 +1373,11 @@ $wgManageWikiExtensions = [
 		'name' => 'Data Transfer',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Data_Transfer',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'specialpages',
 		'install' => [
 			'permissions' => [
