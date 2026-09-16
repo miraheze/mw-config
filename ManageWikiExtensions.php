@@ -565,7 +565,11 @@ $wgManageWikiExtensions = [
 		'name' => 'GeoGebra',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GeoGebra',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'parserhooks',
 	],
 	'googledocs4mw' => [
