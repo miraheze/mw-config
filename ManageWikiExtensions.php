@@ -561,17 +561,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'geogebra' => [
-		'name' => 'GeoGebra',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GeoGebra',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'googledocs4mw' => [
 		'name' => 'GoogleDocs4MW',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:GoogleDocs4MW',
