@@ -2166,17 +2166,6 @@ $wgManageWikiExtensions = [
 		],
 		'section' => 'other',
 	],
-	'cleanchanges' => [
-		'name' => 'Clean Changes',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CleanChanges',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'other',
-	],
 	'collapsiblevector' => [
 		'name' => 'CollapsibleVector',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:CollapsibleVector',
