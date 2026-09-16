@@ -2055,9 +2055,7 @@ $wgManageWikiExtensions = [
 		'help' => 'Note: This extension should no longer be enabled on new wikis.',
 		'requires' => [
 			'permissions' => [
-				'enable' => [
-					'managewiki-restricted',
-				],
+				'managewiki-restricted',
 			],
 		],
 		'section' => 'other',
