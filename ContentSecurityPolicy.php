@@ -302,24 +302,6 @@ switch ( $wgDBname ) {
 			],
 		];
 		break;
-	case 'vocaloidlyricswiki':
-		$wgMirahezeMagicCSPHeaderOverrides = [
-			'frame-src' => [
-				'player.bilibili.com',
-			],
-			'img-src' => [
-				'*.hdslb.com',
-			],
-			'connect-src' => [
-				'api.bilibili.com',
-				'data.bilibili.com',
-				'broadcast.chat.bilibili.com',
-			],
-			'media-src' => [
-				'upos-hz-mirrorakam.akamaized.net',
-			],
-		];
-		break;
 	case 'wowlibrarywiki':
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'script-src' => [
@@ -330,10 +312,16 @@ switch ( $wgDBname ) {
 			],
 		];
 		break;
+	case 'bluearchivezhwiki':
+	case 'fukafanswiki':
+	case 'memepediawiki':
+	case 'redstonewiki':
+	case 'vocaloidlyricswiki':
 	case 'xyywiki':
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'frame-src' => [
 				'player.bilibili.com',
+				'www.bilibili.com/blackboard/webplayer/',
 			],
 			'img-src' => [
 				'*.hdslb.com',
