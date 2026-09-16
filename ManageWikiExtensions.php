@@ -2274,7 +2274,11 @@ $wgManageWikiExtensions = [
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:FeaturedFeeds',
 		'help' => '<b>Configuration of</b> <code>$wgFeaturedFeeds</code> <b>is not possible in ManageWiki.</b><br />File a task on [[m:Phorge|Phorge]] or a pull request on our mw-config repository with the desired configuration.',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 		'section' => 'other'
 	],
 	'flexdiagrams' => [
