@@ -598,16 +598,6 @@ switch ( $wi->dbname ) {
 			'SecurePoll',
 		] );
 
-		/*
-		$wgFeaturedFeeds['test'] = [
-			'page' => 'feedtest',
-			'title' => 'feedtest-title',
-			'short-title' => 'feedtest-short-title',
-			'description' => 'feedtest-description',
-			'entryName' => 'feedtest-entryname',
-		];
-		*/
-
 		break;
 	case 'namuwitchwiki':
 		$wgDisableLangConversion = true;
