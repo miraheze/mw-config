@@ -112,7 +112,6 @@ $wgMirahezeMagicCSPHeaderDefault = [
 		'mirrors.creativecommons.org',
 		'www.gnu.org',
 		'cdn.pixabay.com',
-		'cdn.geogebra.org',
 		'docs.blender.org',
 		'*.imgbox.com',
 		'tile.openstreetmap.org',
