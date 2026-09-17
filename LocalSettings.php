@@ -4842,6 +4842,11 @@ $wgConf->settings += [
 			'loggedin' => true,
 			'amc' => true,
 		],
+		'moviestarplanetwiki' => [
+			'base' => true,
+			'loggedin' => false,
+			'amc' => true,
+		],
 		'pangarwiki' => [
 			'base' => true,
 			'loggedin' => true,
