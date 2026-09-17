@@ -8,4 +8,3 @@ $IP/extensions/SocialProfile/UserStats/extension.json
 $IP/extensions/SocialProfile/UserWelcome/extension.json
 $IP/extensions/Wikibase/extension-client.json
 $IP/extensions/Wikibase/extension-repo.json
-$IP/vendor/mediawiki/parser-hooks/ParserHooks.php
