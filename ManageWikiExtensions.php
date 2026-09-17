@@ -1369,26 +1369,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'specialpages',
 	],
-	'datatransfer' => [
-		'name' => 'Data Transfer',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Data_Transfer',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
-		'section' => 'specialpages',
-		'install' => [
-			'permissions' => [
-				'sysop' => [
-					'permissions' => [
-						'datatransferimport',
-					]
-				]
-			],
-		],
-	],
 	'editcount' => [
 		'name' => 'Editcount',
 		'displayname' => 'EditCount',
