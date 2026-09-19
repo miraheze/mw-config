@@ -2371,6 +2371,13 @@ $wgConf->settings += [
 			],
 		],
 		'itemasylumwiki' => [
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/itemasylumwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
 			'irwa' => [
 				'irwa' => [
 					'src' => 'https://static.wikitide.net/itemasylumwiki/8/8f/IRWA-logo.svg',
@@ -2383,13 +2390,6 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/itemasylumwiki/f/f7/Poweredbymediawiki_badge.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
-				],
-			],
-			'miraheze' => [
-				'miraheze' => [
-					'src' => 'https://static.wikitide.net/itemasylumwiki/8/81/Miraheze_badge.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
-					'alt' => 'Hosted by Miraheze',
 				],
 			],
 			'copyright' => [
