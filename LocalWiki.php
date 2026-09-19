@@ -1161,52 +1161,50 @@ switch ( $wi->dbname ) {
 				'discord-component-embed',
 				'<script id="discord:component-embed" type="application/json">
 				{
-					"component": [
-						{
-							"type": 17,
-							"components": [
-								{
-									"type": 10,
-									"content": "# [tagging.wiki](https://tagging.wiki)\nthe official comprehensive place for everything Untitled Tag Game, the Roblox parkour game centered all around tag!"
-								},
-								{
-									"type": 12,
-									"items": [
-										{
-											"media": {
-												"url": "https://tagging.wiki/Special:Filepath/GarfieldBeach.png"
-											},
-											"description": "Garfield, an in-game character, wearing a sun hat and a blue floral Hawaiian shirt while holding a tropical coconut drink complete with a straw and mini umbrella.",
-											"spoiler": false
-										}
-									]
-								},
-								{
-									"type": 1,
-									"components": [
-										{
-											"type": 2,
-											"style": 5,
-											"label": "Recode",
-											"url": "https://tagging.wiki/"
+					"component": {
+						"type": 17,
+						"components": [
+							{
+								"type": 10,
+								"content": "# [tagging.wiki](https://tagging.wiki)\nthe official comprehensive place for everything Untitled Tag Game, the Roblox parkour game centered all around tag!"
+							},
+							{
+								"type": 12,
+								"items": [
+									{
+										"media": {
+											"url": "https://tagging.wiki/Special:Filepath/GarfieldBeach.png"
 										},
-										{
-											"type": 2,
-											"style": 5,
-											"label": "Legacy",
-											"url": "https://tagging.wiki/legacy:wiki"
-										},
-										{
-											"type": 2,
-											"style": 5,
-											"label": "Devdoc",
-											"url": "https://tagging.wiki/dev:wiki"
-										}
-									]
-								}
-							]
-						}
-					]
+										"description": "Garfield, an in-game character, wearing a sun hat and a blue floral Hawaiian shirt while holding a tropical coconut drink complete with a straw and mini umbrella.",
+										"spoiler": false
+									}
+								]
+							},
+							{
+								"type": 1,
+								"components": [
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Recode",
+										"url": "https://tagging.wiki/"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Legacy",
+										"url": "https://tagging.wiki/legacy:wiki"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Devdoc",
+										"url": "https://tagging.wiki/dev:wiki"
+									}
+								]
+							}
+						]
+					}
 				}
 			</script>'
 			);
