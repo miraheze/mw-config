@@ -1216,16 +1216,6 @@ case 'utgwiki':
 		function onBeforePageDisplay( OutputPage $output ) {
 			$title = $output->getTitle();
 
-			if (
-				$title === null ||
-				(
-					!$title->isMainPage() &&
-					!in_array( $title->getPrefixedDBkey(), [ 'Legacy:Wiki', 'Dev:Wiki' ], true )
-				)
-			) {
-				return;
-			}
-
 			$output->addHeadItem(
 				'discord-component-embed',
 				'<script id="discord:component-embed" type="application/json">
