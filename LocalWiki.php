@@ -1141,7 +1141,7 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
-case 'utgwiki':
+	case 'utgwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $output ) {
@@ -1209,13 +1209,11 @@ case 'utgwiki':
 			</script>'
 			);
 		}
-	break;
+		break;
 	case 'itemasylumwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $output ) {
-			$title = $output->getTitle();
-
 			$output->addHeadItem(
 				'discord-component-embed',
 				'<script id="discord:component-embed" type="application/json">
