@@ -1209,6 +1209,60 @@ switch ( $wi->dbname ) {
 			</script>'
 			);
 		}
+		break;
+	case 'itemasylumwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
+		function onBeforePageDisplay( OutputPage $output ) {
+			$output->addHeadItem(
+				'discord-component-embed',
+				'<script id="discord:component-embed" type="application/json">
+				{
+					"components": [
+						{
+							"type": 17,
+							"accent_color": 16773510,
+							"components": [
+								{
+									"type": 10,
+									"content": "# Item Asylum Wiki"
+								},
+								{
+									"type": 10,
+									"content": "The official wiki for the Roblox game item asylum, a meme and reference-filled randomizer fighting game with many chat tags, emotes, gamemodes, bosses and more!"
+								},
+								{
+									"type": 12,
+									"items": [
+										{
+											"media": {
+												"url": "https://itemasylum.wiki/Special:FilePath/Site-logo.svg"
+											},
+											"description": "Text reading \"ITEM ASYLUM WIKI\" in all caps, with \"ITEM\" being yellow, \"ASYLUM\" being blue and \"WIKI\" being white"
+										}
+									]
+								}
+							]
+						},
+						{
+							"type": 1,
+							"components": [
+								{
+									"type": 2,
+									"style": 5,
+									"label": "Visit the wiki",
+									"url": "https://itemasylum.wiki/",
+									"emoji": {
+										"id": "1007651684715069481",
+										"name": "him"
+									}
+								}
+							]
+						}
+					]
+				}
+			</script>'
+			);
+		}
 		break;
 }
