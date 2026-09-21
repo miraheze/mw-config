@@ -699,7 +699,7 @@ $wgConf->settings += [
 		'default' => 1,
 	],
 	'wgCitizenThemeColor' => [
-		'default' => '#131a21',
+		'default' => '#0d0e12',
 	],
 	'wgCitizenEnableCJKFonts' => [
 		'default' => false,
@@ -732,23 +732,14 @@ $wgConf->settings += [
 	'wgCitizenTableOfContentsCollapseAtCount' => [
 		'default' => 28,
 	],
-	'wgCitizenEnableManifest' => [
-		'default' => true,
-	],
-	'wgCitizenManifestOptions' => [
-		'default' => [
-			'background_color' => '#0d0e12',
-			'description' => '',
-			'short_name' => '',
-			'theme_color' => '#0d0e12',
-			'icons' => [],
-		],
-	],
 	'wgCitizenEnableShare' => [
 		'default' => true,
 	],
 	'wgCitizenShareMode' => [
 		'default' => 'auto',
+	],
+	'wgCitizenCompat' => [
+		'default' => true,
 	],
 
 	// CodeMirror
