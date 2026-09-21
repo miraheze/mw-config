@@ -1230,7 +1230,7 @@ switch ( $wi->dbname ) {
 				'discord-component-embed',
 				'<script id="discord:component-embed" type="application/json">
 				{
-					"components": [
+					"component": [
 						{
 							"type": 17,
 							"accent_color": 16773510,
