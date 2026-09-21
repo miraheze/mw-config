@@ -1209,6 +1209,7 @@ switch ( $wi->dbname ) {
 			</script>'
 			);
 		}
+
 		break;
 	case 'itemasylumwiki':
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
@@ -1264,5 +1265,6 @@ switch ( $wi->dbname ) {
 			</script>'
 			);
 		}
+
 		break;
 }
