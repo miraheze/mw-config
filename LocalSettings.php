@@ -3418,7 +3418,7 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000 (Miraheze)',
-			'Reception123',
+			'Reception123 (Miraheze)',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
 		],
