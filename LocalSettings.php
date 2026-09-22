@@ -6719,7 +6719,7 @@ $wgConf->settings += [
 		'default' => 0.99,
 	],
 	'wmgScribuntoShareInvocationEnv' => [
-		'default' => true,
+		'default' => false,
 	],
 
 	// Search
