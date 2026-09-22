@@ -1285,8 +1285,7 @@ switch ( $wi->dbname ) {
 								}
 							]
 						}
-					],
-					"embeds": []
+					]
 				}
 			</script>'
 			);
