@@ -1214,9 +1214,10 @@ switch ( $wi->dbname ) {
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $output ) {
+			$title = $output->getTitle();
 			if ( !$title?->isMainPage() ) {
-                	return;
-            	}
+				return;
+			}
 
 			$output->addHeadItem(
 				'discord-component-embed',
