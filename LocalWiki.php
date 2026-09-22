@@ -1216,15 +1216,9 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $output ) {
 			$title = $output->getTitle();
 
-			if (
-				$title === null ||
-				(
-					!$title->isMainPage() &&
-					!in_array( $title->getPrefixedDBkey(), [ 'Legacy:Wiki', 'Dev:Wiki' ], true )
-				)
-			) {
-				return;
-			}
+			if (!$title?->isMainPage()) {
+                return;
+            }
 
 			$output->addHeadItem(
 				'discord-component-embed',
