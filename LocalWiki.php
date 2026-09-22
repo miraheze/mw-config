@@ -1215,52 +1215,78 @@ switch ( $wi->dbname ) {
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $output ) {
+			$title = $output->getTitle();
+			if ( !$title?->isMainPage() ) {
+				return;
+			}
+
 			$output->addHeadItem(
 				'discord-component-embed',
 				'<script id="discord:component-embed" type="application/json">
 				{
-					"components": [
+					"component": [
 						{
 							"type": 17,
 							"accent_color": 16773510,
 							"components": [
 								{
-									"type": 10,
-									"content": "# Item Asylum Wiki"
-								},
-								{
-									"type": 10,
-									"content": "The official wiki for the Roblox game item asylum, a meme and reference-filled randomizer fighting game with many chat tags, emotes, gamemodes, bosses and more!"
-								},
-								{
 									"type": 12,
 									"items": [
 										{
 											"media": {
-												"url": "https://itemasylum.wiki/Special:FilePath/Site-logo.svg"
+												"url": "https://itemasylum.wiki/Special:FilePath/Discord-embed-image.png"
 											},
-											"description": "Text reading \"ITEM ASYLUM WIKI\" in all caps, with \"ITEM\" being yellow, \"ASYLUM\" being blue and \"WIKI\" being white"
+											"description": "Text reading \"ITEM ASYLUM WIKI\" in all caps, with \"ITEM\" being yellow, \"ASYLUM\" being blue and \"WIKI\" being white, against a collage of images."
 										}
 									]
+								},
+								{
+									"type": 10,
+									"content": "The official wiki for the Roblox game item asylum, a chaotic randomizer fighting game where you fight with items, play across different maps and gamemodes, vote for maps in different lobbies, team up against bosses, customize yourself with chat tags and emotes, and more!"
 								}
 							]
 						},
 						{
-							"type": 1,
+							"type": 17,
+							"accent_color": 8433135,
 							"components": [
 								{
-									"type": 2,
-									"style": 5,
-									"label": "Visit the wiki",
-									"url": "https://itemasylum.wiki/",
-									"emoji": {
-										"id": "1007651684715069481",
-										"name": "him"
-									}
+									"type": 10,
+									"content": "**Quick links**"
+								},
+								{
+									"type": 1,
+									"components": [
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Items",
+											"url": "https://itemasylum.wiki/Items"
+										},
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Areas",
+											"url": "https://itemasylum.wiki/Areas"
+										},
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Gamemodes",
+											"url": "https://itemasylum.wiki/Gamemodes"
+										},
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Changelog",
+											"url": "https://itemasylum.wiki/Changelog"
+										}
+									]
 								}
 							]
 						}
-					]
+					],
+					"embeds": []
 				}
 			</script>'
 			);
