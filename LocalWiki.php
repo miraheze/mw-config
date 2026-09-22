@@ -1214,7 +1214,6 @@ switch ( $wi->dbname ) {
 		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
 
 		function onBeforePageDisplay( OutputPage $output ) {
-
 			if ( !$title?->isMainPage() ) {
                 	return;
             	}
