@@ -825,6 +825,7 @@ $wgThumbnailEpoch = 20230715011058;
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+$wgScribuntoEngineConf['luasandbox']['shareInvocationEnv'] = $wmgScribuntoShareInvocationEnv;
 
 // For Scribunto / wgCodeEditorEnableCore
 $wgULSNoImeSelectors[] = '.ace_editor textarea';

@@ -1203,6 +1203,16 @@ $wgManageWikiSettings = [
 		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
 		'requires' => [],
 	],
+	'wmgScribuntoShareInvocationEnv' => [
+		'name' => 'Scribunto Share Invocation Environment',
+		'from' => 'scribunto',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => 'Allow using a shared global environment for module invocations. Significantly speeds up pages with a lot of <code>#invoke</code> statements, but may cause weird bugs.',
+		'section' => 'editing',
+		'requires' => [],
+	],
 	'wgPageCreationLog' => [
 		'name' => 'Page Creation Log',
 		'from' => 'mediawiki',
