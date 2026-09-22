@@ -6718,6 +6718,9 @@ $wgConf->settings += [
 	'wgScribuntoSlowFunctionThreshold' => [
 		'default' => 0.99,
 	],
+	'wmgScribuntoShareInvocationEnv' => [
+		'default' => true,
+	],
 
 	// Search
 	'wgSearchType' => [
