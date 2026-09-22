@@ -983,3 +983,8 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 
 // RecentChanges
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
+
+// Disallow wiki creations for 1.46 upgrade
+$wgCreateWikiOpenAIConfig['dryrun'] = true;
+$wgRevokePermissions['*']['createwiki'] = true;
+$wgRevokePermissions['*']['requestwiki'] = true;
