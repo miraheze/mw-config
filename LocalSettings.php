@@ -1795,7 +1795,7 @@ $wgConf->settings += [
 		'ysmwikiwiki' => true,
 	],
 	'wgNamespacesWithoutAutoSummaries' => [
-		'1.46' => [],
+		'default' => [],
 	],
 
 	// EditSimilar
@@ -1898,7 +1898,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgEnableWatchlistLabels' => [
-		'1.46' => false,
+		'default' => false,
 	],
 	'wgShortPagesNamespaceExclusions' => [
 		'default' => [],
@@ -6073,10 +6073,10 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgBotPasswordsLimit' => [
-		'1.46' => 100,
+		'default' => 100,
 	],
 	'wgUserJsPrefLimit' => [
-		'1.46' => 100,
+		'default' => 100,
 	],
 
 	// Preloader
