@@ -3819,5 +3819,5 @@ $wgManageWikiExtensions = [
 ];
 
 if ( $wi->version < 1.46 ) {
-	unset($wgManageWikiExtensions['scheduledcacheexpiry']);
+	unset( $wgManageWikiExtensions['scheduledcacheexpiry'] );
 }
