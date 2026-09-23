@@ -684,7 +684,13 @@ $wgManageWikiExtensions = [
 		'name' => 'MagicNoCache',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNoCache',
 		'conflicts' => false,
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'enable' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'section' => 'parserhooks',
 	],
 	'maps' => [
@@ -931,6 +937,13 @@ $wgManageWikiExtensions = [
 	'sanecase' => [
 		'name' => 'SaneCase',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SaneCase',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'scheduledcacheexpiry' => [
+		'name' => 'ScheduledCacheExpiry',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ScheduledCacheExpiry',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
@@ -3804,3 +3817,7 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
+
+if ( $wi->version < 1.46 ) {
+	unset($wgManageWikiExtensions['scheduledcacheexpiry']);
+}
