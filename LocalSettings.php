@@ -6465,6 +6465,12 @@ $wgConf->settings += [
 		],
 	],
 
+	// ScheduledCacheExpiry
+	'wgScheduledCacheExpiryMinimumExpiry' => [
+		/** 6 hours by default, should not be lowered unless absolutely necessary. */
+		'ext-ScheduledCacheExpiry' => 21600,
+	],
+
 	// Score
 	'wgScoreImageMagickConvert' => [
 		'ext-Score' => '/usr/bin/convert',
