@@ -745,6 +745,24 @@ $wgConf->settings += [
 	'wgCitizenShareMode' => [
 		'default' => 'auto',
 	],
+	'wgCitizenEnablePreferences' => [
+		'default' => true,
+	],
+	'wgCitizenEnableManifest' => [
+		'default' => true,
+	],
+	'wgCitizenManifestOptions' => [
+		'default' => [
+			'background_color' => '#0d0e12',
+			'description' => '',
+			'short_name' => '',
+			'theme_color' => '#0d0e12',
+			'icons' => [],
+		],
+	],
+	'wgCitizenPreview' => [
+		'default' => 0,
+	],
 	'wgCitizenCompat' => [
 		'default' => true,
 	],
