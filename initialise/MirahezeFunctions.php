@@ -689,6 +689,7 @@ class MirahezeFunctions {
 
 		// Permissions
 		foreach ( $cacheArray['permissions'] ?? [] as $group => $perm ) {
+			$settings['wgGroupPermissions']['default'][$group] ??= [];
 			foreach ( (array)$perm['permissions'] as $right ) {
 				$settings['wgGroupPermissions']['default'][$group][$right] = true;
 			}
