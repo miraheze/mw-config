@@ -680,19 +680,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'magicnocache' => [
-		'name' => 'MagicNoCache',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNoCache',
-		'conflicts' => false,
-		'requires' => [
-			'permissions' => [
-				'enable' => [
-					'managewiki-restricted',
-				],
-			],
-		],
-		'section' => 'parserhooks',
-	],
 	'maps' => [
 		'name' => 'Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Maps',
@@ -3817,7 +3804,3 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
-
-if ( $wi->version < 1.46 ) {
-	unset( $wgManageWikiExtensions['scheduledcacheexpiry'] );
-}
