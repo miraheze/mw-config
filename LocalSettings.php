@@ -3942,12 +3942,6 @@ $wgConf->settings += [
 	'wgAllowHTMLEmail' => [
 		'default' => true,
 	],
-	'wgEnableSpecialMute' => [
-		'1.45' => true,
-	],
-	'wgEnableUserEmailMuteList' => [
-		'1.45' => true,
-	],
 
 	// ManageWiki
 	'wgManageWikiCacheDirectory' => [
@@ -7239,13 +7233,6 @@ $wgConf->settings += [
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
 	],
-	'wgVectorNightMode' => [
-		'1.45' => [
-			'logged_out' => false,
-			'logged_in' => true,
-			'beta' => false,
-		],
-	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
 			'showThumbnail' => true,
@@ -7392,11 +7379,6 @@ $wgConf->settings += [
 	],
 	'wgProtectSiteDefaultTimeout' => [
 		'default' => '1 hour',
-	],
-
-	// WebAuthn
-	'wgWebAuthnLimitPasskeysToRoaming' => [
-		'1.45' => true,
 	],
 
 	// Wikibase
