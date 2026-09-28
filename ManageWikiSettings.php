@@ -3759,30 +3759,6 @@ $wgManageWikiSettings = [
 		'help' => 'Enable Minerva\'s dark mode for users with these features enabled.',
 		'requires' => [],
 	],
-	'wgVectorNightMode' => [
-		'name' => 'Vector 2022 Enable Dark Mode',
-		'from' => 'vector',
-		'global' => true,
-		'type' => 'list-multi-bool',
-		'allopts' => [
-			'logged_out',
-			'logged_in',
-			'beta',
-		],
-		'options' => [
-			'Logged out' => 'logged_out',
-			'Logged in' => 'logged_in',
-			'Beta feature' => 'beta',
-		],
-		'overridedefault' => [
-			'logged_out' => false,
-			'logged_in' => true,
-			'beta' => false,
-		],
-		'section' => 'styling',
-		'help' => 'Enable Vector 2022\'s dark mode for these users.',
-		'requires' => [],
-	],
 	'wgWordmark' => [
 		'name' => 'Wordmark',
 		'from' => 'mediawiki',
