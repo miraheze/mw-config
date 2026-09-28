@@ -523,6 +523,7 @@ $wgConf->settings += [
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
 		'wikitransportwiki' => 'numeric',
+		'xyywiki' => 'pinyin-zh-u-kr-digit-latn-hani',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
