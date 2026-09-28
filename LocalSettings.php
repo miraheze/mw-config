@@ -3339,10 +3339,6 @@ $wgConf->settings += [
 	'wgExtraLanguageNames' => [
 		'default' => [
 			// Prevent mh from being treated as an interlanguage link (T11615)
-			'mh' => null,
-		],
-		'1.46' => [
-			// Prevent mh from being treated as an interlanguage link (T11615)
 			'mh' => '',
 		],
 		'+anduranwiki' => [
@@ -8145,18 +8141,13 @@ $wi::$disabledExtensions = [
 
 	'lingo' => 'Currently broken',
 
-	'editsimilar' => 'Incompatible with MediaWiki 1.45',
-	'video' => 'Incompatible with MediaWiki 1.45',
+	'editsimilar' => 'Incompatible with MediaWiki 1.46',
+	'ratepage' => 'Incompatible with MediaWiki 1.46',
+	'video' => 'Incompatible with MediaWiki 1.46',
 
 	// Are these still incompatible?
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.45',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.46',
 ];
-
-if ( $wi->version >= 1.46 ) {
-	$wi::$disabledExtensions += [
-		'ratepage' => 'Incompatible with MediaWiki 1.46',
-	];
-}
 
 $globals = MirahezeFunctions::getConfigGlobals();
 
