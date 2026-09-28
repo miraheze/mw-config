@@ -8154,7 +8154,6 @@ $wi::$disabledExtensions = [
 
 if ( $wi->version >= 1.46 ) {
 	$wi::$disabledExtensions += [
-		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
 		'ratepage' => 'Incompatible with MediaWiki 1.46',
 	];
 }
