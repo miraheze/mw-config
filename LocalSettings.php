@@ -5938,6 +5938,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// RandomSelection
+	'wgRandomSelectionAllowUncached' => [
+		'ext-RandomSelection' => false,
+	],
+
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
