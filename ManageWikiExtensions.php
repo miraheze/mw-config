@@ -897,6 +897,7 @@ $wgManageWikiExtensions = [
 		'name' => 'RandomSelection',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomSelection',
 		'conflicts' => false,
+		'help' => 'Note: performing uncached selection is no longer allowed for this extension. Please use [[dev:Template:Choose|Template:Choose]] on the Developers Wiki instead.',
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
