@@ -523,6 +523,7 @@ $wgConf->settings += [
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
 		'wikitransportwiki' => 'numeric',
+		'wixosswiki' => 'pinyin-zh-u-kr-latn-hani',
 		'xyywiki' => 'pinyin-zh-u-kr-latn-hani',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
@@ -4851,6 +4852,11 @@ $wgConf->settings += [
 			'loggedin' => false,
 			'amc' => true,
 		],
+		'constantnoblewiki' => [
+			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
+		],
 		'criticalrolewiki' => [
 			'base' => true,
 			'loggedin' => false,
@@ -5049,6 +5055,14 @@ $wgConf->settings += [
 	],
 	'wgDisabledVariants' => [
 		'default' => [],
+		'bluearchivezhwiki' => [
+			'zh-cn',
+			'zh-hk',
+			'zh-mo',
+			'zh-my',
+			'zh-sg',
+			'zh-tw',
+		],
 		'zhtardiswiki' => [
 			'zh-hans',
 			'zh-hant',
@@ -5301,6 +5315,15 @@ $wgConf->settings += [
 	'wgMathValidModes' => [
 		'default' => [
 			'mathml'
+		],
+	],
+
+	// Messages
+	'wgForceUIMsgAsContentMsg' => [
+		'default' => [],
+		'xyywiki' => [
+			'filedesc',
+			'license-header',
 		],
 	],
 
@@ -6181,6 +6204,10 @@ $wgConf->settings += [
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'+marvelindiawiki' => [
+			'edittemplateeditorprotected',
+			'editextendedconfirmedprotected',
+		],
 		'+mcsosirswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6198,6 +6225,10 @@ $wgConf->settings += [
 		],
 		'+nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
+		],
+		'+oculiswiki' => [
+			'editwikieditorprotected',
+			'editoculisstaffprotected',
 		],
 		'+otshestwiki' => [
 			'editextendedconfirmedprotected',
@@ -6332,6 +6363,10 @@ $wgConf->settings += [
 		'knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'marvelindiawiki' => [
+			'edittemplateeditorprotected',
+			'editextendedconfirmedprotected',
+		],
 		'mcsosirswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6345,6 +6380,10 @@ $wgConf->settings += [
 		],
 		'nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
+		],
+		'oculiswiki' => [
+			'editwikieditorprotected',
+			'editoculisstaffprotected',
 		],
 		'otshestwiki' => [
 			'editextendedconfirmedprotected',

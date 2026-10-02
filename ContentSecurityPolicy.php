@@ -335,8 +335,10 @@ switch ( $wgDBname ) {
 	case 'assassinscreedwiki':
 	case 'bluearchivezhwiki':
 	case 'bolanqiuwiki':
+	case 'ff14rpwiki':
 	case 'fukafanswiki':
 	case 'memepediawiki':
+	case 'mlpfanworkscnwiki':
 	case 'redstonewiki':
 	case 'utaitewiki':
 	case 'vocaloidlyricswiki':
