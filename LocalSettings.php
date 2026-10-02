@@ -6162,6 +6162,9 @@ $wgConf->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+		'+elementmonswiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6335,6 +6338,9 @@ $wgConf->settings += [
 		],
 		'damnationwiki' => [
 			'editmoderatorprotected',
+		],
+		'elementmonswiki' => [
+			'editextendedprotected',
 		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
