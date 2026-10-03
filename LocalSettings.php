@@ -6162,6 +6162,9 @@ $wgConf->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+	    'dravyashahwiki' => [
+	        'templateeditor',
+	    ],
 		'+elementmonswiki' => [
 			'editextendedconfirmedprotected',
 		],
@@ -6339,6 +6342,9 @@ $wgConf->settings += [
 		'damnationwiki' => [
 			'editmoderatorprotected',
 		],
+	    'dravyashahwiki' => [
+	        'templateeditor',
+	    ],
 		'elementmonswiki' => [
 			'editextendedprotected',
 		],
