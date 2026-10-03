@@ -1113,6 +1113,19 @@ $wgManageWikiSettings = [
 		'help' => 'Enable the new visual mode on revision difference pages by default (not Beta).',
 		'requires' => [],
 	],
+	'wgVisualEditorTabPosition' => [
+		'name' => 'Adjust position of the visual edit button',
+		'from' => 'visualeditor',
+		'type' => 'list',
+		'overridedefault' => 'before',
+		'section' => 'editing',
+		'help' => 'Determines whether the visual edit button will be before or after the wikitext edit button',
+		'options' => [
+			'Before' => 'before',
+			'After' => 'after',
+		],
+		'requires' => [],
+	],
 	'wgVisualEditorTransclusionDialogSuggestedValues' => [
 		'name' => 'Enable VisualEditor Transclusion Dialog Suggested Values',
 		'from' => 'visualeditor',

@@ -427,6 +427,9 @@ $wgConf->settings += [
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
 	],
+	'wgVisualEditorTabPosition' => [
+		'default' => 'before',
+	],
 	'wgPopupsReferencePreviewsBetaFeature' => [
 		'default' => true,
 	],
