@@ -4134,6 +4134,11 @@ $wgConf->settings += [
 				'read' => true,
 			],
 		],
+	    '+dravyashahwiki' => [
+	        'templateeditor' => [
+	            'edittemplateprotected' => true,
+	        ],
+	    ],
 		'+famedatawiki' => [
 			'extendedconfirmed' => [
 				'editextendedconfirmedprotected' => true,
