@@ -8006,7 +8006,8 @@ $wgConf->settings += [
 			'CookieWarning' => false,
 			'cookie' => false,
 			'CreateWiki' => 'debug',
-			'rdbms' => 'warning',
+			// Temporarily raised from warning for T16217
+			'rdbms' => 'error',
 			'DeferredUpdates' => 'error',
 			'DBConnection' => 'warning',
 			'DBPerformance' => 'debug',
