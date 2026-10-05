@@ -12,6 +12,7 @@ use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 
@@ -1147,13 +1148,165 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $output ) {
 			$title = $output->getTitle();
 
+			if ( $title === null ) {
+				return;
+			}
+
 			if (
-				$title === null ||
-				(
-					!$title->isMainPage() &&
-					!in_array( $title->getPrefixedDBkey(), [ 'Legacy:Wiki', 'Dev:Wiki' ], true )
-				)
+				!$title->isMainPage() &&
+				!in_array( $title->getPrefixedDBkey(), [ 'Legacy:Wiki', 'Dev:Wiki' ], true )
 			) {
+				$html = preg_replace(
+					'#<(script|style)\b[^>]*>.*?</\1>#is',
+					' ',
+					$output->getHTML()
+				);
+				$paragraph = '';
+				if ( preg_match( '/<p\b[^>]*>(.*?)<\/p>/is', $html ?? '', $matches ) ) {
+					$paragraph = $matches[1];
+				}
+				$extract = trim( preg_replace(
+					'/\s+/',
+					' ',
+					html_entity_decode(
+						strip_tags( $paragraph ),
+						ENT_QUOTES | ENT_HTML5,
+						'UTF-8'
+					)
+				) ?? '' );
+				if ( $extract === '' ) {
+					$extract = $title->getPrefixedText();
+				}
+				if ( mb_strlen( $extract ) > 1500 ) {
+					$extract = mb_substr( $extract, 0, 1497 ) . '...';
+				}
+
+				$pageProps = MediaWikiServices::getInstance()->getPageProps()->getProperties(
+					$title,
+					[ 'page_image_free', 'page_image' ]
+				);
+				$imageFile = $pageProps['page_image_free'] ?? $pageProps['page_image'] ?? null;
+				$section = [
+					'type' => 9,
+					'components' => [
+						[
+							'type' => 10,
+							'content' => $extract,
+						],
+					],
+				];
+				if ( $imageFile !== null && $imageFile !== '' ) {
+					$section['accessory'] = [
+						'type' => 11,
+						'media' => [
+							'url' => SpecialPage::getTitleFor( 'Filepath', $imageFile )->getFullURL(),
+						],
+						'description' => null,
+					];
+				}
+
+				$embed = [
+					'component' => [
+						'type' => 17,
+						'components' => [
+							$section,
+							[
+								'type' => 1,
+								'components' => [
+									[
+										'type' => 2,
+										'style' => 5,
+										'label' => 'Page here',
+										'url' => $title->getFullURL(),
+									],
+								],
+							],
+						],
+					],
+				];
+				$embedJson = json_encode(
+					$embed,
+					JSON_UNESCAPED_SLASHES |
+					JSON_UNESCAPED_UNICODE |
+					JSON_HEX_TAG |
+					JSON_HEX_AMP |
+					JSON_HEX_APOS |
+					JSON_HEX_QUOT |
+					JSON_INVALID_UTF8_SUBSTITUTE
+				);
+				if ( $embedJson === false ) {
+					return;
+				}
+
+				$output->addHeadItem(
+					'discord-component-embed',
+					'<script id="discord:component-embed" type="application/json">' .
+					$embedJson .
+					'</script>'
+				);
+				return;
+			}
+
+			$output->addHeadItem(
+				'discord-component-embed',
+				'<script id="discord:component-embed" type="application/json">
+				{
+					"component": {
+						"type": 17,
+						"components": [
+							{
+								"type": 10,
+								"content": "# [tagging.wiki](https://tagging.wiki)\nthe official comprehensive place for everything Untitled Tag Game, the Roblox parkour game centered all around tag!"
+							},
+							{
+								"type": 12,
+								"items": [
+									{
+										"media": {
+											"url": "https://tagging.wiki/Special:Filepath/GarfieldBeach.png"
+										},
+										"description": "Garfield, an in-game character, wearing a sun hat and a blue floral Hawaiian shirt while holding a tropical coconut drink complete with a straw and mini umbrella.",
+										"spoiler": false
+									}
+								]
+							},
+							{
+								"type": 1,
+								"components": [
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Recode",
+										"url": "https://tagging.wiki/"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Legacy",
+										"url": "https://tagging.wiki/legacy:wiki"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Devdoc",
+										"url": "https://tagging.wiki/dev:wiki"
+									}
+								]
+							}
+						]
+					}
+				}
+			</script>'
+			);
+		}
+
+		break;
+	case 'itemasylumwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $output ) {
+			$title = $output->getTitle();
+			if ( !$title?->isMainPage() ) {
 				return;
 			}
 
