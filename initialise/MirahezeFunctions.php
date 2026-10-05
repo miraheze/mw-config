@@ -71,7 +71,7 @@ class MirahezeFunctions {
 	public const array MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.46',
 		'beta' => '1.46',
-		'stable' => '1.45',
+		'stable' => '1.46',
 	];
 
 	public const array SUFFIXES = [
@@ -688,6 +688,7 @@ class MirahezeFunctions {
 
 		// Permissions
 		foreach ( $cacheArray['permissions'] ?? [] as $group => $perm ) {
+			$settings['wgGroupPermissions']['default'][$group] ??= [];
 			foreach ( (array)$perm['permissions'] as $right ) {
 				$settings['wgGroupPermissions']['default'][$group][$right] = true;
 			}

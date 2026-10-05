@@ -312,6 +312,7 @@ switch ( $wgDBname ) {
 		];
 		break;
 	case 'xyywiki':
+	case 'zhninjagowiki':
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'frame-src' => [
 				'player.bilibili.com',
@@ -334,8 +335,10 @@ switch ( $wgDBname ) {
 	case 'assassinscreedwiki':
 	case 'bluearchivezhwiki':
 	case 'bolanqiuwiki':
+	case 'ff14rpwiki':
 	case 'fukafanswiki':
 	case 'memepediawiki':
+	case 'mlpfanworkscnwiki':
 	case 'redstonewiki':
 	case 'utaitewiki':
 	case 'vocaloidlyricswiki':

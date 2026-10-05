@@ -47,8 +47,4 @@ wfLoadExtensions( [
 	'cldr',
 ] );
 
-if ( $wi->version < 1.46 ) {
-	wfLoadExtension( 'WebAuthn' );
-}
-
 wfLoadExtension( 'Parsoid', "$IP/vendor/wikimedia/parsoid/extension.json" );

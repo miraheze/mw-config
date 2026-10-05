@@ -427,6 +427,9 @@ $wgConf->settings += [
 	'wgVisualEditorEnableDiffPageBetaFeature' => [
 		'default' => false,
 	],
+	'wgVisualEditorTabPosition' => [
+		'default' => 'before',
+	],
 	'wgPopupsReferencePreviewsBetaFeature' => [
 		'default' => true,
 	],
@@ -523,6 +526,8 @@ $wgConf->settings += [
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
 		'wikitransportwiki' => 'numeric',
+		'wixosswiki' => 'pinyin-zh-u-kr-latn-hani',
+		'xyywiki' => 'pinyin-zh-u-kr-latn-hani',
 		'ext-CategorySortHeaders' => CustomHeaderCollation::class,
 	],
 	'wgCategoryPagingLimit' => [
@@ -696,6 +701,9 @@ $wgConf->settings += [
 	'wgCitizenEnableCollapsibleSections' => [
 		'default' => true,
 	],
+	'wgCitizenEnableDrawerSiteStats' => [
+		'default' => true,
+	],
 	'wgCitizenGlobalToolsPortlet' => [
 		'default' => '',
 	],
@@ -703,21 +711,12 @@ $wgConf->settings += [
 		'default' => 1,
 	],
 	'wgCitizenThemeColor' => [
-		'default' => '#131a21',
-	],
-	'wgCitizenSearchGateway' => [
-		'default' => 'mwActionApi',
-	],
-	'wgCitizenSearchDescriptionSource' => [
-		'default' => 'textextracts',
-	],
-	'wgCitizenMaxSearchResults' => [
-		'default' => 6,
-	],
-	'wgCitizenEnableCommandPalette' => [
-		'default' => true,
+		'default' => '#0d0e12',
 	],
 	'wgCitizenEnableCJKFonts' => [
+		'default' => false,
+	],
+	'wgCitizenEnableARFonts' => [
 		'default' => false,
 	],
 	'wgCitizenOverflowNowrapClasses' => [
@@ -730,8 +729,47 @@ $wgConf->settings += [
 			'srf-datatable',
 		],
 	],
+	'wgCitizenOverflowInheritedClasses' => [
+		'default' => [
+			'floatleft',
+			'floatright',
+		],
+	],
 	'wgCitizenHeaderPosition' => [
 		'default' => 'left',
+	],
+	'wgCitizenHeaderPositionMobile' => [
+		'default' => 'bottom',
+	],
+	'wgCitizenTableOfContentsCollapseAtCount' => [
+		'default' => 28,
+	],
+	'wgCitizenEnableShare' => [
+		'default' => true,
+	],
+	'wgCitizenShareMode' => [
+		'default' => 'auto',
+	],
+	'wgCitizenEnablePreferences' => [
+		'default' => true,
+	],
+	'wgCitizenEnableManifest' => [
+		'default' => true,
+	],
+	'wgCitizenManifestOptions' => [
+		'default' => [
+			'background_color' => '#0d0e12',
+			'description' => '',
+			'short_name' => '',
+			'theme_color' => '#0d0e12',
+			'icons' => [],
+		],
+	],
+	'wgCitizenPreview' => [
+		'default' => 0,
+	],
+	'wgCitizenCompat' => [
+		'default' => true,
 	],
 
 	// CodeMirror
@@ -2371,6 +2409,13 @@ $wgConf->settings += [
 			],
 		],
 		'itemasylumwiki' => [
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/itemasylumwiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
 			'irwa' => [
 				'irwa' => [
 					'src' => 'https://static.wikitide.net/itemasylumwiki/8/8f/IRWA-logo.svg',
@@ -2383,13 +2428,6 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/itemasylumwiki/f/f7/Poweredbymediawiki_badge.svg',
 					'url' => 'https://www.mediawiki.org/',
 					'alt' => 'Powered by MediaWiki',
-				],
-			],
-			'miraheze' => [
-				'miraheze' => [
-					'src' => 'https://static.wikitide.net/itemasylumwiki/8/81/Miraheze_badge.svg',
-					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
-					'alt' => 'Hosted by Miraheze',
 				],
 			],
 			'copyright' => [
@@ -3306,10 +3344,6 @@ $wgConf->settings += [
 	'wgExtraLanguageNames' => [
 		'default' => [
 			// Prevent mh from being treated as an interlanguage link (T11615)
-			'mh' => null,
-		],
-		'1.46' => [
-			// Prevent mh from being treated as an interlanguage link (T11615)
 			'mh' => '',
 		],
 		'+anduranwiki' => [
@@ -3418,7 +3452,7 @@ $wgConf->settings += [
 	'wgImportDumpUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000 (Miraheze)',
-			'Reception123',
+			'Reception123 (Miraheze)',
 			'Universal Omega',
 			'RhinosF1 (Miraheze)',
 		],
@@ -3912,12 +3946,6 @@ $wgConf->settings += [
 	],
 	'wgAllowHTMLEmail' => [
 		'default' => true,
-	],
-	'wgEnableSpecialMute' => [
-		'1.45' => true,
-	],
-	'wgEnableUserEmailMuteList' => [
-		'1.45' => true,
 	],
 
 	// ManageWiki
@@ -4827,6 +4855,11 @@ $wgConf->settings += [
 			'loggedin' => false,
 			'amc' => true,
 		],
+		'constantnoblewiki' => [
+			'base' => true,
+			'loggedin' => true,
+			'amc' => true,
+		],
 		'criticalrolewiki' => [
 			'base' => true,
 			'loggedin' => false,
@@ -5025,6 +5058,14 @@ $wgConf->settings += [
 	],
 	'wgDisabledVariants' => [
 		'default' => [],
+		'bluearchivezhwiki' => [
+			'zh-cn',
+			'zh-hk',
+			'zh-mo',
+			'zh-my',
+			'zh-sg',
+			'zh-tw',
+		],
 		'zhtardiswiki' => [
 			'zh-hans',
 			'zh-hant',
@@ -5277,6 +5318,15 @@ $wgConf->settings += [
 	'wgMathValidModes' => [
 		'default' => [
 			'mathml'
+		],
+	],
+
+	// Messages
+	'wgForceUIMsgAsContentMsg' => [
+		'default' => [],
+		'xyywiki' => [
+			'filedesc',
+			'license-header',
 		],
 	],
 
@@ -5914,6 +5964,11 @@ $wgConf->settings += [
 		],
 	],
 
+	// RandomSelection
+	'wgRandomSelectionAllowUncached' => [
+		'ext-RandomSelection' => false,
+	],
+
 	// RateLimits
 	'+wgRateLimits' => [
 		'default' => [],
@@ -6110,6 +6165,9 @@ $wgConf->settings += [
 		'+devwiki' => [
 			'editinterface',
 		],
+		'+elementmonswiki' => [
+			'editextendedconfirmedprotected',
+		],
 		'+famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6152,6 +6210,10 @@ $wgConf->settings += [
 		'+knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'+marvelindiawiki' => [
+			'edittemplateeditorprotected',
+			'editextendedconfirmedprotected',
+		],
 		'+mcsosirswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6169,6 +6231,10 @@ $wgConf->settings += [
 		],
 		'+nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
+		],
+		'+oculiswiki' => [
+			'editwikieditorprotected',
+			'editoculisstaffprotected',
 		],
 		'+otshestwiki' => [
 			'editextendedconfirmedprotected',
@@ -6276,6 +6342,9 @@ $wgConf->settings += [
 		'damnationwiki' => [
 			'editmoderatorprotected',
 		],
+		'elementmonswiki' => [
+			'editextendedprotected',
+		],
 		'famedatawiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6303,6 +6372,10 @@ $wgConf->settings += [
 		'knightnwiki' => [
 			'editextendedsemiprotected',
 		],
+		'marvelindiawiki' => [
+			'edittemplateeditorprotected',
+			'editextendedconfirmedprotected',
+		],
 		'mcsosirswiki' => [
 			'editextendedconfirmedprotected',
 			'edittemplateprotected',
@@ -6316,6 +6389,10 @@ $wgConf->settings += [
 		],
 		'nomifactoryceuwiki' => [
 			'editmostlyprotectedprotected',
+		],
+		'oculiswiki' => [
+			'editwikieditorprotected',
+			'editoculisstaffprotected',
 		],
 		'otshestwiki' => [
 			'editextendedconfirmedprotected',
@@ -6448,6 +6525,12 @@ $wgConf->settings += [
 		'ext-RSSfeed' => [
 			'*',
 		],
+	],
+
+	// ScheduledCacheExpiry
+	'wgScheduledCacheExpiryMinimumExpiry' => [
+		/** 6 hours by default, should not be lowered unless absolutely necessary. */
+		'ext-ScheduledCacheExpiry' => 21600,
 	],
 
 	// Score
@@ -7204,13 +7287,6 @@ $wgConf->settings += [
 	'wgVectorDefaultSidebarVisibleForAnonymousUser' => [
 		'default' => true,
 	],
-	'wgVectorNightMode' => [
-		'1.45' => [
-			'logged_out' => false,
-			'logged_in' => true,
-			'beta' => false,
-		],
-	],
 	'wgVectorWvuiSearchOptions' => [
 		'default' => [
 			'showThumbnail' => true,
@@ -7357,11 +7433,6 @@ $wgConf->settings += [
 	],
 	'wgProtectSiteDefaultTimeout' => [
 		'default' => '1 hour',
-	],
-
-	// WebAuthn
-	'wgWebAuthnLimitPasskeysToRoaming' => [
-		'1.45' => true,
 	],
 
 	// Wikibase
@@ -7935,7 +8006,8 @@ $wgConf->settings += [
 			'CookieWarning' => false,
 			'cookie' => false,
 			'CreateWiki' => 'debug',
-			'rdbms' => 'warning',
+			// Temporarily raised from warning for T16217
+			'rdbms' => 'error',
 			'DeferredUpdates' => 'error',
 			'DBConnection' => 'warning',
 			'DBPerformance' => 'debug',
@@ -8106,18 +8178,13 @@ $wi::$disabledExtensions = [
 
 	'lingo' => 'Currently broken',
 
-	'editsimilar' => 'Incompatible with MediaWiki 1.45',
-	'video' => 'Incompatible with MediaWiki 1.45',
+	'editsimilar' => 'Incompatible with MediaWiki 1.46',
+	'ratepage' => 'Incompatible with MediaWiki 1.46',
+	'video' => 'Incompatible with MediaWiki 1.46',
 
 	// Are these still incompatible?
-	'snapwikiskin' => 'Incompatible with MediaWiki 1.45',
+	'snapwikiskin' => 'Incompatible with MediaWiki 1.46',
 ];
-
-if ( $wi->version >= 1.46 ) {
-	$wi::$disabledExtensions += [
-		'magicnocache' => 'Disabled with the MediaWiki 1.46 upgrade.',
-	];
-}
 
 $globals = MirahezeFunctions::getConfigGlobals();
 

@@ -680,13 +680,6 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
-	'magicnocache' => [
-		'name' => 'MagicNoCache',
-		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:MagicNoCache',
-		'conflicts' => false,
-		'requires' => [],
-		'section' => 'parserhooks',
-	],
 	'maps' => [
 		'name' => 'Maps',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:Maps',
@@ -904,6 +897,7 @@ $wgManageWikiExtensions = [
 		'name' => 'RandomSelection',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:RandomSelection',
 		'conflicts' => false,
+		'help' => 'Note: performing uncached selection is no longer allowed for this extension. Please use [[dev:Template:Choose|Template:Choose]] on the Developers Wiki instead.',
 		'requires' => [],
 		'section' => 'parserhooks',
 	],
@@ -931,6 +925,13 @@ $wgManageWikiExtensions = [
 	'sanecase' => [
 		'name' => 'SaneCase',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:SaneCase',
+		'conflicts' => false,
+		'requires' => [],
+		'section' => 'parserhooks',
+	],
+	'scheduledcacheexpiry' => [
+		'name' => 'ScheduledCacheExpiry',
+		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:ScheduledCacheExpiry',
 		'conflicts' => false,
 		'requires' => [],
 		'section' => 'parserhooks',
