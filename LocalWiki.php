@@ -12,6 +12,7 @@ use MediaWiki\Parser\Sanitizer;
 use MediaWiki\Request\WebRequest;
 use MediaWiki\Skin\Skin;
 use MediaWiki\SpecialPage\DisabledSpecialPage;
+use MediaWiki\SpecialPage\SpecialPage;
 use MediaWiki\Title\Title;
 use MediaWiki\User\User;
 
@@ -1147,13 +1148,102 @@ switch ( $wi->dbname ) {
 		function onBeforePageDisplay( OutputPage $output ) {
 			$title = $output->getTitle();
 
+			if ( $title === null ) {
+				return;
+			}
+
 			if (
-				$title === null ||
-				(
-					!$title->isMainPage() &&
-					!in_array( $title->getPrefixedDBkey(), [ 'Legacy:Wiki', 'Dev:Wiki' ], true )
-				)
+				!$title->isMainPage() &&
+				!in_array( $title->getPrefixedDBkey(), [ 'Legacy:Wiki', 'Dev:Wiki' ], true )
 			) {
+				$html = preg_replace(
+					'#<(script|style)\b[^>]*>.*?</\1>#is',
+					' ',
+					$output->getHTML()
+				);
+				$paragraph = '';
+				if ( preg_match( '/<p\b[^>]*>(.*?)<\/p>/is', $html ?? '', $matches ) ) {
+					$paragraph = $matches[1];
+				}
+				$extract = trim( preg_replace(
+					'/\s+/',
+					' ',
+					html_entity_decode(
+						strip_tags( $paragraph ),
+						ENT_QUOTES | ENT_HTML5,
+						'UTF-8'
+					)
+				) ?? '' );
+				if ( $extract === '' ) {
+					$extract = $title->getPrefixedText();
+				}
+				if ( mb_strlen( $extract ) > 1500 ) {
+					$extract = mb_substr( $extract, 0, 1497 ) . '...';
+				}
+
+				$pageProps = MediaWikiServices::getInstance()->getPageProps()->getProperties(
+					$title,
+					[ 'page_image_free', 'page_image' ]
+				);
+				$imageFile = $pageProps['page_image_free'] ?? $pageProps['page_image'] ?? null;
+				$section = [
+					'type' => 9,
+					'components' => [
+						[
+							'type' => 10,
+							'content' => $extract,
+						],
+					],
+				];
+				if ( $imageFile !== null && $imageFile !== '' ) {
+					$section['accessory'] = [
+						'type' => 11,
+						'media' => [
+							'url' => SpecialPage::getTitleFor( 'Filepath', $imageFile )->getFullURL(),
+						],
+						'description' => null,
+					];
+				}
+
+				$embed = [
+					'component' => [
+						'type' => 17,
+						'components' => [
+							$section,
+							[
+								'type' => 1,
+								'components' => [
+									[
+										'type' => 2,
+										'style' => 5,
+										'label' => 'Page here',
+										'url' => $title->getFullURL(),
+									],
+								],
+							],
+						],
+					],
+				];
+				$embedJson = json_encode(
+					$embed,
+					JSON_UNESCAPED_SLASHES |
+					JSON_UNESCAPED_UNICODE |
+					JSON_HEX_TAG |
+					JSON_HEX_AMP |
+					JSON_HEX_APOS |
+					JSON_HEX_QUOT |
+					JSON_INVALID_UTF8_SUBSTITUTE
+				);
+				if ( $embedJson === false ) {
+					return;
+				}
+
+				$output->addHeadItem(
+					'discord-component-embed',
+					'<script id="discord:component-embed" type="application/json">' .
+					$embedJson .
+					'</script>'
+				);
 				return;
 			}
 
@@ -1205,6 +1295,87 @@ switch ( $wi->dbname ) {
 							}
 						]
 					}
+				}
+			</script>'
+			);
+		}
+
+		break;
+	case 'itemasylumwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $output ) {
+			$title = $output->getTitle();
+			if ( !$title?->isMainPage() ) {
+				return;
+			}
+
+			$output->addHeadItem(
+				'discord-component-embed',
+				'<script id="discord:component-embed" type="application/json">
+				{
+					"component": [
+						{
+							"type": 17,
+							"accent_color": 16773510,
+							"components": [
+								{
+									"type": 12,
+									"items": [
+										{
+											"media": {
+												"url": "https://itemasylum.wiki/Special:FilePath/Discord-embed-image.png"
+											},
+											"description": "Text reading \"ITEM ASYLUM WIKI\" in all caps, with \"ITEM\" being yellow, \"ASYLUM\" being blue and \"WIKI\" being white, against a collage of images."
+										}
+									]
+								},
+								{
+									"type": 10,
+									"content": "The official wiki for the Roblox game item asylum, a chaotic randomizer fighting game where you fight with items, play across different maps and gamemodes, vote for maps in different lobbies, team up against bosses, customize yourself with chat tags and emotes, and more!"
+								}
+							]
+						},
+						{
+							"type": 17,
+							"accent_color": 8433135,
+							"components": [
+								{
+									"type": 10,
+									"content": "**Quick links**"
+								},
+								{
+									"type": 1,
+									"components": [
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Items",
+											"url": "https://itemasylum.wiki/Items"
+										},
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Areas",
+											"url": "https://itemasylum.wiki/Areas"
+										},
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Gamemodes",
+											"url": "https://itemasylum.wiki/Gamemodes"
+										},
+										{
+											"type": 2,
+											"style": 5,
+											"label": "Changelog",
+											"url": "https://itemasylum.wiki/Changelog"
+										}
+									]
+								}
+							]
+						}
+					]
 				}
 			</script>'
 			);
