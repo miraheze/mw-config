@@ -5000,7 +5000,7 @@ $wgConf->settings += [
 		'default' => '/srv/mediawiki/cache/' . $wi->version . '/gitinfo',
 	],
 	'wgEnableImageWhitelist' => [
-		'defualt' => false,
+		'default' => false,
 	],
 	'wgAllowExternalImages' => [
 		'default' => false,
