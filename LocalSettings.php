@@ -5073,9 +5073,7 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgAllowExternalImagesFrom' => [
-		'default' => [
-			''
-		]
+		'default' => []
 	],
 	'wgFragmentMode' => [
 		'default' => [
