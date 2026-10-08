@@ -1999,6 +1999,21 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to show thumbnails for old images on the image\'s description page.',
 		'requires' => [],
 	],
+	'wgEnableImageWhitelist' => [
+		'name' => 'Allow External Images',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Determines whether or not MediaWiki will allow external images from a set of RegEx URLs set in MediaWiki:External image whitelist to be rendered inline',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgAllowExternalImages',
+				'value' => false,
+			],
+		],
+	],
 	'wgAllowExternalImages' => [
 		'name' => 'Allow External Images',
 		'from' => 'mediawiki',
@@ -2008,6 +2023,21 @@ $wgManageWikiSettings = [
 		'section' => 'media',
 		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
 		'requires' => [],
+	],
+	'wgAllowExternalImagesFrom' => [
+		'name' => 'Allow External Images From',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'texts',
+		'overridedefault' => [],
+		'section' => 'media',
+		'help' => 'Alternative to wgAllowExternalImages, determines what URLs MediaWiki will allow external images to be rendered inline with text from',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgAllowExternalImages',
+				'value' => false,
+			],
+		],
 	],
 	'wgNativeImageLazyLoading' => [
 		'name' => 'Native Image Lazy Loading',
