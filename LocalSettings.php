@@ -5231,12 +5231,41 @@ $wgConf->settings += [
 	'wgMFUseWikibase' => [
 		'default' => false,
 	],
+	'wgMinervaAdvancedMainMenu' => [
+		'default' => [
+			'amc' => true,
+			'base' => false,
+		],
+	],
+	'wgMinervaHistoryInPageActions' => [
+		'default' => [
+			'base' => false,
+			'loggedin' => true,
+		],
+	],
 	'wgMinervaNightMode' => [
 		'default' => [
 			'amc' => true,
 			'base' => true,
 			'loggedin' => true,
 		],
+	],
+	'wgMinervaOverflowInPageActions' => [
+		'default' => [
+			'amc' => true,
+			'base' => false,
+			'loggedin' => true,
+		],
+	],
+	'wgMinervaShowCategories' => [
+		'default' => [
+			'amc' => true,
+			'base' => false,
+			'loggedin' => false,
+		],
+	],
+	'wgMinervaTruncateLeadSection' => [
+		'default' => false,
 	],
 
 	// Moderation extension settings

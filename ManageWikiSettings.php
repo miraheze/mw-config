@@ -3749,6 +3749,46 @@ $wgManageWikiSettings = [
 			]
 		],
 	],
+	'wgMinervaAdvancedMainMenu' => [
+		'name' => 'Minerva Advanced Main Menu',
+		'from' => 'minervaneue',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'amc',
+			'base',
+		],
+		'options' => [
+			'AMC' => 'amc',
+			'Default' => 'base',
+		],
+		'overridedefault' => [
+			'amc' => true,
+			'base' => false,
+		],
+		'section' => 'styling',
+		'help' => 'Control Minerva\'s Advanced Main Menu feature',
+		'requires' => [],
+	],
+	'wgMinervaHistoryInPageActions' => [
+		'name' => 'Minerva History In Page Actions',
+		'from' => 'minervaneue',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'base',
+			'loggedin',
+		],
+		'options' => [
+			'Default' => 'base',
+			'Logged in' => 'loggedin',
+		],
+		'overridedefault' => [
+			'base' => false,
+			'loggedin' => true,
+		],
+		'section' => 'styling',
+		'help' => 'Determines whether Minerva will show history in page actions',
+		'requires' => [],
+	],
 	'wgMinervaNightMode' => [
 		'name' => 'Minerva Enable Dark Mode',
 		'from' => 'minervaneue',
@@ -3770,6 +3810,61 @@ $wgManageWikiSettings = [
 		],
 		'section' => 'styling',
 		'help' => 'Enable Minerva\'s dark mode for users with these features enabled.',
+		'requires' => [],
+	],
+	'wgMinervaOverflowInPageActions' => [
+		'name' => 'Minerva Overflow In Page Actions',
+		'from' => 'minervaneue',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'amc',
+			'base',
+			'loggedin',
+		],
+		'options' => [
+			'AMC' => 'amc',
+			'Default' => 'base',
+			'Logged in' => 'loggedin',
+		],
+		'overridedefault' => [
+			'amc' => true,
+			'base' => false,
+			'loggedin' => true,
+		],
+		'section' => 'styling',
+		'help' => 'Controls if the overflow link appears in the page actions menu',
+		'requires' => [],
+	],
+	'wgMinervaShowCategories' => [
+		'name' => 'Minerva Show Categories',
+		'from' => 'minervaneue',
+		'type' => 'list-multi-bool',
+		'allopts' => [
+			'amc',
+			'base',
+			'loggedin',
+		],
+		'options' => [
+			'AMC' => 'amc',
+			'Default' => 'base',
+			'Logged in' => 'loggedin',
+		],
+		'overridedefault' => [
+			'amc' => true,
+			'base' => false,
+			'loggedin' => false,
+		],
+		'section' => 'styling',
+		'help' => 'Controls whether Minerva will show categories when viewing articles',
+		'requires' => [],
+	],
+	'wgMinervaTruncateLeadSection' => [
+		'name' => 'Minerva Truncate Lead Section',
+		'from' => 'minervaneue',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'styling',
+		'help' => 'Controls if Minerva will truncate the lead section and replace it with a "Read more" button',
 		'requires' => [],
 	],
 	'wgWordmark' => [
