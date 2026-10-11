@@ -2982,7 +2982,8 @@ $wgManageWikiSettings = [
 		'overridedefault' => [
 			'*',
 			'user',
-			'autoconfirmed'
+			'autoconfirmed',
+			'temp',
 		],
 		'section' => 'permissions',
 		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else. Restricted as when misconfigured it can cause issues with assigning permissions.',
@@ -3051,6 +3052,38 @@ $wgManageWikiSettings = [
 		'requires' => [
 			'permissions' => [
 				'managewiki-restricted',
+			],
+		],
+	],
+	'wmgTemporaryAccountsKnown' => [
+		'name' => 'Temporary Accounts Are Known',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Temporary accounts are recognized on this wiki. Must remain enabled for wikis that opt out of temporary accounts after enabling it. See [[m:Tech:Temporary accounts|Tech:Temporary accounts]] for details.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
+	],
+	'wmgEnableTemporaryAccounts' => [
+		'name' => 'Enable Temporary Accounts',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'restricted',
+		'help' => 'Automatically create a temporary account for logged-out users when they edit, as opposed to recording their IP address as the author. This is experimental as not every extension and skin is compatible, which may cause degraded user experience. See [[m:Tech:Temporary accounts|Tech:Temporary accounts]] for details.',
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+			'settings' => [
+				'setting' => 'wmgTemporaryAccountsKnown',
+				'value' => true,
 			],
 		],
 	],

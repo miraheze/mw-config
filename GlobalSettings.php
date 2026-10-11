@@ -59,6 +59,31 @@ if ( $wi->dbname !== 'ldapwikiwiki' ) {
 	}
 }
 
+// Temporary accounts (T16002)
+if ( $wmgEnableTemporaryAccounts || $wmgTemporaryAccountsKnown ) {
+	$wgAutoCreateTempUser['known'] = true;
+	$wgAutoCreateTempUser['enabled'] = $wmgEnableTemporaryAccounts;
+
+	// 1 per 10 minutes, 3 per day
+	$wgTempAccountCreationThrottle = [
+		[
+			'count' => 1,
+			'seconds' => 600,
+		],
+		[
+			'count' => 3,
+			'seconds' => 86400,
+		]
+	];
+
+	// Wikis without CentralAuth (e.g. ldap) will have issues; harmless until we enable temp accounts globally and enable
+	// anon editing, which is unlikely.
+	$wgAutoCreateTempUser['serialProvider'] = [
+		'type' => 'centralauth',
+		'useYear' => true,
+	];
+}
+
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
 	wfLoadExtension( 'Elastica' );
 	$wgCirrusSearchClusters = [

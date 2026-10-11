@@ -4542,6 +4542,7 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedRights' => [
 		'default' => [
 			'any' => [
+				'abusefilter-access-protected-vars',
 				'abusefilter-hide-log',
 				'abusefilter-hidden-log',
 				'abusefilter-modify-global',
@@ -4549,6 +4550,7 @@ $wgConf->settings += [
 				'abusefilter-private-log',
 				'abusefilter-privatedetails',
 				'abusefilter-privatedetails-log',
+				'abusefilter-protected-vars-log',
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
@@ -4644,6 +4646,35 @@ $wgConf->settings += [
 				'interwiki',
 			],
 			'*' => [
+				'read',
+				'skipcaptcha',
+				'torunblocked',
+				'centralauth-merge',
+				'generate-dump',
+				'editsitecss',
+				'editsitejson',
+				'editsitejs',
+				'editusercss',
+				'edituserjson',
+				'edituserjs',
+				'editmyoptions',
+				'editmyprivateinfo',
+				'editmywatchlist',
+				'globalblock-whitelist',
+				'interwiki',
+				'ipblock-exempt',
+				'viewmyprivateinfo',
+				'viewmywatchlist',
+				'managewiki-core',
+				'managewiki-extensions',
+				'managewiki-namespaces',
+				'managewiki-permissions',
+				'managewiki-settings',
+				'noratelimit',
+				'autoconfirmed',
+			],
+			// Temp accounts are basically anons. Duplicate the list for '*' for now.
+			'temp' => [
 				'read',
 				'skipcaptcha',
 				'torunblocked',
@@ -5616,7 +5647,8 @@ $wgConf->settings += [
 		'default' => [
 			'*',
 			'user',
-			'autoconfirmed'
+			'autoconfirmed',
+			'temp',
 		],
 	],
 
@@ -6897,6 +6929,14 @@ $wgConf->settings += [
 			],
 			'css' => [],
 		],
+	],
+
+	// Temporary accounts
+	'wmgEnableTemporaryAccounts' => [
+		'default' => false,
+	],
+	'wmgTemporaryAccountsKnown' => [
+		'default' => false,
 	],
 
 	// TextExtracts
