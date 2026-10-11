@@ -12,7 +12,7 @@ $wgSpeedscopeEnvironment = str_starts_with( wfHostname(), 'test' ) ? 'beta' : 'p
 $wgSpeedscopeExcludedEntryPoints = [ 'cli', 'RunSingleJob' ];
 $wgSpeedscopeExposeCPUInfo = false;
 $wgSpeedscopeSamplingRates = [
-	'prod' => 0.002,
+	'prod' => 0.001,
 ];
 $wgSpeedscopeLogToStatsd = true;
 require_once "$IP/extensions/Speedscope/bootstrap.php";
