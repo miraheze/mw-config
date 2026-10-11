@@ -82,6 +82,13 @@ if ( $wmgEnableTemporaryAccounts || $wmgTemporaryAccountsKnown ) {
 		'type' => 'centralauth',
 		'useYear' => true,
 	];
+
+	$wgAutoCreateTempUser['matchPattern'] = '~2$1';
+
+	$wgAutoCreateTempUser['serialMapping'] = [
+		'type' => 'readable-numeric',
+		'offset' => 10000,
+	];
 }
 
 if ( $wi->isExtensionActive( 'CirrusSearch' ) ) {
