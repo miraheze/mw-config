@@ -539,6 +539,7 @@ $wgMirahezeMagicCSPServices = [
 	'roblox' => [
 		'label' => 'Roblox',
 		'sources' => [
+			// Extension:RobloxAPI needs this for profile pictures.
 			'img-src' => [
 				'*.rbxcdn.com',
 			],
@@ -776,15 +777,10 @@ $wgMirahezeMagicCSPHeaderExtensionServices = [
 	'EmbedSpotify' => [
 		'spotify',
 	],
-	// We don't know which sites a wiki wants to embed videos from, so enable all of them?
+	// We don't know which sites a wiki wants to embed videos from, so only enable YouTube and IA
+	// The rest can be enabled manually on ManageWiki
 	'EmbedVideo' => [
-		'bandcamp',
 		'internet-archive',
-		'niconico',
-		'soundcloud',
-		'spotify',
-		'twitch',
-		'vimeo',
 		'youtube',
 	],
 	'GeoGebra' => [
