@@ -4542,6 +4542,7 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedRights' => [
 		'default' => [
 			'any' => [
+				'abusefilter-access-protected-vars',
 				'abusefilter-hide-log',
 				'abusefilter-hidden-log',
 				'abusefilter-modify-global',
@@ -4549,6 +4550,7 @@ $wgConf->settings += [
 				'abusefilter-private-log',
 				'abusefilter-privatedetails',
 				'abusefilter-privatedetails-log',
+				'abusefilter-protected-vars-log',
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
@@ -5645,7 +5647,8 @@ $wgConf->settings += [
 		'default' => [
 			'*',
 			'user',
-			'autoconfirmed'
+			'autoconfirmed',
+			'temp',
 		],
 	],
 

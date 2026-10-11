@@ -2982,7 +2982,8 @@ $wgManageWikiSettings = [
 		'overridedefault' => [
 			'*',
 			'user',
-			'autoconfirmed'
+			'autoconfirmed',
+			'temp',
 		],
 		'section' => 'permissions',
 		'help' => 'Groups that aren\'t shown on [[Special:ListUsers]] or somewhere else. Restricted as when misconfigured it can cause issues with assigning permissions.',
