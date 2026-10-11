@@ -179,6 +179,10 @@ class SettingsTest extends ManageWikiTestCase {
 							'description' => 'string name of groupings for settings.',
 							'required' => true,
 						],
+						'dropdown' => [
+							'type' => 'boolean',
+							'description' => 'list-multi only: set to false to show the options as a list of checkboxes instead of a dropdown.',
+						],
 						'requires' => [
 							'type' => 'object',
 							'additionalProperties' => false,

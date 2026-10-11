@@ -134,11 +134,11 @@ $wgMirahezeMagicCSPHeaderEssential = [
 /**
  * Third party services a wiki can allow content from.
  *
- * The key must be stable. The label is what gets shown on ManageWiki
+ * The key must be stable. The label and directive URLs are shown on ManageWiki.
  */
 $wgMirahezeMagicCSPServices = [
 	'adobe-fonts' => [
-		'label' => 'Adobe Fonts (use.typekit.net)',
+		'label' => 'Adobe Fonts',
 		'sources' => [
 			'style-src' => [
 				'use.typekit.net',
@@ -171,7 +171,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'blender' => [
-		'label' => 'Blender (docs.blender.org)',
+		'label' => 'Blender',
 		'sources' => [
 			'img-src' => [
 				'docs.blender.org',
@@ -179,7 +179,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'bootstrapcdn' => [
-		'label' => 'Bootstrap (maxcdn.bootstrapcdn.com)',
+		'label' => 'Bootstrap',
 		'sources' => [
 			'img-src' => [
 				'maxcdn.bootstrapcdn.com',
@@ -216,7 +216,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'creative-commons' => [
-		'label' => 'Creative Commons (mirrors.creativecommons.org)',
+		'label' => 'Creative Commons',
 		'sources' => [
 			'img-src' => [
 				'mirrors.creativecommons.org',
@@ -241,7 +241,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'dropbox' => [
-		'label' => 'Dropbox (image embeds from dropboxstatic.com)',
+		'label' => 'Dropbox',
 		'sources' => [
 			'img-src' => [
 				'*.dropboxstatic.com',
@@ -249,7 +249,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'facebook' => [
-		'label' => 'Facebook (image embeds from fbcdn.net)',
+		'label' => 'Facebook',
 		'sources' => [
 			'img-src' => [
 				'*.fbcdn.net',
@@ -273,7 +273,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'geogebra' => [
-		'label' => 'GeoGebra (image embeds from cdn.geogebra.org)',
+		'label' => 'GeoGebra',
 		'sources' => [
 			'img-src' => [
 				'cdn.geogebra.org',
@@ -281,7 +281,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'gnu' => [
-		'label' => 'GNU (image embeds from www.gnu.org)',
+		'label' => 'GNU',
 		'sources' => [
 			'img-src' => [
 				'www.gnu.org',
@@ -289,7 +289,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'gofundme' => [
-		'label' => 'GoFundMe (iframe embeds from www.gofundme.com)',
+		'label' => 'GoFundMe',
 		'sources' => [
 			'frame-src' => [
 				'www.gofundme.com',
@@ -297,7 +297,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'google' => [
-		'label' => 'Google (various Google services)',
+		'label' => 'Google',
 		'sources' => [
 			'script-src' => [
 				'www.google.com',
@@ -425,7 +425,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'lucid' => [
-		'label' => 'Lucid Chart (iframe embeds from lucid.app)',
+		'label' => 'Lucid Chart',
 		'sources' => [
 			'frame-src' => [
 				'lucid.app',
@@ -433,7 +433,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'minecraft-wiki' => [
-		'label' => 'Minecraft Wiki (image embeds from minecraft.wiki)',
+		'label' => 'Minecraft Wiki',
 		'sources' => [
 			'img-src' => [
 				'minecraft.wiki',
@@ -441,7 +441,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'minotar' => [
-		'label' => 'Minotar (image embeds from minotar.net)',
+		'label' => 'Minotar',
 		'sources' => [
 			'img-src' => [
 				'minotar.net',
@@ -449,7 +449,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'mc-heads' => [
-		'label' => 'MC Heads (image embeds from mc-heads.net)',
+		'label' => 'MC Heads',
 		'sources' => [
 			'img-src' => [
 				'mc-heads.net',
@@ -457,7 +457,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'newspapers-com' => [
-		'label' => 'newspapers.com (image embeds)',
+		'label' => 'newspapers.com',
 		'sources' => [
 			'img-src' => [
 				'img.newspapers.com',
@@ -507,7 +507,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'pixabay' => [
-		'label' => 'Pixabay (cdn.pixabay.com)',
+		'label' => 'Pixabay',
 		'sources' => [
 			'img-src' => [
 				'cdn.pixabay.com',
@@ -528,7 +528,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'reddit' => [
-		'label' => 'Reddit (image embeds)',
+		'label' => 'Reddit',
 		'sources' => [
 			'img-src' => [
 				'*.redd.it',
@@ -549,7 +549,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'scratch' => [
-		'label' => 'Scratch (scratch.mit.edu)',
+		'label' => 'Scratch',
 		'sources' => [
 			'frame-src' => [
 				'scratch.mit.edu',
@@ -557,7 +557,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'snap' => [
-		'label' => 'Snap! (snap.berkeley.edu)',
+		'label' => 'Snap!',
 		'sources' => [
 			'frame-src' => [
 				'snap.berkeley.edu',
@@ -565,7 +565,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'soundcloud' => [
-		'label' => 'SoundCloud (iframe embeds from w.soundcloud.com)',
+		'label' => 'SoundCloud',
 		'sources' => [
 			'frame-src' => [
 				'w.soundcloud.com',
@@ -573,7 +573,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'spotify' => [
-		'label' => 'Spotify (iframe embeds from open.spotify.com)',
+		'label' => 'Spotify',
 		'sources' => [
 			'frame-src' => [
 				'open.spotify.com',
@@ -593,7 +593,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'tally' => [
-		'label' => 'tally.so',
+		'label' => 'Tally',
 		'sources' => [
 			'script-src' => [
 				'tally.so',
@@ -604,7 +604,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'the-movie-database' => [
-		'label' => 'The Movie Database (image embeds from image.tmdb.org)',
+		'label' => 'The Movie Database',
 		'sources' => [
 			'img-src' => [
 				'image.tmdb.org',
@@ -658,7 +658,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'wikimedia-base' => [
-		'label' => 'Wikimedia Meta, Wikimedia Commons, Wikipedia, and MediaWiki.org',
+		'label' => 'Wikimedia (minimal set of wikis)',
 		'sources' => [
 			'script-src' => [
 				'*.wikimedia.org',
@@ -691,7 +691,7 @@ $wgMirahezeMagicCSPServices = [
 		],
 	],
 	'wikimedia-full' => [
-		'label' => 'Wikimedia wikis (full range of wikis)',
+		'label' => 'Wikimedia (all wikis)',
 		'sources' => [
 			'script-src' => [
 				'*.wikimedia.org',
@@ -844,6 +844,16 @@ foreach ( $wgMirahezeMagicCSPServices as $service ) {
 			array_merge( $wgMirahezeMagicCSPHeaderDefault[$directive] ?? [], $domains )
 		) );
 	}
+}
+
+// Options shown on ManageWiki. Include the URLs explicitly in the label.
+$wgMirahezeMagicCSPServiceOptions = [];
+foreach ( $wgMirahezeMagicCSPServices as $key => $service ) {
+	$lines = [ $service['label'] ];
+	foreach ( $service['sources'] as $directive => $domains ) {
+		$lines[] = $directive . ': ' . implode( ', ', $domains );
+	}
+	$wgMirahezeMagicCSPServiceOptions[implode( '<br>', $lines )] = $key;
 }
 
 // Per-wiki Content Security Policy additions

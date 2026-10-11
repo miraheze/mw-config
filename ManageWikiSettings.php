@@ -11,6 +11,7 @@
  * overridedefault: a string/array override default when no existing value exist.
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
+ * dropdown: list-multi only; set to false to show the options as a list of checkboxes instead of a dropdown.
  * requires: an array, string, or integer. See below for available types that can be used here.
  *
  * 'type' can be one of:
@@ -621,11 +622,9 @@ $wgManageWikiSettings = [
 		'global' => true,
 		'type' => 'list-multi',
 		'overridedefault' => $wgMirahezeMagicCSPEnabledServicesDefault,
-		'section' => 'other',
-		'options' => array_combine(
-			array_column( $wgMirahezeMagicCSPServices, 'label' ),
-			array_keys( $wgMirahezeMagicCSPServices )
-		),
+		'section' => 'csp',
+		'dropdown' => false,
+		'options' => $wgMirahezeMagicCSPServiceOptions,
 		'help' => 'Third party services that pages on this wiki are allowed to load content from. Sites selected here will be added to the CSP. See [[m:Help:Content_Security_Policy|Help:Content Security Policy]] for details.',
 		// Restricted for now since it doesn't actually do anything and we don't want to
 		// confuse users.
