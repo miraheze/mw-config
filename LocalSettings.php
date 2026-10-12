@@ -6197,7 +6197,7 @@ $wgConf->settings += [
 			'cg',
 			'sysop',
 		],
-		'+cnmusicwiki' => [
+		'cnmusicwiki' => [
 			'',
 			'autoconfirmed',
 			'sysop'
