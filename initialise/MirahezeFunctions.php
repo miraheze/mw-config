@@ -69,7 +69,7 @@ class MirahezeFunctions {
 	private const string MEDIAWIKI_DIRECTORY = '/srv/mediawiki/';
 
 	public const array MEDIAWIKI_VERSIONS = [
-		'alpha' => '1.46',
+		'alpha' => '1.47',
 		'beta' => '1.46',
 		'stable' => '1.46',
 	];
