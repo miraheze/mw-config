@@ -5646,7 +5646,7 @@ $wgConf->settings += [
 		'default' => '/usr/local/bin/mediawiki-firejail-ghostscript',
 	],
 	'wgPdfPostProcessor' => [
-		'default' => '/usr/local/bin/mediawiki-firejail-convert',
+		'default' => '/usr/local/bin/mediawiki-firejail-magick',
 	],
 
 	// Permissions
