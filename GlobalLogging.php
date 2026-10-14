@@ -11,6 +11,7 @@ use MediaWiki\Logger\MonologSpi;
 use Monolog\Handler\HandlerInterface;
 use Monolog\Handler\SamplingHandler;
 use Monolog\Handler\WhatFailureGroupHandler;
+use Monolog\LogRecord;
 use Monolog\Processor\PsrLogMessageProcessor;
 use Monolog\Processor\WebProcessor;
 use Psr\Log\LogLevel;
@@ -32,7 +33,8 @@ $wmgMonologProcessors = [
 	],
 	'mhconfig' => [
 		'factory' => static function (): Closure {
-			return static function ( array $record ): array {
+			// Once fully on 1.47 this should only accept LogRecord
+			return static function ( array|LogRecord $record ): array {
 				global $wgLBFactoryConf, $wgDBname;
 				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
 				return $record;
