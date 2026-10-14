@@ -135,7 +135,7 @@ $wgManageWikiExtensions = [
 		'requires' => [],
 		'install' => [
 			'sql' => [
-				'transcode' => 'extensions/TimedMediaHandler/sql/tables-generated.sql',
+				'transcode' => 'extensions/TimedMediaHandler/sql/mysql/tables-generated.sql',
 			],
 			'permissions' => [
 				'sysop' => [

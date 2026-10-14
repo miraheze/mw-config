@@ -12,7 +12,7 @@ $wgSpeedscopeEnvironment = str_starts_with( wfHostname(), 'test' ) ? 'beta' : 'p
 $wgSpeedscopeExcludedEntryPoints = [ 'cli', 'RunSingleJob' ];
 $wgSpeedscopeExposeCPUInfo = false;
 $wgSpeedscopeSamplingRates = [
-	'prod' => 0.002,
+	'prod' => 0.001,
 ];
 $wgSpeedscopeLogToStatsd = true;
 require_once "$IP/extensions/Speedscope/bootstrap.php";
@@ -2619,6 +2619,29 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'refinerycaves2wiki' => [
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/refinerycaves2wiki/8/81/Miraheze_badge.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/refinerycaves2wiki/b/b0/PoweredByMediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/refinerycaves2wiki/f/ff/CC-BY-SA.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 		'snxyzmetawiki' => [
 			'hostedby' => [
 				'songnguxyz' => [
@@ -4542,6 +4565,7 @@ $wgConf->settings += [
 	'wgManageWikiPermissionsDisallowedRights' => [
 		'default' => [
 			'any' => [
+				'abusefilter-access-protected-vars',
 				'abusefilter-hide-log',
 				'abusefilter-hidden-log',
 				'abusefilter-modify-global',
@@ -4549,6 +4573,7 @@ $wgConf->settings += [
 				'abusefilter-private-log',
 				'abusefilter-privatedetails',
 				'abusefilter-privatedetails-log',
+				'abusefilter-protected-vars-log',
 				'aft-oversighter',
 				'autocreateaccount',
 				'bigdelete',
@@ -4644,6 +4669,35 @@ $wgConf->settings += [
 				'interwiki',
 			],
 			'*' => [
+				'read',
+				'skipcaptcha',
+				'torunblocked',
+				'centralauth-merge',
+				'generate-dump',
+				'editsitecss',
+				'editsitejson',
+				'editsitejs',
+				'editusercss',
+				'edituserjson',
+				'edituserjs',
+				'editmyoptions',
+				'editmyprivateinfo',
+				'editmywatchlist',
+				'globalblock-whitelist',
+				'interwiki',
+				'ipblock-exempt',
+				'viewmyprivateinfo',
+				'viewmywatchlist',
+				'managewiki-core',
+				'managewiki-extensions',
+				'managewiki-namespaces',
+				'managewiki-permissions',
+				'managewiki-settings',
+				'noratelimit',
+				'autoconfirmed',
+			],
+			// Temp accounts are basically anons. Duplicate the list for '*' for now.
+			'temp' => [
 				'read',
 				'skipcaptcha',
 				'torunblocked',
@@ -4873,6 +4927,11 @@ $wgConf->settings += [
 		'osmaniawiki' => [
 			'base' => true,
 			'loggedin' => true,
+			'amc' => true,
+		],
+		'moviestarplanetwiki' => [
+			'base' => true,
+			'loggedin' => false,
 			'amc' => true,
 		],
 		'pangarwiki' => [
@@ -5616,7 +5675,8 @@ $wgConf->settings += [
 		'default' => [
 			'*',
 			'user',
-			'autoconfirmed'
+			'autoconfirmed',
+			'temp',
 		],
 	],
 
@@ -6897,6 +6957,14 @@ $wgConf->settings += [
 			],
 			'css' => [],
 		],
+	],
+
+	// Temporary accounts
+	'wmgEnableTemporaryAccounts' => [
+		'default' => false,
+	],
+	'wmgTemporaryAccountsKnown' => [
+		'default' => false,
 	],
 
 	// TextExtracts
