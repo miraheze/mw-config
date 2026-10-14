@@ -34,9 +34,14 @@ $wmgMonologProcessors = [
 	'mhconfig' => [
 		'factory' => static function (): Closure {
 			// Once fully on 1.47 this should only accept LogRecord
-			return static function ( array|LogRecord $record ): array {
+			return static function ( array|LogRecord $record ): array|LogRecord {
 				global $wgLBFactoryConf, $wgDBname;
-				$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
+				if ( is_array( $record ) ) {
+					$record['extra']['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
+				} else {
+					$record->extra['shard'] = $wgLBFactoryConf['sectionsByDB'][$wgDBname] ?? 'c1';
+				}
+
 				return $record;
 			};
 		},
