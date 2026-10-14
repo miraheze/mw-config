@@ -26,6 +26,9 @@ class MirahezeFunctions {
 
 	public static array $disabledExtensions = [];
 
+	private static ?array $allDatabases = null;
+	private static ?array $deletedDatabases = null;
+
 	private const array ALLOWED_DOMAINS = [
 		'default' => [
 			'miraheze.org',
@@ -78,6 +81,8 @@ class MirahezeFunctions {
 		'wiki' => self::ALLOWED_DOMAINS['default'],
 		'wikibeta' => self::ALLOWED_DOMAINS['beta'],
 	];
+
+	private const string DEFAULT_SITENAME = 'No sitename set.';
 
 	public function __construct() {
 		self::setupSiteConfiguration();
@@ -181,6 +186,14 @@ class MirahezeFunctions {
 		}
 
 		return $onlyDBs ? array_keys( $databases ) : $databases;
+	}
+
+	/**
+	 * Load the full data for all DBs and store it in {@link self::$allDatabases} and {@link self::$deletedDatabases}
+	 */
+	private static function loadAllDatabases(): void {
+		self::$allDatabases ??= self::readDbListFile( 'databases', false );
+		self::$deletedDatabases ??= self::readDbListFile( 'deleted', false );
 	}
 
 	public static function setupSiteConfiguration(): void {
@@ -378,17 +391,13 @@ class MirahezeFunctions {
 	}
 
 	public static function getDatabaseClusters(): array {
-		static $allDatabases = null;
-		static $deletedDatabases = null;
-
-		$allDatabases ??= self::readDbListFile( 'databases', false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
+		self::loadAllDatabases();
 
 		$res = [];
-		foreach ( $allDatabases as $db => $data ) {
+		foreach ( self::$allDatabases as $db => $data ) {
 			$res[$db] = $data['c'];
 		}
-		foreach ( $deletedDatabases as $db => $data ) {
+		foreach ( self::$deletedDatabases as $db => $data ) {
 			$res[$db] = $data['c'];
 		}
 		return $res;
@@ -412,22 +421,15 @@ class MirahezeFunctions {
 
 	public static function getServer(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
-
-		// TODO Don't load all servers!
-
 		return self::getServers( self::$currentDatabase ?: 'default' );
 	}
 
 	public static function getSiteNames(): array {
-		static $allDatabases = null;
-		static $deletedDatabases = null;
+		self::loadAllDatabases();
 
-		$allDatabases ??= self::readDbListFile( 'databases', false );
-		$deletedDatabases ??= self::readDbListFile( 'deleted', false );
-
-		$databases = [ ...$allDatabases, ...$deletedDatabases ];
+		$databases = [ ...self::$allDatabases, ...self::$deletedDatabases ];
 		if ( !$databases ) {
-			return [ 'default' => 'No sitename set.' ];
+			return [ 'default' => self::DEFAULT_SITENAME ];
 		}
 
 		$siteNames = array_combine(
@@ -435,7 +437,7 @@ class MirahezeFunctions {
 			array_column( $databases, 's' )
 		) ?: [];
 
-		$siteNames['default'] = 'No sitename set.';
+		$siteNames['default'] = self::DEFAULT_SITENAME;
 		return $siteNames;
 	}
 
@@ -444,12 +446,11 @@ class MirahezeFunctions {
 	 */
 	private static function getSiteName(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
+		self::loadAllDatabases();
 
-		// TODO Don't load all sitenames!
-
-		$sitenames = self::getSiteNames();
-
-		return $sitenames[ self::$currentDatabase ] ?? $sitenames['default'];
+		return self::$allDatabases[ self::$currentDatabase ]['s']
+			?? self::$deletedDatabases[ self::$currentDatabase ]['s']
+			?? self::DEFAULT_SITENAME;
 	}
 
 	public static function getDefaultMediaWikiVersion(): string {
