@@ -95,17 +95,13 @@ class MirahezeFunctions {
 
 		$this->wikiDBClusters = self::getDatabaseClusters();
 
-		$sitenames = self::getSitenames();
-
 		$this->server = self::getServer();
-		$this->sitename = self::getSiteName( $sitenames );
+		$this->sitename = self::getSiteName();
 		$this->missing = self::isMissing();
 		$this->realm = self::getRealm();
 		$this->version = self::getMediaWikiVersion();
 
-		$this->setDatabase();
-		$this->setServers();
-		$this->setSiteNames( $sitenames );
+		$this->setLocalConfigOptions();
 	}
 
 	public static function getLocalDatabases(): array {
@@ -193,6 +189,10 @@ class MirahezeFunctions {
 
 		$wgConf->suffixes = array_keys( self::SUFFIXES );
 		$wgConf->wikis = self::getLocalDatabases();
+		$wgConf->fullLoadCallback = static function ( $conf ) {
+			$conf->settings['wgServer'] = self::getServers( null, true );
+			$conf->settings['wgSitename'] = self::getSiteNames();
+		};
 	}
 
 	public static function getRealm( ?string $database = null ): string {
@@ -355,8 +355,11 @@ class MirahezeFunctions {
 			|| str_ends_with( $this->server, '.nexttide.org' );
 	}
 
-	public function setDatabase(): void {
-		global $wgConf, $wgDBname, $wgVirtualDomainsMapping;
+	/**
+	 * Set config options for this wiki based on the data we loaded.
+	 */
+	private function setLocalConfigOptions(): void {
+		global $wgConf, $wgDBname, $wgVirtualDomainsMapping, $wgServer, $wgSitename;
 
 		$wgConf->settings['wgDBname'][$this->dbname] = $this->dbname;
 		$wgDBname = $this->dbname;
@@ -368,6 +371,10 @@ class MirahezeFunctions {
 		$wgVirtualDomainsMapping['virtual-managewiki'] = [
 			'db' => $this->getGlobalDatabase(),
 		];
+
+		$wgServer = $this->server;
+
+		$wgSitename = $this->sitename;
 	}
 
 	public static function getDatabaseClusters(): array {
@@ -405,21 +412,10 @@ class MirahezeFunctions {
 
 	public static function getServer(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		// TODO Don't load all servers!
+
 		return self::getServers( self::$currentDatabase ?: 'default' );
-	}
-
-	public function setServers(): void {
-		global $wgConf, $wgServer;
-
-		$wgConf->settings['wgServer'] = self::getServers( null, true );
-		$wgServer = $this->server;
-	}
-
-	public function setSiteNames( array $sitenames ): void {
-		global $wgConf, $wgSitename;
-
-		$wgConf->settings['wgSitename'] = $sitenames;
-		$wgSitename = $this->sitename;
 	}
 
 	public static function getSiteNames(): array {
@@ -443,8 +439,16 @@ class MirahezeFunctions {
 		return $siteNames;
 	}
 
-	public static function getSiteName( array $sitenames ): string {
+	/**
+	 * @return string The site name of the current wiki
+	 */
+	private static function getSiteName(): string {
 		self::$currentDatabase ??= self::getCurrentDatabase();
+
+		// TODO Don't load all sitenames!
+
+		$sitenames = self::getSiteNames();
+
 		return $sitenames[ self::$currentDatabase ] ?? $sitenames['default'];
 	}
 
