@@ -2000,13 +2000,13 @@ $wgManageWikiSettings = [
 		'requires' => [],
 	],
 	'wgEnableImageWhitelist' => [
-		'name' => 'Allow External Images',
+		'name' => 'Enable external image whitelist',
 		'from' => 'mediawiki',
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Determines whether MediaWiki will allow external images from a set of RegEx URLs set in MediaWiki:External image whitelist to be rendered inline',
+		'help' => 'Alternative to <code>$wgAllowExternalImages</code>. Determines whether MediaWiki will allow external images from a set of RegEx URLs set in <code>MediaWiki:External image whitelist</code> to be rendered inline',
 		'requires' => [
 			'settings' => [
 				'setting' => 'wgAllowExternalImages',
@@ -2021,8 +2021,13 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
-		'requires' => [],
+		'help' => 'Determines whether MediaWiki will allow external images from any URL to be rendered inline with text',
+		'requires' => [
+			'settings' => [
+				'setting' => [ 'wgAllowExternalImagesFrom', 'wgEnableImageWhitelist' ],
+				'value' => false,
+			],
+		],
 	],
 	'wgAllowExternalImagesFrom' => [
 		'name' => 'Allow External Images From',
