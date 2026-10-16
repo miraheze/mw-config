@@ -626,13 +626,7 @@ $wgManageWikiSettings = [
 		'dropdown' => false,
 		'options' => $wgMirahezeMagicCSPServiceOptions,
 		'help' => 'Third party services that pages on this wiki are allowed to load content from. Sites selected here will be added to the CSP. See [[m:Help:Content_Security_Policy|Help:Content Security Policy]] for details.',
-		// Restricted for now since it doesn't actually do anything and we don't want to
-		// confuse users.
-		'requires' => [
-			'permissions' => [
-				'managewiki-restricted',
-			],
-		],
+		'requires' => [],
 	],
 
 	// Beta Feature related stuff
