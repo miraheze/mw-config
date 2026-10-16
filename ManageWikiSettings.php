@@ -11,6 +11,7 @@
  * overridedefault: a string/array override default when no existing value exist.
  * help: string providing help information for the setting.
  * section: string name of groupings for settings.
+ * dropdown: list-multi only; set to false to show the options as a list of checkboxes instead of a dropdown.
  * requires: an array, string, or integer. See below for available types that can be used here.
  *
  * 'type' can be one of:
@@ -56,6 +57,9 @@
  * permissions: an array. Set to an array of permissions required for the setting to be visible.
  * state: a string. Can be either 'private' or 'public'. If set to 'private' this setting will only be visible on private wikis. If set to 'public' it will only be visible on public wikis.
  */
+
+// Defines variables needed in settings
+require_once __DIR__ . '/ContentSecurityPolicy.php';
 
 $wgManageWikiSettings = [
 	// Anti-Spam
@@ -611,6 +615,24 @@ $wgManageWikiSettings = [
 		],
 		'help' => 'Element with these CSS classes will be removed on mobile view pages. The <code>.hidden</code> and <code>.mobile-hidden</code> classes are used on FANDOM, and may be enabled for compatibility with FANDOM imports.',
 		'requires' => [],
+	],
+	'wgMirahezeMagicCSPEnabledServices' => [
+		'name' => 'Content Security Policy services',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'list-multi',
+		'overridedefault' => $wgMirahezeMagicCSPEnabledServicesDefault,
+		'section' => 'csp',
+		'dropdown' => false,
+		'options' => $wgMirahezeMagicCSPServiceOptions,
+		'help' => 'Third party services that pages on this wiki are allowed to load content from. Sites selected here will be added to the CSP. See [[m:Help:Content_Security_Policy|Help:Content Security Policy]] for details.',
+		// Restricted for now since it doesn't actually do anything and we don't want to
+		// confuse users.
+		'requires' => [
+			'permissions' => [
+				'managewiki-restricted',
+			],
+		],
 	],
 
 	// Beta Feature related stuff
