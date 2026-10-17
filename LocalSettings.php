@@ -528,6 +528,7 @@ $wgConf->settings += [
 		'historikawiki' => 'uca-cs',
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
+		'takagi3wiki' => 'pinyin-zh-u-kr-latn-hani',
 		'wikitransportwiki' => 'numeric',
 		'wixosswiki' => 'pinyin-zh-u-kr-latn-hani',
 		'xyywiki' => 'pinyin-zh-u-kr-latn-hani',
@@ -5391,6 +5392,10 @@ $wgConf->settings += [
 	// Messages
 	'wgForceUIMsgAsContentMsg' => [
 		'default' => [],
+		'takagi3wiki' => [
+			'filedesc',
+			'license-header',
+		],
 		'xyywiki' => [
 			'filedesc',
 			'license-header',
