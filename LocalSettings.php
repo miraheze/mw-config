@@ -1403,7 +1403,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCookieWarningGeoIp2Path' => [
-		'default' => '/usr/share/GeoIP/GeoLite2-City.mndb',
+		'default' => '/srv/GeoLite2-City.mmdb',
 	],
 
 	// CustomSearchProfiles
@@ -3608,7 +3608,7 @@ $wgConf->settings += [
 
 	// IPInfo
 	'wgIPInfoGeoLite2Prefix' => [
-		'default' => '/usr/share/GeoIP/GeoLite2-',
+		'default' => '/srv/mediawiki/geoip/GeoLite2-',
 	],
 
 	// JavascriptSlideshow
