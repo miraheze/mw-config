@@ -1292,4 +1292,35 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'payloadwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $output ) {
+			$title = $output->getTitle();
+			if ( !$title?->isMainPage() ) {
+				return;
+			}
+
+			$msg = $output->msg( 'discord-component-embed' )->inContentLanguage();
+			if ( $msg->isDisabled() ) {
+				return;
+			}
+
+			$data = json_decode( $msg->plain(), true );
+			if ( ( $data['component']['type'] ?? null ) !== 17 ) {
+				return;
+			}
+
+			$json = json_encode( $data, JSON_UNESCAPED_SLASHES | JSON_UNESCAPED_UNICODE | JSON_HEX_TAG | JSON_HEX_AMP );
+			if ( $json === false || strlen( $json ) > 3000 ) {
+				return;
+			}
+
+			$output->addHeadItem(
+				'discord-component-embed',
+				'<script id="discord:component-embed" type="application/json">' . $json . '</script>'
+			);
+		}
+
+		break;
 }
