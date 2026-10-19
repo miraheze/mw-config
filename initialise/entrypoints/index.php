@@ -69,8 +69,8 @@ if ( class_exists( PHPVersionCheck::class ) ) {
 	wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ?? '' ) );
 }
 
-( new ActionEntryPoint(
+new ActionEntryPoint(
 	RequestContext::getMain(),
 	new EntryPointEnvironment(),
 	MediaWikiServices::getInstance()
-) )->run();
+)->run();
