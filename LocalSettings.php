@@ -5955,6 +5955,10 @@ $wgConf->settings += [
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 		],
+		'+scpcbmwiki' => [
+			'vector-theme' => 'night',
+			'minerva-theme' => 'night',
+		],
 		'+sp2pediawiki' => [
 			'vector-theme' => 'night',
 		],
