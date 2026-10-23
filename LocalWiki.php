@@ -5,6 +5,7 @@ use MediaWiki\Context\RequestContext;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
+use MediaWiki\Language\LanguageConverter;
 use MediaWiki\MediaWikiServices;
 use MediaWiki\Output\OutputPage;
 use MediaWiki\Parser\Parser;
@@ -752,13 +753,6 @@ switch ( $wi->dbname ) {
 
 			if (
 				$languageNameUtils->isSupportedLanguage(
-					LanguageCode::bcp47ToInternal( $displayTitleNsText )
-				)
-			) {
-				$pageLangCode = LanguageCode::bcp47ToInternal( $displayTitleNsText );
-				$displayTitleNsText = '';
-			} elseif (
-				$languageNameUtils->isSupportedLanguage(
 					LanguageCode::bcp47ToInternal( $titleRootText )
 				)
 			) {
@@ -824,11 +818,20 @@ switch ( $wi->dbname ) {
 						->inLanguage( $pageViewLang )
 						->text();
 				}
-			} else {
+			} elseif (
+				in_array(
+					$pageLangCode,
+					LanguageConverter::$languagesWithVariants,
+					true
+				)
+			) {
 				$displayTitleNsText = $pageLangConverter
 					->convertNamespace( $title->getNamespace(), $pageViewLang );
 				$displayTitleMainText = $pageLangConverter
 					->translate( $displayTitleMainText, $pageViewLang );
+			} else {
+				$displayTitleNsText = $pageLang
+					->getFormattedNsText( $title->getNamespace() );
 			}
 
 			return [
