@@ -4129,6 +4129,9 @@ $wgConf->settings += [
 				'checkuser-log' => true,
 				'abusefilter-privatedetails' => true,
 				'abusefilter-privatedetails-log' => true,
+				'ipinfo' => true,
+				'ipinfo-view-full' => true,
+				'ipinfo-view-log' => true,
 			],
 			'suppress' => [
 				'abusefilter-hidden-log' => true,
@@ -4617,9 +4620,7 @@ $wgConf->settings += [
 				'hideuser',
 				'ignore-restricted-groups',
 				'investigate',
-				'ipinfo',
 				'ipinfo-view-arbitrary-ip',
-				'ipinfo-view-basic',
 				'ipinfo-view-full',
 				'ipinfo-view-log',
 				'logentryimport',
@@ -4675,6 +4676,8 @@ $wgConf->settings += [
 				'globalblock-whitelist',
 				'ipblock-exempt',
 				'interwiki',
+				'ipinfo',
+				'ipinfo-view-basic',
 			],
 			'*' => [
 				'read',
@@ -4703,6 +4706,8 @@ $wgConf->settings += [
 				'managewiki-settings',
 				'noratelimit',
 				'autoconfirmed',
+				'ipinfo',
+				'ipinfo-view-basic',
 			],
 			// Temp accounts are basically anons. Duplicate the list for '*' for now.
 			'temp' => [
@@ -4732,6 +4737,8 @@ $wgConf->settings += [
 				'managewiki-settings',
 				'noratelimit',
 				'autoconfirmed',
+				'ipinfo',
+				'ipinfo-view-basic',
 			],
 		],
 	],
