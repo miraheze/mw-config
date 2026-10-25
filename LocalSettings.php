@@ -8378,6 +8378,7 @@ if ( $wgUseQuickInstantCommons ) {
 		'name' => 'wikimediacommons',
 		'backend' => 'miraheze-swift-shared',
 		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'apiProxy' => 'http://10.0.18.101:8081/commons/w/api.php',
 		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
 		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
 		'directory' => $wgUploadDirectory,
