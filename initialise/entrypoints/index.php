@@ -4,6 +4,7 @@ use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
 use MediaWiki\EntryPointEnvironment;
 use MediaWiki\MediaWikiServices;
+use MediaWiki\PHPVersionCheck;
 use MediaWiki\Title\Title;
 
 define( 'MW_ENTRY_POINT', 'index' );
@@ -62,10 +63,14 @@ if ( $mainPageRoot && $requestUri !== '/' && $requestMethod !== 'POST' ) {
 }
 
 require_once MirahezeFunctions::getMediaWiki( 'includes/PHPVersionCheck.php' );
-wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ?? '' ) );
+if ( class_exists( PHPVersionCheck::class ) ) {
+	new PHPVersionCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ?? '' ) )->run();
+} else {
+	wfEntryPointCheck( 'html', dirname( $_SERVER['SCRIPT_NAME'] ?? '' ) );
+}
 
-( new ActionEntryPoint(
+new ActionEntryPoint(
 	RequestContext::getMain(),
 	new EntryPointEnvironment(),
 	MediaWikiServices::getInstance()
-) )->run();
+)->run();

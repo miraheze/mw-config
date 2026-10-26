@@ -911,6 +911,23 @@ switch ( $wgDBname ) {
 			],
 		];
 		break;
+	case 'nrcwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'connect-src' => [
+				'api.rocopedia.org',
+				'cdn.rocopedia.org',
+			],
+			'script-src' => [
+				'cdn.rocopedia.org',
+			],
+			'style-src' => [
+				'cdn.rocopedia.org',
+			],
+			'img-src' => [
+				'cdn.rocopedia.org',
+			],
+		];
+		break;
 	default:
 		break;
 }
