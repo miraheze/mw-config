@@ -889,6 +889,7 @@ switch ( $wgDBname ) {
 	case 'memepediawiki':
 	case 'mlpfanworkscnwiki':
 	case 'redstonewiki':
+	case 'takagi3wiki':
 	case 'utaitewiki':
 	case 'vocaloidlyricswiki':
 	case 'wixosswiki':
@@ -907,6 +908,23 @@ switch ( $wgDBname ) {
 			],
 			'media-src' => [
 				'upos-hz-mirrorakam.akamaized.net',
+			],
+		];
+		break;
+	case 'nrcwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'connect-src' => [
+				'api.rocopedia.org',
+				'cdn.rocopedia.org',
+			],
+			'script-src' => [
+				'cdn.rocopedia.org',
+			],
+			'style-src' => [
+				'cdn.rocopedia.org',
+			],
+			'img-src' => [
+				'cdn.rocopedia.org',
 			],
 		];
 		break;

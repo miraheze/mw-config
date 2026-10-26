@@ -522,12 +522,15 @@ $wgConf->settings += [
 	'wgCategoryCollation' => [
 		// updateCollation.php should be ran after changing
 		'default' => 'uppercase',
+		'bolanqiuwiki' => 'pinyin-zh-u-kr-latn-hani',
+		'cpopwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'extoniawiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
 		'historikawiki' => 'uca-cs',
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
+		'takagi3wiki' => 'pinyin-zh-u-kr-latn-hani',
 		'wikitransportwiki' => 'numeric',
 		'wixosswiki' => 'pinyin-zh-u-kr-latn-hani',
 		'xyywiki' => 'pinyin-zh-u-kr-latn-hani',
@@ -1403,7 +1406,7 @@ $wgConf->settings += [
 		'default' => true,
 	],
 	'wgCookieWarningGeoIp2Path' => [
-		'default' => '/srv/GeoLite2-City.mmdb',
+		'default' => '/usr/share/GeoIP/GeoLite2-City.mmdb',
 	],
 
 	// CustomSearchProfiles
@@ -1941,7 +1944,7 @@ $wgConf->settings += [
 			],
 		],
 		'100bangaiwiki' => [
-			'hostedby' => [
+			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
@@ -2183,7 +2186,7 @@ $wgConf->settings += [
 			],
 		],
 		'cgwiki' => [
-			'hostedby' => [
+			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
@@ -2413,6 +2416,51 @@ $wgConf->settings += [
 					'src' => 'https://static.wikitide.net/doorswiki/f/ff/CC-BY-SA.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
+		'hsckwiki' => [
+			'supportedby' => [
+				'songnguxyz' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'url' => 'https://songngu.xyz',
+					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
+					'height' => '36',
+					'width' => '118',
+				],
+				'wlhmn' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/b/be/Wiki_Logo.svg',
+					'url' => 'https://lophocmatngu.wiki',
+					'alt' => 'Dự án chị em của Wiki Lớp Học Mật Ngữ',
+					'height' => '36',
+					'width' => '118',
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Lưu trữ bởi Miraheze',
+					'height' => '36',
+					'width' => '36',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Xây dựng trên MediaWiki',
+					'height' => '42',
+					'width' => '110',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
+					'height' => '42',
+					'width' => '110',
 				],
 			],
 		],
@@ -2651,7 +2699,7 @@ $wgConf->settings += [
 			],
 		],
 		'snxyzmetawiki' => [
-			'hostedby' => [
+			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
 					'url' => 'https://songngu.xyz',
@@ -3608,7 +3656,7 @@ $wgConf->settings += [
 
 	// IPInfo
 	'wgIPInfoGeoLite2Prefix' => [
-		'default' => '/srv/mediawiki/geoip/GeoLite2-',
+		'default' => '/usr/share/GeoIP/GeoLite2-',
 	],
 
 	// JavascriptSlideshow
@@ -4129,6 +4177,9 @@ $wgConf->settings += [
 				'checkuser-log' => true,
 				'abusefilter-privatedetails' => true,
 				'abusefilter-privatedetails-log' => true,
+				'ipinfo' => true,
+				'ipinfo-view-full' => true,
+				'ipinfo-view-log' => true,
 			],
 			'suppress' => [
 				'abusefilter-hidden-log' => true,
@@ -4617,9 +4668,7 @@ $wgConf->settings += [
 				'hideuser',
 				'ignore-restricted-groups',
 				'investigate',
-				'ipinfo',
 				'ipinfo-view-arbitrary-ip',
-				'ipinfo-view-basic',
 				'ipinfo-view-full',
 				'ipinfo-view-log',
 				'logentryimport',
@@ -4675,6 +4724,8 @@ $wgConf->settings += [
 				'globalblock-whitelist',
 				'ipblock-exempt',
 				'interwiki',
+				'ipinfo',
+				'ipinfo-view-basic',
 			],
 			'*' => [
 				'read',
@@ -4703,6 +4754,8 @@ $wgConf->settings += [
 				'managewiki-settings',
 				'noratelimit',
 				'autoconfirmed',
+				'ipinfo',
+				'ipinfo-view-basic',
 			],
 			// Temp accounts are basically anons. Duplicate the list for '*' for now.
 			'temp' => [
@@ -4732,6 +4785,8 @@ $wgConf->settings += [
 				'managewiki-settings',
 				'noratelimit',
 				'autoconfirmed',
+				'ipinfo',
+				'ipinfo-view-basic',
 			],
 		],
 	],
@@ -5397,6 +5452,14 @@ $wgConf->settings += [
 	// Messages
 	'wgForceUIMsgAsContentMsg' => [
 		'default' => [],
+		'bolanqiuwiki' => [
+			'filedesc',
+			'license-header',
+		],
+		'takagi3wiki' => [
+			'filedesc',
+			'license-header',
+		],
 		'xyywiki' => [
 			'filedesc',
 			'license-header',
@@ -5961,6 +6024,10 @@ $wgConf->settings += [
 			'usebetatoolbar' => 0,
 			'usebetatoolbar-cgd' => 0,
 		],
+		'+scpcbmwiki' => [
+			'vector-theme' => 'night',
+			'minerva-theme' => 'night',
+		],
 		'+sp2pediawiki' => [
 			'vector-theme' => 'night',
 		],
@@ -6210,6 +6277,11 @@ $wgConf->settings += [
 			'autoconfirmed',
 			'cg',
 			'sysop',
+		],
+		'cnmusicwiki' => [
+			'',
+			'autoconfirmed',
+			'sysop'
 		],
 		'+cmgwiki' => [
 			'bureaucrat',
@@ -8332,6 +8404,7 @@ if ( $wgUseQuickInstantCommons ) {
 		'name' => 'wikimediacommons',
 		'backend' => 'miraheze-swift-shared',
 		'apibase' => 'https://commons.wikimedia.org/w/api.php',
+		'apiProxy' => 'http://10.0.18.101:8081/commons/w/api.php',
 		'url' => 'https://upload.wikimedia.org/wikipedia/commons',
 		'thumbUrl' => 'https://upload.wikimedia.org/wikipedia/commons/thumb',
 		'directory' => $wgUploadDirectory,
