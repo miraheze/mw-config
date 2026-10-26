@@ -522,6 +522,7 @@ $wgConf->settings += [
 	'wgCategoryCollation' => [
 		// updateCollation.php should be ran after changing
 		'default' => 'uppercase',
+		'bolanqiuwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'cpopwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'extoniawiki' => 'uca-fr',
 		'holidayswiki' => 'numeric',
@@ -529,6 +530,7 @@ $wgConf->settings += [
 		'historikawiki' => 'uca-cs',
 		'omniversumwiki' => 'uca-cs',
 		'rapanuidictionaryprojectwiki' => 'uca-es',
+		'takagi3wiki' => 'pinyin-zh-u-kr-latn-hani',
 		'wikitransportwiki' => 'numeric',
 		'wixosswiki' => 'pinyin-zh-u-kr-latn-hani',
 		'xyywiki' => 'pinyin-zh-u-kr-latn-hani',
@@ -5444,6 +5446,14 @@ $wgConf->settings += [
 	// Messages
 	'wgForceUIMsgAsContentMsg' => [
 		'default' => [],
+		'bolanqiuwiki' => [
+			'filedesc',
+			'license-header',
+		],
+		'takagi3wiki' => [
+			'filedesc',
+			'license-header',
+		],
 		'xyywiki' => [
 			'filedesc',
 			'license-header',
