@@ -2261,6 +2261,13 @@ $wgConf->settings += [
 			],
 		],
 		'doorswiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/doorswiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/doorswiki/1/1c/Miraheze.svg',
@@ -2397,6 +2404,13 @@ $wgConf->settings += [
 			],
 		],
 		'frdoorswiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/doorswiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/doorswiki/1/1c/Miraheze.svg',
@@ -2629,7 +2643,44 @@ $wgConf->settings += [
 				],
 			],
 		],
+		'pldoorswiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/doorswiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
+			'hostedby' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/doorswiki/1/1c/Miraheze.svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/doorswiki/2/2b/Powered_by_MediaWiki.svg',
+					'url' => 'https://www.mediawiki.org',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/doorswiki/f/ff/CC-BY-SA.svg',
+					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
+					'alt' => 'Creative Commons Attribution-ShareAlike 4.0 International (CC BY-SA 4.0)',
+				],
+			],
+		],
 		'ptbrdoorswiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/doorswiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/doorswiki/1/1c/Miraheze.svg',
@@ -2959,6 +3010,13 @@ $wgConf->settings += [
 			],
 		],
 		'zhdoorswiki' => [
+			'irwa' => [
+				'irwa' => [
+					'src' => 'https://static.wikitide.net/doorswiki/8/8d/IRWA_Logo_%28White%29.svg',
+					'url' => 'https://indierobloxwikis.org',
+					'alt' => 'Part of the Independent Roblox Wiki Alliance',
+				],
+			],
 			'hostedby' => [
 				'miraheze' => [
 					'src' => 'https://static.wikitide.net/doorswiki/1/1c/Miraheze.svg',
