@@ -54,39 +54,6 @@ if ( PHP_SAPI === 'cli' ) {
 	$wgRequestTimeLimit = 60;
 }
 
-/**
- * When using ?forcexhprof=1, a profile can be found as an HTML comment
- * Disabled on production hosts because it seems to be causing performance issues (how ironic)
- */
-$forceprofile = (int)( $_GET['forcexhprof'] ?? 0 );
-if ( $forceprofile === 1 && extension_loaded( 'xhprof' ) ) {
-	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-	xhprof_enable( $xhprofFlags );
-
-	$wgProfiler = [
-		'class' => ProfilerXhprof::class,
-		'flags' => $xhprofFlags,
-		'running' => true,
-		'output' => 'text',
-	];
-
-	// Don't need a global here
-	unset( $xhprofFlags );
-
-	$wgHTTPTimeout = 60;
-} elseif ( PHP_SAPI === 'cli' && extension_loaded( 'xhprof' ) ) {
-	$xhprofFlags = XHPROF_FLAGS_CPU | XHPROF_FLAGS_MEMORY | XHPROF_FLAGS_NO_BUILTINS;
-
-	$wgProfiler = [
-		'class' => ProfilerXhprof::class,
-		'flags' => $xhprofFlags,
-		'output' => 'text',
-	];
-
-	// Don't need a global here
-	unset( $xhprofFlags );
-}
-
 // Show custom database maintenance error page on these clusters.
 $wgDatabaseClustersMaintenanceType = 'unscheduled';
 $wgDatabaseClustersMaintenance = [];
