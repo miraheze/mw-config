@@ -953,18 +953,26 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'maxqueue' => 100,
 	],
-	'FullTextSearch' => [
-		'class' => PoolCounterClient::class,
-		'timeout' => 3,
-		'workers' => 4,
-		'maxqueue' => 8,
-	],
 	'FileRenderExpensive' => [
 		'class' => PoolCounterClient::class,
 		'timeout' => 8,
 		'workers' => 2,
 		'slots' => 8,
 		'maxqueue' => 100,
+	],
+	// Core MySQL fulltext search. One pool per wiki, and one per database server behind it.
+	// These are defined in MirahezeMagic's PooledSearchMySQL.
+	'FullTextSearchWiki' => [
+		'class' => PoolCounterClient::class,
+		'timeout' => 3,
+		'workers' => 2,
+		'maxqueue' => 4,
+	],
+	'FullTextSearch' => [
+		'class' => PoolCounterClient::class,
+		'timeout' => 3,
+		'workers' => 16,
+		'maxqueue' => 32,
 	],
 	'SpecialContributions' => [
 		'class' => PoolCounterClient::class,
