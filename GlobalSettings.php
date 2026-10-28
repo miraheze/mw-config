@@ -953,6 +953,12 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'maxqueue' => 100,
 	],
+	'FullTextSearch' => [
+		'class' => PoolCounterClient::class,
+		'timeout' => 3,
+		'workers' => 4,
+		'maxqueue' => 8,
+	],
 	'FileRenderExpensive' => [
 		'class' => PoolCounterClient::class,
 		'timeout' => 8,
