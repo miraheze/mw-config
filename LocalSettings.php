@@ -6714,6 +6714,7 @@ $wgConf->settings += [
 
 	// Search
 	'wgSearchType' => [
+		'default' => Miraheze\MirahezeMagic\Search\PooledSearchMySQL::class,
 		'ext-CirrusSearch' => 'CirrusSearch',
 		'ext-TitleKey' => MediaWiki\Extension\TitleKey\SearchEngineMySQL::class,
 	],
