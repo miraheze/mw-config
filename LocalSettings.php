@@ -3727,12 +3727,12 @@ $wgConf->settings += [
 		'default' => false,
 	],
 	'wgKartographerSimpleStyleMarkers' => [
-		'default' => true,
-		'bluepageswiki' => false,
-		'gratisdatawiki' => false,
-		'isvwiki' => false,
-		'leborkwiki' => false,
-		'umemorywiki' => false,
+		'default' => false,
+		#'bluepageswiki' => false,
+		#'gratisdatawiki' => false,
+		#'isvwiki' => false,
+		#'leborkwiki' => false,
+		#'umemorywiki' => false,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
