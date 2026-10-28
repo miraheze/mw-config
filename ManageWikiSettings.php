@@ -1999,6 +1999,21 @@ $wgManageWikiSettings = [
 		'help' => 'Whether to show thumbnails for old images on the image\'s description page.',
 		'requires' => [],
 	],
+	'wgEnableImageWhitelist' => [
+		'name' => 'Enable external image whitelist',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'media',
+		'help' => 'Alternative to <code>$wgAllowExternalImages</code>. Determines whether MediaWiki will allow external images from a set of RegEx URLs set in [[MediaWiki:External image whitelist]] to be rendered inline',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgAllowExternalImages',
+				'value' => false,
+			],
+		],
+	],
 	'wgAllowExternalImages' => [
 		'name' => 'Allow External Images',
 		'from' => 'mediawiki',
@@ -2006,8 +2021,28 @@ $wgManageWikiSettings = [
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'media',
-		'help' => 'Determines whether or not MediaWiki will allow external images to be rendered inline with text',
-		'requires' => [],
+		'help' => 'Determines whether MediaWiki will allow external images from any URL to be rendered inline with text',
+		'requires' => [
+			'settings' => [
+				'setting' => [ 'wgAllowExternalImagesFrom', 'wgEnableImageWhitelist' ],
+				'value' => false,
+			],
+		],
+	],
+	'wgAllowExternalImagesFrom' => [
+		'name' => 'Allow External Images From',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'texts',
+		'overridedefault' => [],
+		'section' => 'media',
+		'help' => 'Alternative to <code>$wgAllowExternalImages</code>. Determines what URLs MediaWiki will allow external images to be rendered inline with text from. You should only define the start of the URL with <code>http://</code> or <code>https://</code>, the domain and the trailing slash, e.g: <code>https://www.example.com/</code>',
+		'requires' => [
+			'settings' => [
+				'setting' => 'wgAllowExternalImages',
+				'value' => false,
+			],
+		],
 	],
 	'wgNativeImageLazyLoading' => [
 		'name' => 'Native Image Lazy Loading',
