@@ -802,11 +802,26 @@ $wgConf->settings += [
 	],
 
 	// Contribution Scores
+	'wgContribScoreIgnoreBots' => [
+		'default' => false,
+	],
+	'wgContribScoreIgnoreBlockedUsers' => [
+		'default' => false,
+	],
+	'wgContribScoreIgnoreUsernames' => [
+		'default' => [],
+	],
+	'wgContribScoresUseRealName' => [
+		'default' => false,
+	],
 	'wgContribScoreDisableCache' => [
 		'default' => true,
 	],
-	'wgContribScoreIgnoreBots' => [
+	'wgContribScoreUseRoughEditCount' => [
 		'default' => false,
+	],
+	'wgContribScoreCacheTTL' => [
+		'default' => 30,
 	],
 
 	// Cookies
