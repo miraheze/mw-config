@@ -3647,7 +3647,6 @@ $wgManageWikiSettings = [
 			'settings' => [
 					'setting' => 'wgContribScoreDisableCache',
 					'value' => false,
-				],
 			],
 		],
 	],
