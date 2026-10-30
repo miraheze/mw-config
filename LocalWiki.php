@@ -362,6 +362,16 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
+	case 'hsckwiki':
+		// Enable responsive mode for legacy Vector (its skin.json hardcodes "responsive": false).
+		// Must run after skin.json is merged into $wgValidSkinNames
+		// or else, assigning the key directly here would replace the whole 'vector' entry.
+		$wgExtensionFunctions[] = static function () {
+			global $wgValidSkinNames;
+			$wgValidSkinNames['vector']['args'][0]['responsive'] = true;
+		};
+
+		break;
 	case 'kagagawiki':
 		$uwCcAvailableLanguages = [
 			'an', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el',
