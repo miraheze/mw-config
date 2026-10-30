@@ -61,6 +61,30 @@ $wgDatabaseClustersMaintenance = [];
 require_once '/srv/mediawiki/config/initialise/MirahezeFunctions.php';
 $wi = new MirahezeFunctions();
 
+// Cap in flight web requests per database section so one slow section can't take every PHP worker.
+if ( PHP_SAPI !== 'cli' && !$mwtask && function_exists( 'apcu_entry' ) ) {
+	$wmgInflightShare = 0.6;
+	$wmgInflightKey = 'wmg-inflight:' . ( $wi->wikiDBClusters[$wi->dbname] ?? 'DEFAULT' );
+	$wmgInflightLimit = apcu_entry( 'wmg-inflight-limit', static function () use ( $wmgInflightShare ): int {
+		$cpus = substr_count( (string)@file_get_contents( '/proc/cpuinfo' ), "processor\t:" );
+		return $cpus ? (int)ceil( max( floor( $cpus * 2.0 ), 8 ) * $wmgInflightShare ) : PHP_INT_MAX;
+	} );
+
+	apcu_add( $wmgInflightKey, 0, 300 );
+	register_shutdown_function( static function () use ( $wmgInflightKey ): void {
+		apcu_dec( $wmgInflightKey );
+	} );
+
+	if ( apcu_inc( $wmgInflightKey ) > $wmgInflightLimit ) {
+		http_response_code( 503 );
+		header( 'Retry-After: 5' );
+		header( 'X-DB-Section-Busy: ' . substr( $wmgInflightKey, 13 ) );
+		exit( 'This wiki is temporarily busy. Please try again in a few seconds.' );
+	}
+
+	unset( $wmgInflightShare, $wmgInflightKey, $wmgInflightLimit );
+}
+
 // Load PrivateSettings (e.g. $wgDBpassword)
 require_once '/srv/mediawiki/config/PrivateSettings.php';
 
