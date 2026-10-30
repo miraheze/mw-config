@@ -821,7 +821,7 @@ $wgConf->settings += [
 	],
 	'wgContribScoreIgnoreUsernames' => [
 		'default' => [],
-	];
+	],
 	'wgContribScoresUseRealName' => [
 		'default' => false,
 	],
