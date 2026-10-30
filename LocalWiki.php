@@ -371,7 +371,7 @@ switch ( $wi->dbname ) {
 			$wgValidSkinNames['vector']['args'][0]['responsive'] = true;
 		};
 
-	break;
+		break;
 	case 'kagagawiki':
 		$uwCcAvailableLanguages = [
 			'an', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el',
