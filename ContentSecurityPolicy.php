@@ -152,6 +152,7 @@ $wgMirahezeMagicCSPServices = [
 			],
 			'connect-src' => [
 				'1.1.1.1',
+				'cdnjs.cloudflare.com',
 			],
 		],
 	],
@@ -705,6 +706,7 @@ $wgMirahezeMagicCSPServices = [
 			],
 			'img-src' => [
 				'i.ytimg.com',
+				'img.youtube.com',
 			],
 			'media-src' => [
 				'*.youtube.com',
