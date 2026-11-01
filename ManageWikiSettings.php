@@ -1220,7 +1220,7 @@ $wgManageWikiSettings = [
 		'global' => true,
 		'type' => 'check',
 		'overridedefault' => false,
-		'help' => 'Allow using a shared global environment for module invocations. Significantly speeds up pages with a lot of <code>#invoke</code> statements, but may cause weird bugs.',
+		'help' => 'Reuse Lua environments between <code>#invoke</code> calls instead of creating a new one for each invocation. Significantly speeds up pages with a lot of <code>#invoke</code> calls, but modifications to global variables and built-in libraries in one call may still be present in another call on the same page. This may cause weird bugs on modules that declare or modify global variables.',
 		'section' => 'editing',
 		'requires' => [],
 	],
