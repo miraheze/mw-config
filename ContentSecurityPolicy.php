@@ -152,7 +152,6 @@ $wgMirahezeMagicCSPServices = [
 			],
 			'connect-src' => [
 				'1.1.1.1',
-				'cdnjs.cloudflare.com',
 			],
 		],
 	],
