@@ -1214,6 +1214,16 @@ $wgManageWikiSettings = [
 		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
 		'requires' => [],
 	],
+	'wmgScribuntoShareInvocationEnv' => [
+		'name' => 'Scribunto Share Invocation Environment',
+		'from' => 'scribunto',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => 'Reuse Lua environments between <code>#invoke</code> calls instead of creating a new one for each invocation. Significantly speeds up pages with a lot of <code>#invoke</code> calls, but modifications to global variables and built-in libraries in one call may still be present in another call on the same page. This may cause weird bugs on modules that declare or modify global variables.',
+		'section' => 'editing',
+		'requires' => [],
+	],
 	'wgPageCreationLog' => [
 		'name' => 'Page Creation Log',
 		'from' => 'mediawiki',
