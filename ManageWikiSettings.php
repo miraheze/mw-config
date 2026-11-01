@@ -3609,24 +3609,6 @@ $wgManageWikiSettings = [
 		'help' => 'Excludes selected users from contrib scores reporting',
 		'requires' => [],
 	],
-	'wgContribScoresUseRealName' => [
-		'name' => 'Contrib Scores Use Real Name',
-		'from' => 'contributionscores',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'socialtools',
-		'help' => 'Uses the value of the "Real name" field that a user defines in [[Special:Preferences]] instead of their username',
-		'requires' => [],
-	],
-	'wgContribScoreDisableCache' => [
-		'name' => 'Contrib Score Disable Cache',
-		'from' => 'contributionscores',
-		'type' => 'check',
-		'overridedefault' => true,
-		'section' => 'socialtools',
-		'help' => 'Disables parsing the contribution score provided by the parser function and the contrib scores table',
-		'requires' => [],
-	],
 	'wgContribScoreUseRoughEditCount' => [
 		'name' => 'Contrib Scores Use Rough Edit Count',
 		'from' => 'contributionscores',
@@ -3643,12 +3625,7 @@ $wgManageWikiSettings = [
 		'overridedefault' => 30,
 		'section' => 'socialtools',
 		'help' => 'Defines how long the contribution score will be cached for in seconds',
-		'requires' => [
-			'settings' => [
-					'setting' => 'wgContribScoreDisableCache',
-					'value' => false,
-			],
-		],
+		'requires' => [],
 	],
 
 	// Styling (E.G skins/logos etc)
