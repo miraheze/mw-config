@@ -3637,15 +3637,6 @@ $wgManageWikiSettings = [
 		'help' => 'When computing the contribution score, use a rough estimation of a users edit count instead of using a users total edit count',
 		'requires' => [],
 	],
-	'wgContribScoreCacheTTL' => [
-		'name' => 'Contrib Scores Cache Time to live',
-		'from' => 'contributionscores',
-		'type' => 'integer',
-		'overridedefault' => 30,
-		'section' => 'socialtools',
-		'help' => 'Defines how long the contribution score will be cached for in minutes',
-		'requires' => [],
-	],
 
 	// Styling (E.G skins/logos etc)
 	'wgAppleTouchIcon' => [
