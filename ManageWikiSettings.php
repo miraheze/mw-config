@@ -3643,7 +3643,7 @@ $wgManageWikiSettings = [
 		'type' => 'integer',
 		'overridedefault' => 30,
 		'section' => 'socialtools',
-		'help' => 'Defines how long the contribution score will be cached for in seconds',
+		'help' => 'Defines how long the contribution score will be cached for in minutes',
 		'requires' => [],
 	],
 
