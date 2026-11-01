@@ -816,11 +816,10 @@ $wgConf->settings += [
 	'wgContribScoreIgnoreUsernames' => [
 		'default' => [],
 	],
-	'wgContribScoresUseRealName' => [
-		'default' => false,
-	],
+	/// Do not change this value under any circumstance per CosmicAlpha
+	/// Disabling cache creates performance issues that we would like to avoid.
 	'wgContribScoreDisableCache' => [
-		'default' => true,
+		'default' => false,
 	],
 	'wgContribScoreUseRoughEditCount' => [
 		'default' => false,
