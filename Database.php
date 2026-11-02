@@ -80,6 +80,11 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 				'innodb_lock_wait_timeout' => 15,
 			],
 		],
+		'templateOverridesByServer' => [
+			'db192' => [
+				'flags' => DBO_DEFAULT | ( MW_ENTRY_POINT === 'cli' ? DBO_DEBUG : DBO_PERSISTENT ),
+			],
+		],
 		'hostsByName' => [
 			'db151' => '10.0.15.110',
 			'db161' => '10.0.16.128',
@@ -110,10 +115,8 @@ $isWebRead = $isWeb && ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) !== 'POST';
 
 if ( $isWeb ) {
 	$wgLBFactoryConf['serverTemplate']['connectTimeout'] = 2;
-	$wgLBFactoryConf['serverTemplate']['flags'] |= DBO_PERSISTENT;
 }
 
-// Always set so a reused connection never carries a stale value.
 $wgLBFactoryConf['serverTemplate']['variables']['max_statement_time'] = $isWebRead ? 25 : 0;
 
 if ( $isWebRead ) {
