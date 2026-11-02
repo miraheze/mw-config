@@ -802,11 +802,27 @@ $wgConf->settings += [
 	],
 
 	// Contribution Scores
-	'wgContribScoreDisableCache' => [
-		'default' => true,
-	],
 	'wgContribScoreIgnoreBots' => [
 		'default' => false,
+	],
+	'wgContribScoreIgnoreBlockedUsers' => [
+		'default' => false,
+	],
+	'wgContribScoreIgnoreUsernames' => [
+		'default' => [],
+	],
+	'wgContribScoreUseRoughEditCount' => [
+		'default' => false,
+	],
+	/// Do not change the following two settings under any circumstance, per CosmicAlpha
+	/// Disabling cache creates performance issues that we would like to avoid.
+	'wgContribScoreDisableCache' => [
+		'default' => false,
+	],
+	/// 30 minutes is enough time to cache the values we need, if this starts causing
+	/// performance issues in larger wikis, we could increase it to 60 (1 hour)
+	'wgContribScoreCacheTTL' => [
+		'default' => 30,
 	],
 
 	// Cookies
