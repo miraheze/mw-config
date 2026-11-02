@@ -352,7 +352,8 @@ class MirahezeFunctions {
 
 	public function isBeta(): bool {
 		return str_ends_with( $this->server, '.mirabeta.org' )
-			|| str_ends_with( $this->server, '.nexttide.org' );
+			|| str_ends_with( $this->server, '.nexttide.org' )
+			|| str_ends_with( $this->server, '.rhinosf1.com' );
 	}
 
 	public function setDatabase(): void {
