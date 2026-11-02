@@ -105,21 +105,24 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 }
 
 // Web requests only. CLI and mwtask* keep the default timeouts.
-$wmgDbWeb = PHP_SAPI !== 'cli' && !$mwtask;
-$wmgDbWebRead = $wmgDbWeb && ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) !== 'POST';
+$isWeb = PHP_SAPI !== 'cli' && !$mwtask;
+$isWebRead = $isWeb && ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) !== 'POST';
 
-if ( $wmgDbWeb ) {
+if ( $isWeb ) {
 	$wgLBFactoryConf['serverTemplate']['connectTimeout'] = 2;
 	$wgLBFactoryConf['serverTemplate']['flags'] |= DBO_PERSISTENT;
 }
 
 // Always set so a reused connection never carries a stale value.
-$wgLBFactoryConf['serverTemplate']['variables']['max_statement_time'] = $wmgDbWebRead ? 25 : 0;
+$wgLBFactoryConf['serverTemplate']['variables']['max_statement_time'] = $isWebRead ? 25 : 0;
 
-if ( $wmgDbWebRead ) {
+if ( $isWebRead ) {
 	// Above max_statement_time and the 30s expensive query limit.
 	$wgLBFactoryConf['serverTemplate']['receiveTimeout'] = 35;
 }
+
+// Don't need globals here
+unset( $isWeb, $isWebRead );
 
 $wgLBFactoryConf['loadMonitor']['class'] = LoadMonitor::class;
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
