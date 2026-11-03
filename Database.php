@@ -80,6 +80,11 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 				'innodb_lock_wait_timeout' => 15,
 			],
 		],
+		'templateOverridesByServer' => [
+			'db192' => [
+				'flags' => DBO_DEFAULT | ( MW_ENTRY_POINT === 'cli' ? DBO_DEBUG : DBO_PERSISTENT ),
+			],
+		],
 		'hostsByName' => [
 			'db151' => '10.0.15.110',
 			'db161' => '10.0.16.128',
@@ -103,6 +108,24 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 		],
 	];
 }
+
+// Web requests only. CLI and mwtask* keep the default timeouts.
+$isWeb = PHP_SAPI !== 'cli' && !$mwtask;
+$isWebRead = $isWeb && ( $_SERVER['REQUEST_METHOD'] ?? 'GET' ) !== 'POST';
+
+if ( $isWeb ) {
+	$wgLBFactoryConf['serverTemplate']['connectTimeout'] = 2;
+}
+
+$wgLBFactoryConf['serverTemplate']['variables']['max_statement_time'] = $isWebRead ? 25 : 0;
+
+if ( $isWebRead ) {
+	// Above max_statement_time and the 30s expensive query limit.
+	$wgLBFactoryConf['serverTemplate']['receiveTimeout'] = 35;
+}
+
+// Don't need globals here
+unset( $isWeb, $isWebRead );
 
 $wgLBFactoryConf['loadMonitor']['class'] = LoadMonitor::class;
 // Disable LoadMonitor in CLI, it doesn't provide much value in CLI.
