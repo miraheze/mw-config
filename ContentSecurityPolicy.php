@@ -705,6 +705,7 @@ $wgMirahezeMagicCSPServices = [
 			],
 			'img-src' => [
 				'i.ytimg.com',
+				'img.youtube.com',
 			],
 			'media-src' => [
 				'*.youtube.com',
