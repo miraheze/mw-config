@@ -5048,6 +5048,8 @@ $wgConf->settings += [
 				512002,
 				/** Skye (Miraheze) */
 				786522,
+				/** Reception123 */
+				19,
 			],
 			// Only the board and Technology team are allowed access
 			// DO NOT ADD UNAUTHORIZED USERS
