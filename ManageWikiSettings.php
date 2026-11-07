@@ -1475,6 +1475,15 @@ $wgManageWikiSettings = [
 		'help' => 'This replaces the default CodeEditor with CodeMirror for all users.',
 		'requires' => [],
 	],
+	'wgCiteSubReferencing' => [
+		'name' => 'Cite Enable Sub-referencing',
+		'from' => 'cite',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Allows multiple references to different parts of the same source without repeating the full reference.',
+		'requires' => [],
+	],
 
 	// Links
 	'wgArticleCountMethod' => [
