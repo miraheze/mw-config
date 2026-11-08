@@ -5209,6 +5209,13 @@ $wgConf->settings += [
 			'zh-mo',
 			'zh-my',
 		],
+		'yswikiwiki' => [
+			'zh-mo',
+			'zh-my',
+			'zh-sg',
+			'zh-hans',
+			'zh-hant',
+		],
 	],
 	'wgDefaultLanguageVariant' => [
 		'default' => false,
