@@ -3592,6 +3592,26 @@ $wgManageWikiSettings = [
 		'help' => 'Enables default stuff to display on social profile pages by default',
 		'requires' => [],
 	],
+	'wmgUserProfileV2EnabledServices' => [
+		'name' => 'UserProfileV2 Profile Fields',
+		'from' => 'userprofilev2',
+		'type' => 'list-multi',
+		'options' => [
+			'Discord' => 'discord',
+			'GitHub' => 'github',
+			'Mastodon' => 'mastodon',
+			'Roblox' => 'roblox',
+			'X (Twitter)' => 'twitter',
+		],
+		'overridedefault' => [
+			'discord',
+			'mastodon',
+			'twitter',
+		],
+		'section' => 'socialtools',
+		'help' => 'The social media services to display on user profiles.',
+		'requires' => [],
+	],
 	'wgContribScoreIgnoreBots' => [
 		'name' => 'Contrib Score Ignore Bots',
 		'from' => 'contributionscores',

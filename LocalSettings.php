@@ -7414,6 +7414,13 @@ $wgConf->settings += [
 	'wgUserProfileV2UseGlobalAvatars' => [
 		'default' => false,
 	],
+	'wmgUserProfileV2EnabledServices' => [
+		'default' => [
+			'discord',
+			'mastodon',
+			'twitter',
+		],
+	],
 
 	// Varnish
 	'wgUseCdn' => [
