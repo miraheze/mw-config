@@ -4223,6 +4223,7 @@ $wgConf->settings += [
 				'userrights' => true,
 			],
 			'user' => [
+				'logout' => true,
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
 				'user' => true,
@@ -4697,6 +4698,7 @@ $wgConf->settings += [
 				'ipinfo-view-full',
 				'ipinfo-view-log',
 				'logentryimport',
+				'logout',
 				'managewiki-editdefault',
 				'managewiki-privacy',
 				'managewiki-restricted',
