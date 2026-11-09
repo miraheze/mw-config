@@ -667,6 +667,11 @@ $wgConf->settings += [
 		'rainversewiki' => true,
 	],
 
+	// Cite
+	'wgCiteSubReferencing' => [
+		'default' => false,
+	],
+
 	// Citizen
 	'wgCitizenThemeDefault' => [
 		'default' => 'auto',
