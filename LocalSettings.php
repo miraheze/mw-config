@@ -4697,6 +4697,7 @@ $wgConf->settings += [
 				'ipinfo-view-full',
 				'ipinfo-view-log',
 				'logentryimport',
+				'logout',
 				'managewiki-editdefault',
 				'managewiki-privacy',
 				'managewiki-restricted',
