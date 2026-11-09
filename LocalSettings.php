@@ -3745,6 +3745,7 @@ $wgConf->settings += [
 	],
 	'wgKartographerSimpleStyleMarkers' => [
 		'default' => false,
+		'tkuwiki' => true,
 	],
 	'wgKartographerStyles' => [
 		'default' => [
