@@ -4223,7 +4223,6 @@ $wgConf->settings += [
 				'userrights' => true,
 			],
 			'user' => [
-				'logout' => true,
 				'mwoauthmanagemygrants' => true,
 				'sendemail' => false,
 				'user' => true,
