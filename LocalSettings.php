@@ -5984,6 +5984,9 @@ $wgConf->settings += [
 		'+dmlwikiwiki' => [
 			'imagesize' => 2,
 		],
+		'+drpcwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+fanpediawiki' => [
 			'rcenhancedfilters-disable' => 1,
 			'wlenhancedfilters-disable' => 1,
