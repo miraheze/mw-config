@@ -1442,6 +1442,10 @@ $wgConf->settings += [
 			'virtual-createwiki-central' => [
 				'db' => $wi->getCentralDatabase(),
 			],
+			'virtual-echo-shared' => [
+				'db' => 'metawiki',
+				'cluster' => 'echo',
+			],
 			'virtual-globalblocking' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1499,6 +1503,10 @@ $wgConf->settings += [
 		'+beta' => [
 			'virtual-botpasswords' => [
 				'db' => 'metawikibeta',
+			],
+			'virtual-echo-shared' => [
+				'db' => 'metawikibeta',
+				'cluster' => 'beta',
 			],
 			'virtual-globaljsonlinks' => [
 				'db' => 'commonswikibeta',
@@ -1766,14 +1774,6 @@ $wgConf->settings += [
 	],
 	'wgEchoUseJobQueue' => [
 		'default' => true,
-	],
-	'wgEchoSharedTrackingCluster' => [
-		'default' => 'echo',
-		'beta' => 'beta',
-	],
-	'wgEchoSharedTrackingDB' => [
-		'default' => 'metawiki',
-		'beta' => 'metawikibeta',
 	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
