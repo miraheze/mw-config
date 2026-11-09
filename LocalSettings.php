@@ -4746,6 +4746,8 @@ $wgConf->settings += [
 				'managewiki-namespaces',
 				'managewiki-permissions',
 				'managewiki-settings',
+				'globalblock-local-status',
+				// Removed in 1.47
 				'globalblock-whitelist',
 				'ipblock-exempt',
 				'interwiki',
@@ -4767,6 +4769,8 @@ $wgConf->settings += [
 				'editmyoptions',
 				'editmyprivateinfo',
 				'editmywatchlist',
+				'globalblock-local-status',
+				// Removed in 1.47
 				'globalblock-whitelist',
 				'interwiki',
 				'ipblock-exempt',
@@ -4798,6 +4802,8 @@ $wgConf->settings += [
 				'editmyoptions',
 				'editmyprivateinfo',
 				'editmywatchlist',
+				'globalblock-local-status',
+				// Removed in 1.47
 				'globalblock-whitelist',
 				'interwiki',
 				'ipblock-exempt',
