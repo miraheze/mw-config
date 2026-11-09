@@ -70,7 +70,7 @@ class MirahezeFunctions {
 
 	public const array MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.47',
-		'beta' => '1.46',
+		'beta' => '1.47',
 		'stable' => '1.46',
 	];
 
