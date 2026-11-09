@@ -5613,8 +5613,12 @@ $wgConf->settings += [
 	'wgOAuth2RefreshTokenTTL' => [
 		'default' => 'P365D',
 	],
+	'wgMWOAuthSharedUserIDs' => [
+		'default' => true,
+	],
 	'wgMWOAuthSharedUserSource' => [
 		'default' => 'CentralAuth',
+		'ldapwikiwiki' => 'local',
 	],
 	'wgMWOAuthSecureTokenTransfer' => [
 		'default' => true,
