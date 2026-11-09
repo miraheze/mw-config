@@ -1775,6 +1775,12 @@ $wgConf->settings += [
 	'wgEchoUseJobQueue' => [
 		'default' => true,
 	],
+	'wgEchoSharedTrackingCluster' => [
+		'1.46' => 'echo',
+	],
+	'wgEchoSharedTrackingDB' => [
+		'1.46' => 'metawiki',
+	],
 	'wgEchoUseCrossWikiBetaFeature' => [
 		'default' => true,
 	],
