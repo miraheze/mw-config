@@ -2,6 +2,7 @@
 
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Extension\LdapAuthentication\LdapPrimaryAuthenticationProvider;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
