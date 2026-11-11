@@ -2734,6 +2734,16 @@ $wgManageWikiSettings = [
 	],
 
 	// Permissions
+	'wgRestrictUserPageEditing' => [
+		'name' => 'Restrict User Page Editing',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'permissions',
+		'help' => 'Whether to restrict editing user pages to the page owner and users with the \'editalluserpages\' right.',
+		'requires' => [],
+	],
 	'wgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
@@ -5777,4 +5787,11 @@ if ( $wi->isAllOfExtensionsActive( 'Gamepress', 'Theme' ) ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
+}
+
+if ( $wi->version < 1.47 ) {
+	unset( $wgManageWikiSettings['wgRestrictUserPageEditing'] );
+} else {
+	// Temporary, until we undeploy the extension and enable this on wikis that had it enabled.
+	$wgManageWikiSettings['wgRestrictUserPageEditing']['overridedefault'] = $wi->isExtensionActive( 'UserPageEditProtection' );
 }

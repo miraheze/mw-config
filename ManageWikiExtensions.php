@@ -3873,3 +3873,11 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
+
+if ( $wi->version > 1.46 ) {
+	$wgManageWikiExtensions['userpageeditprotection']['requires'] = [
+		'permissions' => [ 'managewiki-restricted' ],
+	];
+
+	$wgManageWikiExtensions['userpageeditprotection']['help'] = 'Merged into core in MediaWiki 1.47; enable $wgRestrictUserPageEditing in ManageWikiSettings instead.';
+}

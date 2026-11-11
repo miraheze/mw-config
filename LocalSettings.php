@@ -5205,6 +5205,11 @@ $wgConf->settings += [
 			'meta.miraheze.org',
 		],
 	],
+	'wgRestrictUserPageEditing' => [
+		'default' => false,
+		// Temporary, until we undeploy the extension and enable this on wikis that had it enabled.
+		'ext-UserPageEditProtection' => true,
+	],
 	'wgWhitelistRead' => [
 		'default' => [],
 	],
