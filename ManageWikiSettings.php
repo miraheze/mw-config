@@ -5792,6 +5792,6 @@ if ( $wi->isAllOfExtensionsActive( 'Gamepress', 'Theme' ) ) {
 if ( $wi->version < 1.47 ) {
 	unset( $wgManageWikiSettings['wgRestrictUserPageEditing'] );
 } else {
-	// Temporary, until we undeploy rhe extension and enable this on wikis that had it enabled.
+	// Temporary, until we undeploy the extension and enable this on wikis that had it enabled.
 	$wgManageWikiSettings['wgRestrictUserPageEditing']['overridedefault'] = $wi->isExtensionActive( 'UserPageEditProtection' );
 }
