@@ -3874,7 +3874,7 @@ $wgManageWikiExtensions = [
 	],
 ];
 
-if ( $wi->version === 1.47 ) {
+if ( $wi->version > 1.46 ) {
 	$wgManageWikiExtensions['userpageeditprotection']['requires'] = [
 		'permissions' => [ 'managewiki-restricted' ],
 	];
