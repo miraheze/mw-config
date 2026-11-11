@@ -5786,18 +5786,18 @@ $wgConf->settings += [
 			'techteam' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 			'trustandsafety' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 		],
-		'+recaptimesquadwiki' => [
-			'bureaucrat' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
-			'crew-recaptime-dev' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
-			'interface-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
-			'sysop' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
-		],
 		// metawikibeta should mirror metawiki
 		'+metawikibeta' => [
 			'global-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 			'interface-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 			'techteam' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 			'trustandsafety' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+		],
+		'+recaptimesquadwiki' => [
+			'bureaucrat' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'crew-recaptime-dev' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'interface-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'sysop' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 		],
 	],
 
