@@ -5705,6 +5705,16 @@ $wgConf->settings += [
 			'linting' => true,
 		],
 	],
+	// T16487: keep the legacy parser for the initial 1.47 rollout
+	'wgUseParsoidParser' => [
+		'default' => false,
+	],
+	'wgUseParsoidLinksUpdate' => [
+		'default' => false,
+	],
+	'wgUseParsoidMessages' => [
+		'default' => false,
+	],
 
 	// Phonos
 	'wgPhonosEspeak' => [
