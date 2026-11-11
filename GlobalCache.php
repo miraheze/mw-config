@@ -187,10 +187,6 @@ $wgParsoidCacheConfig = [
 	'StashType' => null,
 	// 24h in production, VE will fail to save after this time.
 	'StashDuration' => 24 * 60 * 60,
-	// Only cache if parsing takes longer than n seconds; 0 means cache all.
-	'CacheThresholdTime' => $wgDBname === 'commonswiki' ? 1.0 : 0.0,
-	// Disable cache warming on commonswiki for now.
-	'WarmParsoidParserCache' => $wgDBname === 'commonswiki' ? false : true,
 ];
 
 if ( $wgDBname === 'commonswiki' ) {
