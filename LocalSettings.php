@@ -5207,7 +5207,7 @@ $wgConf->settings += [
 	],
 	'wgRestrictUserPageEditing' => [
 		'default' => false,
-		// Temporary, until we undeploy rhe extension and enable this on wikis that had it enabled.
+		// Temporary, until we undeploy the extension and enable this on wikis that had it enabled.
 		'ext-UserPageEditProtection' => true,
 	],
 	'wgWhitelistRead' => [
