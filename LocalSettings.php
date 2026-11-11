@@ -5575,40 +5575,14 @@ $wgConf->settings += [
 			'editsitejs',
 		],
 	],
-	'wgOATHRequiredForGroups' => [
-		'default' => [
-			'checkuser',
-			'suppress',
-			'steward',
-		],
-		'+cafewiki' => [
-			'sysop',
-		],
-		'+ldapwikiwiki' => [
-			'user',
-		],
-		'+metawiki' => [
-			'assistant-steward',
-			'electionadmin',
-			'global-admin',
-			'interface-admin',
-			'techteam',
-			'trustandsafety',
-		],
-		// metawikibeta should mirror metawiki
-		'+metawikibeta' => [
-			'global-admin',
-			'interface-admin',
-			'techteam',
-			'trustandsafety'
-		],
-		'+recaptimesquadwiki' => [
-			'bureaucrat',
-			'crew-recaptime-dev',
-			'interface-admin',
-			'sysop',
-		],
+	'wgOATHAuthEnforce2FAForAll' => [
+		'default' => false,
 	],
+	'wgOATHAuth2FAForAllWarnings' => [
+		'default' => false,
+		'ldapwikiwiki' => true,
+	],
+
 	// OAuth
 	'wgMWOAuthCentralWiki' => [
 		'default' => 'metawiki',
@@ -5793,6 +5767,37 @@ $wgConf->settings += [
 			'user',
 			'autoconfirmed',
 			'temp',
+		],
+	],
+	'wgRestrictedGroups' => [
+		'default' => [
+			'checkuser' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'suppress' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'steward' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+		],
+		'+cafewiki' => [
+			'sysop' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+		],
+		'+metawiki' => [
+			'assistant-steward' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'electionadmin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'global-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'interface-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'techteam' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'trustandsafety' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+		],
+		// metawikibeta should mirror metawiki
+		'+metawikibeta' => [
+			'global-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'interface-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'techteam' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'trustandsafety' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+		],
+		'+recaptimesquadwiki' => [
+			'bureaucrat' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'crew-recaptime-dev' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'interface-admin' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
+			'sysop' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 		],
 	],
 
