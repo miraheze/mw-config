@@ -3682,6 +3682,11 @@ $wgConf->settings += [
 		'+zhdelwiki' => [
 			'zhwikipedia',
 		],
+		'+ext-Bucket' => [
+			'mh' => [
+				'bucket',
+			],
+		],
 	],
 
 	'wgExportMaxHistory' => [
