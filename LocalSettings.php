@@ -5815,6 +5815,22 @@ $wgConf->settings += [
 			'sysop' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 		],
 	],
+	// T16390
+	'wgReauthenticateForActions' => [
+		'default' => [],
+		'+metawiki' => [
+			'edituserjs' => 'edituserjscss',
+			'editusercss' => 'edituserjscss',
+			'editsitejs' => 'editsitejscss',
+			'editsitecss' => 'editsitejscss',
+		],
+		'+metawikibeta' => [
+			'edituserjs' => 'edituserjscss',
+			'editusercss' => 'edituserjscss',
+			'editsitejs' => 'editsitejscss',
+			'editsitecss' => 'editsitejscss',
+		],
+	],
 
 	// Password policy
 	'wgPasswordPolicy' => [
