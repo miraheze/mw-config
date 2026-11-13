@@ -7336,7 +7336,7 @@ $wgConf->settings += [
 	],
 
 	// UnlinkedWikibase
-	'wgUnlinkedWikibaseStatementsParserFunc' => [
+	'wgUnlinkedWikibaseImitationMode' => [
 		'default' => false,
 	],
 

@@ -5065,13 +5065,13 @@ $wgManageWikiSettings = [
 		'help' => 'The query service Sparql endpoint',
 		'requires' => [],
 	],
-	'wgUnlinkedWikibaseStatementsParserFunc' => [
-		'name' => 'Enable Statements parser function for UnlinkedWikibase',
+	'wgUnlinkedWikibaseImitationMode' => [
+		'name' => 'Enable Wikibase imitation mode for UnlinkedWikibase',
 		'from' => 'unlinkedwikibase',
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'wikibase',
-		'help' => 'Allow the use of <code><nowiki>{{#statements:}}</nowiki></code> parser functions with UnlinkedWikibase.',
+		'help' => 'Enable Wikibase-compatible parser functions (<code><nowiki>{{#statements:}}</nowiki></code> and <code><nowiki>{{#property:}}</nowiki></code>) and Lua methods under the <code>mw.wikibase</code> namespace.',
 		'requires' => [],
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [
