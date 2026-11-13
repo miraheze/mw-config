@@ -391,6 +391,16 @@ $wgConf->settings += [
 	'wgMediaViewerIsInBeta' => [
 		'default' => false,
 	],
+	'wgMediaViewerMobileBeta' => [
+		'default' => false,
+		// T16508
+		'exttestwikibeta' => true,
+	],
+	'wgMediaViewerMobileCarousel' => [
+		'default' => false,
+		// T16508
+		'exttestwikibeta' => true,
+	],
 	'wgVisualEditorEnableWikitextBetaFeature' => [
 		'default' => false,
 	],
