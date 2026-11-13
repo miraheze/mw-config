@@ -220,16 +220,9 @@ switch ( $wi->dbname ) {
 		// case below).
 		wfLoadExtension( 'GlobalUsage' );
 
-		$wgGlobalUsageSharedRepoWiki = 'doorswiki';
 		$wgVirtualDomainsMapping['virtual-globalusage'] = [
 			'db' => 'doorswiki',
 		];
-
-		// MirahezeFunctions::onMediaWikiServices() re-applies $GLOBALS['globals']
-		// after LocalWiki.php, which would reset this to the farm default.
-		if ( isset( $GLOBALS['globals'] ) ) {
-			$GLOBALS['globals']['wgGlobalUsageSharedRepoWiki'] = 'doorswiki';
-		}
 
 		break;
 	case 'dragonquestxwiki':
@@ -297,16 +290,9 @@ switch ( $wi->dbname ) {
 			'abbrvThreshold' => 160
 		];
 
-		$wgGlobalUsageSharedRepoWiki = 'doorswiki';
 		$wgVirtualDomainsMapping['virtual-globalusage'] = [
 			'db' => 'doorswiki',
 		];
-
-		// MirahezeFunctions::onMediaWikiServices() re-applies $GLOBALS['globals']
-		// after LocalWiki.php, which would reset this to the farm default.
-		if ( isset( $GLOBALS['globals'] ) ) {
-			$GLOBALS['globals']['wgGlobalUsageSharedRepoWiki'] = 'doorswiki';
-		}
 
 		break;
 	case 'ftlmultiversewiki':
