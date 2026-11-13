@@ -5818,19 +5818,19 @@ $wgConf->settings += [
 	// T16390
 	'wgReauthenticateForActions' => [
 		'default' => [],
-		'+devwiki' => [
+		'devwiki' => [
 			'edituserjs' => 'edituserjscss',
 			'editusercss' => 'edituserjscss',
 			'editsitejs' => 'editsitejscss',
 			'editsitecss' => 'editsitejscss',
 		],
-		'+metawiki' => [
+		'metawiki' => [
 			'edituserjs' => 'edituserjscss',
 			'editusercss' => 'edituserjscss',
 			'editsitejs' => 'editsitejscss',
 			'editsitecss' => 'editsitejscss',
 		],
-		'+metawikibeta' => [
+		'metawikibeta' => [
 			'edituserjs' => 'edituserjscss',
 			'editusercss' => 'edituserjscss',
 			'editsitejs' => 'editsitejscss',
