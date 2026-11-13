@@ -1214,6 +1214,16 @@ $wgManageWikiSettings = [
 		'help' => 'Use SyntaxHighlight_GeSHi extension to highlight syntax.',
 		'requires' => [],
 	],
+	'wmgScribuntoShareInvocationEnv' => [
+		'name' => 'Scribunto Share Invocation Environment',
+		'from' => 'scribunto',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'help' => 'Reuse Lua environments between <code>#invoke</code> calls instead of creating a new one for each invocation. Significantly speeds up pages with a lot of <code>#invoke</code> calls, but modifications to global variables and built-in libraries in one call may still be present in another call on the same page. This may cause weird bugs on modules that declare or modify global variables.',
+		'section' => 'editing',
+		'requires' => [],
+	],
 	'wgPageCreationLog' => [
 		'name' => 'Page Creation Log',
 		'from' => 'mediawiki',
@@ -1463,6 +1473,15 @@ $wgManageWikiSettings = [
 		'overridedefault' => false,
 		'section' => 'editing',
 		'help' => 'This replaces the default CodeEditor with CodeMirror for all users.',
+		'requires' => [],
+	],
+	'wgCiteSubReferencing' => [
+		'name' => 'Cite Enable Sub-referencing',
+		'from' => 'cite',
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'editing',
+		'help' => 'Allows multiple references to different parts of the same source without repeating the full reference.',
 		'requires' => [],
 	],
 
@@ -2715,6 +2734,16 @@ $wgManageWikiSettings = [
 	],
 
 	// Permissions
+	'wgRestrictUserPageEditing' => [
+		'name' => 'Restrict User Page Editing',
+		'from' => 'mediawiki',
+		'global' => true,
+		'type' => 'check',
+		'overridedefault' => false,
+		'section' => 'permissions',
+		'help' => 'Whether to restrict editing user pages to the page owner and users with the \'editalluserpages\' right.',
+		'requires' => [],
+	],
 	'wgWhitelistRead' => [
 		'name' => 'Whitelist Read',
 		'from' => 'mediawiki',
@@ -5758,4 +5787,11 @@ if ( $wi->isAllOfExtensionsActive( 'Gamepress', 'Theme' ) ) {
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Blue (Gamepress only)'] = 'blue';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Green (Gamepress only)'] = 'green';
 	$wgManageWikiSettings['wgDefaultTheme']['options']['Orange (Gamepress only)'] = 'orange';
+}
+
+if ( $wi->version < 1.47 ) {
+	unset( $wgManageWikiSettings['wgRestrictUserPageEditing'] );
+} else {
+	// Temporary, until we undeploy the extension and enable this on wikis that had it enabled.
+	$wgManageWikiSettings['wgRestrictUserPageEditing']['overridedefault'] = $wi->isExtensionActive( 'UserPageEditProtection' );
 }

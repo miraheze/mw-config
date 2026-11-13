@@ -2093,12 +2093,18 @@ $wgManageWikiExtensions = [
 		'name' => 'BlogPage',
 		'linkPage' => 'https://www.mediawiki.org/wiki/Special:MyLanguage/Extension:BlogPage',
 		'conflicts' => 'simpleblogpage',
+		'help' => 'Note: this extension has compatibility issues with MediaWiki 1.46 and is minimally maintained.',
 		'requires' => [
 			'extensions' => [
 				'comments',
 				'pollny',
 				'socialprofile',
 				'voteny',
+			],
+			'permissions' => [
+				'enable' => [
+					'managewiki-restricted',
+				],
 			],
 		],
 		'install' => [
@@ -3050,7 +3056,13 @@ $wgManageWikiExtensions = [
 		'description' => 'socialprofile-desc',
 		'conflicts' => false,
 		'help' => 'Note: This extension is highly complex, minimally maintained, and generates many bug reports from users. Consider using UserProfileV2 instead.',
-		'requires' => [],
+		'requires' => [
+			'permissions' => [
+				'enable' => [
+					'managewiki-restricted',
+				],
+			],
+		],
 		'install' => [
 			'sql' => [
 				'user_profile' => 'extensions/SocialProfile/UserProfile/sql/user_profile.sql',
@@ -3861,3 +3873,11 @@ $wgManageWikiExtensions = [
 		'section' => 'skins',
 	],
 ];
+
+if ( $wi->version > 1.46 ) {
+	$wgManageWikiExtensions['userpageeditprotection']['requires'] = [
+		'permissions' => [ 'managewiki-restricted' ],
+	];
+
+	$wgManageWikiExtensions['userpageeditprotection']['help'] = 'Merged into core in MediaWiki 1.47; enable $wgRestrictUserPageEditing in ManageWikiSettings instead.';
+}

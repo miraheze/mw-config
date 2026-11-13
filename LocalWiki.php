@@ -2,6 +2,7 @@
 
 use MediaWiki\Actions\ActionEntryPoint;
 use MediaWiki\Context\RequestContext;
+use MediaWiki\Extension\LdapAuthentication\LdapPrimaryAuthenticationProvider;
 use MediaWiki\FileRepo\ForeignDBViaLBRepo;
 use MediaWiki\Html\Html;
 use MediaWiki\Language\LanguageCode;
@@ -87,6 +88,100 @@ switch ( $wi->dbname ) {
 	case 'commonswiki':
 		$wgJsonConfigs['Map.JsonConfig']['store'] = true;
 		$wgJsonConfigs['Tabular.JsonConfig']['store'] = true;
+
+		break;
+
+	case 'computerunionwiki':
+		$wgHooks['BeforePageDisplay'][] = 'onBeforePageDisplay';
+
+		function onBeforePageDisplay( OutputPage $output ) {
+			$title = $output->getTitle();
+
+			if ( $title === null || !$title->isMainPage() ) {
+				return;
+			}
+
+			$output->addHeadItem(
+				'discord-component-embed',
+				'<script id="discord:component-embed" type="application/json">
+				{
+					"component": {
+						"type": 17,
+						"components": [
+							{
+								"type": 10,
+								"content": "# [The Revolutionary Computer Union Wiki](https://computerunion.miraheze.org/)\nWelcome to the official TRCU Wiki! The DEFINITIVE source for anything related to Passport Pls! Here you\'ll find lists of weapons, teams, secret lore, and various easter eggs."
+							},
+							{
+								"type": 12,
+								"items": [
+									{
+										"media": {
+											"url": "https://static.wikitide.net/computerunionwiki/3/3e/UG-Propaganda2.webp"
+										},
+										"description": "The Revolutionary Computer Union\'s Official Wiki",
+										"spoiler": false
+									}
+								]
+							},
+							{
+								"type": 1,
+								"components": [
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Home",
+										"url": "https://computerunion.miraheze.org/"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Items",
+										"url": "https://computerunion.miraheze.org/Category:Items"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Teams",
+										"url": "https://computerunion.miraheze.org/Category:Teams"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Locations",
+										"url": "https://computerunion.miraheze.org/Category:Locations"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Interactables",
+										"url": "https://computerunion.miraheze.org/Category:Interactables"
+									}
+								]
+							},
+							{
+								"type": 1,
+								"components": [
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Notable Individuals",
+										"url": "https://computerunion.miraheze.org/Category:Individuals"
+									},
+									{
+										"type": 2,
+										"style": 5,
+										"label": "Featured Pages",
+										"url": "https://computerunion.miraheze.org/Category:Featured_Pages"
+									}
+								]
+							}
+						]
+					}
+				}
+				</script>'
+			);
+		}
 
 		break;
 	case 'constantnoblewiki':

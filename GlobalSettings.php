@@ -882,6 +882,7 @@ $wgThumbnailEpoch = 20230715011058;
 /** 50MB */
 $wgScribuntoEngineConf['luasandbox']['memoryLimit'] = 50 * 1024 * 1024;
 $wgScribuntoEngineConf['luasandbox']['cpuLimit'] = 10;
+$wgScribuntoEngineConf['luasandbox']['shareInvocationEnv'] = $wmgScribuntoShareInvocationEnv;
 
 // For Scribunto / wgCodeEditorEnableCore
 $wgULSNoImeSelectors[] = '.ace_editor textarea';
@@ -959,6 +960,20 @@ $wgPoolCounterConf = [
 		'workers' => 2,
 		'slots' => 8,
 		'maxqueue' => 100,
+	],
+	// Core MySQL fulltext search. One pool per wiki, and one per database server behind it.
+	// These are defined in MirahezeMagic's PooledSearchMySQL.
+	'FullTextSearchWiki' => [
+		'class' => PoolCounterClient::class,
+		'timeout' => 3,
+		'workers' => 2,
+		'maxqueue' => 4,
+	],
+	'FullTextSearch' => [
+		'class' => PoolCounterClient::class,
+		'timeout' => 3,
+		'workers' => 16,
+		'maxqueue' => 32,
 	],
 	'SpecialContributions' => [
 		'class' => PoolCounterClient::class,

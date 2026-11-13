@@ -70,7 +70,7 @@ class MirahezeFunctions {
 
 	public const array MEDIAWIKI_VERSIONS = [
 		'alpha' => '1.47',
-		'beta' => '1.46',
+		'beta' => '1.47',
 		'stable' => '1.46',
 	];
 
@@ -351,8 +351,7 @@ class MirahezeFunctions {
 	}
 
 	public function isBeta(): bool {
-		return str_ends_with( $this->server, '.mirabeta.org' )
-			|| str_ends_with( $this->server, '.nexttide.org' );
+		return str_starts_with( wfHostname(), 'test' );
 	}
 
 	public function setDatabase(): void {
