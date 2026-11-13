@@ -213,6 +213,18 @@ switch ( $wi->dbname ) {
 		}
 
 		break;
+	case 'doorswiki':
+		// T15986: this wiki is the file repository for the DOORS language wikis.
+		// GlobalUsage records usages in this wiki's database so that the other
+		// DOORS wikis can share them (see the frdoorswiki/ptbrdoorswiki/zhdoorswiki
+		// case below).
+		wfLoadExtension( 'GlobalUsage' );
+
+		$wgVirtualDomainsMapping['virtual-globalusage'] = [
+			'db' => 'doorswiki',
+		];
+
+		break;
 	case 'dragonquestxwiki':
 		$wgPopupsConf['contentPreviews'] = [
 			'image' => true,
@@ -238,6 +250,49 @@ switch ( $wi->dbname ) {
 		break;
 	case 'fischwiki':
 		$wgLogRestrictions['newusers'] = 'read';
+
+		break;
+	case 'frdoorswiki':
+	case 'ptbrdoorswiki':
+	case 'zhdoorswiki':
+		// T15986: read files from doorswiki while keeping local uploads
+		wfLoadExtension( 'GlobalUsage' );
+
+		$wgForeignFileRepos[] = [
+			'class' => ForeignDBViaLBRepo::class,
+			'name' => 'shared-doorswiki',
+			'backend' => 'miraheze-swift',
+			'url' => 'https://static.wikitide.net/doorswiki',
+			'hashLevels' => 2,
+			'thumbScriptUrl' => false,
+			'transformVia404' => true,
+			'hasSharedCache' => true,
+			'descBaseUrl' => 'https://doorsgame.wiki/wiki/File:',
+			'scriptDirUrl' => 'https://doorsgame.wiki/w',
+			'fetchDescription' => true,
+			'descriptionCacheExpiry' => 86400 * 7,
+			'wiki' => 'doorswiki',
+			'initialCapital' => true,
+			'zones' => [
+				'public' => [
+					'container' => 'local-public',
+				],
+				'thumb' => [
+					'container' => 'local-thumb',
+				],
+				'temp' => [
+					'container' => 'local-temp',
+				],
+				'deleted' => [
+					'container' => 'local-deleted',
+				],
+			],
+			'abbrvThreshold' => 160
+		];
+
+		$wgVirtualDomainsMapping['virtual-globalusage'] = [
+			'db' => 'doorswiki',
+		];
 
 		break;
 	case 'ftlmultiversewiki':
