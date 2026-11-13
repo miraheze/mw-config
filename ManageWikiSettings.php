@@ -3639,7 +3639,7 @@ $wgManageWikiSettings = [
 		'type' => 'skin',
 		'overridedefault' => 'vector-2022',
 		'section' => 'styling',
-		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
+		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab. If the selected skin is not responsive (such as Vector legacy), consider enabling the MobileFrontend extension and the MinervaNeue skin to improve the mobile experience.',
 		'requires' => [],
 	],
 	'wgDefaultMobileSkin' => [
