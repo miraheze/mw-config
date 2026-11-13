@@ -562,6 +562,7 @@ switch ( $wi->dbname ) {
 			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
+			'MirahezeRequests',
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
@@ -574,83 +575,6 @@ switch ( $wi->dbname ) {
 				'RequireDetails' => false,
 				'IncludeIP' => false,
 				'MustBeLoggedIn' => false,
-			],
-			'requestaccount' => [
-				'RecipientUser' => 'Miraheze CVT',
-				'SenderName' => 'Account Creation Request Form via Meta',
-				'RequireDetails' => true,
-				'IncludeIP' => true,
-				'MustBeLoggedIn' => false,
-				'AdditionalFields' => [
-					'SelectIssue' => [
-						'label-message' => 'contactpage-requestaccount-selectissue',
-						'type' => 'radio',
-						'options-messages' => [
-							'version-other' => 'other',
-							'contactpage-requestaccount-selectissue-abusefilterissue' => 'abusefilter',
-							'contactpage-requestaccount-selectissue-recaptchaissues' => 'captcha',
-							'contactpage-requestaccount-selectissue-globalblock' => 'globalblock',
-						],
-						'help-message' => 'contactpage-requestaccount-selectissue-help',
-						'required' => true,
-					],
-					'DescribeIssue' => [
-						'label-message' => 'contactpage-requestaccount-describeissue',
-						'type' => 'text',
-						'hide-if' => [
-							'!==',
-							'SelectIssue',
-							'other'
-						],
-						'help-message' => 'contactpage-requestaccount-describeissue-help',
-						'required' => true,
-					],
-					'SelectGlobalBlockIssue' => [
-						'label-message' => 'contactpage-requestaccount-describeglobalblockissue',
-						'type' => 'radio',
-						'hide-if' => [
-							'!==',
-							'SelectIssue',
-							'globalblock'
-						],
-						'options-messages' => [
-							'contactpage-requestaccount-describeglobalblockissue-crosswikiabuse' => 'crosswikiabuse',
-							'contactpage-requestaccount-describeglobalblockissue-crosswikispam' => 'crosswikispam',
-							'contactpage-requestaccount-describeglobalblockissue-crosswikivandalism' => 'crosswikivandalism',
-							'contactpage-requestaccount-describeglobalblockissue-lta' => 'lta',
-							'contactpage-requestaccount-describeglobalblockissue-nopp' => 'webhostorproxy',
-							'contactpage-requestaccount-describeglobalblockissue-ts' => 'trustandsafetyblock',
-							'version-other' => 'other',
-						],
-						'help-message' => 'contactpage-requestaccount-describeglobalblockissue-help',
-						'required' => true,
-					],
-					'OtherGlobalBlockIssue' => [
-						'label-message' => 'contactpage-requestaccount-describeglobalblockissue-otherissue',
-						'type' => 'text',
-						'hide-if' => [
-							'!==',
-							'SelectGlobalBlockIssue',
-							'other'
-						],
-						'help-message' => 'contactpage-requestaccount-describeglobalblockissue-otherissue',
-						'required' => true,
-					],
-					'SelectUsername' => [
-						'label-message' => 'contactpage-requestaccount-selectusername',
-						'type' => 'text',
-						'maxlength' => 50,
-						'help-message' => 'contactpage-requestaccount-selectusername-help',
-						'required' => true,
-					],
-					'OtherDetails' => [
-						'label-message' => 'contactpage-requestaccount-otherdetails',
-						'type' => 'textarea',
-						'help-message' => 'contactpage-requestaccount-otherdetails-help',
-						'required' => true,
-					],
-				],
-				'DisplayFormat' => 'raw',
 			],
 			'requestbetaaccount' => [
 				'RecipientUser' => 'Miraheze Operations',
@@ -689,6 +613,7 @@ switch ( $wi->dbname ) {
 			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
+			'MirahezeRequests',
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
