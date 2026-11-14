@@ -5155,8 +5155,14 @@ $wgConf->settings += [
 	'wgGitInfoCacheDirectory' => [
 		'default' => '/srv/mediawiki/cache/' . $wi->version . '/gitinfo',
 	],
+	'wgEnableImageWhitelist' => [
+		'default' => false,
+	],
 	'wgAllowExternalImages' => [
 		'default' => false,
+	],
+	'wgAllowExternalImagesFrom' => [
+		'default' => []
 	],
 	'wgFragmentMode' => [
 		'default' => [
