@@ -492,6 +492,7 @@ $wgConf->settings += [
 		'bolanqiuwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'cpopwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'extoniawiki' => 'uca-fr',
+		'ff14rpwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
 		'historikawiki' => 'uca-cs',
