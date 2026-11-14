@@ -6024,6 +6024,9 @@ $wgConf->settings += [
 		'+fwtdwiki' => [
 			'minerva-theme' => 'night',
 		],
+		'+inhofficialwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
 		],
