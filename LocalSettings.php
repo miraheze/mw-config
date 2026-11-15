@@ -1193,7 +1193,6 @@ $wgConf->settings += [
 		],
 		'beta' => [
 			'db172 (c1)' => 'c1',
-			'db161 (c2)' => 'c2',
 		],
 	],
 	// Use if you want to stop wikis being created on this cluster
@@ -1201,6 +1200,7 @@ $wgConf->settings += [
 		'default' => [
 			// DO NOT USE S1! RESERVED FOR CORE DATABASES
 			'db192 (s1)' => 's1',
+			'db161 (c2)' => 'c2',
 		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
