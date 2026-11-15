@@ -6111,6 +6111,9 @@ $wgConf->settings += [
 			'minerva-theme' => 'night',
 			'vector-theme' => 'night',
 		],
+		'+tfukwiki' => [
+			'thumbsize' => 6,
+		],
 		'+versesanddimensionswiki' => [
 			'vector-theme' => 'night',
 		],
