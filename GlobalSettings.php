@@ -1035,6 +1035,4 @@ $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
 $wgSpecialPages['RemovePII'] = DisabledSpecialPage::getCallback( 'RemovePII', 'RemovePII is temporarily unavailable. Please try again later.' );
 $wgSpecialPages['VanishUser'] = DisabledSpecialPage::getCallback( 'VanishUser', 'VanishUser is temporarily unavailable. Please try again later.' );
 $wgSpecialPages['RenameUser'] = DisabledSpecialPage::getCallback( 'RenameUser', 'RenameUser is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'GlobalRenameRequest is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'GlobalRenameQueue is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'GlobalRenameRequest is temporarily unavailable. Please try again later.' );
+$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'GlobalRenamUser is temporarily unavailable. Please try again later.' );
