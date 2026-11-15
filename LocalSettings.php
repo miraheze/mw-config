@@ -6098,6 +6098,9 @@ $wgConf->settings += [
 			'vector-theme' => 'night',
 			'minerva-theme' => 'night',
 		],
+		'+slotboundwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+sp2pediawiki' => [
 			'vector-theme' => 'night',
 		],
