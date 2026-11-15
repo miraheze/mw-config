@@ -1037,4 +1037,4 @@ $wgSpecialPages['VanishUser'] = DisabledSpecialPage::getCallback( 'VanishUser', 
 $wgSpecialPages['RenameUser'] = DisabledSpecialPage::getCallback( 'RenameUser', 'RenameUser is temporarily unavailable. Please try again later.' );
 $wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'GlobalRenameRequest is temporarily unavailable. Please try again later.' );
 $wgSpecialPages['GlobalRenameQueue'] = DisabledSpecialPage::getCallback( 'GlobalRenameQueue', 'GlobalRenameQueue is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'GlobalRenameUser is temporarily unavailable. Please try again later.' );
+$wgSpecialPages['GlobalRenameRequest'] = DisabledSpecialPage::getCallback( 'GlobalRenameRequest', 'GlobalRenameRequest is temporarily unavailable. Please try again later.' );
