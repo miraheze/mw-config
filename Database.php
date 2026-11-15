@@ -96,7 +96,7 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 		'readOnlyBySection' => [
 			// 'DEFAULT' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
-			// 'c2' => 'Maintenance is in progress. Please try again in a few minutes.',
+			'c2' => 'Maintenance is in progress. Please try again later or visit miraheze.org/discord for updates.',
 			// 'c3' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 'c4' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 's1' => 'Maintenance is in progress. Please try again in a few minutes.',
