@@ -4111,13 +4111,12 @@ $wgConf->settings += [
 			'gadgets',
 			'globaluserpage',
 			'inputbox',
-			'minervaneue',
-			'mobilefrontend',
 			'multimediaviewer',
 			'pageimages',
 			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
+			'templatedata',
 			'templatesandbox',
 			'templatestyles',
 			'textextracts',
@@ -5955,6 +5954,7 @@ $wgConf->settings += [
 	// Preferences
 	'+wgDefaultUserOptions' => [
 		'default' => [
+			'editrecovery' => 1,
 			'enotifwatchlistpages' => 0,
 			'math' => 'mathml',
 			'usebetatoolbar' => 1,
