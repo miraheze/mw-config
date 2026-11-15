@@ -667,6 +667,10 @@ $wgConf->settings += [
 		'default' => false,
 		'rainversewiki' => true,
 	],
+	'wgCirrusSearchUseIcuTokenizer' => [
+		'default' => 'default',
+		'xyywiki' => 'yes',
+	],
 
 	// Cite
 	'wgCiteSubReferencing' => [
