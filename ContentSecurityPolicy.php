@@ -277,6 +277,7 @@ $wgMirahezeMagicCSPServices = [
 			'connect-src' => [
 				'storage.googleapis.com',
 				'translate.googleapis.com',
+				'maps.googleapis.com',
 			],
 		],
 	],
