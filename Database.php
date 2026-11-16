@@ -96,7 +96,7 @@ if ( strpos( wfHostname(), 'test' ) === 0 ) {
 		'readOnlyBySection' => [
 			// 'DEFAULT' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 'c1' => 'Maintenance is in progress. Please try again in a few minutes.',
-			'c2' => 'Maintenance is in progress. Visit miraheze.org/discord for updates. We expect this maintenance will finish around 1-2 AM UTC on Monday 16th November. We will update this message if anything changes. (Last updated 20:20 UTC 15 Nov)',
+			// 'c2' => 'Maintenance is in progress. Visit miraheze.org/discord for updates. We expect this maintenance will finish around 1-2 AM UTC on Monday 16th November. We will update this message if anything changes. (Last updated 20:20 UTC 15 Nov)',
 			// 'c3' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 'c4' => 'Maintenance is in progress. Please try again in a few minutes.',
 			// 's1' => 'Maintenance is in progress. Please try again in a few minutes.',
