@@ -1030,15 +1030,3 @@ $wgNotifyTypeAvailabilityByCategory['login-success']['web'] = false;
 
 // RecentChanges
 $wgDefaultUserOptions['rcdays'] = $wmgDefaultRecentChangesDays;
-
-// Disable Renames/Vanishs due to db161 maintenance
-$wgSpecialPages['RemovePII'] = DisabledSpecialPage::getCallback( 'RemovePII', 'RemovePII is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['VanishUser'] = DisabledSpecialPage::getCallback( 'VanishUser', 'VanishUser is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['RenameUser'] = DisabledSpecialPage::getCallback( 'RenameUser', 'RenameUser is temporarily unavailable. Please try again later.' );
-$wgSpecialPages['GlobalRenameUser'] = DisabledSpecialPage::getCallback( 'GlobalRenameUser', 'GlobalRenamUser is temporarily unavailable. Please try again later.' );
-$wgRevokePermissions['trustandsafety']['centralauth-rename'] = true;
-$wgRevokePermissions['assistant-steward']['centralauth-rename'] = true;
-$wgRevokePermissions['global-admin']['centralauth-rename'] = true;
-$wgRevokePermissions['global-renamer']['centralauth-rename'] = true;
-$wgRevokePermissions['steward']['centralauth-rename'] = true;
-$wgRevokePermissions['techteam']['centralauth-rename'] = true;
