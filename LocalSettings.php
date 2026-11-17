@@ -1914,6 +1914,14 @@ $wgConf->settings += [
 			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Logo.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					'height' => '36',
@@ -1922,16 +1930,32 @@ $wgConf->settings += [
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					'height' => '36',
-					'width' => '36',
+					'width' => '102',
 				],
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Build_with_MediaWiki.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/2/2c/MediaWiki-small.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => '42',
@@ -1940,7 +1964,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/f/f3/CC_BY-SA_4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => '42',
@@ -2156,6 +2180,14 @@ $wgConf->settings += [
 			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Logo.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					'height' => '36',
@@ -2164,16 +2196,32 @@ $wgConf->settings += [
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					'height' => '36',
-					'width' => '36',
+					'width' => '102',
 				],
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Build_with_MediaWiki.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/2/2c/MediaWiki-small.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => '42',
@@ -2182,7 +2230,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/cgwiki/2/27/CC_BY-NC-SA-4.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/9/90/CC_BY-NC-SA_4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-nc-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Phi thương mại - Chia sẻ tương tự 4.0 (CC BY-NC-SA 4.0)',
 					'height' => '42',
@@ -2404,6 +2452,14 @@ $wgConf->settings += [
 			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Logo.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					'height' => '36',
@@ -2411,6 +2467,14 @@ $wgConf->settings += [
 				],
 				'wlhmn' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/b/be/Wiki_Logo.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/e/e2/WLHMN-logo.png',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://lophocmatngu.wiki',
 					'alt' => 'Dự án chị em của Wiki Lớp Học Mật Ngữ',
 					'height' => '36',
@@ -2419,16 +2483,32 @@ $wgConf->settings += [
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					'height' => '36',
-					'width' => '36',
+					'width' => '102',
 				],
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Build_with_MediaWiki.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/2/2c/MediaWiki-small.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => '42',
@@ -2437,7 +2517,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/f/f3/CC_BY-SA_4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => '42',
@@ -2502,13 +2582,29 @@ $wgConf->settings += [
 			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Logo.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					'height' => '36',
 					'width' => '118',
 				],
 				'indiewikifed' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/a/a2/IWF_Footer.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/a/a2/IWF_Footer.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/a/aa/IndieWikiFed-small.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://lophocmatngu.wiki/WLHMN:Independent_Wiki_Federation',
 					'alt' => 'Một thành viên của Liên Minh Wiki Tự Do',
 					'height' => '40',
@@ -2517,16 +2613,32 @@ $wgConf->settings += [
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					'height' => '36',
-					'width' => '36',
+					'width' => '102',
 				],
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Build_with_MediaWiki.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/2/2c/MediaWiki-small.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => '42',
@@ -2535,7 +2647,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/f/f3/CC_BY-SA_4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => '42',
@@ -2720,6 +2832,14 @@ $wgConf->settings += [
 			'supportedby' => [
 				'songnguxyz' => [
 					'src' => 'https://static.wikitide.net/lhmnwiki/5/58/Footer.SN.xyz.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Logo.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://songngu.xyz',
 					'alt' => 'Dự án được bảo quản bởi SongNgư.xyz',
 					'height' => '36',
@@ -2728,16 +2848,32 @@ $wgConf->settings += [
 			],
 			'miraheze' => [
 				'miraheze' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/lhmnwiki/1/1c/Miraheze.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze',
 					'alt' => 'Lưu trữ bởi Miraheze',
 					'height' => '36',
-					'width' => '36',
+					'width' => '102',
 				],
 			],
 			'poweredby' => [
 				'mediawiki' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/9/9b/MediaWiki.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/6/6f/Build_with_MediaWiki.svg',
+					'sources' => [
+						[
+							'media' => '(max-width: 639.98px)',
+							'srcset' => 'https://static.wikitide.net/snxyzmetawiki/2/2c/MediaWiki-small.svg',
+							'width' => '36',
+							'height' => '36',
+						],
+					],
 					'url' => 'https://www.mediawiki.org',
 					'alt' => 'Xây dựng trên MediaWiki',
 					'height' => '42',
@@ -2746,7 +2882,7 @@ $wgConf->settings += [
 			],
 			'copyright' => [
 				'copyright' => [
-					'src' => 'https://static.wikitide.net/lhmnwiki/4/4e/CC-BY-SA-4.svg',
+					'src' => 'https://static.wikitide.net/snxyzmetawiki/f/f3/CC_BY-SA_4.svg',
 					'url' => 'https://creativecommons.org/licenses/by-sa/4.0/',
 					'alt' => 'Creative Commons Ghi công - Chia sẻ tương tự 4.0 (CC BY-SA 4.0)',
 					'height' => '42',
