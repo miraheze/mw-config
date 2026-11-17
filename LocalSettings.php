@@ -3728,6 +3728,9 @@ $wgConf->settings += [
 	'wgImportDumpEnableAutomatedJob' => [
 		'default' => true,
 	],
+	'wgImportDumpEnableChunkedUploads' => [
+		'default' => true,
+	],
 	'wgImportDumpFileExpiryDays' => [
 		'default' => [
 			'complete' => 30,
