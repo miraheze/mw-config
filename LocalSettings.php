@@ -4340,6 +4340,9 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
+			'*' => [
+				'request-account' => true,
+			],
 			'assistant-steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -4349,6 +4352,7 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
 				'managewiki-permissions' => true,
@@ -4395,9 +4399,9 @@ $wgConf->settings += [
 				'createwiki' => true,
 				'createwiki-deleterequest' => true,
 				'globalblock' => true,
-				'handle-requestaccount' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-core' => true,
 				'managewiki-editdefault' => true,
 				'oathauth-verify-user' => true,
@@ -4473,6 +4477,7 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
 				'managewiki-permissions' => true,
@@ -4553,6 +4558,7 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'user' => [
+				'request-account' => true,
 				'request-custom-domain' => true,
 				'request-import' => true,
 				'requestwiki' => true,
