@@ -669,8 +669,8 @@ $wgConf->settings += [
 	],
 	'wgCirrusSearchUseIcuTokenizer' => [
 		'default' => 'default',
-		'xyywiki' => 'yes',
 		'vocaloidlyricswiki' => 'yes',
+		'xyywiki' => 'yes',
 	],
 
 	// Cite
