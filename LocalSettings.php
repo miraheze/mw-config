@@ -123,10 +123,12 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 
 	// We use load.php directly from auth for custom domains due to CSP
 	$wgCentralAuthSul3SharedDomainRestrictions['allowedEntryPoints'] = [ 'load' ];
-	$wgCentralAuthSul3SharedDomainRestrictions['allowedSpecialPages'] = [
-		'RequestAccount',
-		'RequestAccountQueue',
-	];
+	if ( $wi->dbname === 'metawiki' || $wi->dbname === 'metawikibeta' ) {
+		$wgCentralAuthSul3SharedDomainRestrictions['allowedSpecialPages'] = [
+			'RequestAccount',
+			'RequestAccountQueue',
+		];
+	}
 }
 
 $wgScript = "$wgScriptPath/index.php";
@@ -1486,9 +1488,6 @@ $wgConf->settings += [
 			'virtual-matomoanalytics' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
-			'virtual-mirahezerequests' => [
-				'db' => $wi->getCentralDatabase(),
-			],
 			'virtual-oathauth' => [
 				'db' => $wi->getGlobalDatabase(),
 			],
@@ -1511,6 +1510,16 @@ $wgConf->settings += [
 			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
+			],
+		],
+		'+metawiki' => [
+			'virtual-mirahezerequests' => [
+				'db' => 'metawiki',
+			],
+		],
+		'+metawikibeta' => [
+			'virtual-mirahezerequests' => [
+				'db' => 'metawikibeta',
 			],
 		],
 		'+beta' => [
@@ -5166,7 +5175,9 @@ $wgConf->settings += [
 	// MirahezeRequests
 	// for now
 	'wgMirahezeRequestsIPVisibilityGroups' => [
-		'default' => [ 'steward', 'techteam' ],
+		'default' => [],
+		'metawiki' => [ 'steward', 'techteam' ],
+		'metawikibeta' => [ 'steward', 'techteam' ],
 	],
 
 	// Miscellaneous
