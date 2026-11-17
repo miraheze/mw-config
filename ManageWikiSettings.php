@@ -3639,7 +3639,7 @@ $wgManageWikiSettings = [
 		'type' => 'skin',
 		'overridedefault' => 'vector-2022',
 		'section' => 'styling',
-		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab.',
+		'help' => 'Changes the visual interface to the selected skin for all users, however it can be changed through user\'s preferences, unless the skin is added to <code>$wgSkipSkins</code> in the Preferences tab. If the selected skin is not responsive (such as Vector legacy), consider enabling the MobileFrontend extension and the MinervaNeue skin to improve the mobile experience.',
 		'requires' => [],
 	],
 	'wgDefaultMobileSkin' => [
@@ -5065,13 +5065,13 @@ $wgManageWikiSettings = [
 		'help' => 'The query service Sparql endpoint',
 		'requires' => [],
 	],
-	'wgUnlinkedWikibaseStatementsParserFunc' => [
-		'name' => 'Enable Statements parser function for UnlinkedWikibase',
+	'wgUnlinkedWikibaseImitationMode' => [
+		'name' => 'Enable Wikibase imitation mode for UnlinkedWikibase',
 		'from' => 'unlinkedwikibase',
 		'type' => 'check',
 		'overridedefault' => false,
 		'section' => 'wikibase',
-		'help' => 'Allow the use of <code><nowiki>{{#statements:}}</nowiki></code> parser functions with UnlinkedWikibase.',
+		'help' => 'Enable Wikibase-compatible parser functions (<code><nowiki>{{#statements:}}</nowiki></code> and <code><nowiki>{{#property:}}</nowiki></code>) and Lua methods under the <code>mw.wikibase</code> namespace.',
 		'requires' => [],
 	],
 	'wgWBQualityConstraintsInstanceOfId' => [

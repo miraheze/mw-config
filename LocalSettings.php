@@ -496,6 +496,7 @@ $wgConf->settings += [
 		'bolanqiuwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'cpopwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'extoniawiki' => 'uca-fr',
+		'ff14rpwiki' => 'pinyin-zh-u-kr-latn-hani',
 		'holidayswiki' => 'numeric',
 		'levyraatiwikiwiki' => 'numeric',
 		'historikawiki' => 'uca-cs',
@@ -669,6 +670,11 @@ $wgConf->settings += [
 	'wgCirrusSearchPrefixSearchStartsWithAnyWord' => [
 		'default' => false,
 		'rainversewiki' => true,
+	],
+	'wgCirrusSearchUseIcuTokenizer' => [
+		'default' => 'default',
+		'vocaloidlyricswiki' => 'yes',
+		'xyywiki' => 'yes',
 	],
 
 	// Cite
@@ -1187,7 +1193,6 @@ $wgConf->settings += [
 	'wgCreateWikiDatabaseClusters' => [
 		'default' => [
 			'db151 (c1)' => 'c1',
-			'db161 (c2)' => 'c2',
 			'db171 (c3)' => 'c3',
 			'db181 (c4)' => 'c4',
 		],
@@ -1200,6 +1205,7 @@ $wgConf->settings += [
 		'default' => [
 			// DO NOT USE S1! RESERVED FOR CORE DATABASES
 			'db192 (s1)' => 's1',
+			'db161 (c2)' => 'c2',
 		],
 	],
 	'wgCreateWikiDatabaseSuffix' => [
@@ -2424,6 +2430,29 @@ $wgConf->settings += [
 				],
 			],
 		],
+	'harrypotterzhwiki' => [
+			'copyright' => [
+				'copyright' => [
+					'src' => 'https://static.wikitide.net/animalroyalewiki/f/f2/CC_BY-NC-SA_logo.svg',
+					'url' => 'https://creativecommons.org/licenses/by-nc-sa/3.0/',
+					'alt' => 'Creative Commons Attribution-NonCommercial-ShareAlike 3.0 Unported (CC BY-NC-SA 3.0)',
+				],
+			],
+			'poweredby' => [
+				'mediawiki' => [
+					'src' => 'https://static.wikitide.net/animalroyalewiki/d/da/Poweredby_mediawiki.svg',
+					'url' => 'https://www.mediawiki.org/',
+					'alt' => 'Powered by MediaWiki',
+				],
+			],
+			'miraheze' => [
+				'miraheze' => [
+					'src' => 'https://static.wikitide.net/commonswiki/f/fe/Powered_by_Miraheze_(no_box).svg',
+					'url' => 'https://meta.miraheze.org/wiki/Special:MyLanguage/Miraheze_Meta',
+					'alt' => 'Hosted by Miraheze',
+				],
+			],
+		],
 		'hsckwiki' => [
 			'supportedby' => [
 				'songnguxyz' => [
@@ -3278,6 +3307,10 @@ $wgConf->settings += [
 	'wgGlobalUsageSharedRepoWiki' => [
 		'default' => 'commonswiki',
 		'beta' => 'commonswikibeta',
+		'doorswiki' => 'doorswiki',
+		'frdoorswiki' => 'doorswiki',
+		'ptbrdoorswiki' => 'doorswiki',
+		'zhdoorswiki' => 'doorswiki',
 		'gpcommonswiki' => 'gpcommonswiki',
 		'gratisdatawiki' => 'gpcommonswiki',
 		'gratispaideiawiki' => 'gpcommonswiki',
@@ -4117,13 +4150,12 @@ $wgConf->settings += [
 			'gadgets',
 			'globaluserpage',
 			'inputbox',
-			'minervaneue',
-			'mobilefrontend',
 			'multimediaviewer',
 			'pageimages',
 			'portableinfobox',
 			'purge',
 			'syntaxhighlight_geshi',
+			'templatedata',
 			'templatesandbox',
 			'templatestyles',
 			'textextracts',
@@ -5841,6 +5873,28 @@ $wgConf->settings += [
 			'sysop' => [ 'memberConditions' => [ 'oath.has_2fa' ] ],
 		],
 	],
+	// T16390
+	'wgReauthenticateForActions' => [
+		'default' => [],
+		'devwiki' => [
+			'edituserjs' => 'edituserjscss',
+			'editusercss' => 'edituserjscss',
+			'editsitejs' => 'editsitejscss',
+			'editsitecss' => 'editsitejscss',
+		],
+		'metawiki' => [
+			'edituserjs' => 'edituserjscss',
+			'editusercss' => 'edituserjscss',
+			'editsitejs' => 'editsitejscss',
+			'editsitecss' => 'editsitejscss',
+		],
+		'metawikibeta' => [
+			'edituserjs' => 'edituserjscss',
+			'editusercss' => 'edituserjscss',
+			'editsitejs' => 'editsitejscss',
+			'editsitecss' => 'editsitejscss',
+		],
+	],
 
 	// Password policy
 	'wgPasswordPolicy' => [
@@ -5980,6 +6034,7 @@ $wgConf->settings += [
 	// Preferences
 	'+wgDefaultUserOptions' => [
 		'default' => [
+			'editrecovery' => 1,
 			'enotifwatchlistpages' => 0,
 			'math' => 'mathml',
 			'usebetatoolbar' => 1,
@@ -6050,6 +6105,9 @@ $wgConf->settings += [
 		'+fwtdwiki' => [
 			'minerva-theme' => 'night',
 		],
+		'+inhofficialwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+kaiserreichwiki' => [
 			'vector-theme' => 'night',
 		],
@@ -6116,6 +6174,9 @@ $wgConf->settings += [
 			'vector-theme' => 'night',
 			'minerva-theme' => 'night',
 		],
+		'+slotboundwiki' => [
+			'vector-theme' => 'night',
+		],
 		'+sp2pediawiki' => [
 			'vector-theme' => 'night',
 		],
@@ -6128,6 +6189,9 @@ $wgConf->settings += [
 		'+stopitslenderwiki' => [
 			'minerva-theme' => 'night',
 			'vector-theme' => 'night',
+		],
+		'+tfukwiki' => [
+			'thumbsize' => 6,
 		],
 		'+versesanddimensionswiki' => [
 			'vector-theme' => 'night',
@@ -7362,7 +7426,7 @@ $wgConf->settings += [
 	],
 
 	// UnlinkedWikibase
-	'wgUnlinkedWikibaseStatementsParserFunc' => [
+	'wgUnlinkedWikibaseImitationMode' => [
 		'default' => false,
 	],
 

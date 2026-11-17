@@ -277,6 +277,7 @@ $wgMirahezeMagicCSPServices = [
 			'connect-src' => [
 				'storage.googleapis.com',
 				'translate.googleapis.com',
+				'maps.googleapis.com',
 			],
 		],
 	],
@@ -881,16 +882,20 @@ switch ( $wgDBname ) {
 			],
 		];
 		break;
+	case 'adofaiwiki':
 	case 'assassinscreedwiki':
 	case 'bluearchivezhwiki':
 	case 'bolanqiuwiki':
 	case 'dlfmwiki':
 	case 'ff14rpwiki':
 	case 'fukafanswiki':
+	case 'kardswiki':
 	case 'memepediawiki':
 	case 'mlpfanworkscnwiki':
+	case 'newthreekingdomswiki':
 	case 'redstonewiki':
 	case 'takagi3wiki':
+	case 'tigerzhangwiki':
 	case 'utaitewiki':
 	case 'vocaloidlyricswiki':
 	case 'wixosswiki':

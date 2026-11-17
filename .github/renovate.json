@@ -1,0 +1,17 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"extends": [
+		"config:recommended"
+	],
+	"labels": [
+		"dependencies"
+	],
+	"enabledManagers": [
+		"github-actions",
+		"composer"
+	],
+	"dependencyDashboard": false,
+	"automerge": true,
+	"automergeType": "branch",
+	"prHourlyLimit": 0
+}
