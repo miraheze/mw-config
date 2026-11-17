@@ -3728,6 +3728,13 @@ $wgConf->settings += [
 	'wgImportDumpEnableAutomatedJob' => [
 		'default' => true,
 	],
+	'wgImportDumpFileExpiryDays' => [
+		'default' => [
+			'complete' => 30,
+			'declined' => 14,
+			'failed' => 30,
+		],
+	],
 	'wgImportDumpInterwikiMap' => [
 		'default' => [
 			'fandom.com' => 'wikia',
