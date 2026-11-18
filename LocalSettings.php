@@ -3735,6 +3735,9 @@ $wgConf->settings += [
 	'wgImportDumpEnableChunkedUploads' => [
 		'default' => true,
 	],
+	'wgImportDumpEnableHistoryDetection' => [
+		'default' => true,
+	],
 	'wgImportDumpFileExpiryDays' => [
 		'default' => [
 			'complete' => 30,
