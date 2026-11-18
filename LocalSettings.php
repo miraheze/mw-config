@@ -3725,6 +3725,10 @@ $wgConf->settings += [
 	],
 
 	// ImportDump
+	'wgImportDumpChunkedUploadThreshold' => [
+		// 50 MiB
+		'default' => 50 * 1024 ** 2,
+	],
 	'wgImportDumpEnableAutomatedJob' => [
 		'default' => true,
 	],
