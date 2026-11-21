@@ -6632,9 +6632,8 @@ $wgConf->settings += [
 	],
 	'wgRequestImportInterwikiMap' => [
 		'default' => [
-			'fandom.com' => 'wikia',
+			'fandom.com' => 'fandom',
 			'miraheze.org' => 'mh',
-			// 'wikitide.org' => 'wt',
 		],
 	],
 	'wgRequestImportStalledImportHours' => [
