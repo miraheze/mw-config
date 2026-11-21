@@ -5327,6 +5327,8 @@ $wgConf->settings += [
 				798213,
 				/** TheWWRNerdGuy (Miraheze) (Technology team) */
 				825247,
+				/** Waki285 (Miraheze) (Technology team) */
+				990007,
 			],
 		],
 	],
