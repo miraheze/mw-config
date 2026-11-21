@@ -7369,6 +7369,12 @@ $wgConf->settings += [
 		],
 	],
 
+	// TemplateStylesExtender
+	'wgTemplateStylesExtenderAllowExternalResourcesInCustomProperties' => [
+		'default' => false,
+		'yonicversewiki' => true,
+	],
+
 	// Temporary accounts
 	'wmgEnableTemporaryAccounts' => [
 		'default' => false,
