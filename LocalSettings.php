@@ -1464,9 +1464,6 @@ $wgConf->settings += [
 			'virtual-globalusage' => [
 				'db' => 'commonswiki',
 			],
-			'virtual-importdump' => [
-				'db' => $wi->getCentralDatabase(),
-			],
 			'virtual-incidentreporting' => [
 				'db' => $wi->getIncidentsDatabase(),
 			],
@@ -3725,90 +3722,6 @@ $wgConf->settings += [
 	// InterwikiSorting
 	'wgInterwikiSortingSort' => [
 		'ext-InterwikiSorting' => 'code',
-	],
-
-	// ImportDump
-	'wgImportDumpChunkedUploadThreshold' => [
-		// 50 MiB
-		'default' => 50 * 1024 ** 2,
-	],
-	'wgImportDumpEnableAutomatedJob' => [
-		'default' => true,
-	],
-	'wgImportDumpEnableChunkedUploads' => [
-		'default' => true,
-	],
-	'wgImportDumpEnableHistoryDetection' => [
-		'default' => true,
-	],
-	'wgImportDumpExtensionRequirements' => [
-		'default' => [
-			'PortableInfobox' => [
-				'models' => [],
-				'patterns' => [ '/<infobox[\s>\/]/i' ],
-				'settings' => [],
-			],
-			'TemplateStyles' => [
-				'models' => [ 'sanitized-css' ],
-				'patterns' => [ '/<templatestyles[\s>\/]/i' ],
-				'settings' => [],
-			],
-			'WikibaseClient' => [
-				'models' => [],
-				'patterns' => [
-					'/\{\{\s*#(?:property|statements)\s*:/i',
-					'/\bmw\.wikibase\b/',
-				],
-				'settings' => [],
-			],
-			'WikibaseLexeme' => [
-				'models' => [ 'wikibase-lexeme' ],
-				'patterns' => [],
-				'settings' => [ 'allowEntityImport' ],
-			],
-			'WikibaseRepository' => [
-				'models' => [ 'wikibase-item', 'wikibase-property' ],
-				'patterns' => [],
-				'settings' => [ 'allowEntityImport' ],
-			],
-		],
-	],
-	'wgImportDumpFileExpiryDays' => [
-		'default' => [
-			'complete' => 30,
-			'declined' => 14,
-			'failed' => 30,
-		],
-	],
-	'wgImportDumpInterwikiMap' => [
-		'default' => [
-			'fandom.com' => 'wikia',
-			'miraheze.org' => 'mh',
-			// 'wikitide.org' => 'wt',
-		],
-	],
-	'wgImportDumpScriptCommand' => [
-		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
-		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
-	],
-	'wgImportDumpStalledImportHours' => [
-		'default' => 6,
-	],
-	'wgImportDumpUsersNotifiedOnAllRequests' => [
-		'default' => [
-			'MacFan4000 (Miraheze)',
-			'Reception123 (Miraheze)',
-			'Universal Omega (Miraheze)',
-			'RhinosF1 (Miraheze)',
-		],
-	],
-	'wgImportDumpUsersNotifiedOnFailedImports' => [
-		'default' => [
-			'MacFan4000 (Miraheze)',
-			'Reception123 (Miraheze)',
-			'Universal Omega (Miraheze)',
-			'RhinosF1 (Miraheze)',
-		],
 	],
 
 	// Imports
