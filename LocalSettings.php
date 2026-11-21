@@ -3738,6 +3738,38 @@ $wgConf->settings += [
 	'wgImportDumpEnableHistoryDetection' => [
 		'default' => true,
 	],
+	'wgImportDumpExtensionRequirements' => [
+		'default' => [
+			'PortableInfobox' => [
+				'models' => [],
+				'patterns' => [ '/<infobox[\s>\/]/i' ],
+				'settings' => [],
+			],
+			'TemplateStyles' => [
+				'models' => [ 'sanitized-css' ],
+				'patterns' => [ '/<templatestyles[\s>\/]/i' ],
+				'settings' => [],
+			],
+			'WikibaseClient' => [
+				'models' => [],
+				'patterns' => [
+					'/\{\{\s*#(?:property|statements)\s*:/i',
+					'/\bmw\.wikibase\b/',
+				],
+				'settings' => [],
+			],
+			'WikibaseLexeme' => [
+				'models' => [ 'wikibase-lexeme' ],
+				'patterns' => [],
+				'settings' => [ 'allowEntityImport' ],
+			],
+			'WikibaseRepository' => [
+				'models' => [ 'wikibase-item', 'wikibase-property' ],
+				'patterns' => [],
+				'settings' => [ 'allowEntityImport' ],
+			],
+		],
+	],
 	'wgImportDumpFileExpiryDays' => [
 		'default' => [
 			'complete' => 30,
