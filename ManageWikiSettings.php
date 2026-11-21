@@ -3638,15 +3638,6 @@ $wgManageWikiSettings = [
 		'help' => 'Excludes selected users from contrib scores reporting',
 		'requires' => [],
 	],
-	'wgContribScoreUseRoughEditCount' => [
-		'name' => 'Contrib Scores Use Rough Edit Count',
-		'from' => 'contributionscores',
-		'type' => 'check',
-		'overridedefault' => false,
-		'section' => 'socialtools',
-		'help' => 'When computing the contribution score, use a rough estimation of a users edit count instead of using a users total edit count',
-		'requires' => [],
-	],
 
 	// Styling (E.G skins/logos etc)
 	'wgAppleTouchIcon' => [
