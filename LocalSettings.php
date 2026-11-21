@@ -1491,6 +1491,9 @@ $wgConf->settings += [
 			'virtual-requestcustomdomain' => [
 				'db' => $wi->getCentralDatabase(),
 			],
+			'virtual-requestimport' => [
+				'db' => $wi->getCentralDatabase(),
+			],
 			'virtual-urlshortener' => [
 				'db' => $wi->getCentralDatabase(),
 			],
@@ -6566,6 +6569,89 @@ $wgConf->settings += [
 			'MacFan4000 (Miraheze)',
 			'Original Authority',
 			'Universal Omega',
+			'RhinosF1 (Miraheze)',
+		],
+	],
+
+	// RequestImport
+	'wgRequestImportChunkedUploadThreshold' => [
+		// 50 MiB
+		'default' => 50 * 1024 ** 2,
+	],
+	'wgRequestImportDumpCommand' => [
+		'default' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawiki-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+		'metawikibeta' => 'screen -d -m bash -c ". /etc/swift-env.sh; swift download miraheze-metawikibeta-local-public {file-path} -o /home/$USER/{file-name}; mwscript importDump {wiki} -y --no-updates --username-prefix={username-prefix} /home/$USER/{file-name}; mwscript rebuildall {wiki} -y; mwscript initSiteStats {wiki} --active --update -y; rm /home/$USER/{file-name}"',
+	],
+	'wgRequestImportEnableAutomatedJob' => [
+		'default' => true,
+	],
+	'wgRequestImportEnableChunkedUploads' => [
+		'default' => true,
+	],
+	'wgRequestImportEnableHistoryDetection' => [
+		'default' => true,
+	],
+	'wgRequestImportExtensionRequirements' => [
+		'default' => [
+			'PortableInfobox' => [
+				'models' => [],
+				'patterns' => [ '/<infobox[\s>\/]/i' ],
+				'settings' => [],
+			],
+			'TemplateStyles' => [
+				'models' => [ 'sanitized-css' ],
+				'patterns' => [ '/<templatestyles[\s>\/]/i' ],
+				'settings' => [],
+			],
+			'WikibaseClient' => [
+				'models' => [],
+				'patterns' => [
+					'/\{\{\s*#(?:property|statements)\s*:/i',
+					'/\bmw\.wikibase\b/',
+				],
+				'settings' => [],
+			],
+			'WikibaseLexeme' => [
+				'models' => [ 'wikibase-lexeme' ],
+				'patterns' => [],
+				'settings' => [ 'allowEntityImport' ],
+			],
+			'WikibaseRepository' => [
+				'models' => [ 'wikibase-item', 'wikibase-property' ],
+				'patterns' => [],
+				'settings' => [ 'allowEntityImport' ],
+			],
+		],
+	],
+	'wgRequestImportFileExpiryDays' => [
+		'default' => [
+			'complete' => 30,
+			'declined' => 14,
+			'failed' => 30,
+		],
+	],
+	'wgRequestImportInterwikiMap' => [
+		'default' => [
+			'fandom.com' => 'fandom',
+			'miraheze.org' => 'mh',
+		],
+	],
+	'wgRequestImportStalledImportHours' => [
+		'default' => 6,
+	],
+	'wgRequestImportUsersNotifiedOnAllRequests' => [
+		'default' => [
+			'MacFan4000 (Miraheze)',
+			'Reception123 (Miraheze)',
+			'Universal Omega (Miraheze)',
+			'RhinosF1 (Miraheze)',
+		],
+	],
+	'wgRequestImportUsersNotifiedOnFailedImports' => [
+		'default' => [
+			'MacFan4000 (Miraheze)',
+			'Reception123 (Miraheze)',
+			'Universal Omega (Miraheze)',
 			'RhinosF1 (Miraheze)',
 		],
 	],
