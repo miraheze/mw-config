@@ -368,6 +368,9 @@ if ( $wi->isExtensionActive( 'UserProfileV2' ) ) {
 
 	$wgUserProfileV2ProfileFields[] = 'profile-show-globalgroups';
 	$wgUserProfileV2ProfileFields[] = 'profile-show-globaledits';
+
+	// Don't need globals here
+	unset( $profileFields, $service, $field );
 }
 
 if ( $wi->isExtensionActive( 'VisualEditor' ) ) {
