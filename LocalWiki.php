@@ -364,9 +364,9 @@ switch ( $wi->dbname ) {
 		break;
 	case 'hsckwiki':
 		// Enable responsive mode for legacy Vector (its skin.json hardcodes "responsive": false).
-		// Must run after skin.json is merged into $wgValidSkinNames
-		// or else, assigning the key directly here would replace the whole 'vector' entry.
-		$wgExtensionFunctions[] = static function () {
+		// Use the MediaWikiServices hook to runs after skin.json is merged into $wgValidSkinNames
+		// but just before SkinFactory is built. Extension function runs laters on production env.
+		$wgHooks['MediaWikiServices'][] = static function (): void {
 			global $wgValidSkinNames;
 			$wgValidSkinNames['vector']['args'][0]['responsive'] = true;
 		};
