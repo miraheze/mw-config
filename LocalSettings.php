@@ -6559,6 +6559,9 @@ $wgConf->settings += [
 			'Universal Omega (Miraheze)',
 			'RhinosF1 (Miraheze)',
 		],
+		'beta' => [
+			'Universal Omega',
+		],
 	],
 	'wgRequestImportUsersNotifiedOnFailedImports' => [
 		'default' => [
@@ -6566,6 +6569,9 @@ $wgConf->settings += [
 			'Reception123 (Miraheze)',
 			'Universal Omega (Miraheze)',
 			'RhinosF1 (Miraheze)',
+		],
+		'beta' => [
+			'Universal Omega',
 		],
 	],
 
