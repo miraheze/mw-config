@@ -3333,6 +3333,12 @@ $wgConf->settings += [
 		'default' => false,
 	],
 
+	// Fix Double Redirects
+	'wgFixDoubleRedirects' => [
+		'default' => false,
+		'teflpediawiki' => true,
+	],
+
 	// Gadgets
 	'wgGadgetsRepo' => [
 		'default' => 'definition',
