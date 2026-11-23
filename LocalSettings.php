@@ -6504,6 +6504,9 @@ $wgConf->settings += [
 	'wgRequestImportEnableHistoryDetection' => [
 		'default' => true,
 	],
+	'wgRequestImportEnableImageImports' => [
+		'default' => true,
+	],
 	'wgRequestImportExtensionRequirements' => [
 		'default' => [
 			'PortableInfobox' => [
