@@ -854,9 +854,11 @@ switch ( $wgDBname ) {
 		$wgMirahezeMagicCSPHeaderOverrides = [
 			'script-src' => [
 				'www.wowhead.com',
+				'wow.zamimg.com',
 			],
 			'connect-src' => [
 				'www.wowhead.com',
+				'wow.zamimg.com',
 			],
 		];
 		break;
