@@ -6480,9 +6480,9 @@ $wgConf->settings += [
 	'wgRequestCustomDomainUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000 (Miraheze)',
-			'Original Authority',
-			'Universal Omega',
+			'Original Authority (Miraheze)',
 			'RhinosF1 (Miraheze)',
+			'Universal Omega (Miraheze)',
 		],
 	],
 
