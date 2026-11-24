@@ -6555,6 +6555,9 @@ $wgConf->settings += [
 	'wgRequestImportStalledImportHours' => [
 		'default' => 6,
 	],
+	'wgRequestImportTempDirectory' => [
+		'default' => '/srv/mediawiki/cache/requestimport',
+	],
 	'wgRequestImportUsersNotifiedOnAllRequests' => [
 		'default' => [
 			'MacFan4000 (Miraheze)',
