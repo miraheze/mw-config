@@ -112,9 +112,10 @@ if ( $cwPrivate ) {
 	];
 }
 
-if ( $wgDBname === 'hololivewiki' ) {
+if ( in_array( $wgDBname, [ 'hololivewiki', 'metawiki', 'metawikibeta' ], true ) ) {
 	// default: 3600 * 6 (6 hours)
 	// hololivewiki: 86400 * 7 (7 days) (T11973)
+	// metawiki, metawikibeta: 86400 * 7 (7 days), so large RequestImport uploads survive until verified
 	$wgUploadStashMaxAge = 86400 * 7;
 }
 
