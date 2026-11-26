@@ -5176,8 +5176,8 @@ $wgConf->settings += [
 	// for now
 	'wgMirahezeRequestsIPVisibilityGroups' => [
 		'default' => [],
-		'metawiki' => [ 'steward', 'techteam' ],
-		'metawikibeta' => [ 'steward', 'techteam' ],
+		'metawiki' => [ 'steward', 'techteam', 'trustandsafety' ],
+		'metawikibeta' => [ 'steward', 'techteam', 'trustandsafety' ],
 	],
 
 	// Miscellaneous
