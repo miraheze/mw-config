@@ -123,6 +123,12 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 
 	// We use load.php directly from auth for custom domains due to CSP
 	$wgCentralAuthSul3SharedDomainRestrictions['allowedEntryPoints'] = [ 'load' ];
+	if ( $wi->dbname === $wi->getCentralDatabase() ) {
+		$wgCentralAuthSul3SharedDomainRestrictions['allowedSpecialPages'] = [
+			'RequestAccount',
+			'RequestAccountQueue',
+		];
+	}
 }
 
 $wgScript = "$wgScriptPath/index.php";
@@ -1504,6 +1510,16 @@ $wgConf->settings += [
 			],
 			'virtual-oathauth' => [
 				'db' => 'ldapwikiwiki',
+			],
+		],
+		'+metawiki' => [
+			'virtual-mirahezerequests' => [
+				'db' => 'metawiki',
+			],
+		],
+		'+metawikibeta' => [
+			'virtual-mirahezerequests' => [
+				'db' => 'metawikibeta',
 			],
 		],
 		'+beta' => [
@@ -4475,6 +4491,9 @@ $wgConf->settings += [
 			],
 		],
 		'+metawiki' => [
+			'*' => [
+				'request-account' => true,
+			],
 			'assistant-steward' => [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
@@ -4484,6 +4503,7 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
 				'managewiki-permissions' => true,
@@ -4515,6 +4535,7 @@ $wgConf->settings += [
 				'centralauth-lock' => true,
 				'centralauth-rename' => true,
 				'globalblock' => true,
+				'handle-requestaccount' => true,
 			],
 			'proxybot' => [
 				'globalblock' => true,
@@ -4531,6 +4552,7 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-core' => true,
 				'managewiki-editdefault' => true,
 				'oathauth-verify-user' => true,
@@ -4550,6 +4572,7 @@ $wgConf->settings += [
 				'handle-custom-domain-requests' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-editdefault' => true,
 				'massmessage' => true,
 				'oathauth-verify-user' => true,
@@ -4605,6 +4628,7 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
 				'managewiki-permissions' => true,
@@ -4626,6 +4650,7 @@ $wgConf->settings += [
 				'abusefilter-modify-global' => true,
 				'centralauth-lock' => true,
 				'globalblock' => true,
+				'handle-requestaccount' => true,
 			],
 			'proxybot' => [
 				'globalblock' => true,
@@ -4644,6 +4669,7 @@ $wgConf->settings += [
 				'globalblock' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'managewiki-core' => true,
 				'managewiki-extensions' => true,
 				'managewiki-namespaces' => true,
@@ -4663,6 +4689,7 @@ $wgConf->settings += [
 				'globalgrouppermissions' => true,
 				'handle-import-request-interwiki' => true,
 				'handle-import-requests' => true,
+				'handle-requestaccount' => true,
 				'oathauth-verify-user' => true,
 				'oathauth-disable-for-user' => true,
 				'view-private-import-requests' => true,
@@ -4682,6 +4709,7 @@ $wgConf->settings += [
 				'view-private-import-requests' => true,
 			],
 			'user' => [
+				'request-account' => true,
 				'request-custom-domain' => true,
 				'request-import' => true,
 				'requestwiki' => true,
@@ -4832,6 +4860,7 @@ $wgConf->settings += [
 				'handle-import-request-interwiki',
 				'handle-import-requests',
 				'handle-pii',
+				'handle-requestaccount',
 				'hideuser',
 				'ignore-restricted-groups',
 				'investigate',
@@ -5253,6 +5282,13 @@ $wgConf->settings += [
 				990007,
 			],
 		],
+	],
+
+	// MirahezeRequests
+	'wgMirahezeRequestsIPVisibilityGroups' => [
+		'default' => [],
+		'metawiki' => [ 'steward', 'techteam', 'trustandsafety' ],
+		'metawikibeta' => [ 'steward', 'techteam', 'trustandsafety' ],
 	],
 
 	// Miscellaneous

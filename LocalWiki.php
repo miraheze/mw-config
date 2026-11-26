@@ -618,6 +618,7 @@ switch ( $wi->dbname ) {
 			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
+			'MirahezeRequests',
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
@@ -745,6 +746,7 @@ switch ( $wi->dbname ) {
 			'ContactPage',
 			'GlobalWatchlist',
 			'IncidentReporting',
+			'MirahezeRequests',
 			'RequestCustomDomain',
 			'SecurePoll',
 		] );
