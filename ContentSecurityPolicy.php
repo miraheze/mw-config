@@ -534,8 +534,8 @@ $wgMirahezeMagicCSPServices = [
 			'img-src' => [
 				'*.spotifycdn.com',
 			],
-		'connect-src' => [
-			'open.spotify.com',
+			'connect-src' => [
+				'open.spotify.com',
 			],
 		],
 	],
