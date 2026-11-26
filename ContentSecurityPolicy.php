@@ -99,6 +99,14 @@ $wgMirahezeMagicCSPServices = [
 			],
 		],
 	],
+	'apple-music' => [
+		'label' => 'Apple Music',
+		'sources' => [
+			'frame-src' => [
+				'music.apple.com',
+			],
+		],
+	],
 	'bandcamp' => [
 		'label' => 'Bandcamp',
 		'sources' => [
@@ -408,6 +416,19 @@ $wgMirahezeMagicCSPServices = [
 			],
 		],
 	],
+	'mozilla' => [
+		'label' => 'Mozilla',
+		'sources' => [
+			'img-src' => [
+				'mozilla.org',
+				'*.mozilla.org',
+			],
+			'font-src' => [
+				'mozilla.org',
+				'*.mozilla.org',
+			],
+		],
+	],
 	'newspapers-com' => [
 		'label' => 'newspapers.com',
 		'sources' => [
@@ -618,6 +639,7 @@ $wgMirahezeMagicCSPServices = [
 				'*.wikipedia.org',
 				'mediawiki.org',
 				'*.mediawiki.org',
+				'tools-static.wmflabs.org',
 			],
 			'style-src' => [
 				'*.wikimedia.org',
@@ -659,6 +681,7 @@ $wgMirahezeMagicCSPServices = [
 				'mediawiki.org',
 				'*.mediawiki.org',
 				'wikidata.org',
+				'tools-static.wmflabs.org',
 			],
 			'style-src' => [
 				'*.wikimedia.org',
@@ -933,6 +956,61 @@ switch ( $wgDBname ) {
 			],
 			'img-src' => [
 				'cdn.rocopedia.org',
+			],
+		];
+		break;
+	case 'gotwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'frame-src' => [
+				'taborian.com',
+			],
+		];
+		break;
+	case 'befaestningdkwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'img-src' => [
+				'kortdata.xn--befstning-i3a.dk',
+			],
+		];
+		break;
+	case 'blokotowiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'img-src' => [
+				'api.blokoto.wiki',
+			],
+		];
+		break;
+	case 'soulframeruwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'frame-src' => [
+				'https://3d.alca.gg',
+			],
+		];
+		break;
+	case 'upgxwiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'connect-src' => [
+				'api.upgxwiki.com',
+			],
+		];
+		break;
+	case 'musipediasudoestewiki':
+		$wgMirahezeMagicCSPHeaderOverrides = [
+			'script-src' => [
+				'vlibras.gov.br',
+				'*.vlibras.gov.br',
+			],
+			'img-src' => [
+				'vlibras.gov.br',
+				'*.vlibras.gov.br',
+			],
+			'frame-src' => [
+				'vlibras.gov.br',
+				'*.vlibras.gov.br',
+			],
+			'connect-src' => [
+				'vlibras.gov.br',
+				'*.vlibras.gov.br',
 			],
 		];
 		break;
