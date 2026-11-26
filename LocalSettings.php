@@ -123,7 +123,7 @@ if ( ( $_SERVER['HTTP_HOST'] ?? '' ) === $wi->getSharedDomain()
 
 	// We use load.php directly from auth for custom domains due to CSP
 	$wgCentralAuthSul3SharedDomainRestrictions['allowedEntryPoints'] = [ 'load' ];
-	if ( $wi->dbname === 'metawiki' || $wi->dbname === 'metawikibeta' ) {
+	if ( $wi->dbname === $wi->getCentralDatabase() ) {
 		$wgCentralAuthSul3SharedDomainRestrictions['allowedSpecialPages'] = [
 			'RequestAccount',
 			'RequestAccountQueue',
@@ -5173,7 +5173,6 @@ $wgConf->settings += [
 	],
 
 	// MirahezeRequests
-	// for now
 	'wgMirahezeRequestsIPVisibilityGroups' => [
 		'default' => [],
 		'metawiki' => [ 'steward', 'techteam', 'trustandsafety' ],
