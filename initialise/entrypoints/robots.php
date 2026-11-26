@@ -136,9 +136,6 @@ foreach ( $blockedBots as $bot ) {
 # Bots that don't understand Crawl-Delay might break when encountering it
 # See https://github.com/otwcode/otwarchive/pull/4411#discussion_r1044351129 (English) and https://webtan.impress.co.jp/e/2022/11/04/43611 (Japanese)
 
-# Throttle BingBot (also respects the default disallow rules above)
-wfRobotsEmitGroup( 'bingbot', array_merge( wfRobotsGetDefaultRules(), [ 'Crawl-delay: 20' ] ) );
-
 wfRobotsEmitGroup( 'MJ12bot', [ 'Crawl-Delay: 10' ] );
 
 # TODO: Crawl-delay is not respected since 2018
