@@ -531,6 +531,12 @@ $wgMirahezeMagicCSPServices = [
 			'frame-src' => [
 				'open.spotify.com',
 			],
+			'img-src' => [
+				'*.spotifycdn.com',
+			],
+			'connect-src' => [
+				'open.spotify.com',
+			],
 		],
 	],
 	'steam' => [
