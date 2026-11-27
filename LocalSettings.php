@@ -4993,6 +4993,11 @@ $wgConf->settings += [
 			],
 		],
 	],
+	'ManageWikiUndeleteWikiGroups' => [
+		'default' => [
+			'bureaucrat',
+		],
+	],
 	'wgManageWikiUseCustomDomains' => [
 		'default' => true,
 	],
