@@ -2068,10 +2068,15 @@ $wgManageWikiSettings = [
 	'wgEmbedVideoRequireConsent' => [
 		'name' => 'EmbedVideo Require Consent',
 		'from' => 'embedvideo',
-		'type' => 'check',
+		'type' => 'list',
+		'options' => [
+			'Require consent each time' => true,
+			'Remember consent per service' => 'remember',
+			'Skip consent, load immediately' => false,
+		],
 		'overridedefault' => true,
 		'section' => 'media',
-		'help' => 'Only load the iframe if the user clicks it?',
+		'help' => 'Only load the video after the user chooses to continue?',
 		'requires' => [],
 	],
 	'wgRPUseMMVModule' => [
