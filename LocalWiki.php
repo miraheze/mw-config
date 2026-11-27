@@ -419,6 +419,16 @@ switch ( $wi->dbname ) {
 		$wgPageImagesScores['position'] = [ 100, -100, -100, -100 ];
 
 		break;
+	case 'hsckwiki':
+		// Enable responsive mode for legacy Vector (its skin.json hardcodes "responsive": false).
+		// Use the MediaWikiServices hook to runs after skin.json is merged into $wgValidSkinNames
+		// but just before SkinFactory is built. Extension function runs laters on production env.
+		$wgHooks['MediaWikiServices'][] = static function (): void {
+			global $wgValidSkinNames;
+			$wgValidSkinNames['vector']['args'][0]['responsive'] = true;
+		};
+
+		break;
 	case 'kagagawiki':
 		$uwCcAvailableLanguages = [
 			'an', 'ar', 'az', 'be', 'bg', 'bn', 'ca', 'cs', 'da', 'de', 'el',
